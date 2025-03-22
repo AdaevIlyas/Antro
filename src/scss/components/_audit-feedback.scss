@@ -1,0 +1,28 @@
+
+
+.audit-feedback{
+
+
+    &__inner{
+        margin-top: rem(120);
+        margin-bottom: rem(120);
+    }
+
+    &__title{
+        margin-bottom: rem(40);
+    }
+
+    .main-cases__swiper-slide{
+        background: #fff;
+    }
+    .main-cases__swiper-next{
+        background: #fff;
+    }
+    .main-cases__swiper-prev{
+        background: #fff;
+    }
+    .main-cases__swiper{
+        margin-top: 0;
+    }
+
+}

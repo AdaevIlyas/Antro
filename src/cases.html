@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+    <div class="site-container">
+        @include('partials/header.html')
+        @include('partials/mobile-menu.html')
+
+
+        <main class="main">
+
+            <section class="cases">
+
+                <div class="cases__inner">
+
+                    
+                    
+                    
+                    <div class='container'>
+
+                        <h1 class="cases__title">Кейсы</h1>
+
+                        <div class="cases__scroll">
+                            <div class="cases__filters">
+
+                                <label for="cases-filter-1" class="cases__label">
+                                    Все
+                                    <input type="radio" name="cases-filter" id="cases-filter-1" checked>
+                                </label>
+                                <label for="cases-filter-2" class="cases__label">
+                                    Ecommerce
+                                    <input type="radio" name="cases-filter" id="cases-filter-2">
+                                </label>
+    
+                                <label for="cases-filter-3" class="cases__label">
+                                    Фэшн
+                                    <input type="radio" name="cases-filter" id="cases-filter-3">
+                                </label>    
+                                <label for="cases-filter-4" class="cases__label">
+                                    Бьюти
+                                    <input type="radio" name="cases-filter" id="cases-filter-4">
+                                </label>    
+                                <label for="cases-filter-5" class="cases__label">
+                                    DIY
+                                    <input type="radio" name="cases-filter" id="cases-filter-5">
+                                </label>    
+                                <label for="cases-filter-6" class="cases__label">
+                                    Фарма
+                                    <input type="radio" name="cases-filter" id="cases-filter-6">
+                                </label>    
+                                <label for="cases-filter-7" class="cases__label">
+                                    Фудтех
+                                    <input type="radio" name="cases-filter" id="cases-filter-7">
+                                </label>    
+                                <label for="cases-filter-8" class="cases__label">
+                                    Мобильные приложения
+                                    <input type="radio" name="cases-filter" id="cases-filter-8">
+                                </label>    
+                                <label for="cases-filter-9" class="cases__label">
+                                    Сервисы
+                                    <input type="radio" name="cases-filter" id="cases-filter-9">
+                                </label>    
+                                <label for="cases-filter-10" class="cases__label">
+                                    Ювелирка
+                                    <input type="radio" name="cases-filter" id="cases-filter-10">
+                                </label>    
+                                <label for="cases-filter-11" class="cases__label">
+                                    Корпоративные сайты
+                                    <input type="radio" name="cases-filter" id="cases-filter-11">
+                                </label>    
+                                <label for="cases-filter-12" class="cases__label">
+                                    Брендинг
+                                    <input type="radio" name="cases-filter" id="cases-filter-12">
+                                </label>    
+                                <label for="cases-filter-13" class="cases__label">
+                                    Другое
+                                    <input type="radio" name="cases-filter" id="cases-filter-13">
+                                </label>    
+    
+                            </div>
+                        </div>
+                        
+
+
+                        <div class="cases__grid">
+
+                            <div class="main-cases__card">
+                                <div class="main-cases__card-image scale-hover img-cursor-hover">
+                                    <div class="tooltip">Bootwood</div>
+                                    <div class="main-cases__card-logo">
+                                        <img src="img/svg/logos/bootwood.svg" alt="">
+                                    </div>
+                                    <img src="img/cases/bootwood.jpg" alt="">
+                                    <div class="main-cases__card-label">
+                                        <div class="main-cases__card-up"><img src="img/svg/grow.svg" alt=""> +20%</div>
+                                        <div class="main-cases__card-text">конверсия в покупку</div>
+                                    </div>
+                                </div>
+                                <div class="main-cases__card-tags">
+                                    <div class="main-cases__card-tag">Ритейл</div>
+                                    <img src="img/svg/star-small.svg" alt="*">
+                                    <div class="main-cases__card-tag">Ecommerce</div>
+                                    <img src="img/svg/star-small.svg" alt="*">
+                                    <div class="main-cases__card-tag">ElasticSearch</div>
+                                    <img src="img/svg/star-small.svg" alt="*">
+                                    <div class="main-cases__card-tag">Рефакторинг</div>
+                                </div>
+                                <div class="main-cases__card-title">Мультибрендовый интернет-магазин на базе сайта Timberland.ru</div>
+                            </div>
+
+                            <div class="main-cases__card">
+                                <div class="main-cases__card-image main-cases__card-image_short scale-hover img-cursor-hover">
+                                    <div class="tooltip">New Balance</div>
+                                    <div class="main-cases__card-logo">
+                                        <img src="img/svg/logos/new-balance.svg" alt="">
+                                    </div>
+                                    <img class="img-scale" src="img/cases/new-balance.jpg" alt="">
+                                    <!-- <div class="main-cases__card-label">
+                                        <div class="main-cases__card-up"><img src="img/svg/grow.svg" alt=""> +20%</div>
+                                        <div class="main-cases__card-text">конверсия в покупку</div>
+                                    </div> -->
+                                </div>
+                                <div class="main-cases__card-tags">
+                                    <div class="main-cases__card-tag">Ритейл</div>
+                                    <img src="img/svg/star-small.svg" alt="*">
+                                    <div class="main-cases__card-tag">Ecommerce</div>
+                                    <img src="img/svg/star-small.svg" alt="*">
+                                    <div class="main-cases__card-tag">ElasticSearch</div>
+                                    <img src="img/svg/star-small.svg" alt="*">
+                                    <div class="main-cases__card-tag">Рефакторинг</div>
+                                </div>
+                                <div class="main-cases__card-title">Мультикорзина со сложной логикой взаимодействия складов, доставки и программ лояльности</div>
+                            </div>
+
+                            <div class="main-cases__card">
+                                <div class="main-cases__card-image main-cases__card-image_short scale-hover img-cursor-hover">
+                                    <div class="tooltip">New Balance</div>
+                                    <div class="main-cases__card-logo">
+                                        <img src="img/svg/logos/new-balance.svg" alt="">
+                                    </div>
+                                    <img class="img-scale" src="img/cases/new-balance.jpg" alt="">
+                                    <!-- <div class="main-cases__card-label">
+                                        <div class="main-cases__card-up"><img src="img/svg/grow.svg" alt=""> +20%</div>
+                                        <div class="main-cases__card-text">конверсия в покупку</div>
+                                    </div> -->
+                                </div>
+                                <div class="main-cases__card-tags">
+                                    <div class="main-cases__card-tag">Ритейл</div>
+                                    <img src="img/svg/star-small.svg" alt="*">
+                                    <div class="main-cases__card-tag">Ecommerce</div>
+                                    <img src="img/svg/star-small.svg" alt="*">
+                                    <div class="main-cases__card-tag">ElasticSearch</div>
+                                    <img src="img/svg/star-small.svg" alt="*">
+                                    <div class="main-cases__card-tag">Рефакторинг</div>
+                                </div>
+                                <div class="main-cases__card-title">Мультикорзина со сложной логикой взаимодействия складов, доставки и программ лояльности</div>
+                            </div>
+
+                            <div class="main-cases__card">
+                                <div class="main-cases__card-image scale-hover img-cursor-hover">
+                                    <div class="tooltip">Bootwood</div>
+                                    <div class="main-cases__card-logo">
+                                        <img src="img/svg/logos/bootwood.svg" alt="">
+                                    </div>
+                                    <img src="img/cases/bootwood.jpg" alt="">
+                                    <div class="main-cases__card-label">
+                                        <div class="main-cases__card-up"><img src="img/svg/grow.svg" alt=""> +20%</div>
+                                        <div class="main-cases__card-text">конверсия в покупку</div>
+                                    </div>
+                                </div>
+                                <div class="main-cases__card-tags">
+                                    <div class="main-cases__card-tag">Ритейл</div>
+                                    <img src="img/svg/star-small.svg" alt="*">
+                                    <div class="main-cases__card-tag">Ecommerce</div>
+                                    <img src="img/svg/star-small.svg" alt="*">
+                                    <div class="main-cases__card-tag">ElasticSearch</div>
+                                    <img src="img/svg/star-small.svg" alt="*">
+                                    <div class="main-cases__card-tag">Рефакторинг</div>
+                                </div>
+                                <div class="main-cases__card-title">Мультибрендовый интернет-магазин на базе сайта Timberland.ru</div>
+                            </div>
+
+                            <div class="main-cases__card">
+                                <div class="main-cases__card-image scale-hover img-cursor-hover">
+                                    <div class="tooltip">Bootwood</div>
+                                    <div class="main-cases__card-logo">
+                                        <img src="img/svg/logos/bootwood.svg" alt="">
+                                    </div>
+                                    <img src="img/cases/bootwood.jpg" alt="">
+                                    <div class="main-cases__card-label">
+                                        <div class="main-cases__card-up"><img src="img/svg/grow.svg" alt=""> +20%</div>
+                                        <div class="main-cases__card-text">конверсия в покупку</div>
+                                    </div>
+                                </div>
+                                <div class="main-cases__card-tags">
+                                    <div class="main-cases__card-tag">Ритейл</div>
+                                    <img src="img/svg/star-small.svg" alt="*">
+                                    <div class="main-cases__card-tag">Ecommerce</div>
+                                    <img src="img/svg/star-small.svg" alt="*">
+                                    <div class="main-cases__card-tag">ElasticSearch</div>
+                                    <img src="img/svg/star-small.svg" alt="*">
+                                    <div class="main-cases__card-tag">Рефакторинг</div>
+                                </div>
+                                <div class="main-cases__card-title">Мультибрендовый интернет-магазин на базе сайта Timberland.ru</div>
+                            </div>
+
+                            <div class="main-cases__card">
+                                <div class="main-cases__card-image main-cases__card-image_short scale-hover img-cursor-hover">
+                                    <div class="tooltip">New Balance</div>
+                                    <div class="main-cases__card-logo">
+                                        <img src="img/svg/logos/new-balance.svg" alt="">
+                                    </div>
+                                    <img class="img-scale" src="img/cases/new-balance.jpg" alt="">
+                                    <!-- <div class="main-cases__card-label">
+                                        <div class="main-cases__card-up"><img src="img/svg/grow.svg" alt=""> +20%</div>
+                                        <div class="main-cases__card-text">конверсия в покупку</div>
+                                    </div> -->
+                                </div>
+                                <div class="main-cases__card-tags">
+                                    <div class="main-cases__card-tag">Ритейл</div>
+                                    <img src="img/svg/star-small.svg" alt="*">
+                                    <div class="main-cases__card-tag">Ecommerce</div>
+                                    <img src="img/svg/star-small.svg" alt="*">
+                                    <div class="main-cases__card-tag">ElasticSearch</div>
+                                    <img src="img/svg/star-small.svg" alt="*">
+                                    <div class="main-cases__card-tag">Рефакторинг</div>
+                                </div>
+                                <div class="main-cases__card-title">Мультикорзина со сложной логикой взаимодействия складов, доставки и программ лояльности</div>
+                            </div>
+
+                            <a href="#" class="btn-reset btn main-cases__btn btn_hover-pink">Смотреть все кейсы</a>
+
+                        </div>
+
+
+                        <div class="main-cases__experience cases__soon">
+                            <h2 class="title">Скоро опубликуем</h2>
+            
+                            <div class="main-cases__experience-swiper">
+                                <div class="main-cases__experience-list">
+                                    <div class="main-cases__experience-line">
+                                        <div class="main-cases__experience-logo">
+                                            <img src="img/partners/severstal.svg" alt="">
+                                        </div>
+                                        <div class="main-cases__experience-text">
+                                            Редизайн внутреннего стартапа на основе сегментации клиентов и анализа метрик
+                                        </div>
+                                        <div class="main-cases__experience-type">Промышленность</div>
+                                    </div>
+                
+                                    <div class="main-cases__experience-line">
+                                        <div class="main-cases__experience-logo">
+                                            <img src="img/partners/4dev.svg" alt="">
+                                        </div>
+                                        <div class="main-cases__experience-text">
+                                            UX/UI-аудит и дизайн для сайта продукта. Поддерживаем продукт работами по улучшению пользовательского опыта
+                                        </div>
+                                        <div class="main-cases__experience-type">Финансы</div>
+                                    </div>
+                
+                                    <div class="main-cases__experience-line">
+                                        <div class="main-cases__experience-logo">
+                                            <img src="img/partners/career-online.svg" alt="">
+                                        </div>
+                                        <div class="main-cases__experience-text">
+                                            Исследование целевой аудитории, изменение стратегии развития продукта на основе данных
+                                        </div>
+                                        <div class="main-cases__experience-type">Образование</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="#" class="btn-reset btn btn_lightning main-solutions__content-btn btn_hover-graylight cases__soon-btn">
+                                <div class="btn__circle">
+                                    <img src="img/svg/lightning-dark.svg" alt="">
+                                </div>
+                                Смотреть все кейсы
+                            </a>
+                            
+                        </div>
+                    </div>
+
+                    @include('partials/main-order.html')
+
+                </div>
+
+                
+
+            </section>
+
+
+            
+
+            
+
+        </main>
+
+
+        @include('partials/modal.html')
+        @include('partials/footer.html')
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+
+
+
+.scale-hover{
+
+    transition-duration: 0.3s;
+    will-change: transform;
+
+    &:hover{
+        @include NOTmobile{
+            transform: scale(1.02);
+        }
+    }
+
+}
+
+.img-scale-hover {
+
+    .img-scale{
+        transition-duration: 0.5s;
+
+        &:hover{
+            @include NOTmobile{
+                transform: scale(1.08);
+            }
+        }
+    }
+
+}
+
+.img-move{
+    
+
+    &_duration{
+        //transition: all 0.5s;
+        //transition-delay: 0.3s;
+    }
+}
+
+
+
+.img-cursor-hover{
+    position: relative;
+
+    &:hover{
+        .tooltip{
+            opacity: 1;
+        }
+    }
+}
+
+
+.tooltip{
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    background-color: black;
+    color: white;
+    top: 0;
+    left: 0;
+    border-radius: rem(100);
+    font-size: rem(14);
+    padding: rem(11) rem(18);
+    z-index: 20;
+    transition: all 0.2s;
+    display: block;
+
+    
+
+    @include mobile{
+        display: none;
+    }
+
+    &.js-copy-tooltip{
+        @include mobile{
+            display: block;
+        }
+    }
+
+    &_hidden{
+        display: none !important;
+    }
+
+}
+
+
+.js-appear{
+    transition: all 0.6s;
+}
+
+.delay1{
+    transition-delay: .2s !important;
+}
+
+.delay2{
+    transition-delay: .4s !important;
+}
+
+.delay3{
+    transition-delay: .6s !important;
+}
+
+.appear{
+    opacity: 0 !important;
+    transform: translateY(rem(200)) scale(0.8) !important;
+}

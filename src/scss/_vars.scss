@@ -1,0 +1,28 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Graphik LCG", sans-serif;
+  --content-width: 1170px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --white: #fff;
+  --pink: #FC63D5;
+  --pinkHover: #E055BD;
+  --pinkActive: #C546A4;
+  --pinkBg: #F4A0DA;
+  --pinkLight: #F1B7DC;
+  --black: #0A0620;
+  --wave: #1CC0A0;
+  --waveHover: #31E8C4;
+  --green: #3ACC20;
+  --greenHover: #55E93B;
+  --greenLight: #ACFD9E;
+  --gray: #D6CCD4;
+  --grayLight: #EBEBEB;
+  --grayDark: #615E71;
+  --bg: #F6F6F6;
+  --blue: #2780E5;
+}

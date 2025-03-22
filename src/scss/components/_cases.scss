@@ -1,0 +1,222 @@
+
+
+.cases{
+
+    &__inner{
+        margin-top: rem(174);
+        margin-bottom: rem(60);
+
+        @include laptop{
+            margin-top: rem(160);
+            margin-bottom: rem(40);
+        }
+        @include mobile{
+            margin-top: rem(116);
+            margin-bottom: rem(60);
+        }
+    }
+
+    &__title{
+        font-size: rem(108);
+        line-height: 1.2;
+        font-weight: 600;
+        margin-bottom: rem(48);
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--black);
+
+        @include laptop{
+            font-size: rem(72);
+            margin-bottom: rem(40);
+        }
+        @include mobile{
+            font-size: rem(36);
+            margin-bottom: rem(20);
+            text-align: left;
+        }
+    }
+
+    &__scroll{
+        width: 100%;
+        position: relative;
+        
+        @include mobile{
+            width: calc(100% + rem(32));
+            margin-left: rem(-16);
+            overflow-x: auto;
+            padding-left: rem(16);
+            padding-right: rem(16);
+            padding-bottom: rem(10);
+        }
+    }
+
+    &__filters{
+        display: flex;
+        max-width: rem(1120);
+        margin: 0 auto;
+        gap: rem(8);
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include laptop{
+            max-width: rem(947);
+
+        }
+
+        @include mobile{
+            max-width: unset;
+            width: rem(857);
+            gap: rem(6);
+            justify-content: flex-start;
+        }
+    }
+
+    &__label{
+        background: var(--bg);
+        border-radius: rem(14);
+        height: rem(48);
+        padding: 0 rem(24);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: rem(20);
+        color: var(--black);
+        cursor: pointer;
+
+        @include laptop{
+            font-size: rem(16);
+            height: rem(40);
+            padding: 0 rem(18);
+            border-radius: rem(10);
+        }
+
+        input{
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        &:has(> input:checked) {
+            background: var(--black);
+            color: #fff;
+        }
+
+    }
+
+
+
+    &__grid{
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(60) rem(40);
+        margin-top: rem(80);
+        margin-bottom: rem(120);
+
+        @include laptop{
+            gap: rem(40);
+            margin-top: rem(60);
+            margin-bottom: rem(80);
+        }
+        @include mobile{
+            margin-top: rem(20);
+            margin-bottom: rem(60);
+        }
+
+        .main-cases__card{
+            width: rem(770);
+            justify-content: center;
+            @include laptop{
+                width: rem(600);
+            }
+            @include mobile{
+                width: rem(343);
+            }
+        }
+        .main-cases__card-title{
+            font-size: rem(26);
+            @include laptop{
+                font-size: rem(20);
+            }
+            @include mobile{
+                font-size: rem(18);
+            }
+        }
+        .main-cases__card-image{
+            mask-image: none;
+            mask-image: url(../img/mask/p-cases-big-xl.svg);
+            mask-size: 100% 100%;
+            mask-repeat: no-repeat;
+
+            @include laptop{
+                mask-image: url(../img/mask/p-cases-big-l.svg);
+                mask-size: 100% 100%;
+                mask-repeat: no-repeat;
+            }
+
+            @include mobile{
+                height: rem(280);
+                mask-image: url(../img/mask/p-cases-big-m.svg);
+                mask-size: 100% 100%;
+                mask-repeat: no-repeat;
+            }
+        }
+        .main-cases__card-image_short{
+            height: rem(500);
+            mask-image: url(../img/mask/p-cases-small-xl.svg);
+            mask-size: 100% 100%;
+            mask-repeat: no-repeat;
+            @include laptop{
+                height: rem(330);
+                mask-image: url(../img/mask/p-cases-small-l.svg);
+                mask-size: 100% 100%;
+                mask-repeat: no-repeat;
+            }
+            @include mobile{
+                height: rem(230);
+                mask-image: url(../img/mask/p-cases-small-m.svg);
+                mask-size: 100% 100%;
+                mask-repeat: no-repeat;
+            }
+        }
+        .main-cases__btn{
+            margin: 0 auto;
+        }
+    }
+
+
+
+    &__soon{
+        margin-bottom: rem(120);
+
+        @include laptop{
+            margin-bottom: rem(80);
+        }
+        @include mobile{
+            margin-bottom: rem(60);
+
+            .title{
+                font-weight: 400;
+            }
+        }
+
+        .main-cases__experience-list{
+            @include mobile{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+        }
+        .main-cases__experience-line{
+            @include mobile{
+                width: 100%;
+            }
+        }
+    }
+
+    &__soon-btn{
+        margin: 0 auto;
+        margin-top: rem(40);
+        max-width: rem(216);
+    }
+
+}

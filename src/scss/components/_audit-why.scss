@@ -1,0 +1,98 @@
+
+.audit-why{
+
+    &__inner{
+        margin-top: rem(120);
+        margin-bottom: rem(120);
+    }
+
+    &__title{
+        font-size: rem(50);
+        text-align: center;
+    }
+
+    &__box{
+        display: flex;
+        max-width: rem(1044);
+        column-gap: rem(20);
+        margin: 0 auto;
+        margin-bottom: rem(60);
+    }
+
+    &__col{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(20);
+    }
+
+    &__block{
+        padding: rem(46) rem(44);
+        background: #fff;
+        border-radius: rem(50);
+
+        &_pink{
+            height: rem(328);
+            background: var(--pink);
+
+            .audit-why__block-title{
+                color: #FFF2FC;
+            }
+            .audit-why__block-text{
+                color: #FFFFFFCC;
+            }
+        }
+
+        &_black{
+            height: rem(512);
+            background: var(--black);
+            border-radius: rem(600);
+            padding: rem(64);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .audit-why__block-title{
+                color: #FFF2FC;
+                text-align: center;
+            }
+            .audit-why__block-text{
+                color: #FFFFFFCC;
+                text-align: center;
+            }
+            .audit-why__block-image{
+                width: rem(63);
+                height: rem(63);
+                margin-top: 0;
+                margin-bottom: rem(30);
+            }
+        }
+    }
+
+    &__block-title{
+        color: var(--black);
+        font-size: rem(24);
+        margin-bottom: rem(12);
+    }
+
+    &__block-text{
+        color: var(--grayDark);
+        font-size: rem(16);
+    }
+
+    &__block-image{
+        width: rem(222);
+        height: rem(234);
+        margin: 0 auto;
+        margin-top: rem(28);
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+        }
+    }
+
+}

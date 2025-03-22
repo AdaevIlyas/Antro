@@ -1,0 +1,39 @@
+@use "sass:math";
+
+@function rem($pixels) {
+  @return calc($pixels / 10) + rem;
+}
+
+html {
+    
+  --refRes: 1780;
+  font-size: calc(100vw / var(--refRes) * 10);
+
+  @media (max-width: 1440px) {
+    --refRes: 1440;
+    font-size: calc(100vw / var(--refRes) * 10);
+  }
+  @media (max-width: 480px) {
+    --refRes: 375;
+    font-size: calc(100vw / var(--refRes) * 10);
+  }
+
+  /* --refRes: 375;
+  font-size: calc(100vw / var(--refRes) * 10);
+
+  @media (min-width: 480px) {
+    --refRes: 1280;
+    font-size: calc(100vw / var(--refRes) * 10);
+  }
+
+  @media (min-width: 1462px) {
+    --refRes: 1280;
+    font-size: clamp( 11.41px, calc(100vw / var(--refRes) * 10), 11.42px );
+  }
+
+  @media (min-width: 1779px) {
+    --refRes: 1780;
+    font-size: calc(100vw / var(--refRes) * 10);
+  } */
+
+}

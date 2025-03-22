@@ -1,0 +1,147 @@
+
+
+.blog{
+
+    &__inner{
+        margin-top: rem(174);
+
+        @include laptop{
+            margin-top: rem(160);
+        }
+        @include mobile{
+            margin-top: rem(116);
+        }
+    }
+
+    &__title{
+        margin-bottom: rem(32);
+
+        @include laptop{
+            margin-bottom: rem(24);
+        }
+        @include mobile{
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__filters{
+        display: flex;
+        width: 100%;
+        gap: rem(8);
+        flex-wrap: wrap;
+        margin-bottom: rem(40);
+
+        @include mobile{
+            margin-bottom: rem(30);
+        }
+    }
+
+    &__label{
+        background: var(--bg);
+        border-radius: rem(14);
+        height: rem(48);
+        padding: 0 rem(24);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: rem(20);
+        color: var(--black);
+        cursor: pointer;
+
+        @include laptop{
+            font-size: rem(16);
+            height: rem(40);
+            padding: 0 rem(18);
+            border-radius: rem(10);
+        }
+
+        input{
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        &:has(> input:checked) {
+            background: var(--black);
+            color: #fff;
+        }
+
+    }
+
+    &__grid{
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(60) rem(22);
+
+        @include laptop{
+            gap: rem(40) rem(15);
+        }
+        @include mobile{
+            gap: rem(16);
+        }
+
+        .main-media__card{
+            width: rem(512);
+            height: auto;
+            min-height: rem(507);
+
+            @include laptop{
+                width: rem(403);
+                min-height: unset;
+            }
+            @include mobile{
+                width: 100%;
+            }
+
+        }
+        .main-media__card_short{
+            height: auto;
+            min-height: unset;
+        }
+        .main-media__card-image{
+            height: rem(250);
+            margin-top: rem(30);
+
+            @include laptop{
+                height: rem(163);
+            }
+            @include mobile{
+                height: rem(173);
+            }
+        }
+        .main-media__card-text{
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+        }
+        .main-media__card-title{
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+        }
+
+
+
+        
+
+    }
+
+    &__cell{
+        width: rem(512);
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(22);
+
+        @include laptop{
+            width: rem(403);
+            gap: rem(15);
+        }
+        @include mobile{
+            width: 100%;
+        }
+
+    }
+
+}

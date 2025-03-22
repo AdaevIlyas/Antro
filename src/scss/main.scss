@@ -1,0 +1,56 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/elements";
+
+
+@import "./components/header";
+@import "./components/mobile-menu";
+
+
+@import "./components/main-first";
+@import "./components/main-about";
+@import "./components/main-cases";
+
+@import "./components/main-research";
+@import "./components/main-solutions";
+@import "./components/main-services";
+@import "./components/main-media";
+@import "./components/main-team";
+@import "./components/main-order";
+@import "./components/animations";
+
+@import "./components/cases";
+@import "./components/case";
+@import "./components/blog";
+@import "./components/contacts";
+
+
+
+@import "./components/audit-first";
+@import "./components/audit-brands";
+@import "./components/audit-why";
+@import "./components/audit-structure";
+
+
+@import "./components/audit-goods";
+@import "./components/audit-start";
+
+
+@import "./components/audit-form";
+@import "./components/audit-feedback";
+@import "./components/audit-cases";
+
+@import "./components/audit-faq";
+
+
+
+
+
+
+@import "./components/modal";
+@import "./components/footer";

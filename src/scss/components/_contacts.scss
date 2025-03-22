@@ -1,0 +1,236 @@
+
+
+.contacts{
+
+    &__inner{
+        margin-top: rem(174);
+        margin-bottom: rem(120);
+
+        @include laptop{
+            margin-top: rem(154);
+            margin-bottom: rem(80);
+        }
+        @include mobile{
+            margin-top: rem(152);
+            margin-bottom: rem(60);
+        }
+    }
+
+    &__box{
+        display: flex;
+        column-gap: rem(10);
+        margin-bottom: rem(64);
+
+        @include laptop{
+            margin-bottom: rem(40);
+            column-gap: rem(8);
+        }
+        @include mobile{
+            flex-wrap: wrap;
+            row-gap: rem(10);
+        }
+    }
+
+    &__baloon{
+        background: var(--bg);
+        border-radius: rem(50);
+        padding: rem(46) rem(44);
+        margin-bottom: auto;
+
+        @include laptop{
+            border-radius: rem(38);
+            padding: rem(38) rem(36);
+
+        }
+
+        @include mobile{
+            border-radius: rem(30);
+            padding: rem(24);
+        }
+
+        .main-team__card-link{
+            
+            max-width: unset;
+            width: auto;
+            margin-right: auto;
+        }
+
+        &:nth-of-type(1){
+            width: rem(578);
+            @include laptop{
+                width: rem(406);
+            }
+            @include mobile{
+                width: 100%;
+            }
+        }
+
+        &:nth-of-type(2){
+            width: rem(575);
+            @include laptop{
+                width: rem(390);
+            }
+            @include mobile{
+                width: 100%;
+            }
+        }
+
+        &:nth-of-type(3){
+            width: rem(407);
+            @include laptop{
+                width: rem(268);
+            }
+            @include mobile{
+                width: 100%;
+            }
+        }
+
+        &_wide{
+            width: rem(708) !important;
+            padding-bottom: rem(38);
+            @include laptop{
+                width: rem(544) !important;
+            }
+            @include mobile{
+                width: 100% !important;
+                padding-bottom: rem(24);
+            }
+        }
+    }
+
+    &__baloon-btn{
+        display: flex;   
+        margin-top: rem(22);    
+
+        @include laptop{
+            margin-top: rem(18);
+        }
+        
+        & + & {
+            margin-top: rem(8);
+            @include laptop{
+                margin-top: rem(10);
+            }
+        }
+    }
+
+    &__baloon-map{
+        display: flex;
+        align-items: center;
+        column-gap: rem(24);
+        background: #fff;
+        padding: rem(34) rem(44);
+        border-radius: rem(50);
+        margin-top: rem(22);
+        
+        img {
+            width: rem(80);
+            height: rem(80);
+
+            @include laptop{
+                width: rem(68);
+                height: rem(68);
+            }
+            @include mobile{
+                width: rem(60);
+                height: rem(60);
+            }
+        }
+
+        @include laptop{
+            padding: rem(24) rem(34);
+            padding-right: rem(6);
+            border-radius: rem(36);
+            column-gap: rem(16);
+        }
+        @include mobile{
+            padding: rem(12) rem(14);
+            border-radius: rem(24);
+        }
+    }
+
+    &__baloon-title{
+        font-size: rem(24);
+        font-weight: 400;
+        margin-bottom: rem(10);
+        @include laptop{
+            font-size: rem(20);
+        }
+        @include mobile{
+            font-size: rem(18);
+        }
+    }
+
+    &__baloon-text{
+        font-size: rem(16);
+
+        @include laptop{
+            font-size: rem(14);
+        }
+        @include mobile{
+            font-size: rem(14);
+        }
+
+        &_map{
+            font-size: rem(20);
+            margin-bottom: rem(8);
+            @include laptop{
+                font-size: rem(18);
+            }
+        }
+
+        &_address{
+            color: var(--grayDark);
+            @include laptop{
+                font-size: rem(14);
+            }
+            @include mobile{
+                font-size: rem(12);
+            }
+        }
+    }
+
+    &__baloon-flex{
+        display: flex;
+        column-gap: rem(24);
+        margin-top: rem(22);
+
+        @include laptop{
+            column-gap: rem(22);
+            margin-top: rem(18);
+        }
+        @include mobile{
+            flex-wrap: wrap;
+            flex-direction: column;
+            row-gap: rem(8);
+
+            br{
+                display: none;
+            }
+        }
+
+        .main-team__card-link{
+            font-size: rem(16);
+            @include laptop{
+                font-size: rem(14);
+            }
+        }
+    }
+
+    &__title{
+        font-size: rem(38);
+        margin-bottom: rem(40);
+        text-transform: none;
+        font-weight: 400;
+        @include laptop{
+            font-size: rem(24);
+            margin-bottom: rem(30);
+        }
+        @include mobile{
+            font-size: rem(20);
+            
+        }
+    }
+
+
+}
