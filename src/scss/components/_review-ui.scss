@@ -1,0 +1,18 @@
+.review-section-wrapper {
+    margin-block: rem(120);
+    @include laptop {
+        margin-block: rem(80);
+    }
+
+    @include mobile {
+        margin-block: rem(60);
+    }
+}
+
+.review-title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    line-height: 108%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+}

@@ -7,10 +7,8 @@
 // подключения компонентов страницы
 @import "./components/elements";
 
-
 @import "./components/header";
 @import "./components/mobile-menu";
-
 
 @import "./components/main-first";
 @import "./components/main-about";
@@ -29,17 +27,13 @@
 @import "./components/blog";
 @import "./components/contacts";
 
-
-
 @import "./components/audit-first";
 @import "./components/audit-brands";
 @import "./components/audit-why";
 @import "./components/audit-structure";
 
-
 @import "./components/audit-goods";
 @import "./components/audit-start";
-
 
 @import "./components/audit-form";
 @import "./components/audit-feedback";
@@ -47,10 +41,10 @@
 
 @import "./components/audit-faq";
 
-
-
-
-
+// review-inside
+@import "./components/review-ui";
+@import "./components/review-inside";
+@import "./components/review-formats";
 
 @import "./components/modal";
 @import "./components/footer";
