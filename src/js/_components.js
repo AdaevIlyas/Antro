@@ -1,5 +1,4 @@
-console.log('components');
-
+console.log("components");
 
 import { video } from "../js/components/video";
 video();
@@ -34,7 +33,8 @@ copylink();
 import { pageNavigation } from "../js/components/pageNavigation";
 pageNavigation();
 
-
 import { accordion } from "../js/components/accordion";
 accordion();
 
+import { reviewContent } from "./components/reviewContent";
+reviewContent();
