@@ -1,9 +1,21 @@
 .review-content {
     &__wrapper {
         margin-inline: rem(20);
-        padding: rem(100) rem(213) rem(177) rem(213);
+        padding: rem(100) rem(213) rem(177);
         border-radius: rem(60);
         background: linear-gradient(180deg, #012525 0%, #048b8b 100%);
+
+        @include laptop {
+            margin-inline: rem(16);
+            border-radius: rem(44);
+            padding: rem(60) rem(83) rem(80);
+        }
+
+        @include mobile {
+            margin-inline: 0;
+            border-radius: rem(40);
+            padding: rem(40) rem(16);
+        }
     }
 
     &__title {
@@ -32,6 +44,18 @@
 
         margin-inline: auto;
         margin-bottom: rem(60);
+
+        @include laptop {
+            max-width: rem(664);
+            gap: rem(12);
+            margin-bottom: rem(50);
+        }
+
+        @include mobile {
+            max-width: none;
+            gap: rem(7);
+            margin-bottom: rem(30);
+        }
     }
 
     &__inside {
@@ -44,11 +68,24 @@
         background: rgba(255, 255, 255, 0.1);
 
         border-radius: rem(160);
+
+        @include laptop {
+            padding: rem(9) rem(18);
+        }
+
+        @include mobile {
+            padding: rem(8) rem(10);
+        }
     }
 
     &__inside-img {
         width: rem(20);
         height: rem(20);
+
+        @include laptop {
+            width: rem(16);
+            height: rem(16);
+        }
     }
 
     &__inside-text {
@@ -58,6 +95,10 @@
         line-height: normal;
         letter-spacing: -0.03em;
         color: var(--white);
+
+        @include laptop {
+            font-size: rem(14);
+        }
     }
 
     &__list {
@@ -74,6 +115,16 @@
     position: relative;
     padding: rem(38) rem(50) rem(50) rem(50);
     border-radius: rem(50);
+
+    @include laptop {
+        border-radius: rem(38);
+        padding: rem(44);
+    }
+
+    @include mobile {
+        border-radius: rem(30);
+        padding: rem(24);
+    }
 
     &.active {
         background: red;
@@ -170,6 +221,9 @@
         display: flex;
         gap: rem(8);
         margin-bottom: rem(16);
+
+        @include laptop {
+        }
     }
 
     &__pages {
@@ -183,8 +237,21 @@
         font-family: var(--font-family);
         font-weight: 500;
         font-size: rem(14);
+        line-height: 120%;
 
         backdrop-filter: blur(rem(50));
+
+        @include laptop {
+            padding: rem(9) rem(18);
+            height: rem(35);
+        }
+
+        @include mobile {
+            height: rem(30);
+            padding: rem(8) rem(9);
+
+            font-size: rem(12);
+        }
     }
 
     &__free {
@@ -208,10 +275,28 @@
 
         backdrop-filter: blur(rem(50));
 
+        @include laptop {
+            height: rem(35);
+            padding: rem(8) rem(18);
+            font-size: rem(12);
+        }
+
+        @include mobile {
+            height: rem(30);
+            gap: rem(4);
+            padding: rem(7) rem(9);
+            font-size: rem(10);
+        }
+
         &-logo {
             width: rem(20);
             height: rem(20);
             flex: 0 0 auto;
+
+            @include mobile {
+                width: rem(16);
+                height: rem(16);
+            }
         }
     }
 
@@ -222,6 +307,10 @@
         cursor: pointer;
 
         user-select: none;
+
+        @include mobile {
+            gap: rem(10);
+        }
     }
 
     &__circle {
@@ -238,6 +327,19 @@
         font-weight: 500;
         font-size: rem(20);
         line-height: 94%;
+
+        @include laptop {
+            width: rem(40);
+            height: rem(40);
+            font-size: rem(18);
+        }
+
+        @include mobile {
+            width: rem(36);
+            height: rem(36);
+            font-size: rem(16);
+            line-height: normal;
+        }
     }
 
     &__title {
@@ -246,6 +348,15 @@
         font-size: rem(34);
         line-height: 120%;
         letter-spacing: -0.03em;
+
+        @include laptop {
+            font-size: rem(24);
+            line-height: 108%;
+        }
+
+        @include mobile {
+            font-size: rem(16);
+        }
     }
 
     &__close {
@@ -261,6 +372,18 @@
         transition: all 0.3s ease;
 
         transform: rotate(-45deg);
+
+        @include laptop {
+            top: rem(32);
+            right: rem(32);
+        }
+
+        @include mobile {
+            top: rem(12);
+            right: rem(12);
+            width: rem(40);
+            height: rem(40);
+        }
 
         svg {
             width: 100%;
@@ -286,6 +409,18 @@
         display: flex;
 
         gap: rem(32);
+
+        @include laptop {
+            margin-top: rem(28);
+            gap: rem(40);
+        }
+
+        @include mobile {
+            margin-top: rem(24);
+
+            flex-direction: column;
+            gap: rem(6);
+        }
     }
 
     &__description {
@@ -294,6 +429,14 @@
         font-size: rem(18);
         line-height: 120%;
         letter-spacing: -0.03em;
+
+        @include laptop {
+            font-size: rem(16);
+        }
+
+        @include mobile {
+            font-size: rem(14);
+        }
     }
 
     &__list {
@@ -303,8 +446,24 @@
         gap: rem(12);
         max-width: max-content;
 
+        @include laptop {
+            gap: rem(10);
+        }
+
+        @include mobile {
+            gap: rem(6);
+        }
+
         &_max-width {
             max-width: rem(478);
+
+            @include laptop {
+                max-width: rem(434);
+            }
+
+            @include mobile {
+                max-width: none;
+            }
         }
     }
 
@@ -317,6 +476,16 @@
         line-height: 120%;
         letter-spacing: -0.03em;
 
+        @include laptop {
+            font-size: rem(16);
+            line-height: 110%;
+            letter-spacing: -0.02em;
+        }
+
+        @include mobile {
+            font-size: rem(14);
+        }
+
         &::before {
             content: "";
             flex: 0 0 auto;
@@ -325,6 +494,14 @@
             border-radius: 50%;
             margin: rem(8.5) rem(8) rem(3.5) rem(3);
             background: var(--white);
+
+            @include laptop {
+                margin: rem(5) rem(8) rem(7) rem(3);
+            }
+
+            @include mobile {
+                margin: rem(4) rem(8) rem(8) rem(3);
+            }
         }
     }
 }
