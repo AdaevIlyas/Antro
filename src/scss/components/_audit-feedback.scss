@@ -6,6 +6,10 @@
     &__inner{
         margin-top: rem(120);
         margin-bottom: rem(120);
+
+        @include laptop{
+            margin: rem(80) 0;
+        }
     }
 
     &__title{

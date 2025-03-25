@@ -6,6 +6,11 @@
     &__inner{
         margin-top: rem(94);
         margin-bottom: rem(60);
+
+        @include laptop{
+            margin-top: rem(72);
+            margin-bottom: rem(80);
+        }
     }
 
     &__box{
@@ -16,12 +21,22 @@
         overflow: hidden;
         position: relative;
         min-width: rem(729);
+
+        @include laptop{
+            border-radius: rem(44);
+            padding: rem(80) rem(84) rem(85);
+            min-width: rem(601);
+        }
     }
 
     &__labels{
         margin-bottom: rem(32);
         display: flex;
         column-gap: rem(11);
+
+        @include laptop{
+            column-gap: rem(8);
+        }
     }
 
     &__label{
@@ -35,9 +50,19 @@
         background: #ffffff11;
         padding: rem(10) rem(28);
 
+        @include laptop{
+            padding: rem(9) rem(18);
+            font-size: rem(14);
+        }
+
         svg {
             width: rem(20);
             height: rem(20);
+
+            @include laptop{
+                width: rem(16);
+                height: rem(16);
+            }
         }
     }
 
@@ -48,6 +73,12 @@
         max-width: rem(841);
         line-height: 1.08;
         margin-bottom: rem(24);
+
+        @include laptop{
+            font-size: rem(64);
+            margin-bottom: rem(20);
+            max-width: rem(715);
+        }
     }
 
     &__text{
@@ -55,12 +86,24 @@
         color: #fff;
         max-width: rem(750);
         margin-bottom: rem(56);
+
+        @include laptop{
+            font-size: rem(18);
+            max-width: rem(537);
+            margin-bottom: rem(40);
+        }
     }
 
     &__btn{
         min-width: rem(439);
         height: rem(81);
         font-size: rem(26);
+
+        @include laptop{
+            min-width: rem(300);
+            height: rem(58);
+            font-size: rem(16);
+        }
     }
 
     &__image{
@@ -69,6 +112,13 @@
         height: rem(736);
         right: rem(96);
         top: rem(-3);
+
+        @include laptop{
+            width: rem(555);
+            height: rem(555);
+            right: rem(-45);
+            top: rem(0);
+        }
 
         img {
             width: 100%;

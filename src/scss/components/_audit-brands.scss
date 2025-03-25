@@ -5,6 +5,10 @@
     &__inner{
         margin-top: rem(60);
         margin-bottom: rem(120);
+
+        @include laptop{
+            margin: rem(80) 0;
+        }
     }
 
     &__box{
@@ -19,6 +23,11 @@
         font-size: rem(28);
         display: flex;
         align-items: center;
+
+        @include laptop{
+            font-size: rem(20);
+            height: rem(55);
+        }
     }
 
     &__brands{
@@ -28,8 +37,17 @@
         max-width: rem(1102);
         justify-content: flex-end;
 
+        @include laptop{
+            gap: rem(10) rem(4);
+            max-width: rem(800);
+        }
+
         .main-about__partners-el{
             background: #fff;
+
+            @include laptop{
+                height: rem(55);
+            }
         }
     }
 
