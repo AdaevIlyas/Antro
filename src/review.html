@@ -11,15 +11,21 @@
 
         <main class="main">
             @include('partials/review-inside.html')
+            @include('partials/review-companies.html')
             @include('partials/review-content.html')
             @include('partials/review-formats.html')
+            @include('partials/review-feedback.html')
+            <div class="review__bg">
+                @include('partials/review-services.html')
+                @include('partials/review-research.html')
 
+            </div>
 
         </main>
 
 
-        <!-- @include('partials/modal.html') -->
-        <!-- @include('partials/footer.html') -->
+        @include('partials/modal.html')
+        @include('partials/footer.html')
 
     </div>
 </body>
