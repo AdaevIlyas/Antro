@@ -11,8 +11,37 @@
 
 .review-title {
     font-family: var(--font-family);
+    color: var(--reviewDark);
     font-weight: 500;
     line-height: 108%;
     letter-spacing: -0.03em;
     text-transform: uppercase;
+}
+
+.review__bg {
+    display: flex;
+    flex-direction: column;
+    gap: rem(120);
+
+    margin-inline: rem(20);
+    margin-block: rem(120);
+    padding: rem(74) rem(213) rem(100);
+    border-radius: rem(60);
+    background: linear-gradient(180deg, #012525 0%, #048b8b 100%);
+
+    @include laptop {
+        gap: rem(70);
+        margin-inline: rem(16);
+        margin-block: rem(80);
+        border-radius: rem(44);
+        padding: rem(60) rem(84) rem(80);
+    }
+
+    @include mobile {
+        gap: rem(60);
+        margin-inline: 0;
+        margin-block: rem(60);
+        border-radius: rem(40);
+        padding: rem(40) rem(16);
+    }
 }

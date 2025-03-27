@@ -193,26 +193,3 @@ a {
     margin: rem(100) auto;
     border-radius: rem(60);
 }
-
-.review__bg {
-    display: flex;
-    flex-direction: column;
-    gap: rem(120);
-
-    margin-inline: rem(20);
-    padding: rem(74) rem(213) rem(100);
-    border-radius: rem(60);
-    background: linear-gradient(180deg, #012525 0%, #048b8b 100%);
-
-    @include laptop {
-        margin-inline: rem(16);
-        border-radius: rem(44);
-        padding: rem(60) rem(84) rem(80);
-    }
-
-    @include mobile {
-        margin-inline: 0;
-        border-radius: rem(40);
-        padding: rem(40) rem(16);
-    }
-}

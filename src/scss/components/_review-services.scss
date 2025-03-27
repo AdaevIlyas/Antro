@@ -4,6 +4,15 @@
         justify-content: space-between;
         align-items: start;
         margin-bottom: rem(40);
+
+        @include laptop {
+            margin-bottom: rem(24);
+        }
+
+        @include mobile {
+            flex-direction: column;
+            gap: rem(16);
+        }
     }
 
     &__title {
@@ -20,11 +29,31 @@
         flex-direction: column;
         gap: rem(17);
         width: rem(461);
+
+        @include laptop {
+            width: rem(393);
+        }
+
+        @include mobile {
+            width: auto;
+            align-items: center;
+            gap: rem(4);
+        }
     }
 
     &__company-img {
         width: rem(197);
         height: rem(53);
+
+        @include laptop {
+            width: rem(152);
+            height: rem(41);
+        }
+
+        @include mobile {
+            width: rem(97);
+            height: rem(26);
+        }
     }
 
     &__company-text {
@@ -34,15 +63,45 @@
         line-height: 110%;
         letter-spacing: -0.02em;
         color: #fff;
+
+        @include laptop {
+            font-size: rem(16);
+        }
+
+        @include mobile {
+            font-size: rem(12);
+            text-align: center;
+        }
     }
 
     .main-services__card {
         gap: rem(60);
         padding: rem(28) rem(40) rem(29) rem(60);
+
+        @include laptop {
+            gap: rem(53);
+            padding: rem(20) rem(44) rem(19);
+        }
+
+        @include mobile {
+            padding: rem(24);
+            gap: rem(0);
+        }
     }
 
     .main-services__card_big {
         padding: rem(20);
+        margin-bottom: 0;
+
+        @include laptop {
+            padding: rem(14);
+            gap: rem(29);
+        }
+
+        @include mobile {
+            padding: rem(8) rem(8) rem(86) rem(8);
+            gap: rem(20);
+        }
     }
 
     .main-services__card-content .main-services__card-left .main-services__card-title {
@@ -52,14 +111,42 @@
     .main-services__card-image {
         width: rem(412);
         height: rem(288);
+
+        @include laptop {
+            width: rem(370);
+            height: rem(235);
+            border-radius: rem(28);
+        }
+
+        @include mobile {
+            width: 100%;
+            height: rem(230);
+            border-radius: rem(24);
+        }
     }
 
     .main-services__card-left {
         width: rem(393);
+
+        @include laptop {
+            width: rem(334);
+        }
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     .main-services__card-right {
         width: rem(337);
+
+        @include laptop {
+            width: rem(297);
+        }
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     .main-services__card-text_time {
@@ -67,6 +154,10 @@
         display: flex;
         align-items: center;
         margin-bottom: rem(14);
+
+        @include mobile {
+            display: none;
+        }
     }
 
     .main-services__card-text_time span {
@@ -76,12 +167,37 @@
         background: #04afaf;
     }
 
+    .main-services__card-label {
+        background: #04afaf;
+        top: 0;
+        transform: translateX(-50%) translateY(rem(227));
+    }
+
+    .main-services__card-content {
+        @include mobile {
+            margin-top: 0;
+        }
+    }
+
     .main-services__card-icon {
         background: #b9dbdb;
+
+        @include mobile {
+            width: rem(38);
+            height: rem(38);
+        }
     }
 
     .main-services__card-title {
         width: rem(372);
+
+        @include laptop {
+            width: rem(283);
+        }
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     .main-services__card-content .main-services__card-title {

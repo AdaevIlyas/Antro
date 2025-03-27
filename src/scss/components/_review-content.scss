@@ -34,6 +34,17 @@
         }
     }
 
+    &__insides-inner {
+        @include mobile {
+            // margin-inline: rem(-16);
+            // padding-inline: rem(16);
+
+            // padding-bottom: rem(10);
+            // margin-bottom: rem(20);
+            // overflow-x: hidden;
+        }
+    }
+
     &__insides {
         max-width: rem(801);
 
@@ -52,8 +63,10 @@
         }
 
         @include mobile {
+            justify-content: flex-start;
             max-width: none;
-            gap: rem(7);
+            width: rem(409);
+            gap: rem(6);
             margin-bottom: rem(30);
         }
     }
@@ -99,6 +112,10 @@
         @include laptop {
             font-size: rem(14);
         }
+
+        @include mobile {
+            font-size: rem(12);
+        }
     }
 
     &__list {
@@ -123,7 +140,7 @@
 
     @include mobile {
         border-radius: rem(30);
-        padding: rem(24);
+        padding: rem(20);
     }
 
     &.active {
@@ -247,8 +264,8 @@
         }
 
         @include mobile {
-            height: rem(30);
-            padding: rem(8) rem(9);
+            height: rem(32);
+            padding: rem(9) rem(14);
 
             font-size: rem(12);
         }
@@ -282,9 +299,9 @@
         }
 
         @include mobile {
-            height: rem(30);
+            height: rem(32);
             gap: rem(4);
-            padding: rem(7) rem(9);
+            padding: rem(9) rem(14);
             font-size: rem(10);
         }
 
@@ -379,8 +396,8 @@
         }
 
         @include mobile {
-            top: rem(12);
-            right: rem(12);
+            top: rem(16);
+            right: rem(16);
             width: rem(40);
             height: rem(40);
         }
@@ -484,6 +501,8 @@
 
         @include mobile {
             font-size: rem(14);
+            line-height: 120%;
+            letter-spacing: -0.03em;
         }
 
         &::before {
