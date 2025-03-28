@@ -3,7 +3,7 @@ export const header = () => {
 
   if (header) {
     const mobileMenu = document.querySelector(".mobile-menu");
-    const modal = document.querySelector(".modal");
+    const modal = document.querySelector(".modal[data-modal='order']");
     const logos = document.querySelectorAll(".js-header-logo");
 
     if (window.innerWidth > 480) {

@@ -40,6 +40,13 @@ html {
         .footer__box{
             background: #fff;
         }
+        .footer__social-link{
+            background: var(--bg);
+            &::before{
+                content: '';
+                background: var(--bg);
+            }
+        }
     }
 }
 

@@ -38,3 +38,6 @@ accordion();
 
 import { reviewContent } from "./components/reviewContent";
 reviewContent();
+
+import { auditBlock } from "./components/auditBlock";
+auditBlock();

@@ -33,7 +33,7 @@
             min-width: unset;
             min-height: unset;
             border-radius: rem(44);
-            max-width: rem(530);
+            //max-width: rem(530);
             height: rem(530);
             padding: rem(36);
         }
@@ -99,7 +99,7 @@
 
     &__label{
         font-size: rem(18);
-        background: var(--green);
+        background: #3BB55D;
         border-radius: rem(100);
         height: rem(26);
         padding: 0 rem(8);
