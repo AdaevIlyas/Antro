@@ -1,6 +1,5 @@
 html {
     box-sizing: border-box;
-
 }
 
 *,
@@ -35,9 +34,9 @@ html {
     min-height: 100%;
     font-size: 16px;
 
-    &_audit{
+    &_audit {
         background: var(--bg);
-        .footer__box{
+        .footer__box {
             background: #fff;
         }
         .footer__social-link{
@@ -114,7 +113,6 @@ a {
         -webkit-appearance: none;
         margin: 0;
     }
-
 }
 
 .visually-hidden {
@@ -133,28 +131,28 @@ a {
     padding: 0 rem(100);
     width: 100%;
 
-    @include mobile{
+    @include mobile {
         padding: 0 rem(16);
     }
 
-    &_wide{
+    &_wide {
         padding: 0 rem(20);
 
-        @include laptop{
+        @include laptop {
             padding: 0 rem(16);
         }
-        @include mobile{
+        @include mobile {
             padding: 0;
         }
     }
 
-    &_text{
+    &_text {
         padding: 0 rem(180);
 
-        @include laptop{
+        @include laptop {
             padding: 0 rem(120);
         }
-        @include mobile{
+        @include mobile {
             padding: 0 rem(16);
         }
     }
@@ -182,8 +180,7 @@ a {
     position: relative;
 }
 
-
-.test{
+.test {
     width: rem(400);
     height: rem(400);
 
@@ -195,7 +192,7 @@ a {
     mask-repeat: no-repeat;
 }
 
-.test2{
+.test2 {
     width: rem(400);
     height: rem(400);
 

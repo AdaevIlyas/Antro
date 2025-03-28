@@ -65,6 +65,12 @@
             .review-card__item_included {
                 color: var(--white);
             }
+
+            @include mobile {
+                .review-card__body {
+                    padding-bottom: rem(89);
+                }
+            }
         }
     }
 }
@@ -78,12 +84,12 @@
     overflow: hidden;
 
     @include laptop {
-        padding: rem(36);
+        padding: rem(24);
         border-radius: rem(38);
     }
 
     @include mobile {
-        padding: rem(28);
+        padding: rem(20);
         border-radius: rem(30);
     }
 
@@ -311,7 +317,7 @@
         }
 
         @include mobile {
-            padding: rem(20) 0 rem(89) 0;
+            padding: rem(20) 0 0 0;
         }
     }
 
