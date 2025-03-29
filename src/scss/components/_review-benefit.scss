@@ -26,6 +26,14 @@
             max-width: rem(798);
             gap: rem(10);
         }
+
+        @include mobile {
+            justify-content: start;
+            gap: rem(6);
+            max-width: none;
+            width: rem(400);
+            margin-bottom: rem(40);
+        }
     }
 
     &__inside {
@@ -51,6 +59,19 @@
             padding: rem(16) rem(20);
             height: rem(50);
         }
+
+        @include mobile {
+            font-size: rem(14);
+            line-height: 120%;
+            letter-spacing: -0.03em;
+
+            padding: rem(8) rem(12);
+            height: rem(33);
+
+            &:nth-child(2) {
+                order: 5;
+            }
+        }
     }
 
     &__box {
@@ -59,6 +80,14 @@
         column-gap: rem(20);
         margin: 0 auto;
         margin-bottom: rem(60);
+
+        @include laptop {
+            max-width: rem(900);
+        }
+        @include mobile {
+            flex-wrap: wrap;
+            row-gap: rem(10);
+        }
     }
 
     &__col {
@@ -66,19 +95,61 @@
         display: flex;
         flex-direction: column;
         row-gap: rem(20);
+        @include mobile {
+            width: 100%;
+            row-gap: rem(10);
+
+            &:first-child {
+                .review-benefit__block:nth-child(2) {
+                    order: 1;
+                }
+            }
+
+            &:last-child {
+                .review-benefit__block:nth-child(1) {
+                    order: 1;
+                }
+
+                .review-benefit__block:nth-child(3) {
+                    order: 2;
+                }
+            }
+        }
     }
 
     &__block {
         padding: rem(46) rem(44);
         background: #fff;
         border-radius: rem(50);
+        position: relative;
+        overflow: hidden;
+
+        @include laptop {
+            padding: rem(36);
+            border-radius: rem(38);
+        }
+        @include mobile {
+            border-radius: rem(30);
+            padding: rem(24);
+        }
 
         &_pink {
             height: rem(328);
             background: #04afaf;
 
+            @include laptop {
+                height: rem(260);
+            }
+            @include mobile {
+                height: rem(146);
+            }
+
             .review-benefit__block-title {
                 color: #fff2fc;
+
+                @include mobile {
+                    text-wrap: balance;
+                }
             }
             .review-benefit__block-text {
                 color: #ffffffcc;
@@ -95,19 +166,43 @@
             align-items: center;
             flex-direction: column;
 
+            @include laptop {
+                height: rem(440);
+                padding: rem(64) rem(68);
+            }
+            @include mobile {
+                padding: rem(24) rem(24);
+                height: rem(182);
+            }
+
             .review-benefit__block-title {
                 color: #fff2fc;
                 text-align: center;
+                @include mobile {
+                    padding-inline: rem(10);
+                    font-size: rem(18);
+                }
             }
             .review-benefit__block-text {
                 color: #ffffffcc;
                 text-align: center;
+                font-size: rem(14);
+                @include mobile {
+                    margin-top: rem(8);
+                    max-width: rem(220);
+                }
             }
             .review-benefit__block-image {
                 width: rem(63);
                 height: rem(63);
                 margin-top: 0;
                 margin-bottom: rem(30);
+                @include mobile {
+                    width: rem(48);
+                    height: rem(48);
+                    position: relative;
+                    margin-bottom: rem(13);
+                }
             }
         }
     }
@@ -115,12 +210,23 @@
     &__block-title {
         color: var(--black);
         font-size: rem(24);
-        margin-bottom: rem(12);
+
+        @include laptop {
+            font-size: rem(20);
+        }
+        @include mobile {
+            font-size: rem(18);
+        }
     }
 
     &__block-text {
         color: var(--grayDark);
         font-size: rem(16);
+        margin-top: rem(12);
+        @include mobile {
+            font-size: rem(14);
+            margin-top: rem(8);
+        }
     }
 
     &__block-image {
@@ -128,6 +234,19 @@
         height: rem(234);
         margin: 0 auto;
         margin-top: rem(28);
+
+        @include laptop {
+            width: rem(212);
+            height: rem(212);
+        }
+        @include mobile {
+            position: absolute;
+            width: rem(60);
+            height: rem(60);
+            right: rem(-10);
+            top: rem(-4);
+            margin: 0;
+        }
 
         img {
             width: 100%;

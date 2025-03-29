@@ -1,95 +1,91 @@
-
-.audit-why{
-
-    &__inner{
+.audit-why {
+    &__inner {
         margin-top: rem(120);
         margin-bottom: rem(120);
 
-        @include laptop{
+        @include laptop {
             margin: rem(80) 0;
         }
-        @include mobile{
+        @include mobile {
             margin: rem(60) 0;
         }
     }
 
-    &__title{
+    &__title {
         font-size: rem(50);
         text-align: center;
 
-        @include laptop{
+        @include laptop {
             font-size: rem(38);
         }
-        @include mobile{
+        @include mobile {
             font-size: rem(24);
         }
     }
 
-    &__box{
+    &__box {
         display: flex;
         max-width: rem(1044);
         column-gap: rem(20);
         margin: 0 auto;
         margin-bottom: rem(60);
 
-        @include laptop{
+        @include laptop {
             max-width: rem(900);
-
         }
-        @include mobile{
+        @include mobile {
             flex-wrap: wrap;
             row-gap: rem(10);
         }
-
     }
 
-    &__col{
+    &__col {
         width: 50%;
         display: flex;
         flex-direction: column;
         row-gap: rem(20);
-        @include mobile{
+        @include mobile {
             width: 100%;
             row-gap: rem(10);
         }
     }
 
-    &__block{
+    &__block {
         padding: rem(46) rem(44);
         background: #fff;
         border-radius: rem(50);
         position: relative;
         overflow: hidden;
 
-        @include laptop{
+        @include laptop {
             padding: rem(36);
             border-radius: rem(38);
         }
-        @include mobile{
+        @include mobile {
             border-radius: rem(30);
             padding: rem(24);
         }
 
-        &_pink{
+        &_pink {
             height: rem(328);
             background: var(--pink);
 
-            @include laptop{
+            @include laptop {
                 height: rem(260);
             }
-            @include mobile{
+            @include mobile {
                 height: rem(146);
             }
 
-            .audit-why__block-title{
-                color: #FFF2FC;
+            .audit-why__block-title {
+                color: #fff2fc;
             }
-            .audit-why__block-text{
-                color: #FFFFFFCC;
+            .audit-why__block-text {
+                color: #ffffffcc;
             }
         }
 
-        &_black{
+        &_black {
             height: rem(512);
             background: var(--black);
             border-radius: rem(600);
@@ -99,37 +95,37 @@
             align-items: center;
             flex-direction: column;
 
-            @include laptop{
+            @include laptop {
                 height: rem(440);
                 padding: rem(64) rem(68);
             }
-            @include mobile{
+            @include mobile {
                 padding: rem(24) rem(24);
                 height: rem(182);
             }
 
-            .audit-why__block-title{
-                color: #FFF2FC;
+            .audit-why__block-title {
+                color: #fff2fc;
                 text-align: center;
-                @include mobile{
+                @include mobile {
                     font-size: rem(18);
                     margin-bottom: rem(8);
                 }
             }
-            .audit-why__block-text{
-                color: #FFFFFFCC;
+            .audit-why__block-text {
+                color: #ffffffcc;
                 text-align: center;
                 font-size: rem(14);
-                @include mobile{
+                @include mobile {
                     max-width: rem(220);
                 }
             }
-            .audit-why__block-image{
+            .audit-why__block-image {
                 width: rem(63);
                 height: rem(63);
                 margin-top: 0;
                 margin-bottom: rem(30);
-                @include mobile{
+                @include mobile {
                     width: rem(48);
                     height: rem(48);
                     position: relative;
@@ -139,39 +135,39 @@
         }
     }
 
-    &__block-title{
+    &__block-title {
         color: var(--black);
         font-size: rem(24);
         margin-bottom: rem(12);
 
-        @include laptop{
+        @include laptop {
             font-size: rem(20);
         }
-        @include mobile{
+        @include mobile {
             font-size: rem(18);
             margin-bottom: rem(8);
         }
     }
 
-    &__block-text{
+    &__block-text {
         color: var(--grayDark);
         font-size: rem(16);
-        @include mobile{
+        @include mobile {
             font-size: rem(14);
         }
     }
 
-    &__block-image{
+    &__block-image {
         width: rem(222);
         height: rem(234);
         margin: 0 auto;
         margin-top: rem(28);
 
-        @include laptop{
+        @include laptop {
             width: rem(212);
             height: rem(212);
         }
-        @include mobile{
+        @include mobile {
             position: absolute;
             width: rem(60);
             height: rem(60);
@@ -187,5 +183,4 @@
             object-fit: contain;
         }
     }
-
 }

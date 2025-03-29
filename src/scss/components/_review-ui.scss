@@ -45,3 +45,55 @@
         padding: rem(40) rem(16);
     }
 }
+
+.page-review {
+    .header__scroll {
+        height: rem(88);
+
+        @include laptop {
+            height: rem(72);
+        }
+    }
+
+    .header__scroll button {
+        max-width: rem(313);
+
+        @include laptop {
+            max-width: none;
+            width: rem(278);
+        }
+    }
+
+    .header__scroll .header__box {
+        height: rem(88);
+        width: rem(654);
+        padding-left: rem(14);
+        padding-right: rem(30);
+
+        @include laptop {
+            height: rem(72);
+            width: rem(584);
+            padding-left: rem(10);
+            padding-right: rem(36);
+        }
+    }
+
+    .header__social {
+        font-size: rem(18);
+        margin-left: rem(8);
+
+        @include laptop {
+            margin-left: 0;
+        }
+
+        img {
+            width: rem(24);
+            height: rem(24);
+
+            @include laptop {
+                width: rem(20);
+                height: rem(20);
+            }
+        }
+    }
+}
