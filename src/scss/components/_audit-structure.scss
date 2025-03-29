@@ -10,6 +10,9 @@
         @include laptop{
             margin: rem(80) 0;
         }
+        @include mobile{
+            margin: rem(60) 0;
+        }
     }
     
 
@@ -27,6 +30,10 @@
             padding-top: rem(60);
             padding-bottom: rem(80);
         }
+        @include mobile{
+            padding: rem(40) rem(16);
+            border-radius: rem(40);
+        }
     }
 
     &__title{
@@ -35,6 +42,10 @@
 
     &__timeline{
         width: 100%;
+
+        @include mobile{
+            
+        }
         
         img,svg{
             width: 100%;
@@ -53,6 +64,9 @@
             margin-top: rem(80);
 
         }
+        @include mobile{
+            margin-top: rem(40);
+        }
     }
 
     &__block{
@@ -68,6 +82,11 @@
             padding: rem(44);
             width: rem(1080);
         }
+        @include mobile{
+            width: rem(343);
+            flex-wrap: wrap;
+            padding: rem(24);
+        }
     }
 
     &__block-col{
@@ -78,6 +97,9 @@
 
         @include laptop{
             max-width: rem(432);
+        }
+        @include mobile{
+            width: 100%;
         }
 
         &:nth-of-type(2){

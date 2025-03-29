@@ -170,6 +170,9 @@
                     padding-right: rem(36);
                 }
 
+                @include mobile{
+                    display: none;
+                }
 
 
             }

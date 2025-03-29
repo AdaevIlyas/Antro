@@ -9,11 +9,19 @@
         @include laptop{
             margin: rem(80) 0;
         }
+        @include mobile{
+            margin: rem(60) 0;
+        }
     }
 
     &__box{
         display: flex;
         justify-content: space-between;
+
+        @include mobile{
+            flex-wrap: wrap;
+            row-gap: rem(20);
+        }
     }
 
     &__title{
@@ -41,12 +49,19 @@
             gap: rem(10) rem(4);
             max-width: rem(800);
         }
+        @include mobile{
+            justify-content: flex-start;
+            min-width: rem(563);
+        }
 
         .main-about__partners-el{
             background: #fff;
 
             @include laptop{
                 height: rem(55);
+            }
+            @include mobile{
+                height: rem(52);
             }
         }
     }

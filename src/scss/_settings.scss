@@ -200,3 +200,18 @@ a {
     margin: rem(100) auto;
     border-radius: rem(60);
 }
+
+
+.el-desctop{
+    display: block !important;
+    @include mobile{
+        display: none !important;
+    }
+}
+
+.el-mobile{
+    display: none !important;
+    @include mobile{
+        display: block !important;
+    }
+}
