@@ -847,6 +847,9 @@
     @include laptop{
         border-radius: rem(38);
     }
+    @include mobile{
+        border-radius: rem(30);
+    }
 
     &:last-child {
         margin-bottom: 0;
@@ -867,6 +870,10 @@
         @include laptop{
             padding: rem(24) rem(28);   
         }
+        @include mobile{
+            padding: rem(20);
+            
+        }
 
         &-title {
             font-weight: 400;
@@ -874,6 +881,9 @@
 
             @include laptop{
                 font-size: rem(20);
+            }
+            @include mobile{
+                font-size: rem(16);
             }
         }
 
@@ -888,6 +898,11 @@
             justify-content: center;
             align-items: center;
             border-radius: rem(100);
+
+            @include mobile{
+                width: rem(40);
+                height: rem(40);
+            }
 
             svg {
                 width: rem(16);
@@ -940,6 +955,10 @@
                 padding: rem(24) rem(28);
                 padding-top: 0;
             }
+            @include mobile{
+                padding: rem(20);
+                padding-top: 0;
+            }
         }
 
         &-title {
@@ -962,6 +981,10 @@
             padding: rem(20);
             border-radius: rem(20);
             background: var(--bg);
+
+            @include mobile{
+                padding: rem(16);
+            }
         }
 
         &-description {
@@ -972,6 +995,9 @@
 
             @include laptop{
                 font-size: rem(16);
+            }
+            @include mobile{
+                font-size: rem(14);
             }
         }
 
