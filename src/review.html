@@ -6,10 +6,11 @@
 <body class="page__body page__body_audit">
     <div class="site-container">
         @include('partials/header-review.html')
-        @include('partials/mobile-menu.html')
+        @include('partials/mobile-menu-review.html')
 
 
         <main class="main">
+            @include('partials/review-first.html')
             @include('partials/review-inside.html')
             @include('partials/review-benefit.html')
             @include('partials/review-content.html')
@@ -20,6 +21,7 @@
                 @include('partials/review-services.html')
                 @include('partials/review-research.html')
             </div>
+            @include('partials/review-form.html')
         </main>
 
 

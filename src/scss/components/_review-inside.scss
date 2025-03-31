@@ -16,7 +16,7 @@
         }
 
         @include mobile {
-            padding: rem(20) rem(14);
+            padding: rem(30) rem(14) rem(20) rem(14);
             margin-block: rem(60);
             border-radius: rem(40);
             max-width: none;
