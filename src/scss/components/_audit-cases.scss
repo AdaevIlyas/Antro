@@ -20,6 +20,9 @@
             font-size: rem(38);
             max-width: rem(600);
         }
+        @include mobile{
+            font-size: rem(24);
+        }
     }
 
     .main-cases__card-image{

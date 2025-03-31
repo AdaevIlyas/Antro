@@ -18,6 +18,10 @@
         @include laptop{
             justify-content: center;
         }
+        @include mobile{
+            flex-wrap: wrap;
+            row-gap: rem(10);
+        }
     }
 
     &__col{
@@ -37,6 +41,12 @@
             height: rem(530);
             padding: rem(36);
         }
+        @include mobile{
+            width: 100%;
+            height: auto;
+            border-radius: rem(30);
+            padding: rem(28);
+        }
     }
 
     &__title{
@@ -50,6 +60,10 @@
             font-size: rem(38);
             margin-bottom: rem(24);
         }
+        @include mobile{
+            font-size: rem(24);
+            margin-bottom: rem(20);
+        }
     }
 
     &__text{
@@ -61,6 +75,9 @@
         @include laptop{
             font-size: rem(16);
             padding-left: rem(33);
+        }
+        @include mobile{
+            font-size: rem(14);
         }
 
         svg {
@@ -95,6 +112,10 @@
         @include laptop{
             font-size: rem(18);
         }
+        @include mobile{
+            margin-top: rem(24);
+            font-size: rem(16);
+        }
     }
 
     &__label{
@@ -113,6 +134,9 @@
             font-size: rem(16);
             height: rem(22);
         }
+        @include mobile{
+            font-size: rem(14);
+        }
     }
 
     &__price{
@@ -128,6 +152,10 @@
             margin-bottom: rem(-15);
             margin-top: rem(12);
         }
+        @include mobile{
+            font-size: rem(50);
+            margin-bottom: 0;
+        }
     }
 
     &__form{
@@ -140,6 +168,9 @@
             max-width: unset;
             margin: 0;
             row-gap: rem(16);
+            @include mobile{
+                row-gap: rem(10);
+            }
         }
         .main-order__form-note{
             text-align: left;
@@ -148,6 +179,10 @@
             margin-top: rem(20);
             @include laptop{
                 width: 100%;
+            }
+            @include mobile{
+                margin-top: rem(16);
+                margin-bottom: rem(24);
             }
         }
         .input-block input{
@@ -160,6 +195,9 @@
             @include laptop{
                 height: rem(58);
                 font-size: rem(14);
+            }
+            @include mobile{
+                height: rem(50);
             }
 
             &::placeholder{
@@ -212,6 +250,10 @@
         .main-order__form-flex{
             display: flex;
             column-gap: rem(10);
+            @include mobile{
+                flex-direction: column;
+                row-gap: rem(10);
+            }
         }
 
         .input-block{
@@ -238,6 +280,11 @@
             @include laptop{
                 top: rem(20);
             }
+            @include mobile{
+                top: rem(18);
+                width: rem(14);
+                height: rem(14);
+            }
         }
         
 
@@ -249,6 +296,9 @@
             @include laptop{
                 height: rem(58);
                 font-size: rem(16);
+            }
+            @include mobile{
+                height: rem(50);
             }
         }
 

@@ -30,7 +30,9 @@
         gap: rem(20);
         justify-content: center;
 
-
+        @include mobile{
+            gap: rem(10);
+        }
     }
 
     &__card{
@@ -46,6 +48,10 @@
             padding: rem(36);
             border-radius: rem(38);
         }
+        @include mobile{
+            border-radius: rem(30);
+            padding: rem(24);
+        }
 
         &_big{
             width: rem(1314);
@@ -56,6 +62,14 @@
                 width: rem(1080);
                 height: rem(469);
                 padding: rem(44);
+            }
+            @include mobile{
+                margin-bottom: rem(20);
+                padding: rem(24);
+                height: auto;
+                display: flex;
+                flex-direction: column;
+
             }
 
             .audit-goods__card-title{
@@ -70,6 +84,12 @@
                     font-size: rem(24);
                     max-width: rem(432);
                 }
+                @include mobile{
+                    order: -2;
+                    margin-top: rem(24);
+                    margin-bottom: rem(6);
+                    font-size: rem(20);
+                }
             }
             .audit-goods__card-text{
                 font-size: rem(18);
@@ -79,6 +99,9 @@
                 @include laptop{
                     font-size: rem(16);
                     max-width: rem(432);
+                }
+                @include mobile{
+                    font-size: rem(14);
                 }
             }
             
@@ -98,6 +121,10 @@
                 padding-top: rem(62);
                 padding-bottom: rem(128);
             }
+            @include mobile{
+                padding: rem(28.5) rem(24);
+
+            }
 
             .audit-goods__card-title{
                 color: #fff;
@@ -115,6 +142,14 @@
 
                 @include laptop{
                     margin-bottom: rem(23);
+                }
+                @include mobile{
+                    margin-bottom: rem(13);
+                    width: rem(48);
+                    height: rem(48);
+                    position: relative;
+                    top: unset;
+                    right: unset;
                 }
             }
             
@@ -137,10 +172,33 @@
         @include laptop{
             
         }
+        @include mobile{
+            display: none;
+        }
 
         svg{
             width: rem(8);
             height: rem(8);
+        }
+    }
+
+    &__card-label-mobile{
+        display: none;
+        @include mobile{
+            display: inline-flex;
+            margin-right: auto;
+            padding: rem(8) rem(12);
+            align-items: center;
+            color: #fff;
+            background: var(--blue);
+            font-size: rem(14);
+            border-radius: rem(100);
+
+            margin-top: rem(14);
+
+            & + & {
+                margin-top: rem(4);
+            }
         }
     }
 
@@ -157,6 +215,15 @@
             top: rem(44);
             right: rem(44);
         }
+        @include mobile{
+            position: relative;
+            top: unset;
+            right: unset;
+            font-weight: 400;
+            order: -1;
+            margin-bottom: rem(12);
+            font-size: rem(18);
+        }
     }
 
     &__card-title{
@@ -169,6 +236,10 @@
             font-size: rem(20);
 
         }
+        @include mobile{
+            font-size: rem(18);
+            margin-bottom: rem(8);
+        }
     }
 
     &__card-text{
@@ -178,6 +249,9 @@
 
         @include laptop{
             
+        }
+        @include mobile{
+            font-size: rem(14);
         }
 
         & + & {
@@ -199,6 +273,14 @@
         @include laptop{
             margin-top: rem(20);
         }
+
+        @include mobile{
+            margin-bottom: 0;
+
+            .btn{
+                margin-bottom: 0;
+            }
+        }
     }
 
     &__card-report{
@@ -216,6 +298,14 @@
             right: rem(-51);
             bottom: rem(56);
             border-radius: rem(16);
+        }
+        @include mobile{
+            height: rem(175);
+            width: 100%;
+            right: unset;
+            bottom: unset;
+            position: relative;
+            order: -3;
         }
 
         img {
@@ -235,6 +325,13 @@
             width: rem(161);
             height: rem(161);
             margin-bottom: rem(32);
+        }
+        @include mobile{
+            width: rem(60);
+            height: rem(60);
+            position: absolute;
+            right: rem(-10);
+            top: rem(-4);
         }
 
         img {

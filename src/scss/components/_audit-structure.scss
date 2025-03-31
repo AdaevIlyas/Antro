@@ -86,6 +86,8 @@
             width: rem(343);
             flex-wrap: wrap;
             padding: rem(24);
+            row-gap: rem(20);
+            border-radius: rem(30);
         }
     }
 
@@ -118,9 +120,24 @@
         @include laptop{
             font-size: rem(24);
         }
+        @include mobile{
+            font-size: rem(20);
+        }
 
         &_days{
             text-align: right;
+            @include mobile{
+                display: none;
+            }
+        }
+    }
+
+    &__block-days{
+        display: none;
+        @include mobile{
+            display: block;
+            font-size: rem(18);
+            margin-top: rem(6);
         }
     }
 
@@ -133,11 +150,26 @@
         @include laptop{
             font-size: rem(16);
         }
+        @include mobile{
+            font-size: rem(14);
+            margin-top: rem(12);
+        }
 
         & + & {
             margin-top: rem(6);
         }
 
+    }
+
+    &__block-btn{
+        margin-top: rem(20);
+
+        a {
+            margin-bottom: 0;
+        }
+        .btn__circle{
+            background: #fff;
+        }
     }
 
     &__block-label{
@@ -157,6 +189,14 @@
             font-size: rem(13);
 
         }
+        @include mobile{
+            margin-top: rem(14);
+            font-size: rem(12);
+
+            &.el-mobile + &.el-mobile {
+                margin-top: rem(4);
+            }
+        }
 
         svg{
             width: rem(8);
@@ -174,6 +214,12 @@
             margin-bottom: rem(32);
 
         }
+        @include mobile{
+            flex-wrap: wrap;
+            row-gap: rem(8);
+            margin: 0;
+            width: 100%;
+        }
     }
 
     &__block-baloon{
@@ -189,6 +235,9 @@
             border-radius: rem(16);
             max-width: rem(444);
         }
+        @include mobile{
+            width: 100%;
+        }
         
         &_small{
             width: rem(233);
@@ -196,6 +245,11 @@
 
             @include laptop{
                 height: rem(106);
+            }
+            @include mobile{
+                width: 100%;
+                border-radius: rem(24);
+                height: auto;
             }
         }
     }
@@ -207,6 +261,9 @@
         @include laptop{
             font-size: rem(18);
 
+        }
+        @include mobile{
+            font-size: rem(16);
         }
     }
 
@@ -220,6 +277,12 @@
 
         @include laptop{
             font-size: rem(16);
+        }
+        @include mobile{
+            font-size: rem(14);
+            br{
+                display: none;
+            }
         }
         
         span{
@@ -252,6 +315,10 @@
         align-items: center;
         color: var(--grayDark);
         font-size: rem(16);
+
+        @include mobile{
+            font-size: rem(14);
+        }
 
         &::before{
             content: '';

@@ -38,6 +38,17 @@
         }
     }
 
+    &__scroll{
+        @include mobile{
+            width: calc(100% + rem(32));
+            overflow-x: auto;
+            margin-left: rem(-16);
+            margin-right: rem(-16);
+            padding: 0 rem(16);
+            padding-bottom: rem(5);
+        }
+    }
+
     &__brands{
         gap: rem(20) rem(6);
         display: flex;
@@ -51,7 +62,7 @@
         }
         @include mobile{
             justify-content: flex-start;
-            min-width: rem(563);
+            min-width: rem(507);
         }
 
         .main-about__partners-el{

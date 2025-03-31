@@ -46,6 +46,13 @@ html {
                 background: var(--bg);
             }
         }
+        .mobile-menu{
+            background: #3500274D;
+            backdrop-filter: blur(17.5px);
+        }
+        .mobile-menu__burger-text{
+            color: #fff;
+        }
     }
 }
 
