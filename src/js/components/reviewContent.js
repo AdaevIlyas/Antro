@@ -6,7 +6,7 @@ export const reviewContent = () => {
       const head = item.querySelector(".review-content-item__head");
       const body = item.querySelector(".review-content-item__body");
 
-      head.addEventListener("click", () => {
+      item.addEventListener("click", () => {
         item.classList.toggle("active");
       });
     });

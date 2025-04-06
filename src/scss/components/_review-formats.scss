@@ -37,6 +37,9 @@
 
         @include laptop {
             grid-auto-rows: minmax(rem(750), auto);
+
+            max-width: rem(1080);
+            margin: 0 auto;
         }
 
         @include mobile {
@@ -432,6 +435,7 @@
     }
 
     &__channel {
+        position: relative;
         margin-top: rem(30);
         display: flex;
         align-items: center;
@@ -447,9 +451,46 @@
             margin-top: rem(20);
             max-width: none;
         }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: calc(100% + rem(22));
+            height: calc(100% + rem(8));
+            left: rem(-4);
+            top: rem(-4);
+            border-radius: rem(100);
+            z-index: 0;
+            transition-duration: 0.3s;
+            background: transparent;
+
+            @include laptop {
+                top: rem(-2);
+                height: calc(100% + rem(4));
+            }
+        }
+
+        &:hover {
+            @include NOTmobile {
+                &::after {
+                    content: "";
+                    // background: #111a26;
+                }
+            }
+        }
+
+        &:active {
+            @include NOTmobile {
+                &::after {
+                    content: "";
+                    // background: #111a26;
+                }
+            }
+        }
     }
 
     &__channel-img {
+        z-index: 1;
         width: rem(48);
         height: rem(48);
         border-radius: 100%;
@@ -466,6 +507,7 @@
     }
 
     &__channel-text {
+        z-index: 1;
         font-family: var(--font-family);
         font-weight: 400;
         font-size: rem(16);

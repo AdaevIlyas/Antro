@@ -48,11 +48,19 @@
 
 .page-review {
     .header__scroll {
-        height: rem(88);
+        height: rem(80);
 
         @include laptop {
             height: rem(72);
         }
+
+        .btn__circle {
+            margin-right: rem(7);
+        }
+    }
+
+    .header__social {
+        font-size: rem(18);
     }
 
     .header__scroll button {
@@ -65,34 +73,35 @@
     }
 
     .header__scroll .header__box {
-        height: rem(88);
-        width: rem(654);
-        padding-left: rem(14);
-        padding-right: rem(30);
+        height: rem(80);
+        width: rem(596);
+        padding-left: rem(10);
+        padding-right: rem(26);
+        gap: 0;
 
         @include laptop {
             height: rem(72);
-            width: rem(584);
+            width: rem(554);
             padding-left: rem(10);
             padding-right: rem(36);
         }
     }
 
-    .header__social {
-        font-size: rem(18);
-        margin-left: rem(8);
+    .btn__circle .header__social {
+        // font-size: rem(18);
+        // margin-left: rem(8);
 
         @include laptop {
-            margin-left: 0;
+            // margin-left: 0;
         }
 
         img {
-            width: rem(24);
-            height: rem(24);
+            width: rem(22);
+            height: rem(22);
 
             @include laptop {
-                width: rem(20);
-                height: rem(20);
+                width: rem(18);
+                height: rem(18);
             }
         }
     }
