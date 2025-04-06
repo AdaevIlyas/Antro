@@ -41,3 +41,8 @@ reviewContent();
 
 import { auditBlock } from "./components/auditBlock";
 auditBlock();
+
+import { dataSwap } from "./components/dataSwap";
+try {
+  dataSwap();
+} catch (error) {}

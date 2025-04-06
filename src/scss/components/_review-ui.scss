@@ -45,3 +45,127 @@
         padding: rem(40) rem(16);
     }
 }
+
+.page-review {
+    .header__scroll {
+        height: rem(88);
+
+        @include laptop {
+            height: rem(72);
+        }
+    }
+
+    .header__scroll button {
+        max-width: rem(313);
+
+        @include laptop {
+            max-width: none;
+            width: rem(278);
+        }
+    }
+
+    .header__scroll .header__box {
+        height: rem(88);
+        width: rem(654);
+        padding-left: rem(14);
+        padding-right: rem(30);
+
+        @include laptop {
+            height: rem(72);
+            width: rem(584);
+            padding-left: rem(10);
+            padding-right: rem(36);
+        }
+    }
+
+    .header__social {
+        font-size: rem(18);
+        margin-left: rem(8);
+
+        @include laptop {
+            margin-left: 0;
+        }
+
+        img {
+            width: rem(24);
+            height: rem(24);
+
+            @include laptop {
+                width: rem(20);
+                height: rem(20);
+            }
+        }
+    }
+
+    .mobile-menu {
+        .btn {
+            max-width: rem(162);
+        }
+    }
+
+    .mobile-menu__burger-icon {
+        flex: 0 0 auto;
+        background: none;
+
+        img,
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .mobile-menu__burger-text {
+        text-align: left;
+        padding-right: rem(13);
+    }
+}
+
+.header-review__btn-description {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: rem(8);
+
+    border-radius: rem(42);
+    padding: rem(6) rem(10);
+
+    background: #04afaf;
+
+    @include laptop {
+        width: max-content;
+
+        gap: rem(6);
+
+        top: calc(100% + rem(2));
+        left: 50%;
+        right: auto;
+
+        transform: translateX(-50%);
+    }
+
+    span {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: rem(13);
+        line-height: normal;
+        letter-spacing: -0.03em;
+        color: #fff;
+
+        @include laptop {
+            font-size: rem(10);
+        }
+    }
+
+    span:nth-child(1) {
+        font-weight: 600;
+    }
+
+    span:nth-child(2) {
+        font-weight: 400;
+    }
+}

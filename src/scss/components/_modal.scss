@@ -1,7 +1,4 @@
-
-
-.modal{
-
+.modal {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -11,37 +8,62 @@
     background: #00000099;
     display: none;
 
-    &_video{
+    &_video {
         background: #000000dd;
         justify-content: center;
         align-items: center;
     }
 
-    &_open{
+    &_review {
+        overflow-y: auto;
+        overflow-x: hidden;
+        background: #000000dd;
+        justify-content: center;
+    }
+
+    &__review-wrapper {
+        position: relative;
+        padding-block: rem(70) rem(20);
+        margin-block: auto;
+
+        @include mobile {
+            padding-top: rem(60);
+        }
+
+        .review-form__box {
+            position: relative;
+        }
+    }
+
+    &_open {
         display: block;
 
-        &.modal_video{
+        &.modal_video {
+            display: flex;
+        }
+
+        &.modal_review {
             display: flex;
         }
     }
 
-    &_scroll{
-        .modal__inner{
+    &_scroll {
+        .modal__inner {
             margin-right: rem(364);
-            @include laptop{
+            @include laptop {
                 margin-right: rem(185);
             }
-            @include mobile{
+            @include mobile {
                 margin-right: unset;
             }
         }
     }
 
-    &__close{
+    &__close {
         position: absolute;
         top: rem(17);
         right: rem(18);
-        background: #3500274D;
+        background: #3500274d;
         width: rem(48);
         height: rem(48);
         border-radius: rem(100);
@@ -51,60 +73,59 @@
         align-items: center;
         transition-duration: 0.3s;
 
-        img{
+        img {
             width: rem(20);
             height: rem(20);
             transition-duration: 0.3s;
         }
 
-        @include laptop{
+        @include laptop {
             width: rem(38);
             height: rem(38);
             top: rem(12);
             right: rem(20);
         }
-        @include mobile{
+        @include mobile {
             width: rem(40);
             height: rem(40);
             top: rem(16);
             right: rem(16);
         }
 
-        &:hover{
-            @include NOTmobile{
+        &:hover {
+            @include NOTmobile {
                 transform: scale(1.2);
                 background: #35002733;
-                img{
+                img {
                     transform: scale(0.909);
                 }
             }
         }
 
-        &:active{
-            @include NOTmobile{
+        &:active {
+            @include NOTmobile {
                 transform: scale(1.1);
-                background: #3500274D;
-                img{
+                background: #3500274d;
+                img {
                     transform: scale(0.909);
                 }
             }
         }
-
     }
 
-    &__frame{
+    &__frame {
         display: flex;
         flex-direction: column;
         align-items: center;
-        @include mobile{
+        @include mobile {
             height: rem(540);
             overflow: auto;
-            
+
             padding-bottom: rem(30);
         }
     }
 
-    &__inner{
+    &__inner {
         transition-duration: 0.3s;
         position: relative;
         margin-bottom: rem(12);
@@ -119,13 +140,13 @@
         margin-top: rem(6);
         margin-right: rem(66);
         margin-left: auto;
-        @include laptop{
+        @include laptop {
             padding: rem(44);
             padding-top: rem(60);
             border-radius: rem(38);
             max-width: rem(533);
         }
-        @include mobile{
+        @include mobile {
             padding: 0 rem(0);
             padding-top: rem(76);
             padding-bottom: rem(0);
@@ -136,7 +157,7 @@
             border-radius: rem(24) rem(24) 0 0;
         }
 
-        &_video{
+        &_video {
             background: #000;
             border-radius: 0;
             margin: 0 !important;
@@ -146,32 +167,32 @@
             max-width: unset;
             padding: 0;
 
-            .modal__close{
+            .modal__close {
                 top: rem(-70);
                 right: 0;
                 background: #fff;
 
-                @include mobile{
+                @include mobile {
                     right: rem(16);
                     top: rem(-50);
                 }
 
-                img{
+                img {
                     filter: invert(1);
                 }
             }
 
-            @include mobile{
+            @include mobile {
                 width: 100%;
                 height: rem(500);
             }
 
-            video{
+            video {
                 width: 100%;
                 max-height: rem(700);
                 display: block;
 
-                @include mobile{
+                @include mobile {
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -184,32 +205,64 @@
                 }
             }
         }
+
+        &_review {
+            background: transparent;
+            border-radius: 0;
+            margin: 0 !important;
+            width: rem(1580);
+            position: relative;
+            max-width: unset;
+            padding: 0;
+
+            @include laptop {
+                width: rem(1240);
+            }
+
+            @include mobile {
+                width: rem(343);
+            }
+
+            .modal__close {
+                top: rem(18);
+                right: rem(-58);
+                background: rgba(255, 255, 255, 0.3);
+
+                @include mobile {
+                    right: rem(0);
+                    top: rem(10);
+                }
+
+                img {
+                }
+            }
+        }
     }
 
-    &__scroll{
-        @include mobile{
+    &__scroll {
+        @include mobile {
             padding: 0 rem(40);
             max-height: rem(530);
             overflow-y: auto;
         }
     }
 
-    &__form-title{
+    &__form-title {
         max-width: rem(483);
         text-align: center;
         font-size: rem(24);
         color: var(--black);
-        @include laptop{
+        @include laptop {
             font-size: rem(20);
             max-width: rem(409);
         }
-        @include mobile{
+        @include mobile {
             font-size: rem(18);
             max-width: rem(320);
         }
     }
 
-    &__form-fields{
+    &__form-fields {
         max-width: rem(307);
         width: 100%;
         margin-top: rem(28);
@@ -218,21 +271,21 @@
         flex-direction: column;
         row-gap: rem(10);
 
-        @include laptop{
+        @include laptop {
             margin-top: rem(20);
             margin-bottom: rem(30);
             row-gap: rem(8);
             max-width: rem(270);
         }
-        @include mobile{
+        @include mobile {
             margin-top: rem(24);
             margin-bottom: rem(14);
             row-gap: rem(6);
         }
 
-        button{
+        button {
             margin-top: rem(6);
-            @include mobile{
+            @include mobile {
                 width: rem(296);
                 max-width: unset;
                 height: rem(50);
@@ -240,54 +293,53 @@
             }
         }
 
-        .input-block{
-            @include mobile{
+        .input-block {
+            @include mobile {
                 max-width: rem(260);
             }
-            &:has( > input[type=text] ) {
+            &:has(> input[type="text"]) {
                 max-width: rem(260);
-                @include laptop{
+                @include laptop {
                     max-width: rem(240);
                 }
-                @include mobile{
+                @include mobile {
                     max-width: rem(260);
                 }
             }
-            &:has( > input[type=tel] ) {
+            &:has(> input[type="tel"]) {
                 max-width: rem(230);
-                @include laptop{
+                @include laptop {
                     max-width: rem(210);
                 }
-                @include mobile{
+                @include mobile {
                     max-width: rem(260);
                 }
             }
         }
-
     }
 
-    &__form-note{
+    &__form-note {
         max-width: rem(555);
         text-align: center;
-        color: #B0AEB8;
+        color: #b0aeb8;
         font-size: rem(16);
 
-        @include laptop{
+        @include laptop {
             font-size: rem(14);
             max-width: rem(493);
         }
-        @include mobile{
+        @include mobile {
             font-size: rem(12);
             max-width: rem(360);
         }
 
-        a{
-            color: #B0AEB8;
+        a {
+            color: #b0aeb8;
             text-decoration: underline;
         }
     }
 
-    &__social{
+    &__social {
         z-index: 1;
         width: 100%;
         column-gap: rem(10);
@@ -296,15 +348,15 @@
         justify-content: center;
         margin-top: rem(38);
 
-        @include laptop{
+        @include laptop {
             margin-top: rem(30);
         }
-        @include mobile{
+        @include mobile {
             margin-top: rem(24);
         }
     }
 
-    &__social-link{
+    &__social-link {
         background: var(--bg);
         width: rem(48);
         height: rem(48);
@@ -320,16 +372,16 @@
             height: rem(22);
         }
 
-        @include laptop{
+        @include laptop {
             width: rem(42);
             height: rem(42);
-            
+
             img {
                 width: rem(18);
                 height: rem(18);
             }
         }
-        @include mobile{
+        @include mobile {
             width: rem(48);
             height: rem(48);
 
@@ -339,5 +391,4 @@
             }
         }
     }
-
 }
