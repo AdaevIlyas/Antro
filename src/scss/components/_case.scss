@@ -596,7 +596,7 @@
                 line-height: 1.5;
                 position: relative;
 
-                @include tablet{
+                @include laptop{
                     font-size: rem(16);
                 }
             }
