@@ -36,6 +36,9 @@
             font-size: rem(20);
             height: rem(55);
         }
+        @include mobile{
+            height: auto;
+        }
     }
 
     &__scroll{

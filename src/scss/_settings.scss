@@ -53,6 +53,11 @@ html {
         .mobile-menu__burger-text{
             color: #fff;
         }
+        .mobile-menu__burger_open{
+            .mobile-menu__burger-text{
+                color: #0A0620;
+            }
+        }
     }
 }
 

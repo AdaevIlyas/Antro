@@ -166,10 +166,15 @@
 
         a {
             margin-bottom: 0;
+            @include mobile{
+                max-width: rem(270);
+            }
         }
         .btn__circle{
             background: #fff;
         }
+
+        
     }
 
     &__block-label{
