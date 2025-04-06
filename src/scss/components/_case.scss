@@ -27,14 +27,15 @@
     }
 
     &__inner{
-        margin-top: rem(124);
+        margin-top: rem(114);
+        padding-top: rem(10);
 
         @include laptop{
-            margin-top: rem(92);
+            margin-top: rem(82);
         }
 
         @include mobile{
-            margin-top: rem(86);
+            margin-top: rem(76);
         }
     }
 
@@ -594,6 +595,10 @@
                 font-size: rem(18);
                 line-height: 1.5;
                 position: relative;
+
+                @include tablet{
+                    font-size: rem(16);
+                }
             }
         }
 
@@ -604,7 +609,7 @@
     
 
     &__feedback{
-        margin-bottom: rem(120);
+
         width: rem(1192);
         height: rem(578);
         padding: rem(60);
@@ -617,14 +622,14 @@
             height: rem(483);
             padding: rem(44);
             border-radius: rem(38);
-            margin-bottom: rem(80);
+
         }
         @include mobile{
             padding: rem(24);
             width: 100%;
             height: auto;
             border-radius: rem(30);
-            margin-bottom: rem(60);
+        
         }
 
         .main-cases__swiper-title{
@@ -668,9 +673,15 @@
 
     &__more{
         margin-bottom: rem(120);
+        margin-top: rem(120);
+
+        @include laptop{
+            margin-top: rem(80);
+        }
 
         @include mobile{
             margin-bottom: rem(60);
+            margin-top: rem(60);
         }
 
         &_top{
