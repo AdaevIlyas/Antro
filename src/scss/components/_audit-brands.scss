@@ -44,6 +44,7 @@
     &__scroll{
         @include mobile{
             width: calc(100% + rem(32));
+            overflow-y: hidden;
             overflow-x: auto;
             margin-left: rem(-16);
             margin-right: rem(-16);

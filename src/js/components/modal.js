@@ -94,7 +94,7 @@ export const modal = () => {
 
 
 
-    if ( forms.length ) {
+    /* if ( forms.length ) {
         
         for (let form of forms ) {
             
@@ -106,7 +106,7 @@ export const modal = () => {
 
         }
 
-    }
+    } */
 
     
 

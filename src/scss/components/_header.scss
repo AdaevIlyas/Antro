@@ -157,6 +157,10 @@
             top: calc(100vh - rem(120));
             transform: translateY(rem(200));
 
+            @include mobile{
+                display: none;
+            }
+
             .header__box{
                 height: rem(80);
                 width: rem(497);

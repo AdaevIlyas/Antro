@@ -149,7 +149,7 @@
     &__cover{
         width: 100%;
         height: rem(800);
-        margin-top: rem(-500);
+        //margin-top: rem(-500);
         position: relative;
 
         mask-image: url(../img/mask/p-case-cover-xl.svg);
@@ -223,10 +223,11 @@
         width: rem(245);
         //height: rem(500);
         position: sticky;
-        top: rem(0);
+        top: rem(50);
         padding-top: rem(60);
         margin-left: auto;
         margin-right: rem(102);
+        margin-bottom: rem(-500);
         //transform: translateY(100%);
         z-index: 10;
         transform: translateZ(0);
@@ -242,8 +243,10 @@
             position: fixed;
             top: 100vh;
             transform: translateY(0);
+            margin-bottom: 0;
             height: auto;
             left: 0;
+            top: 0;
             width: 100%;
             background: #fff;
             padding-bottom: rem(62);
@@ -721,11 +724,33 @@
     &__swiper{
         width: calc(100% - rem(100));
         margin-left: unset;
+        overflow: visible;
+
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 120%;
+            left: calc(100% + rem(30));
+            top: -10%;
+            background: #fff;
+            display: block;
+            z-index: 9;
+
+            @include mobile{
+                display: none;
+            }
+        }
 
         @include mobile{
             width: calc(100% + rem(32));
             margin-left: rem(-16);
             padding: 0 rem(16);
+        }
+
+        .swiper-slide-prev{
+            transition: all 0.3s;
+            opacity: 0;
         }
 
         .main-cases__card-image{
@@ -769,6 +794,7 @@
 
         & + .main-cases__swiper-controls{
             height: rem(660);
+            z-index: 10;
 
             @include laptop{
                 height: rem(430);

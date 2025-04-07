@@ -44,7 +44,7 @@ export const mask = () => {
                 });
             }
 
-            for (let el of selector ) {
+            /* for (let el of selector ) {
                 el.oninput = function() {
                     if ( el.value.replace(/[()+_ -]/g,'').length < 11 ) {
                         el.setCustomValidity(" ");
@@ -52,7 +52,7 @@ export const mask = () => {
                         el.setCustomValidity("");
                     }
                 }
-            }
+            } */
 
         }
     })
