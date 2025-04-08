@@ -3,7 +3,7 @@ export const header = () => {
 
   if (header) {
     const mobileMenu = document.querySelector(".mobile-menu");
-    const modal = document.querySelector(".modal[data-modal='order']");
+    const modals = document.querySelectorAll(".modal[data-scroll]");
     const logos = document.querySelectorAll(".js-header-logo");
 
     if (window.innerWidth > 480) {
@@ -23,10 +23,14 @@ export const header = () => {
     function header_scroll() {
       if (window.pageYOffset > 0 && header) {
         header.classList.add("header_scroll");
-        modal.classList.add("modal_scroll");
+        for (let modal of modals ) {
+          modal.classList.add("modal_scroll");
+        }
       } else {
         header.classList.remove("header_scroll");
-        modal.classList.remove("modal_scroll");
+        for (let modal of modals ) {
+          modal.classList.remove("modal_scroll");
+        }
       }
     }
 

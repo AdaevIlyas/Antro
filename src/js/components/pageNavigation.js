@@ -7,6 +7,11 @@ export const pageNavigation = () => {
     const navOpen = document.querySelector('.js-page-navigation-open');
 
 
+    if ( nav ) {
+        let height = nav.offsetHeight;
+        nav.style.marginBottom = (-1 * height) + 'px';
+    }
+
     if ( navClose && nav ) {
         navClose.addEventListener('click',function(){
             nav.classList.remove("article__navigation_open");
