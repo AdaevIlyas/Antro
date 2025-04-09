@@ -382,6 +382,7 @@
     }
 
     &__channel {
+        position: relative;
         margin-top: rem(24);
         display: flex;
         align-items: center;
@@ -390,6 +391,7 @@
 
         &-disabled {
             opacity: 0.15;
+            pointer-events: none;
         }
 
         @include laptop {
@@ -401,9 +403,50 @@
             margin-top: rem(20);
             max-width: none;
         }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: calc(100% + rem(22));
+            height: calc(100% + rem(8));
+            left: rem(-4);
+            top: rem(-4);
+            border-radius: rem(100);
+            z-index: 0;
+            transition-duration: 0.3s;
+            background: transparent;
+
+            @include laptop {
+                top: rem(-2);
+                height: calc(100% + rem(4));
+            }
+        }
+
+        &:hover {
+            @include NOTmobile {
+                .review-form__channel-text {
+                    color: var(--black);
+                }
+
+                &::after {
+                    content: "";
+                    background: var(--bg);
+                }
+            }
+        }
+
+        &:active {
+            @include NOTmobile {
+                &::after {
+                    content: "";
+                    background: var(--bg);
+                }
+            }
+        }
     }
 
     &__channel-img {
+        z-index: 1;
         width: rem(48);
         height: rem(48);
         border-radius: 100%;
@@ -420,12 +463,14 @@
     }
 
     &__channel-text {
+        z-index: 1;
         font-family: var(--font-family);
         font-weight: 400;
         font-size: rem(16);
         line-height: 120%;
         letter-spacing: -0.03em;
         color: var(--white);
+        transition: color 0.3s ease;
 
         @include laptop {
             font-size: rem(14);
@@ -448,6 +493,14 @@
         line-height: normal;
         letter-spacing: -0.03em;
         color: var(--white);
+
+        transition-duration: 0.3s;
+
+        @include NOTmobile {
+            &:hover {
+                opacity: 0.8;
+            }
+        }
 
         @include laptop {
             margin-top: rem(20);

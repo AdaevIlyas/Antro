@@ -1,4 +1,14 @@
 .review-services {
+    @include laptop {
+        margin: 0 auto;
+        max-width: rem(1080);
+        width: 100%;
+    }
+
+    @include mobile {
+        max-width: none;
+    }
+
     &__head {
         display: flex;
         justify-content: space-between;
@@ -77,6 +87,7 @@
     .main-services__card {
         gap: rem(60);
         padding: rem(28) rem(40) rem(29) rem(60);
+        background: var(--white);
 
         @include laptop {
             gap: rem(53);
@@ -86,6 +97,16 @@
         @include mobile {
             padding: rem(24);
             gap: rem(0);
+        }
+    }
+
+    .main-services__card-btn {
+        .btn__circle {
+            img {
+                flex: 0 0 auto;
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 
