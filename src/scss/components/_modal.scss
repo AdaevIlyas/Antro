@@ -52,7 +52,7 @@
         .modal__inner {
             margin-right: rem(364);
             @include laptop {
-                margin-right: rem(185);
+                margin-right: rem(265);
             }
             @include mobile {
                 margin-right: unset;
@@ -146,6 +146,7 @@
             padding-top: rem(60);
             border-radius: rem(38);
             max-width: rem(533);
+            margin-right: rem(90);
         }
         @include mobile {
             padding: 0 rem(0);

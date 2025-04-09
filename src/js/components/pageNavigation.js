@@ -53,6 +53,10 @@ export const pageNavigation = () => {
                     
                     let id = "#" + link.href.split("#")[1];
                     let cmsOffset = document.querySelector(".content-cms").offsetTop;
+
+                    if ( document.querySelector('.js-article') ) {
+                        window.getComputedStyle(document.querySelector(".article .content-cms_margin")).marginTop.replace("px", '');
+                    }
     
                     console.log('', id);
     
