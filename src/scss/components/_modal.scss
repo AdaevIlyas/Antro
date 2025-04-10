@@ -28,11 +28,62 @@
         width: 100%;
 
         @include mobile {
-            padding-top: rem(60);
+            height: 100%;
+            margin-block: auto 0;
+            padding-block: rem(20) 0;
         }
 
         .review-form__box {
             position: relative;
+            @include mobile {
+                height: 100%;
+                .review-form__col:first-child,
+                .audit-form__col:first-child {
+                    display: none;
+                }
+            }
+        }
+
+        @include mobile {
+            .review-form__col,
+            .audit-form__col {
+                padding-top: rem(56);
+                padding-inline: rem(44);
+                border-radius: rem(24) rem(24) 0 0;
+            }
+
+            .audit-form__col {
+                .modal-mobile__review-discount {
+                    background: #3bb55d;
+                }
+            }
+
+            .review-form__form,
+            .audit-form__form {
+                justify-content: start;
+                height: max-content;
+                flex: 0 0 auto;
+            }
+            .main-order__form-note {
+                max-width: rem(310);
+                color: #4c5f5f;
+
+                a {
+                    color: #4c5f5f;
+                }
+            }
+
+            .audit-form__form .main-order__form-note {
+                color: #b0aeb8;
+
+                a {
+                    color: #b0aeb8;
+                }
+            }
+
+            .review-form__box-free .review-form__form {
+                gap: rem(24);
+            }
         }
     }
 
@@ -222,7 +273,7 @@
             }
 
             @include mobile {
-                width: rem(343);
+                width: 100%;
             }
 
             .modal__close {
@@ -231,8 +282,9 @@
                 background: rgba(255, 255, 255, 0.3);
 
                 @include mobile {
-                    right: rem(0);
-                    top: rem(10);
+                    z-index: 10;
+                    right: rem(16);
+                    top: rem(36);
                 }
 
                 img {
@@ -392,5 +444,70 @@
                 height: rem(22);
             }
         }
+    }
+}
+
+.modal-mobile {
+    &__review-head {
+        margin-bottom: rem(38);
+
+        @media (min-width: 481px) {
+            display: none;
+        }
+    }
+
+    &__review-title {
+        font-weight: 500;
+        font-size: rem(20);
+        line-height: 116%;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        color: var(--white);
+        margin-bottom: rem(12);
+    }
+
+    &__review-data {
+        display: flex;
+        align-items: center;
+        gap: rem(8);
+        margin-bottom: rem(4);
+    }
+
+    &__review-price {
+        font-weight: 500;
+        font-size: rem(24);
+        line-height: 108%;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        color: var(--white);
+    }
+
+    &__review-discount {
+        font-weight: 400;
+        font-size: rem(13);
+        line-height: 120%;
+        letter-spacing: -0.03em;
+        color: var(--white);
+
+        border-radius: rem(160);
+        padding: rem(2) rem(8);
+        background: #04afaf;
+    }
+
+    &__review-old-price {
+        font-weight: 400;
+        font-size: rem(16);
+        line-height: 108%;
+        letter-spacing: -0.03em;
+        text-decoration: line-through;
+        color: #4c5f5f;
+    }
+
+    &__review-description {
+        font-weight: 400;
+        font-size: rem(14);
+        line-height: 120%;
+        letter-spacing: -0.03em;
+        color: var(--white);
     }
 }

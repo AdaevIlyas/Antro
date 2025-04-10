@@ -60,7 +60,16 @@
     }
 
     .header__social {
-        font-size: rem(18);
+        @include laptop {
+            gap: rem(8);
+        }
+
+        img {
+            @include laptop {
+                width: rem(18);
+                height: rem(18);
+            }
+        }
     }
 
     .header__scroll button {

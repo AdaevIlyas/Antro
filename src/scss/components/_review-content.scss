@@ -92,6 +92,7 @@
     }
 
     &__inside-img {
+        flex: 0 0 auto;
         width: rem(20);
         height: rem(20);
 
@@ -280,14 +281,6 @@
         border-radius: rem(160);
         padding: rem(8) rem(20);
 
-        font-family: var(--font-family);
-        font-weight: 600;
-        font-size: rem(14);
-        line-height: normal;
-        letter-spacing: 0.02em;
-        text-transform: uppercase;
-        color: var(--black);
-
         background: var(--white);
 
         backdrop-filter: blur(rem(50));
@@ -303,6 +296,27 @@
             gap: rem(4);
             padding: rem(9) rem(14);
             font-size: rem(10);
+        }
+
+        span {
+            font-family: var(--font-family);
+            font-weight: 600;
+            font-size: rem(14);
+            line-height: normal;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: var(--black);
+            margin-bottom: rem(-2);
+
+            @include laptop {
+                font-size: rem(12);
+                margin-bottom: rem(-1);
+            }
+
+            @include mobile {
+                font-size: rem(10);
+                margin-bottom: 0;
+            }
         }
 
         &-logo {
