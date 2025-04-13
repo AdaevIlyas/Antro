@@ -1,41 +1,35 @@
-
-
-
-.audit-goods{
-
-
-    &__inner{
+.audit-goods {
+    &__inner {
         margin-top: rem(120);
         margin-bottom: rem(120);
 
-        @include laptop{
+        @include laptop {
             margin: rem(80) 0;
         }
     }
 
-    &__title{
+    &__title {
         max-width: rem(1053);
         margin-left: auto;
         margin-right: auto;
 
-        @include laptop{
-            
+        @include laptop {
             max-width: rem(900);
         }
     }
 
-    &__box{
+    &__box {
         display: flex;
         flex-wrap: wrap;
         gap: rem(20);
         justify-content: center;
 
-        @include mobile{
+        @include mobile {
             gap: rem(10);
         }
     }
 
-    &__card{
+    &__card {
         width: rem(425);
         padding: rem(46) rem(44);
         background: #fff;
@@ -43,71 +37,69 @@
         position: relative;
         overflow: hidden;
 
-        @include laptop{
+        @include laptop {
             width: rem(347);
             padding: rem(36);
             border-radius: rem(38);
         }
-        @include mobile{
+        @include mobile {
             border-radius: rem(30);
             padding: rem(24);
         }
 
-        &_big{
+        &_big {
             width: rem(1314);
             height: rem(606);
             padding: rem(50);
 
-            @include laptop{
+            @include laptop {
                 width: rem(1080);
                 height: rem(469);
                 padding: rem(44);
             }
-            @include mobile{
+            @include mobile {
                 margin-bottom: rem(20);
                 padding: rem(24);
                 height: auto;
                 display: flex;
                 flex-direction: column;
-
             }
 
-            .audit-goods__card-title{
+            .audit-goods__card-title {
                 margin-bottom: rem(16);
                 margin-top: rem(101);
                 font-size: rem(34);
                 font-weight: 500;
 
-                @include laptop{
+                @include laptop {
                     margin-bottom: rem(12);
                     margin-top: rem(32);
                     font-size: rem(24);
                     max-width: rem(432);
                 }
-                @include mobile{
+                @include mobile {
                     order: -2;
                     margin-top: rem(24);
                     margin-bottom: rem(6);
                     font-size: rem(20);
                 }
             }
-            .audit-goods__card-text{
+            .audit-goods__card-text {
                 font-size: rem(18);
                 line-height: 1.5;
                 color: var(--black);
 
-                @include laptop{
+                @include laptop {
                     font-size: rem(16);
                     max-width: rem(432);
                 }
-                @include mobile{
+                @include mobile {
                     font-size: rem(14);
                 }
             }
-            
         }
 
-        &_black{
+        &_black {
             background: var(--black);
             border-radius: rem(500);
             display: flex;
@@ -117,33 +109,32 @@
             padding-top: rem(92);
             padding-bottom: rem(162);
 
-            @include laptop{
+            @include laptop {
                 padding-top: rem(62);
                 padding-bottom: rem(128);
             }
-            @include mobile{
+            @include mobile {
                 padding: rem(28.5) rem(24);
-
             }
 
-            .audit-goods__card-title{
+            .audit-goods__card-title {
                 color: #fff;
                 text-align: center;
             }
-            .audit-goods__card-text{
+            .audit-goods__card-text {
                 color: #fff;
                 opacity: 0.8;
                 text-align: center;
             }
-            .audit-goods__card-image{
+            .audit-goods__card-image {
                 width: rem(60);
                 height: rem(63);
                 margin-bottom: rem(30);
 
-                @include laptop{
+                @include laptop {
                     margin-bottom: rem(23);
                 }
-                @include mobile{
+                @include mobile {
                     margin-bottom: rem(13);
                     width: rem(48);
                     height: rem(48);
@@ -152,12 +143,10 @@
                     right: unset;
                 }
             }
-            
         }
-
     }
 
-    &__card-label{
+    &__card-label {
         display: inline-flex;
         margin-right: auto;
         padding: rem(8) rem(20);
@@ -169,22 +158,21 @@
         font-size: rem(14);
         border-radius: rem(100);
 
-        @include laptop{
-            
+        @include laptop {
         }
-        @include mobile{
+        @include mobile {
             display: none;
         }
 
-        svg{
+        svg {
             width: rem(8);
             height: rem(8);
         }
     }
 
-    &__card-label-mobile{
+    &__card-label-mobile {
         display: none;
-        @include mobile{
+        @include mobile {
             display: inline-flex;
             margin-right: auto;
             padding: rem(8) rem(12);
@@ -202,7 +190,7 @@
         }
     }
 
-    &__card-days{
+    &__card-days {
         color: var(--black);
         font-size: rem(34);
         position: absolute;
@@ -210,12 +198,12 @@
         top: rem(50);
         right: rem(50);
 
-        @include laptop{
+        @include laptop {
             font-size: rem(24);
             top: rem(44);
             right: rem(44);
         }
-        @include mobile{
+        @include mobile {
             position: relative;
             top: unset;
             right: unset;
@@ -226,64 +214,63 @@
         }
     }
 
-    &__card-title{
+    &__card-title {
         max-width: rem(597);
         font-size: rem(24);
         font-weight: 400;
         margin-bottom: rem(12);
 
-        @include laptop{
+        @include laptop {
             font-size: rem(20);
-
         }
-        @include mobile{
+        @include mobile {
             font-size: rem(18);
             margin-bottom: rem(8);
         }
     }
 
-    &__card-text{
+    &__card-text {
         max-width: rem(597);
         font-size: rem(16);
         color: var(--grayDark);
 
-        @include laptop{
-            
+        @include laptop {
         }
-        @include mobile{
+        @include mobile {
             font-size: rem(14);
         }
 
         & + & {
             margin-top: rem(12);
 
-            @include laptop{
+            @include laptop {
                 margin-top: rem(10);
             }
         }
 
-        span{
+        span {
             font-weight: 500;
         }
     }
 
-    &__card-btn{
+    &__card-btn {
         margin-top: rem(24);
+        max-width: max-content;
 
-        @include laptop{
+        @include laptop {
             margin-top: rem(20);
         }
 
-        @include mobile{
+        @include mobile {
             margin-bottom: 0;
 
-            .btn{
+            .btn {
                 margin-bottom: 0;
             }
         }
     }
 
-    &__card-report{
+    &__card-report {
         position: absolute;
         width: rem(730);
         height: rem(433);
@@ -292,14 +279,14 @@
         border-radius: rem(44);
         overflow: hidden;
 
-        @include laptop{
+        @include laptop {
             width: rem(507);
             height: rem(300);
             right: rem(-51);
             bottom: rem(56);
             border-radius: rem(16);
         }
-        @include mobile{
+        @include mobile {
             height: rem(175);
             width: 100%;
             right: unset;
@@ -315,18 +302,18 @@
         }
     }
 
-    &__card-image{
+    &__card-image {
         width: rem(194);
         height: rem(198);
         margin: 0 auto;
         margin-bottom: rem(57);
 
-        @include laptop{
+        @include laptop {
             width: rem(161);
             height: rem(161);
             margin-bottom: rem(32);
         }
-        @include mobile{
+        @include mobile {
             width: rem(60);
             height: rem(60);
             position: absolute;
@@ -340,6 +327,4 @@
             display: block;
         }
     }
-
-
 }

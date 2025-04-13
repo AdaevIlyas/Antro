@@ -60,7 +60,9 @@
     }
 
     .header__social {
+        margin-left: rem(26);
         @include laptop {
+            margin-left: auto;
             gap: rem(8);
         }
 
