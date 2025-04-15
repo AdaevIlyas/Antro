@@ -9,6 +9,20 @@
 
 
         <main class="main">
+            @include('partials/report-first.html')
+            <div class="report-track">
+                <div class="container">
+                    <div class="report-track__wrapper">
+                        @include('partials/report-way.html')
+                        <div class="report-track__body">
+                            <div class="js-way-start">
+                            </div>
+                            <div class=" js-way-finish">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             @include('partials/report-media.html')
             @include('partials/report-community.html')
             <div class="review__bg">

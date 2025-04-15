@@ -11,3 +11,16 @@
     background: var(--bg);
   }
 }
+
+.report-track {
+  &__wrapper {
+    display: flex;
+    align-items: start;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: rem(60);
+  }
+}

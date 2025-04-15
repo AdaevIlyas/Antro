@@ -46,3 +46,8 @@ import { dataSwap } from "./components/dataSwap";
 try {
   dataSwap();
 } catch (error) {}
+
+import { reportWay } from "./components/reportWay";
+try {
+  reportWay();
+} catch (error) {}
