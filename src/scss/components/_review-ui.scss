@@ -57,10 +57,17 @@
         .btn__circle {
             margin-right: rem(7);
         }
+
+        .header__social {
+            margin-left: rem(26);
+
+            @include laptop {
+                margin-left: auto;
+            }
+        }
     }
 
     .header__social {
-        margin-left: rem(26);
         @include laptop {
             margin-left: auto;
             gap: rem(8);
