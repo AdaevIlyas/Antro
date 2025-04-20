@@ -13,14 +13,25 @@
 }
 
 .report-track {
+  margin-block: rem(120);
+  @include laptop {
+    margin-block: rem(80);
+  }
+
+  @include mobile {
+    margin-block: rem(60);
+  }
+
   &__wrapper {
     display: flex;
     align-items: start;
+    gap: rem(20);
   }
 
   &__body {
     display: flex;
     flex-direction: column;
     gap: rem(60);
+    width: 100%;
   }
 }

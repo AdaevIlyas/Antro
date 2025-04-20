@@ -1,0 +1,290 @@
+.report-data {
+    &__head {
+        padding-left: rem(30);
+        max-width: rem(553);
+    }
+
+    &__title {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: rem(34);
+        line-height: 120%;
+        letter-spacing: -0.03em;
+        color: var(--black);
+
+        margin-bottom: rem(16);
+    }
+
+    &__head-list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(10);
+    }
+
+    &__head-list-item {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: rem(18);
+        line-height: 150%;
+        letter-spacing: -0.03em;
+        color: var(--black);
+
+        span {
+            font-weight: 500;
+        }
+
+        &_grid {
+            display: grid;
+            grid-template-columns: rem(115) auto;
+            align-items: center;
+            gap: rem(20);
+        }
+    }
+
+    &__body {
+        position: relative;
+        margin-top: rem(32);
+
+        display: flex;
+        gap: rem(40);
+
+        border-radius: rem(50);
+        padding: rem(20);
+        max-width: rem(1315);
+        background: var(--white);
+    }
+
+    &__left {
+        flex: 0 0 auto;
+        border-radius: rem(40);
+        width: rem(412);
+        height: rem(288);
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__right {
+        flex: 1 1 auto;
+        position: relative;
+        padding-block: rem(20);
+    }
+
+    &__price-wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        display: flex;
+        align-items: center;
+
+        border-radius: rem(50);
+        padding: rem(14) rem(30);
+        height: rem(67);
+        background: #04afaf;
+
+        &_total {
+            padding: rem(18) rem(38);
+            height: rem(75);
+
+            .report-data__price {
+                display: flex;
+                align-items: center;
+                gap: rem(12);
+            }
+        }
+    }
+
+    &__stock {
+        position: absolute;
+        right: rem(-18);
+        top: calc(100% + rem(7));
+
+        display: flex;
+        align-items: center;
+        border-radius: rem(42);
+        padding: rem(6) rem(10);
+        height: rem(29);
+        background: var(--pink);
+
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: rem(13);
+        line-height: 130%;
+        color: var(--bg);
+    }
+
+    &__price {
+        position: relative;
+
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: rem(30);
+        line-height: 130%;
+        color: var(--white);
+
+        span {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: rem(20);
+            line-height: 130%;
+            text-decoration: line-through;
+            color: var(--white);
+            opacity: 0.3;
+        }
+    }
+
+    &__crown {
+        display: flex;
+        flex-direction: column;
+        gap: rem(6);
+        max-width: rem(368);
+        margin-bottom: rem(24);
+    }
+
+    &__subtitle {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: rem(18);
+        line-height: 130%;
+        color: var(--grayDark);
+    }
+
+    &__heading {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: rem(24);
+        line-height: 108%;
+        letter-spacing: -0.03em;
+        color: var(--black);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(14);
+    }
+
+    &__item {
+        display: flex;
+        gap: rem(8);
+
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: rem(18);
+        line-height: 120%;
+        letter-spacing: -0.03em;
+        color: #c9c8ce;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            background-image: url("/img/review/item-no.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            width: rem(20);
+            height: rem(20);
+
+            flex: 0 0 auto;
+
+            @include mobile {
+                margin-block: rem(2);
+                width: rem(16);
+                height: rem(16);
+            }
+        }
+
+        &_included {
+            color: var(--black);
+
+            &::before {
+                background-image: url("/img/review/item-yes.svg");
+            }
+        }
+    }
+
+    &__channel {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: rem(13);
+        max-width: rem(407);
+
+        &-disabled {
+            opacity: 0.2;
+            pointer-events: none;
+        }
+
+        @include laptop {
+            margin-top: rem(24);
+            max-width: rem(368);
+        }
+
+        @include mobile {
+            margin-top: rem(20);
+            max-width: none;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: calc(100% + rem(22));
+            height: calc(100% + rem(8));
+            left: rem(-4);
+            top: rem(-4);
+            border-radius: rem(100);
+            z-index: 0;
+            transition-duration: 0.3s;
+            background: transparent;
+
+            @include laptop {
+                top: rem(-2);
+                height: calc(100% + rem(4));
+            }
+        }
+
+        &:hover {
+            @include NOTmobile {
+                .review-form__channel-text {
+                    color: var(--black);
+                }
+
+                &::after {
+                    content: "";
+                    background: var(--bg);
+                }
+            }
+        }
+
+        &:active {
+            @include NOTmobile {
+                &::after {
+                    content: "";
+                    background: var(--bg);
+                }
+            }
+        }
+    }
+
+    &__channel-img {
+        z-index: 1;
+        width: rem(42);
+        height: rem(42);
+        border-radius: 100%;
+    }
+
+    &__channel-text {
+        z-index: 1;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: rem(16);
+        line-height: 120%;
+        letter-spacing: -0.03em;
+        color: var(--black);
+        transition: color 0.3s ease;
+    }
+}

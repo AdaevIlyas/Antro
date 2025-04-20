@@ -1,31 +1,37 @@
 export const reportWay = () => {
-  const track = document.querySelector(".js-way");
-  const trackCircle = track.querySelector(".report-way__circle");
+  const trackWrap = document.querySelectorAll(".report-track");
 
-  const start = document.querySelector(".js-way-start");
-  const finish = document.querySelector(".js-way-finish");
+  trackWrap.forEach((wrap) => {
+    const track = wrap.querySelector(".js-way");
+    const trackCircle = track.querySelector(".report-way__circle");
 
-  init();
+    const start = wrap.querySelector(".js-way-start");
+    const finish = wrap.querySelector(".js-way-finish");
 
-  function init() {
-    const trackCircleRect = trackCircle.getBoundingClientRect();
-    const trackCircleHeight = trackCircleRect.height / 2;
-    const startRect = start.getBoundingClientRect();
-    const finishRect = finish.getBoundingClientRect();
+    init();
 
-    let distance = finishRect.bottom - startRect.top;
+    window.addEventListener("resize", init);
 
-    const pointCenterStart = startRect.height / 2;
-    const pointCenterFinish = finishRect.height / 2;
+    function init() {
+      const trackCircleRect = trackCircle.getBoundingClientRect();
+      const trackCircleHeight = trackCircleRect.height / 2;
+      const startRect = start.getBoundingClientRect();
+      const finishRect = finish.getBoundingClientRect();
 
-    distance =
-      distance -
-      pointCenterStart -
-      pointCenterFinish +
-      trackCircleHeight +
-      trackCircleHeight;
+      let distance = finishRect.bottom - startRect.top;
 
-    track.style.top = `${pointCenterStart - trackCircleHeight}px`;
-    track.style.height = `${distance}px`;
-  }
+      const pointCenterStart = startRect.height / 2;
+      const pointCenterFinish = finishRect.height / 2;
+
+      distance =
+        distance -
+        pointCenterStart -
+        pointCenterFinish +
+        trackCircleHeight +
+        trackCircleHeight;
+
+      track.style.top = `${pointCenterStart - trackCircleHeight}px`;
+      track.style.height = `${distance}px`;
+    }
+  });
 };
