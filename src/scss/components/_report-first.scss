@@ -62,7 +62,7 @@
             height: rem(128);
         }
 
-        @include laptop {
+        @include mobile {
             position: absolute;
             right: rem(12);
             bottom: rem(12);

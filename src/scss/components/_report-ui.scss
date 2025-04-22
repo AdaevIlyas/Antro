@@ -26,6 +26,10 @@
     display: flex;
     align-items: start;
     gap: rem(20);
+
+    @include laptop {
+      gap: rem(18);
+    }
   }
 
   &__body {
@@ -33,5 +37,9 @@
     flex-direction: column;
     gap: rem(60);
     width: 100%;
+
+    @include mobile {
+      gap: rem(30);
+    }
   }
 }

@@ -11,6 +11,22 @@
 
         padding-left: rem(30);
         max-width: rem(553);
+
+        @include laptop {
+            font-size: rem(30);
+            padding-left: rem(24);
+            max-width: rem(533);
+        }
+
+        @include mobile {
+            font-size: rem(24);
+            padding-left: rem(20);
+            max-width: rem(303);
+
+            br {
+                display: none;
+            }
+        }
     }
 
     &__body {
@@ -23,10 +39,30 @@
         padding: rem(20) rem(20) rem(20) rem(40);
         max-width: rem(1210);
         background: var(--white);
+
+        @include laptop {
+            margin-top: rem(24);
+            gap: rem(50);
+            border-radius: rem(38);
+            padding-left: rem(36);
+            max-width: max-content;
+        }
+
+        @include mobile {
+            margin-top: rem(20);
+            flex-direction: column-reverse;
+            gap: rem(20);
+            border-radius: rem(30);
+            padding: rem(20);
+        }
     }
 
     &__left {
         flex: 1 1 auto;
+
+        @include mobile {
+            position: relative;
+        }
     }
 
     &__subtitle {
@@ -48,6 +84,14 @@
         color: var(--white);
 
         margin-bottom: rem(10);
+
+        @include mobile {
+            position: absolute;
+            top: rem(-20);
+            left: 50%;
+            transform: translate(-50%, -70%);
+            margin-bottom: 0;
+        }
     }
 
     &__heading {
@@ -59,9 +103,24 @@
         color: var(--black);
 
         margin-bottom: rem(16);
+
+        @include mobile {
+            font-size: rem(20);
+        }
     }
 
     &__text {
+        max-width: rem(550);
+        margin-bottom: rem(26);
+
+        @include laptop {
+            max-width: rem(460);
+        }
+
+        @include mobile {
+            margin-bottom: rem(20);
+        }
+
         p {
             font-family: var(--font-family);
             font-weight: 400;
@@ -73,14 +132,21 @@
             &:not(:last-child) {
                 margin-bottom: 1em;
             }
-        }
 
-        max-width: rem(550);
-        margin-bottom: rem(26);
+            @include mobile {
+                font-size: rem(14);
+            }
+        }
     }
 
     &__btn {
         max-width: rem(327);
+
+        @include laptop {
+            max-width: rem(343);
+            height: rem(50);
+            font-size: rem(16);
+        }
     }
 
     &__right {
@@ -89,6 +155,18 @@
         width: rem(500);
         height: rem(288);
         overflow: hidden;
+
+        @include laptop {
+            border-radius: rem(24);
+            width: rem(400);
+            height: rem(260);
+        }
+
+        @include mobile {
+            border-radius: rem(30);
+            width: 100%;
+            height: rem(230);
+        }
     }
 
     &__img {

@@ -8,6 +8,14 @@
     width: rem(60);
     // height: rem(710);
 
+    @include laptop {
+        width: rem(50);
+    }
+
+    @include mobile {
+        display: none;
+    }
+
     &__circle {
         position: relative;
         z-index: 2;
@@ -23,11 +31,26 @@
         border-radius: 100%;
 
         background: #04afaf;
+
+        @include laptop {
+            width: rem(50);
+            height: rem(50);
+        }
     }
 
     &__icon {
         width: rem(26);
         height: rem(26);
+    }
+
+    &__email {
+        width: rem(26);
+        height: rem(26);
+
+        @include laptop {
+            width: rem(22);
+            height: rem(22);
+        }
     }
 
     &__pin {
@@ -37,6 +60,11 @@
         border-radius: 100%;
 
         background: var(--white);
+
+        @include laptop {
+            width: rem(16);
+            height: rem(16);
+        }
     }
 
     &__line {
