@@ -41,6 +41,7 @@
         @include mobile {
             width: 100%;
             height: auto;
+            min-height: unset;
             border-radius: rem(30);
             padding: rem(28);
         }
