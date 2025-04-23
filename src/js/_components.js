@@ -51,3 +51,7 @@ import { reportWay } from "./components/reportWay";
 try {
   reportWay();
 } catch (error) {}
+
+function thanksModal() {
+  document.querySelector(".js-modal-open[data-modal='thanks']").click();
+}

@@ -1,31 +1,32 @@
-
-
-
-.audit-faq{
-
-
-    &__inner{
+.audit-faq {
+    &__inner {
         margin-top: rem(120);
-        margin-bottom: rem(60);       
+        margin-bottom: rem(60);
 
-        @include laptop{
+        @include laptop {
             margin: rem(80) 0;
         }
     }
 
-    &__title{
+    &__title {
         margin-bottom: rem(40);
     }
 
-    &__box{
+    &__box {
         display: flex;
         flex-direction: column;
         row-gap: rem(12);
 
-        @include mobile{
+        @include mobile {
             row-gap: rem(10);
         }
     }
 
+    .accordion__content-description {
+        max-width: rem(1000);
 
+        @include mobile {
+            max-width: none;
+        }
+    }
 }
