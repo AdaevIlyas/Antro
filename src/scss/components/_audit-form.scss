@@ -1,30 +1,27 @@
-
-
-.audit-form{
-
-    &__inner{
+.audit-form {
+    &__inner {
         margin-top: rem(120);
         margin-bottom: rem(120);
 
-        @include laptop{
+        @include laptop {
             margin: rem(80) 0;
         }
     }
 
-    &__box{
+    &__box {
         display: flex;
         column-gap: rem(20);
 
-        @include laptop{
+        @include laptop {
             justify-content: center;
         }
-        @include mobile{
+        @include mobile {
             flex-wrap: wrap;
             row-gap: rem(10);
         }
     }
 
-    &__col{
+    &__col {
         display: flex;
         flex-direction: column;
         background: var(--black);
@@ -33,15 +30,15 @@
         padding: rem(60);
         min-height: rem(704);
 
-        @include laptop{
+        @include laptop {
             min-width: unset;
-            min-height: unset;
+            min-height: rem(530);
             border-radius: rem(44);
             //max-width: rem(530);
-            height: rem(530);
+            height: auto;
             padding: rem(36);
         }
-        @include mobile{
+        @include mobile {
             width: 100%;
             height: auto;
             border-radius: rem(30);
@@ -49,34 +46,34 @@
         }
     }
 
-    &__title{
+    &__title {
         font-size: rem(50);
         font-weight: 500;
         color: #fff;
         margin-bottom: rem(32);
         text-transform: uppercase;
 
-        @include laptop{
+        @include laptop {
             font-size: rem(38);
             margin-bottom: rem(24);
         }
-        @include mobile{
+        @include mobile {
             font-size: rem(24);
             margin-bottom: rem(20);
         }
     }
 
-    &__text{
+    &__text {
         font-size: rem(20);
         color: #fff;
         padding-left: rem(37);
         position: relative;
 
-        @include laptop{
+        @include laptop {
             font-size: rem(16);
             padding-left: rem(33);
         }
-        @include mobile{
+        @include mobile {
             font-size: rem(14);
         }
 
@@ -87,7 +84,7 @@
             left: 0;
             top: 0;
 
-            @include laptop{
+            @include laptop {
                 width: rem(20);
                 height: rem(20);
             }
@@ -95,13 +92,13 @@
 
         & + & {
             margin-top: rem(16);
-            @include laptop{
+            @include laptop {
                 margin-top: rem(12);
             }
         }
     }
 
-    &__period{
+    &__period {
         font-size: rem(20);
         color: #fff;
         display: flex;
@@ -109,18 +106,18 @@
         column-gap: rem(12);
         margin-top: auto;
 
-        @include laptop{
+        @include laptop {
             font-size: rem(18);
         }
-        @include mobile{
+        @include mobile {
             margin-top: rem(24);
             font-size: rem(16);
         }
     }
 
-    &__label{
+    &__label {
         font-size: rem(18);
-        background: #3BB55D;
+        background: #3bb55d;
         border-radius: rem(100);
         height: rem(26);
         padding: 0 rem(8);
@@ -130,16 +127,16 @@
         line-height: 1;
         color: #fff;
 
-        @include laptop{
+        @include laptop {
             font-size: rem(16);
             height: rem(22);
         }
-        @include mobile{
+        @include mobile {
             font-size: rem(14);
         }
     }
 
-    &__price{
+    &__price {
         font-size: rem(90);
         margin-top: rem(16);
         font-weight: 500;
@@ -147,161 +144,156 @@
         line-height: 1.08;
         margin-bottom: rem(-20);
 
-        @include laptop{
+        @include laptop {
             font-size: rem(80);
             margin-bottom: rem(-15);
             margin-top: rem(12);
         }
-        @include mobile{
+        @include mobile {
             font-size: rem(50);
             margin-bottom: 0;
         }
     }
 
-    &__form{
+    &__form {
         height: 100%;
         display: flex;
         flex-direction: column;
 
-        .main-order__form-fields{
+        .main-order__form-fields {
             width: 100%;
             max-width: unset;
             margin: 0;
             row-gap: rem(16);
-            @include mobile{
+            @include mobile {
                 row-gap: rem(10);
             }
         }
-        .main-order__form-note{
+        .main-order__form-note {
             text-align: left;
             width: rem(521);
             line-height: 1.2;
             margin-top: rem(20);
-            @include laptop{
+            @include laptop {
                 width: 100%;
             }
-            @include mobile{
+            @include mobile {
                 margin-top: rem(16);
                 margin-bottom: rem(24);
             }
         }
-        .input-block input{
+        .input-block input {
             height: rem(70);
             font-size: rem(20);
             color: #fff;
-            background: #3B384D;
-            border-color: #4F4C5F;
+            background: #3b384d;
+            border-color: #4f4c5f;
 
-            @include laptop{
+            @include laptop {
                 height: rem(58);
                 font-size: rem(14);
             }
-            @include mobile{
+            @include mobile {
                 height: rem(50);
             }
 
-            &::placeholder{
-                color: #9D9BA7;
+            &::placeholder {
+                color: #9d9ba7;
             }
 
-            &:hover{
-                border-color: #8983AA;
+            &:hover {
+                border-color: #8983aa;
             }
 
-            &:focus{
-                background: #4F4C5F;
-                border-color: #4F4C5F;
+            &:focus {
+                background: #4f4c5f;
+                border-color: #4f4c5f;
             }
-
         }
-        .input-block.error{
-
-            .input-block__exclamation{
-                background: #FDA3A3;
+        .input-block.error {
+            .input-block__exclamation {
+                background: #fda3a3;
             }
-            .input-block__error{
-                color: #FDA3A3;
+            .input-block__error {
+                color: #fda3a3;
             }
 
-            input{
-                border-color: #FDA3A3;
+            input {
+                border-color: #fda3a3;
             }
         }
 
-        .select__list{
-            background: #3B384D;
-            border-color: #8983AA;
+        .select__list {
+            background: #3b384d;
+            border-color: #8983aa;
         }
-        .select__option{
+        .select__option {
             color: #fff;
             font-size: rem(20);
             border-radius: rem(14);
 
-            @include laptop{
+            @include laptop {
                 font-size: rem(16);
                 padding: rem(7) rem(10);
             }
 
-            &:hover{
-                background: #4F4C5F;
+            &:hover {
+                background: #4f4c5f;
             }
         }
-        
-        .main-order__form-flex{
+
+        .main-order__form-flex {
             display: flex;
             column-gap: rem(10);
-            @include mobile{
+            @include mobile {
                 flex-direction: column;
                 row-gap: rem(10);
             }
         }
 
-        .input-block{
-            &:has( > input[type=text] ) {
+        .input-block {
+            &:has(> input[type="text"]) {
                 max-width: rem(325);
             }
-            &:has( > input[type=tel] ) {
+            &:has(> input[type="tel"]) {
                 max-width: rem(325);
             }
-            &:has( > input[type=email] ) {
+            &:has(> input[type="email"]) {
                 max-width: rem(410);
             }
-            &:has( > .select ) {
+            &:has(> .select) {
                 max-width: rem(325);
             }
         }
 
-        .select::after{
+        .select::after {
             width: rem(18);
             height: rem(18);
             filter: invert(1);
             top: rem(26);
 
-            @include laptop{
+            @include laptop {
                 top: rem(20);
             }
-            @include mobile{
+            @include mobile {
                 top: rem(18);
                 width: rem(14);
                 height: rem(14);
             }
         }
-        
 
-        button{
+        button {
             margin-top: auto;
             height: rem(70);
             font-size: rem(18);
 
-            @include laptop{
+            @include laptop {
                 height: rem(58);
                 font-size: rem(16);
             }
-            @include mobile{
+            @include mobile {
                 height: rem(50);
             }
         }
-
     }
-
 }
