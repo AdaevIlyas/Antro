@@ -397,8 +397,11 @@
         max-width: rem(407);
 
         &-disabled {
-            opacity: 0.2;
             pointer-events: none;
+
+            .report-data__channel-text {
+                color: #c9c8ce;
+            }
         }
 
         @include laptop {
@@ -428,18 +431,18 @@
             }
         }
 
-        &:hover {
-            @include NOTmobile {
-                .review-form__channel-text {
-                    color: var(--black);
-                }
+        // &:hover {
+        //     @include NOTmobile {
+        //         .review-form__channel-text {
+        //             color: var(--black);
+        //         }
 
-                &::after {
-                    content: "";
-                    background: var(--bg);
-                }
-            }
-        }
+        //         &::after {
+        //             content: "";
+        //             background: var(--bg);
+        //         }
+        //     }
+        // }
 
         &:active {
             @include NOTmobile {
