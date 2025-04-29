@@ -422,27 +422,27 @@
             }
         }
 
-        &:hover {
-            @include NOTmobile {
-                .review-form__channel-text {
-                    color: var(--black);
-                }
+        // &:hover {
+        //     @include NOTmobile {
+        //         .review-form__channel-text {
+        //             color: var(--black);
+        //         }
 
-                &::after {
-                    content: "";
-                    background: var(--bg);
-                }
-            }
-        }
+        //         &::after {
+        //             content: "";
+        //             background: var(--bg);
+        //         }
+        //     }
+        // }
 
-        &:active {
-            @include NOTmobile {
-                &::after {
-                    content: "";
-                    background: var(--bg);
-                }
-            }
-        }
+        // &:active {
+        //     @include NOTmobile {
+        //         &::after {
+        //             content: "";
+        //             background: var(--bg);
+        //         }
+        //     }
+        // }
     }
 
     &__channel-img {

@@ -444,14 +444,14 @@
         //     }
         // }
 
-        &:active {
-            @include NOTmobile {
-                &::after {
-                    content: "";
-                    background: var(--bg);
-                }
-            }
-        }
+        // &:active {
+        //     @include NOTmobile {
+        //         &::after {
+        //             content: "";
+        //             background: var(--bg);
+        //         }
+        //     }
+        // }
     }
 
     &__channel-img {
