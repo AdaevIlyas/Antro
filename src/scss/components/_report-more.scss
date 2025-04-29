@@ -58,9 +58,16 @@
     }
 
     &__left {
+        margin-block: auto;
         flex: 1 1 auto;
 
+        @include laptop {
+            padding-block: rem(20);
+        }
+
         @include mobile {
+            padding-block: 0;
+            margin-block: 0;
             position: relative;
         }
     }
@@ -159,10 +166,12 @@
         @include laptop {
             border-radius: rem(24);
             width: rem(400);
-            height: rem(260);
+            min-height: rem(260);
+            height: auto;
         }
 
         @include mobile {
+            min-height: auto;
             border-radius: rem(30);
             width: 100%;
             height: rem(230);

@@ -3,7 +3,7 @@ export const auditBlock = () => {
   const auditStart2 = document.querySelector(".js-audit-start-2");
   const auditStartImg1 = document.querySelector(".js-audit-start-img-1");
   const auditStartImg2 = document.querySelector(".js-audit-start-img-2");
-  const auditImgParent = auditStartImg1.parentElement;
+  const auditImgParent = auditStartImg1?.parentElement;
 
   if (auditStart1 && auditStart2) {
     document.addEventListener("scroll", function () {

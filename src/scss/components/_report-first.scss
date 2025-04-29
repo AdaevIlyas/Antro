@@ -1,4 +1,17 @@
 .report-first {
+    &_buy {
+        @include mobile {
+            .report-first__text {
+                max-width: rem(289);
+            }
+
+            .report-first__img {
+                width: rem(64);
+                height: rem(64);
+            }
+        }
+    }
+
     &__wrapper {
         display: flex;
         align-items: center;
@@ -41,6 +54,10 @@
         text-transform: uppercase;
         color: var(--black);
 
+        br {
+            display: none;
+        }
+
         @include laptop {
             font-size: rem(38);
             max-width: rem(684);
@@ -49,6 +66,26 @@
         @include mobile {
             font-size: rem(24);
             max-width: rem(239);
+        }
+    }
+
+    &__text-small {
+        margin-top: rem(16);
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: rem(24);
+        line-height: 120%;
+        letter-spacing: -0.03em;
+        color: var(--black);
+
+        @include laptop {
+            font-size: rem(16);
+        }
+
+        @include mobile {
+            margin-top: rem(12);
+            font-size: rem(14);
+            max-width: rem(243);
         }
     }
 

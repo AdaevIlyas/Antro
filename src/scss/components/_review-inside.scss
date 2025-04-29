@@ -44,6 +44,9 @@
     }
 
     &__left {
+        @include mobile {
+            padding-inline: rem(6);
+        }
     }
 
     &__title {
