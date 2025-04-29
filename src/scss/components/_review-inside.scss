@@ -153,6 +153,7 @@
     }
 
     &__channel-img {
+        pointer-events: none;
         z-index: 1;
         width: rem(48);
         height: rem(48);
@@ -170,6 +171,7 @@
     }
 
     &__channel-text {
+        pointer-events: none;
         z-index: 1;
         font-family: var(--font-family);
         font-weight: 400;
