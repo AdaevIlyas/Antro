@@ -53,5 +53,11 @@ try {
 } catch (error) {}
 
 function thanksModal() {
+  document.querySelector(".js-modal-open[data-modal='thanks_audit']").click();
+}
+// thanksModal();
+
+function thanksModalFirst() {
   document.querySelector(".js-modal-open[data-modal='thanks']").click();
 }
+// thanksModalFirst();
