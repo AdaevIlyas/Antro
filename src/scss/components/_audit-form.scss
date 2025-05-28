@@ -1,300 +1,301 @@
 .audit-form {
-    &__inner {
-        margin-top: rem(120);
-        margin-bottom: rem(120);
+  &__inner {
+    margin-top: rem(120);
+    margin-bottom: rem(120);
 
-        @include laptop {
-            margin: rem(80) 0;
-        }
+    @include laptop {
+      margin: rem(80) 0;
+    }
+  }
+
+  &__box {
+    display: flex;
+    column-gap: rem(20);
+
+    @include laptop {
+      justify-content: center;
+    }
+    @include mobile {
+      flex-wrap: wrap;
+      row-gap: rem(10);
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    background: var(--black);
+    border-radius: rem(50);
+    width: 50%;
+    padding: rem(60);
+    min-height: rem(704);
+
+    @include laptop {
+      min-width: unset;
+      min-height: rem(530);
+      border-radius: rem(44);
+      //max-width: rem(530);
+      height: auto;
+      padding: rem(36);
+    }
+    @include mobile {
+      width: 100%;
+      height: auto;
+      min-height: unset;
+      border-radius: rem(30);
+      padding: rem(28);
+    }
+  }
+
+  &__title {
+    font-size: rem(50);
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: rem(32);
+    text-transform: uppercase;
+
+    @include laptop {
+      font-size: rem(38);
+      margin-bottom: rem(24);
+    }
+    @include mobile {
+      font-size: rem(24);
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__text {
+    font-size: rem(20);
+    color: #fff;
+    padding-left: rem(37);
+    position: relative;
+
+    @include laptop {
+      font-size: rem(16);
+      padding-left: rem(33);
+    }
+    @include mobile {
+      font-size: rem(14);
     }
 
-    &__box {
-        display: flex;
-        column-gap: rem(20);
+    svg {
+      width: rem(24);
+      height: rem(24);
+      position: absolute;
+      left: 0;
+      top: 0;
 
-        @include laptop {
-            justify-content: center;
-        }
-        @include mobile {
-            flex-wrap: wrap;
-            row-gap: rem(10);
-        }
+      @include laptop {
+        width: rem(20);
+        height: rem(20);
+      }
     }
 
-    &__col {
-        display: flex;
-        flex-direction: column;
-        background: var(--black);
-        border-radius: rem(50);
-        width: 50%;
-        padding: rem(60);
-        min-height: rem(704);
-
-        @include laptop {
-            min-width: unset;
-            min-height: rem(530);
-            border-radius: rem(44);
-            //max-width: rem(530);
-            height: auto;
-            padding: rem(36);
-        }
-        @include mobile {
-            width: 100%;
-            height: auto;
-            min-height: unset;
-            border-radius: rem(30);
-            padding: rem(28);
-        }
+    & + & {
+      margin-top: rem(16);
+      @include laptop {
+        margin-top: rem(12);
+      }
     }
+  }
 
-    &__title {
-        font-size: rem(50);
-        font-weight: 500;
-        color: #fff;
-        margin-bottom: rem(32);
-        text-transform: uppercase;
+  &__period {
+    font-size: rem(20);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    column-gap: rem(12);
+    margin-top: auto;
 
-        @include laptop {
-            font-size: rem(38);
-            margin-bottom: rem(24);
-        }
-        @include mobile {
-            font-size: rem(24);
-            margin-bottom: rem(20);
-        }
+    @include laptop {
+      font-size: rem(18);
     }
-
-    &__text {
-        font-size: rem(20);
-        color: #fff;
-        padding-left: rem(37);
-        position: relative;
-
-        @include laptop {
-            font-size: rem(16);
-            padding-left: rem(33);
-        }
-        @include mobile {
-            font-size: rem(14);
-        }
-
-        svg {
-            width: rem(24);
-            height: rem(24);
-            position: absolute;
-            left: 0;
-            top: 0;
-
-            @include laptop {
-                width: rem(20);
-                height: rem(20);
-            }
-        }
-
-        & + & {
-            margin-top: rem(16);
-            @include laptop {
-                margin-top: rem(12);
-            }
-        }
+    @include mobile {
+      margin-top: rem(24);
+      font-size: rem(16);
     }
+  }
 
-    &__period {
-        font-size: rem(20);
-        color: #fff;
-        display: flex;
-        align-items: center;
-        column-gap: rem(12);
-        margin-top: auto;
+  &__label {
+    font-size: rem(18);
+    background: #3bb55d;
+    border-radius: rem(100);
+    height: rem(26);
+    padding: 0 rem(8);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    color: #fff;
 
-        @include laptop {
-            font-size: rem(18);
-        }
-        @include mobile {
-            margin-top: rem(24);
-            font-size: rem(16);
-        }
+    @include laptop {
+      font-size: rem(16);
+      height: rem(22);
     }
-
-    &__label {
-        font-size: rem(18);
-        background: #3bb55d;
-        border-radius: rem(100);
-        height: rem(26);
-        padding: 0 rem(8);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        line-height: 1;
-        color: #fff;
-
-        @include laptop {
-            font-size: rem(16);
-            height: rem(22);
-        }
-        @include mobile {
-            font-size: rem(14);
-        }
+    @include mobile {
+      font-size: rem(14);
     }
+  }
 
-    &__price {
-        font-size: rem(90);
+  &__price {
+    font-size: rem(90);
+    margin-top: rem(16);
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.08;
+    margin-bottom: rem(-20);
+
+    @include laptop {
+      font-size: rem(80);
+      margin-bottom: rem(-15);
+      margin-top: rem(12);
+    }
+    @include mobile {
+      font-size: rem(50);
+      margin-bottom: 0;
+    }
+  }
+
+  &__form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .main-order__form-fields {
+      width: 100%;
+      max-width: unset;
+      margin: 0;
+      row-gap: rem(16);
+      @include mobile {
+        row-gap: rem(10);
+        margin-bottom: rem(24);
+      }
+    }
+    .main-order__form-note {
+      text-align: left;
+      width: rem(521);
+      line-height: 1.2;
+      margin-top: rem(20);
+      @include laptop {
+        width: 100%;
+      }
+      @include mobile {
         margin-top: rem(16);
-        font-weight: 500;
-        color: #fff;
-        line-height: 1.08;
-        margin-bottom: rem(-20);
+        margin-bottom: rem(24);
+      }
+    }
+    .input-block input {
+      height: rem(70);
+      font-size: rem(20);
+      color: #fff;
+      background: #3b384d;
+      border-color: #4f4c5f;
 
-        @include laptop {
-            font-size: rem(80);
-            margin-bottom: rem(-15);
-            margin-top: rem(12);
-        }
-        @include mobile {
-            font-size: rem(50);
-            margin-bottom: 0;
-        }
+      @include laptop {
+        height: rem(58);
+        font-size: rem(14);
+      }
+      @include mobile {
+        height: rem(50);
+      }
+
+      &::placeholder {
+        color: #9d9ba7;
+      }
+
+      &:hover {
+        border-color: #8983aa;
+      }
+
+      &:focus {
+        background: #4f4c5f;
+        border-color: #4f4c5f;
+      }
+    }
+    .input-block.error {
+      .input-block__exclamation {
+        background: #fda3a3;
+      }
+      .input-block__error {
+        color: #fda3a3;
+      }
+
+      input {
+        border-color: #fda3a3;
+      }
     }
 
-    &__form {
-        height: 100%;
-        display: flex;
+    .select__list {
+      background: #3b384d;
+      border-color: #8983aa;
+    }
+    .select__option {
+      color: #fff;
+      font-size: rem(20);
+      border-radius: rem(14);
+
+      @include laptop {
+        font-size: rem(16);
+        padding: rem(7) rem(10);
+      }
+
+      &:hover {
+        background: #4f4c5f;
+      }
+    }
+
+    .main-order__form-flex {
+      display: flex;
+      column-gap: rem(10);
+      @include mobile {
         flex-direction: column;
-
-        .main-order__form-fields {
-            width: 100%;
-            max-width: unset;
-            margin: 0;
-            row-gap: rem(16);
-            @include mobile {
-                row-gap: rem(10);
-            }
-        }
-        .main-order__form-note {
-            text-align: left;
-            width: rem(521);
-            line-height: 1.2;
-            margin-top: rem(20);
-            @include laptop {
-                width: 100%;
-            }
-            @include mobile {
-                margin-top: rem(16);
-                margin-bottom: rem(24);
-            }
-        }
-        .input-block input {
-            height: rem(70);
-            font-size: rem(20);
-            color: #fff;
-            background: #3b384d;
-            border-color: #4f4c5f;
-
-            @include laptop {
-                height: rem(58);
-                font-size: rem(14);
-            }
-            @include mobile {
-                height: rem(50);
-            }
-
-            &::placeholder {
-                color: #9d9ba7;
-            }
-
-            &:hover {
-                border-color: #8983aa;
-            }
-
-            &:focus {
-                background: #4f4c5f;
-                border-color: #4f4c5f;
-            }
-        }
-        .input-block.error {
-            .input-block__exclamation {
-                background: #fda3a3;
-            }
-            .input-block__error {
-                color: #fda3a3;
-            }
-
-            input {
-                border-color: #fda3a3;
-            }
-        }
-
-        .select__list {
-            background: #3b384d;
-            border-color: #8983aa;
-        }
-        .select__option {
-            color: #fff;
-            font-size: rem(20);
-            border-radius: rem(14);
-
-            @include laptop {
-                font-size: rem(16);
-                padding: rem(7) rem(10);
-            }
-
-            &:hover {
-                background: #4f4c5f;
-            }
-        }
-
-        .main-order__form-flex {
-            display: flex;
-            column-gap: rem(10);
-            @include mobile {
-                flex-direction: column;
-                row-gap: rem(10);
-            }
-        }
-
-        .input-block {
-            &:has(> input[type="text"]) {
-                max-width: rem(325);
-            }
-            &:has(> input[type="tel"]) {
-                max-width: rem(325);
-            }
-            &:has(> input[type="email"]) {
-                max-width: rem(410);
-            }
-            &:has(> .select) {
-                max-width: rem(325);
-            }
-        }
-
-        .select::after {
-            width: rem(18);
-            height: rem(18);
-            filter: invert(1);
-            top: rem(26);
-
-            @include laptop {
-                top: rem(20);
-            }
-            @include mobile {
-                top: rem(18);
-                width: rem(14);
-                height: rem(14);
-            }
-        }
-
-        button {
-            margin-top: auto;
-            height: rem(70);
-            font-size: rem(18);
-
-            @include laptop {
-                height: rem(58);
-                font-size: rem(16);
-            }
-            @include mobile {
-                height: rem(50);
-            }
-        }
+        row-gap: rem(10);
+      }
     }
+
+    .input-block {
+      &:has(> input[type="text"]) {
+        max-width: rem(325);
+      }
+      &:has(> input[type="tel"]) {
+        max-width: rem(325);
+      }
+      &:has(> input[type="email"]) {
+        max-width: rem(410);
+      }
+      &:has(> .select) {
+        max-width: rem(325);
+      }
+    }
+
+    .select::after {
+      width: rem(18);
+      height: rem(18);
+      filter: invert(1);
+      top: rem(26);
+
+      @include laptop {
+        top: rem(20);
+      }
+      @include mobile {
+        top: rem(18);
+        width: rem(14);
+        height: rem(14);
+      }
+    }
+
+    button {
+      margin-top: auto;
+      height: rem(70);
+      font-size: rem(18);
+
+      @include laptop {
+        height: rem(58);
+        font-size: rem(16);
+      }
+      @include mobile {
+        height: rem(50);
+      }
+    }
+  }
 }

@@ -1,4 +1,5 @@
-<label class="i-checkbox">
+<label
+    class="i-checkbox @if(context.small === 'small'){i-checkbox_small}@if(context.left === 'left'){i-checkbox_left}@if (context.dark === 'dark'){i-checkbox_dark}@if(context.audit === 'audit'){i-checkbox_audit}">
     <input class="i-checkbox__input" type="checkbox" name="i_agree" checked />
     <div class="i-checkbox__mask">
         <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -7,8 +8,9 @@
         </svg>
     </div>
     <div class="i-checkbox__text">
-        Я соглашаюсь с условиями <a href="">публичной оферты</a> и
-        <a href="">обработкой моих персональных данных</a> в порядке,
-        предусмотренном публичной офертой
+        Я соглашаюсь с условиями
+        <a href="">публичной оферты</a>
+        и&nbsp;<a href="">обработкой моих персональных данных</a>
+        в порядке, предусмотренном публичной офертой
     </div>
 </label>
