@@ -75,6 +75,14 @@
         }
       }
 
+      .review-form__box:not(.review-form__box-free) {
+        .review-form__col {
+          .main-order__form-fields {
+            margin-bottom: rem(24);
+          }
+        }
+      }
+
       .review-form__form,
       .audit-form__form {
         justify-content: start;

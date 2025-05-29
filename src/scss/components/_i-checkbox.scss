@@ -13,6 +13,24 @@
     max-width: rem(302);
   }
 
+  &_error {
+    .i-checkbox__mask {
+      border-color: #fda3a3;
+
+      &:hover {
+        border-color: #fda3a3;
+      }
+    }
+
+    .i-checkbox__text {
+      color: #fda3a3;
+
+      a {
+        color: #fda3a3;
+      }
+    }
+  }
+
   &_dark {
     margin-top: rem(24);
     max-width: none;
@@ -141,7 +159,8 @@
 
     a {
       text-decoration: underline;
-      text-underline-position: under;
+      text-underline-offset: rem(2);
+      text-decoration-skip-ink: none;
       color: #b0aeb8;
       transition: all 0.3s ease;
 
