@@ -1,0 +1,42 @@
+.i-banner {
+  margin: rem(30) auto;
+
+  z-index: 19;
+
+  width: rem(1640);
+  height: rem(90);
+  border-radius: rem(100);
+  background: linear-gradient(90deg, #026878 0%, #03d871 62.02%);
+
+  &_scroll {
+    .i-banner__scroll {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__scroll {
+    position: fixed;
+    z-index: 18;
+    bottom: rem(110);
+
+    transform: translateY(50%);
+    opacity: 0;
+    visibility: collapse;
+
+    transition-duration: 0.3s;
+
+    .i-banner__body {
+      height: rem(62);
+    }
+  }
+
+  &__body {
+    width: rem(1640);
+    height: rem(90);
+
+    border-radius: rem(100);
+    background: linear-gradient(90deg, #026878 0%, #03d871 62.02%);
+  }
+}

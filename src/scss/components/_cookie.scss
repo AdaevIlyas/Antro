@@ -1,0 +1,190 @@
+.cookie {
+  position: fixed;
+  z-index: 20;
+  width: rem(440);
+  right: rem(20);
+  bottom: rem(20);
+  transition-duration: 0.3s;
+
+  @include laptop {
+    width: rem(394);
+    right: rem(16);
+    bottom: rem(16);
+  }
+
+  @include mobile {
+    width: auto;
+    left: rem(16);
+    right: rem(16);
+    bottom: rem(10);
+  }
+
+  &_scroll {
+    @include mobile {
+      bottom: rem(66);
+    }
+  }
+
+  &_review {
+    .cookie__wrapper {
+      background: #012e2e;
+
+      @include mobile {
+        background: #f6f6f6;
+      }
+    }
+
+    .cookie__agree {
+      @include mobile {
+        &::before {
+          background: #012e2e;
+        }
+      }
+    }
+  }
+
+  &_audit {
+    .cookie__wrapper {
+      background: #2780e5;
+
+      @include mobile {
+        background: #f6f6f6;
+      }
+    }
+
+    .cookie__agree {
+      @include mobile {
+        &::before {
+          background: #2780e5;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+
+    padding: rem(12) rem(12) rem(12) rem(20);
+    border-radius: rem(100);
+    background: #0a0620;
+
+    @include mobile {
+      flex-direction: column;
+      gap: rem(12);
+
+      padding: rem(16);
+      border-radius: rem(24);
+      background: #f6f6f6;
+    }
+  }
+
+  &__text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(14);
+    line-height: 130%;
+    letter-spacing: -3%;
+    color: #ffffff;
+
+    @include laptop {
+      font-size: rem(13);
+    }
+
+    @include mobile {
+      height: rem(36);
+
+      font-size: rem(14);
+      line-height: 110%;
+      color: #0a0620;
+    }
+
+    a {
+      color: inherit;
+      font-weight: 500;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    width: rem(16);
+    height: rem(16);
+    transform: translate(5%, 15%);
+  }
+
+  &__agree {
+    position: relative;
+    flex: 0 0 auto;
+
+    height: rem(40);
+    width: rem(120);
+
+    border-radius: rem(120);
+
+    span {
+      position: relative;
+      z-index: 1;
+
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: rem(14);
+      line-height: 100%;
+      letter-spacing: -1%;
+      color: #ffffff;
+
+      @include laptop {
+        font-size: rem(13);
+      }
+
+      @include mobile {
+        font-size: rem(14);
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      border-radius: rem(100);
+      z-index: 0;
+      transition-duration: 0.3s;
+      background: #ffffff33;
+    }
+
+    &:hover {
+      @include NOTmobile {
+        &::before {
+          content: "";
+          transform: scale(1.02, 1.091);
+        }
+      }
+    }
+
+    &:active {
+      @include NOTmobile {
+        &::before {
+          content: "";
+          transform: scale(1.02, 1.091);
+        }
+      }
+    }
+
+    @include laptop {
+      width: rem(104);
+      font-size: rem(13);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+
+      width: 100%;
+      &::before {
+        background: #0a0620;
+      }
+    }
+  }
+}

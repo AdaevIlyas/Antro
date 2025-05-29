@@ -1,0 +1,10 @@
+<div
+    class="cookie @if(context.main == 'main'){cookie_main} @if(context.audit == 'audit'){cookie_audit} @if(context.review == 'review'){cookie_review}">
+    <div class="cookie__wrapper">
+        <div class="cookie__text">
+            Продолжая просмотр, вы даете согласие на обработку файлов <a href="">cookies</a>
+            <img class="cookie__icon" src="/img/svg/cookie.svg" alt="">
+        </div>
+        <button class="btn-reset cookie__agree"><span>Принять</span></button>
+    </div>
+</div>
