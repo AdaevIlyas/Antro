@@ -19,9 +19,21 @@
     bottom: rem(10);
   }
 
+  &_none {
+    display: none !important;
+  }
+
   &_scroll {
     @include mobile {
       bottom: rem(66);
+    }
+  }
+
+  &_scroll-top {
+    bottom: rem(102);
+
+    @include laptop {
+      bottom: rem(92);
     }
   }
 
