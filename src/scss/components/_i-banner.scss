@@ -132,6 +132,8 @@
     overflow: hidden;
 
     @include laptop {
+      height: rem(70);
+      padding: rem(10) rem(14) rem(10) rem(30);
       width: rem(1300);
     }
 
@@ -210,7 +212,7 @@
 
   &__title {
     font-family: var(--font-family);
-    font-weight: 600;
+    font-weight: 500;
     font-size: rem(24);
     line-height: 120%;
     letter-spacing: -5%;
