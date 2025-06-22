@@ -14,17 +14,17 @@
       justify-content: space-between;
     }
     @include mobile {
-      padding: rem(154) 0 rem(33) 0;
-      max-height: rem(530);
+      padding: rem(89) 0 rem(33) 0;
+      max-height: rem(470);
     }
   }
 
   &__title {
-    font-size: rem(100);
+    font-size: rem(86);
     font-weight: 600;
     text-align: center;
     width: 100%;
-    max-width: rem(1400);
+    max-width: rem(1600);
     text-transform: uppercase;
     letter-spacing: -0.051em;
     line-height: 1;
@@ -32,12 +32,13 @@
     z-index: 3;
 
     @include laptop {
-      font-size: rem(72);
+      font-size: rem(60);
       max-width: rem(1100);
+      line-height: 110%;
     }
     @include mobile {
-      font-size: rem(36);
-      max-width: rem(320);
+      font-size: rem(29);
+      max-width: rem(360);
     }
   }
 

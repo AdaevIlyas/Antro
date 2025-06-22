@@ -137,22 +137,60 @@
     }
   }
 
+  &__price-block {
+    margin-top: auto;
+    display: flex;
+    align-items: end;
+    gap: rem(24);
+    margin-bottom: rem(-20);
+
+    @include laptop {
+      flex-direction: column;
+      align-items: start;
+      gap: rem(8);
+      margin-bottom: rem(-15);
+    }
+
+    @include mobile {
+      gap: rem(6);
+      margin-bottom: 0;
+    }
+  }
+
   &__price {
-    font-size: rem(90);
+    font-size: rem(85);
     margin-top: rem(16);
     font-weight: 500;
     color: #fff;
     line-height: 1.08;
-    margin-bottom: rem(-20);
 
     @include laptop {
-      font-size: rem(80);
-      margin-bottom: rem(-15);
+      font-size: rem(70);
       margin-top: rem(12);
     }
     @include mobile {
       font-size: rem(50);
-      margin-bottom: 0;
+    }
+  }
+
+  &__old-price {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(45);
+    line-height: 108%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    text-decoration: line-through;
+    color: #413c5b;
+    padding-bottom: rem(6);
+
+    @include laptop {
+      font-size: rem(40);
+      padding-bottom: 0;
+    }
+
+    @include mobile {
+      font-size: rem(24);
     }
   }
 
