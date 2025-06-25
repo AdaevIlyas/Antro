@@ -82,10 +82,10 @@
     bottom: 0;
     left: 0;
     z-index: -1;
-    padding: rem(73) rem(36) rem(0) rem(60);
+    padding: rem(73) rem(30) rem(0) rem(54);
     display: flex;
     justify-content: space-between;
-    gap: rem(66);
+    gap: rem(43);
     transition-duration: 0.3s;
     transform: translateY(100%);
     opacity: 0;
@@ -101,6 +101,11 @@
     flex-direction: column;
     row-gap: rem(20);
 
+    &_first {
+      width: rem(90);
+      flex: 0 0 auto;
+    }
+
     &_links {
       row-gap: rem(32);
       padding-top: rem(8);
@@ -112,7 +117,7 @@
 
       .header__link {
         display: block;
-        font-weight: 400;
+        font-weight: 500;
       }
     }
   }

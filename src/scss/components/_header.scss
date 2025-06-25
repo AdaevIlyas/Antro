@@ -99,15 +99,16 @@
 
       &_pink {
         &:hover {
-          color: #fff;
+          color: #e0e0e0;
 
           &::before {
-            background: #8872ff99;
+            background: #0a0620;
           }
         }
 
         &::before {
-          background: #6f55ff99;
+          background: #0a0620;
+          opacity: 0.6;
         }
       }
     }
@@ -355,7 +356,7 @@
         color: #fff;
 
         &::before {
-          background: #8670ff;
+          background: #615e71;
         }
       }
 
@@ -365,7 +366,7 @@
         border-radius: rem(100);
         inset: rem(-3) rem(-12);
         z-index: -1;
-        background: #6f55ff;
+        background: #0a0620;
         transition-duration: 0.3s;
 
         @include laptop {
