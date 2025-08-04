@@ -1,6 +1,10 @@
 .main-research {
   margin-bottom: rem(20);
 
+  @include mobile {
+    margin-bottom: rem(10);
+  }
+
   &__inner {
     padding-top: rem(80);
     padding-bottom: rem(80);
