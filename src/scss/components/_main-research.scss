@@ -1,30 +1,28 @@
-
-
-.main-research{
+.main-research {
     margin-bottom: rem(20);
 
-    &__inner{
+    &__inner {
         padding-top: rem(80);
         padding-bottom: rem(80);
         //border-radius: rem(60);
-        background: url(../img/background-hills.jpg) no-repeat;
+        background: url(../img/bg-res.png) no-repeat;
         background-size: cover;
         background-position: center;
 
-        mask-image: url(../img/mask/new-mask-2-xl.svg);
+        mask-image: url(../img/mask/new-mask-res.svg);
         mask-size: 100% 100%;
         mask-repeat: no-repeat;
 
-        @include laptop{
+        @include laptop {
             margin-top: rem(60);
             margin-bottom: rem(60);
             //border-radius: rem(44);
-
-            mask-image: url(../img/mask/new-mask-2-l.svg);
+            mask-image: url(../img/mask/new-mask-res-laptop.svg);
+            // mask-image: url(../img/mask/new-mask-2-l.svg);
             mask-size: 100% 100%;
             mask-repeat: no-repeat;
         }
-        @include mobile{
+        @include mobile {
             border-radius: rem(40);
             margin-top: rem(40);
             margin-bottom: 0;
@@ -43,26 +41,26 @@
         }
     }
 
-    &__wrap{
+    &__wrap {
         max-width: rem(1314);
         margin: 0 auto;
 
-        @include laptop{
+        @include laptop {
             max-width: rem(1080);
         }
-        @include mobile{
+        @include mobile {
             max-width: rem(359);
         }
     }
 
-    &__top{
+    &__top {
         margin-bottom: rem(40);
         display: flex;
         justify-content: space-between;
-        @include laptop{
+        @include laptop {
             margin-bottom: rem(24);
         }
-        @include mobile{
+        @include mobile {
             margin-bottom: rem(30);
             flex-direction: column;
             row-gap: rem(16);
@@ -70,16 +68,16 @@
         }
     }
 
-    &__title{
-        span{
-            color: #4DFCDA;
+    &__title {
+        span {
+            color: #4dfcda;
         }
-        @include mobile{
+        @include mobile {
             text-align: center;
         }
     }
 
-    &__description{
+    &__description {
         color: var(--white);
         font-size: rem(18);
         line-height: 1.1;
@@ -87,58 +85,58 @@
         margin-top: rem(7);
         max-width: rem(490);
 
-        @include laptop{
+        @include laptop {
             max-width: rem(405);
             font-size: rem(16);
             margin-top: rem(6);
         }
-        @include mobile{
+        @include mobile {
             max-width: rem(280);
             font-size: rem(12);
             margin-top: rem(4);
         }
     }
 
-    &__box{
+    &__box {
         width: 100%;
 
-        &_grid{
+        &_grid {
             margin-top: rem(10);
             gap: rem(10);
             display: flex;
-            @include mobile{
+            @include mobile {
                 flex-wrap: wrap-reverse;
             }
         }
     }
 
-    &__col{
+    &__col {
         display: flex;
         flex-direction: column;
         gap: rem(10);
         flex-shrink: 0;
-        
+
         &:nth-of-type(1) {
             width: rem(551);
-            @include laptop{
+            @include laptop {
                 width: rem(464);
             }
-            @include mobile{
+            @include mobile {
                 width: 100%;
             }
         }
         &:nth-of-type(2) {
             width: rem(753);
-            @include laptop{
+            @include laptop {
                 width: rem(608);
             }
-            @include mobile{
+            @include mobile {
                 width: 100%;
             }
         }
     }
 
-    &__card{
+    &__card {
         background: var(--white);
         border-radius: rem(50);
         padding: rem(46) rem(44);
@@ -148,56 +146,55 @@
         position: relative;
         overflow: hidden;
 
-        @include laptop{
+        @include laptop {
             border-radius: rem(38);
             padding: rem(38) rem(36);
         }
-        @include mobile{
+        @include mobile {
             border-radius: rem(30);
             padding: rem(24);
         }
 
-        &_mobile{
+        &_mobile {
             display: none;
-            @include mobile{
+            @include mobile {
                 display: flex;
             }
         }
 
-        &_desktop{
+        &_desktop {
             display: flex;
-            @include mobile{
+            @include mobile {
                 display: none;
             }
         }
 
-        &_wide{
+        &_wide {
             height: auto;
             padding: rem(60);
 
-            @include laptop{
+            @include laptop {
                 padding: rem(44);
             }
-            @include mobile{
+            @include mobile {
                 border-radius: rem(30);
                 padding: rem(24);
             }
 
-            .main-research__card-title{
+            .main-research__card-title {
                 font-size: rem(34);
-                @include laptop{
+                @include laptop {
                     font-size: rem(24);
                     margin-bottom: rem(8);
                 }
-                @include mobile{
+                @include mobile {
                     font-size: rem(18);
                     line-height: 1.2;
                 }
             }
-            .main-research__card-text{
-
+            .main-research__card-text {
             }
-            .main-research__card-image{
+            .main-research__card-image {
                 width: rem(640);
                 height: rem(330);
                 display: flex;
@@ -206,245 +203,239 @@
                 background: var(--pink);
                 border-radius: rem(300);
                 margin-bottom: rem(24);
-                @include laptop{
+                @include laptop {
                     width: rem(534);
                     height: rem(270);
                     margin-bottom: rem(20);
                 }
-                @include mobile{
+                @include mobile {
                     width: 100%;
                     height: rem(170);
                 }
             }
         }
 
-        &_type1{
+        &_type1 {
             padding: rem(24) rem(60);
             width: calc(100% - rem(29));
             margin-left: auto;
-            background: #3500274D;
+            background: #3500274d;
             border-radius: rem(160);
             backdrop-filter: blur(calc(50px * 0.35));
             display: flex;
             flex-direction: column;
             align-items: center;
             row-gap: rem(10);
-            .main-research__card-text{
+            .main-research__card-text {
                 max-width: rem(402);
                 text-align: center;
             }
 
-            @include laptop{
+            @include laptop {
                 padding: rem(18) rem(40);
                 row-gap: rem(6);
-                .main-research__card-text{
+                .main-research__card-text {
                     max-width: rem(361);
                 }
             }
-            @include mobile{
+            @include mobile {
                 width: 100%;
                 margin-left: unset;
             }
         }
 
-        &_type2{
+        &_type2 {
             width: calc(100% - rem(27));
-            .main-research__card-title{
+            .main-research__card-title {
                 margin-bottom: 0;
             }
-            .main-research__card-el{
+            .main-research__card-el {
                 max-width: rem(216);
             }
 
-            @include laptop{
+            @include laptop {
                 width: 100%;
-                .main-research__card-el{
+                .main-research__card-el {
                     max-width: rem(193);
                 }
             }
-            @include mobile{
-                .main-research__card-el{
+            @include mobile {
+                .main-research__card-el {
                     max-width: unset;
                     width: rem(204);
                 }
             }
         }
 
-        &_type3{
+        &_type3 {
             width: calc(100% - rem(221));
-            .main-research__card-el{
+            .main-research__card-el {
                 max-width: rem(383);
             }
-            .main-research__card-title{
+            .main-research__card-title {
                 margin-bottom: 0;
             }
 
-            @include laptop{
+            @include laptop {
                 width: calc(100% - rem(168));
             }
-            @include mobile{
+            @include mobile {
                 width: 100%;
             }
         }
-
     }
 
-    
-
-    &__card-tags{
+    &__card-tags {
         display: flex;
         column-gap: rem(6);
         align-items: center;
 
-        img{
+        img {
             flex-shrink: 0;
             width: 1rem;
             height: 1rem;
         }
     }
 
-    &__card-tag{
+    &__card-tag {
         color: var(--grayDark);
         font-size: rem(16);
         line-height: 1.2;
     }
 
-    &__card-title{
+    &__card-title {
         margin-bottom: rem(8);
         font-size: rem(24);
         line-height: 1.1;
-        @include laptop{
+        @include laptop {
             font-size: rem(20);
             margin-bottom: rem(6);
         }
-        @include mobile{
+        @include mobile {
             font-size: rem(18);
         }
     }
 
-    &__card-text{
+    &__card-text {
         font-size: rem(16);
         line-height: 1.2;
         display: flex;
         align-items: center;
         column-gap: rem(6);
 
-        img{
+        img {
             width: rem(10);
             height: rem(10);
             display: block;
-            @include laptop{
+            @include laptop {
                 width: rem(8);
                 height: rem(8);
             }
         }
 
-        
-
-        @include laptop{
+        @include laptop {
             font-size: rem(14);
         }
-        @include mobile{
+        @include mobile {
             align-items: center;
             font-size: rem(12);
 
-            img{
+            img {
                 width: rem(8);
                 height: rem(8);
                 margin-bottom: rem(1);
             }
         }
 
-        &_white{
+        &_white {
             color: var(--white);
-            @include mobile{
+            @include mobile {
                 font-size: rem(14);
             }
         }
 
-        &_tag{
-
-            @include mobile{
+        &_tag {
+            @include mobile {
                 align-items: flex-start !important;
             }
 
-            img{
+            img {
                 width: rem(16);
                 height: rem(17);
-                @include mobile{
+                @include mobile {
                     width: rem(13);
                     height: rem(14);
                 }
             }
         }
 
-        &_space{
-            word-spacing: rem(2)
+        &_space {
+            word-spacing: rem(2);
         }
 
-        &_big{
+        &_big {
             font-size: rem(20);
-            @include laptop{
+            @include laptop {
                 font-size: rem(18);
             }
-            @include mobile{
+            @include mobile {
                 font-size: rem(14);
             }
         }
 
-        &_gray{
+        &_gray {
             color: var(--grayDark);
             margin-top: rem(8);
         }
 
-        &_title{
+        &_title {
             font-size: rem(20);
             margin-bottom: rem(10);
             justify-content: center;
-            @include laptop{
+            @include laptop {
                 font-size: rem(18);
                 margin-bottom: rem(6);
             }
-            @include mobile{
+            @include mobile {
                 text-align: center;
                 margin-bottom: rem(8);
             }
         }
 
-        &_description{
+        &_description {
             text-align: center;
             justify-content: center;
             max-width: rem(556);
             margin: 0 auto;
-            @include laptop{
+            @include laptop {
                 max-width: rem(490);
             }
-            @include mobile{
+            @include mobile {
                 font-size: rem(14);
             }
         }
     }
 
-    &__card-list{
+    &__card-list {
         margin-top: rem(22);
         display: flex;
         flex-direction: column;
         row-gap: rem(8);
 
-        &_row{
+        &_row {
             flex-direction: row;
             column-gap: rem(24);
-            @include mobile{
+            @include mobile {
                 flex-wrap: wrap;
             }
         }
 
-        @include laptop{
+        @include laptop {
             margin-top: rem(18);
         }
     }
 
-    &__card-el{
+    &__card-el {
         display: inline-flex;
         align-items: center;
         column-gap: rem(10);
@@ -453,51 +444,51 @@
         margin-right: auto;
         z-index: 1;
 
-        span{
+        span {
             color: var(--blue);
             display: flex;
             align-items: center;
             margin-left: rem(-4);
             column-gap: rem(2);
-            @include mobile{
+            @include mobile {
                 display: inline-flex;
                 margin-left: rem(5);
                 transform: translateY(rem(3));
             }
         }
 
-        p{
+        p {
             display: flex;
             column-gap: rem(10);
-            @include mobile{
+            @include mobile {
                 display: block;
                 max-width: rem(148);
             }
         }
 
-        @include laptop{
+        @include laptop {
             font-size: rem(14);
             column-gap: rem(8);
         }
     }
 
-    &__card-image{
+    &__card-image {
         margin-top: auto;
         overflow: hidden;
         position: relative;
 
-        img{
+        img {
             width: 100%;
             height: 100%;
             display: block;
         }
 
-        @include laptop{
+        @include laptop {
             width: rem(534);
         }
     }
 
-    &__card-label{
+    &__card-label {
         /* width: rem(46);
         height: rem(46);
         border-radius: rem(100);
@@ -509,7 +500,7 @@
         display: flex;
         justify-content: center;
         align-items: center; */
-        
+
         position: absolute;
         bottom: 30px;
         display: flex;
@@ -517,32 +508,29 @@
         justify-content: center;
         column-gap: rem(8);
         color: var(--white);
-        background: #3500274D;
+        background: #3500274d;
         backdrop-filter: blur(calc(50px * 0.35));
         padding: rem(10) rem(28);
         border-radius: rem(100);
         overflow: hidden;
 
-        
-
-        img{
+        img {
             width: rem(10);
             height: rem(10);
         }
 
-        @include laptop{
+        @include laptop {
             padding: 0 rem(20);
             height: rem(33);
             font-size: rem(14);
-            img{
+            img {
                 width: rem(8);
                 height: rem(8);
                 margin-bottom: rem(1);
             }
-    
         }
 
-        @include mobile{
+        @include mobile {
             padding: 0 rem(10);
             height: rem(22);
             font-size: rem(12);
@@ -551,18 +539,18 @@
         }
     }
 
-    &__card-bot{
+    &__card-bot {
         display: flex;
         justify-content: center;
         column-gap: rem(20);
         margin-top: rem(20);
 
-        &_stats{
+        &_stats {
             column-gap: rem(10);
         }
     }
 
-    &__card-stat{
+    &__card-stat {
         font-size: rem(16);
         line-height: 1.2;
         color: var(--grayDark);
@@ -570,42 +558,42 @@
         column-gap: rem(3);
     }
 
-    &__card-box{
+    &__card-box {
         margin-top: rem(40);
         display: flex;
         column-gap: rem(10);
-        @include laptop{
+        @include laptop {
             margin-top: rem(30);
         }
-        @include mobile{
+        @include mobile {
             margin-top: rem(20);
             flex-wrap: wrap;
             row-gap: rem(28);
         }
     }
 
-    &__card-left{
+    &__card-left {
         width: rem(640);
         flex-shrink: 0;
-        @include laptop{
+        @include laptop {
             width: rem(534);
         }
-        @include mobile{
+        @include mobile {
             width: 100%;
         }
     }
 
-    &__card-right{
+    &__card-right {
         gap: rem(10);
         display: flex;
         flex-direction: column;
         width: 100%;
-        @include laptop{
+        @include laptop {
             gap: rem(8);
         }
     }
 
-    &__card-block{
+    &__card-block {
         padding: rem(34) rem(44);
         background: var(--bg);
         border-radius: rem(50);
@@ -614,40 +602,40 @@
         align-items: center;
         column-gap: rem(24);
 
-        @include laptop{
+        @include laptop {
             padding: rem(26) rem(34);
             column-gap: rem(16);
             border-radius: rem(38);
         }
-        @include mobile{
+        @include mobile {
             border-radius: rem(24);
             padding: rem(12) rem(14);
         }
     }
 
-    &__card-icon{
+    &__card-icon {
         flex-shrink: 0;
         width: rem(80);
         height: rem(80);
         border-radius: rem(20);
         overflow: hidden;
 
-        @include laptop{
+        @include laptop {
             width: rem(68);
             height: rem(68);
         }
-        @include mobile{
+        @include mobile {
             width: rem(60);
             height: rem(60);
             border-radius: rem(16);
         }
 
-        img{
+        img {
             width: 100%;
             height: 100%;
         }
 
-        &_small{
+        &_small {
             width: rem(48);
             height: rem(48);
             display: flex;
@@ -655,13 +643,13 @@
             align-items: center;
             background: var(--bg);
             border-radius: rem(100);
-            img{
+            img {
                 width: rem(20);
                 height: rem(20);
             }
 
-            @include laptop{
-                img{
+            @include laptop {
+                img {
                     width: rem(18);
                     height: rem(18);
                 }
@@ -669,8 +657,8 @@
         }
     }
 
-    &__card-btn{
-        background: #C2B3BE;
+    &__card-btn {
+        background: #c2b3be;
         color: var(--white);
         //height: rem(48);
         font-weight: 400;
@@ -681,10 +669,10 @@
         margin: 0 auto;
         margin-top: rem(6);
 
-        @include laptop{
+        @include laptop {
             max-width: rem(225);
         }
-        @include mobile{
+        @include mobile {
             margin-top: rem(16);
             max-width: unset;
             height: rem(50);
@@ -693,27 +681,27 @@
             padding-left: rem(52);
         }
 
-        .btn__circle{
-            background: #A68FA0;
-            @include mobile{
+        .btn__circle {
+            background: #a68fa0;
+            @include mobile {
                 width: rem(40);
                 height: rem(40);
             }
 
-            img{
-                @include mobile{
+            img {
+                @include mobile {
                     width: rem(17);
                     height: rem(17);
                 }
             }
         }
 
-        &:hover{
+        &:hover {
             //background: transparent;
         }
     }
 
-    &__subscribe{
+    &__subscribe {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -726,27 +714,27 @@
         justify-content: flex-end;
         padding: rem(44) rem(46);
 
-        .main-team__form{
+        .main-team__form {
             margin-left: 0;
         }
 
-        @include laptop{
+        @include laptop {
             padding: rem(36) rem(38);
         }
-        @include mobile{
+        @include mobile {
             padding: rem(24);
         }
 
-        &_open{
+        &_open {
             display: flex;
         }
     }
 
-    &__subscribe-close{
+    &__subscribe-close {
         width: rem(38);
         height: rem(38);
         border-radius: rem(100);
-        background: #3500274D;
+        background: #3500274d;
         cursor: pointer;
         display: flex;
         justify-content: center;
@@ -755,11 +743,10 @@
         top: rem(26);
         right: rem(26);
 
-        img{
+        img {
             display: block;
             width: rem(18);
             height: rem(18);
         }
     }
-
 }
