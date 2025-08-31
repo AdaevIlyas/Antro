@@ -1,0 +1,237 @@
+.audit-its-recom {
+  position: relative;
+  display: flex;
+  align-items: start;
+  gap: rem(67);
+
+  z-index: 0;
+
+  padding: rem(44) rem(80) rem(34) rem(80);
+  margin: rem(-20) rem(38) 0 rem(38);
+  border-radius: 0 0 rem(50) rem(50);
+
+  background: var(--pink);
+
+  @include laptop {
+    gap: rem(147);
+    padding: rem(50) rem(70) rem(39) rem(70);
+    margin: rem(-30) rem(24) 0 rem(24);
+    border-radius: 0 0 rem(38) rem(38);
+  }
+
+  @include mobile {
+    flex-direction: column;
+    gap: rem(14);
+    padding: rem(40) rem(12) rem(40) rem(13);
+    margin: rem(-30) rem(8) 0 rem(8);
+    border-radius: 0 0 rem(40) rem(40);
+  }
+
+  &__blur {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    bottom: rem(55);
+
+    width: rem(1016);
+    height: rem(108);
+    filter: blur(rem(70));
+    background: var(--pink);
+    border-radius: rem(50);
+
+    transform: translateX(-50%);
+
+    @include laptop {
+      width: rem(859);
+      height: rem(108);
+      bottom: rem(58);
+    }
+
+    @include mobile {
+      width: rem(224);
+      height: rem(108);
+      bottom: rem(30);
+
+      filter: blur(rem(50));
+    }
+  }
+
+  &__title {
+    flex: 0 0 auto;
+
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(50);
+    line-height: 108%;
+    letter-spacing: -3%;
+    color: #ffffff;
+
+    max-width: rem(507);
+    padding-top: rem(6);
+
+    @include laptop {
+      font-size: rem(38);
+      max-width: rem(295);
+      padding-top: rem(10);
+    }
+
+    @include mobile {
+      font-size: rem(24);
+      max-width: rem(200);
+      padding-top: 0;
+    }
+  }
+
+  &__list {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: rem(14);
+
+    @include laptop {
+      gap: rem(12);
+    }
+
+    @include mobile {
+      gap: rem(8);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: start;
+    gap: rem(14);
+
+    padding: rem(12);
+    border-radius: rem(32);
+
+    @include laptop {
+      border-radius: rem(28);
+    }
+
+    @include mobile {
+      gap: rem(12);
+      border-radius: rem(24);
+      padding-left: rem(14);
+    }
+
+    &:first-child {
+      margin-bottom: rem(6);
+      background: #ff81df;
+
+      @include laptop {
+        margin-bottom: rem(4);
+      }
+    }
+
+    &:not(:first-child) {
+      padding-block: 0;
+
+      .audit-its-recom__icon {
+        height: rem(58);
+
+        @include laptop {
+          height: rem(52);
+        }
+
+        @include mobile {
+          height: rem(48);
+          width: rem(48);
+        }
+      }
+
+      .audit-its-recom__icon-svg {
+        width: rem(58);
+        height: rem(58);
+
+        @include laptop {
+          height: rem(52);
+          width: rem(52);
+        }
+
+        @include mobile {
+          height: rem(48);
+          width: rem(48);
+        }
+      }
+
+      .audit-its-recom__item-body {
+        margin-block: auto;
+      }
+    }
+  }
+
+  &__icon {
+    flex: 0 0 auto;
+    display: grid;
+    place-content: center;
+
+    width: rem(68);
+    height: rem(68);
+
+    @include laptop {
+      width: rem(62);
+      height: rem(62);
+    }
+
+    @include mobile {
+      height: rem(56);
+      width: rem(56);
+    }
+  }
+
+  &__icon-svg {
+    width: rem(68);
+    height: rem(68);
+
+    @include laptop {
+      width: rem(62);
+      height: rem(62);
+    }
+
+    @include mobile {
+      height: rem(56);
+      width: rem(56);
+    }
+  }
+
+  &__item-title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: 120%;
+    color: #fff;
+    margin-bottom: rem(2);
+
+    @include laptop {
+      line-height: 150%;
+      font-size: rem(16);
+      margin-bottom: 0;
+    }
+
+    @include mobile {
+      font-size: rem(14);
+    }
+  }
+
+  &__item-description {
+    max-width: rem(379);
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 120%;
+    letter-spacing: -3%;
+    color: #ffe8f9;
+
+    @include laptop {
+      max-width: rem(344);
+
+      font-size: rem(16);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+    }
+  }
+}
