@@ -52,6 +52,9 @@ try {
   reportWay();
 } catch (error) {}
 
+import { cookie_and_banner } from "./components/cookie_and_banner";
+cookie_and_banner();
+
 function thanksModal() {
   document.querySelector(".js-modal-open[data-modal='thanks_audit']").click();
 }

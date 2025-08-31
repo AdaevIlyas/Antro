@@ -1,0 +1,172 @@
+.i-checkbox {
+  margin-inline: auto;
+
+  display: flex;
+  gap: rem(8);
+  max-width: rem(560);
+
+  @include laptop {
+    max-width: rem(504);
+  }
+
+  @include mobile {
+    max-width: rem(302);
+  }
+
+  &_error {
+    .i-checkbox__mask {
+      border-color: #fda3a3;
+
+      &:hover {
+        border-color: #fda3a3;
+      }
+    }
+
+    .i-checkbox__text {
+      color: #fda3a3;
+
+      a {
+        color: #fda3a3;
+      }
+    }
+  }
+
+  &_dark {
+    margin-top: rem(24);
+    max-width: none;
+    margin-inline: 0;
+
+    @include laptop {
+      margin-top: rem(18);
+    }
+
+    @include mobile {
+      margin-top: rem(24);
+      width: rem(302);
+    }
+
+    .i-checkbox__text {
+      color: #4c5f5f;
+
+      a {
+        color: #4c5f5f;
+
+        &:hover {
+          color: #4c5f5fc4;
+        }
+      }
+    }
+  }
+
+  &_audit {
+    margin-top: rem(16);
+    margin-inline: 0;
+
+    @include laptop {
+      margin-top: rem(12);
+    }
+
+    @include mobile {
+      margin-top: rem(24);
+      width: rem(302);
+    }
+  }
+
+  &_left {
+    @include laptop {
+      margin-inline: 0;
+    }
+  }
+
+  &_small {
+    max-width: none;
+    max-width: rem(437);
+
+    @include laptop {
+      max-width: rem(352);
+    }
+
+    @include mobile {
+      max-width: rem(329);
+      margin-inline: 0;
+    }
+
+    .i-checkbox__text {
+      font-size: rem(12);
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__input:checked + &__mask {
+    background: #fc63d5;
+    border-color: #fc63d5;
+
+    svg {
+      opacity: 1;
+    }
+
+    &:hover {
+      background: #e055bd;
+      border-color: #e055bd;
+    }
+  }
+
+  &__mask {
+    display: grid;
+    place-content: center;
+
+    flex: 0 0 auto;
+    width: rem(20);
+    height: rem(20);
+    border-radius: rem(5);
+    border: rem(1) solid #b0aeb8;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    svg {
+      width: rem(12);
+      height: rem(8);
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      border-color: #8d8b96;
+    }
+  }
+
+  &__text {
+    user-select: none;
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #b0aeb8;
+
+    @include laptop {
+      font-size: rem(14);
+    }
+
+    @include mobile {
+      font-size: rem(12);
+    }
+
+    a {
+      text-decoration: underline;
+      text-underline-offset: rem(2);
+      text-decoration-skip-ink: none;
+      color: #b0aeb8;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #8d8b96;
+      }
+    }
+  }
+}

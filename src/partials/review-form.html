@@ -85,7 +85,7 @@
                 </div>
 
 
-                <div class="review-form__col">
+                <div class="review-form__col review-form__col_min-height">
 
                     <form action="" class="review-form__form">
 
@@ -134,8 +134,8 @@
 
 
                         </div>
-                        <div class="main-order__form-note">Оставляя заявку, я соглашаюсь с <a href="#">обработкой
-                                персональных данных</a> и <a href="#">политикой конфиденциальности</a></div>
+                        <!-- <div class="main-order__form-note">Оставляя заявку, я соглашаюсь с <a href="#">обработкой
+                                персональных данных</a> и <a href="#">политикой конфиденциальности</a></div> -->
 
                         <button class="btn-reset btn btn_wide btn_hover-pink">Купить полный обзор</button>
 
@@ -144,6 +144,7 @@
                         <img src="/img/svg/document-w.svg" alt="" class="review-form__free-img">
                         Скачать публичный обзор бесплатно
                     </button>
+                    @include('./i-checkbox.html', {"dark": "dark"})
                 </div>
 
             </div>
@@ -248,6 +249,7 @@
                         <img src="/img/svg/lightning.svg" alt="" class="review-form__free-img">
                         Купить полный обзор
                     </button>
+                    @include('./i-checkbox.html', {"dark": "dark"})
                 </div>
 
             </div>

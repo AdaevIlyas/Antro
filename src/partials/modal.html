@@ -77,8 +77,7 @@
                 <button class="btn-reset btn btn_wide btn_hover-pink">Оставить заявку</button>
             </div>
 
-            <div class="modal__form-note">Нажимая на кнопку, вы даете согласие на <a href="#">обработку персональных
-                    данных</a> и соглашаетесь с <a href="#">политикой конфиденциальности</a></div>
+            @include('./i-checkbox.html')
 
             <div class="modal__social">
                 <a href="#" class="modal__social-link btn_hover-round">
@@ -244,8 +243,8 @@
 
 
                         </div>
-                        <div class="main-order__form-note">Оставляя заявку, я соглашаюсь с <a href="#">обработкой
-                                персональных данных</a> и <a href="#">политикой конфиденциальности</a></div>
+                        <!-- <div class="main-order__form-note">Оставляя заявку, я соглашаюсь с <a href="#">обработкой
+                                персональных данных</a> и <a href="#">политикой конфиденциальности</a></div> -->
 
                         <button class="btn-reset btn btn_wide btn_hover-pink">Купить полный обзор</button>
 
@@ -254,6 +253,7 @@
                         <img src="/img/svg/document-w.svg" alt="" class="review-form__free-img">
                         Скачать публичный обзор бесплатно
                     </button>
+                    @include('./i-checkbox.html', {"dark": "dark"})
                 </div>
 
             </div>
@@ -366,6 +366,7 @@
                         <img src="/img/svg/lightning.svg" alt="" class="review-form__free-img">
                         Купить полный обзор
                     </button>
+                    @include('./i-checkbox.html', {"dark": "dark"})
                 </div>
 
             </div>
@@ -502,10 +503,11 @@
 
 
                         </div>
-                        <div class="main-order__form-note">Оставляя заявку, я соглашаюсь с <a href="#">обработкой
-                                персональных данных</a> и <a href="#">политикой конфиденциальности</a></div>
+                        <!-- <div class="main-order__form-note">Оставляя заявку, я соглашаюсь с <a href="#">обработкой
+                                персональных данных</a> и <a href="#">политикой конфиденциальности</a></div> -->
 
                         <button class="btn-reset btn btn_wide btn_hover-pink">Оставить заявку</button>
+                        @include('./i-checkbox.html', {"audit": "audit"})
                     </form>
 
                 </div>

@@ -1,0 +1,384 @@
+.i-banner {
+  margin: 0 auto rem(30) auto;
+
+  z-index: 19;
+
+  width: rem(1640);
+  height: rem(90);
+
+  overflow: hidden;
+
+  @include laptop {
+    width: rem(1300);
+  }
+
+  @include mobile {
+    width: 100%;
+    height: rem(106);
+  }
+
+  &_none {
+    .i-banner__scroll {
+      display: none !important;
+    }
+  }
+
+  &_scroll {
+    .i-banner__scroll {
+      transform: translateY(0);
+      //   opacity: 1;
+      //   visibility: visible;
+
+      @include mobile {
+        transition-delay: 2s;
+      }
+    }
+  }
+
+  &__scroll {
+    position: fixed;
+    z-index: 18;
+    bottom: rem(30);
+
+    transform: translateY(calc(100% + rem(30)));
+    // opacity: 0;
+    // visibility: collapse;
+
+    transition-duration: 0.3s;
+
+    @include laptop {
+      bottom: rem(20);
+
+      transform: translateY(calc(100% + rem(20)));
+    }
+
+    @include mobile {
+      width: 100%;
+      bottom: rem(62);
+
+      transform: translateY(calc(100% + rem(62)));
+    }
+
+    .i-banner__body {
+      height: rem(62);
+      padding: rem(9) rem(16) rem(9) rem(20);
+
+      @include mobile {
+        position: relative;
+        height: rem(106);
+        padding: rem(12) rem(16);
+      }
+    }
+
+    .i-banner__title {
+      font-size: rem(20);
+
+      @include mobile {
+        font-size: rem(12);
+        max-width: rem(230);
+      }
+    }
+
+    .i-banner__close {
+      width: rem(44);
+      height: rem(44);
+
+      @include mobile {
+        position: absolute;
+        top: rem(-2);
+        right: rem(-6);
+
+        width: rem(32);
+        height: rem(32);
+      }
+    }
+
+    .i-banner__right {
+      position: static;
+      width: rem(226);
+
+      @include mobile {
+        width: unset;
+      }
+    }
+
+    .i-banner__btn {
+      max-width: rem(170);
+      height: rem(44);
+
+      @include mobile {
+        width: 100%;
+        max-width: none;
+        height: rem(40);
+        padding-left: rem(16);
+      }
+
+      .btn__circle {
+        width: rem(36);
+        height: rem(36);
+
+        @include mobile {
+          width: rem(32);
+          height: rem(32);
+        }
+      }
+    }
+  }
+
+  &__body {
+    position: relative;
+
+    padding: rem(20) rem(24) rem(20) rem(40);
+
+    width: rem(1640);
+    height: rem(90);
+    border-radius: rem(100);
+    overflow: hidden;
+
+    @include laptop {
+      height: rem(70);
+      padding: rem(10) rem(14) rem(10) rem(30);
+      width: rem(1300);
+    }
+
+    @include mobile {
+      width: unset;
+      height: rem(106);
+      border-radius: rem(24);
+      margin-inline: rem(16);
+
+      padding: rem(12) rem(16);
+    }
+  }
+
+  &__body-wrapper {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(10);
+
+    height: 100%;
+    width: 100%;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &__gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(90deg, #026878 0%, #03d871 62.02%);
+
+    animation: anim_before 10s linear infinite;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: rem(-1);
+
+      width: 100%;
+      height: 100%;
+
+      background: linear-gradient(270deg, #026878 0%, #03d871 62.02%);
+
+      transform: translateX(100%);
+
+      // animation: anim_before 20s linear infinite;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: rem(-2);
+
+      width: 100%;
+      height: 100%;
+
+      background: linear-gradient(90deg, #026878 0%, #03d871 62.02%);
+
+      transform: translateX(200%);
+
+      // animation: anim_after 20s linear infinite;
+    }
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(24);
+    line-height: 120%;
+    letter-spacing: -5%;
+    text-transform: uppercase;
+    color: #fff;
+
+    @include mobile {
+      font-size: rem(12);
+      line-height: 130%;
+      max-width: rem(230);
+    }
+  }
+
+  &__btn {
+    max-width: rem(174);
+    height: rem(50);
+    padding-left: rem(24);
+    background: none;
+
+    @include mobile {
+      width: 100%;
+      max-width: none;
+      height: rem(40);
+      padding-left: rem(16);
+    }
+
+    &::before {
+      background: #00000033;
+    }
+
+    &:hover {
+      @include NOTmobile {
+        background: none;
+        &::before {
+          background: #00000033;
+        }
+      }
+    }
+
+    &:active {
+      @include NOTmobile {
+        background: none;
+        &::before {
+          background: #00000033;
+        }
+      }
+    }
+
+    .btn__circle {
+      width: rem(40);
+      height: rem(40);
+      background: #00000033;
+
+      @include mobile {
+        width: rem(32);
+        height: rem(32);
+      }
+
+      &:hover {
+        @include NOTmobile {
+          background: #00000033;
+        }
+      }
+
+      &:active {
+        @include NOTmobile {
+          background: #00000033;
+        }
+      }
+    }
+  }
+
+  &__right {
+    position: relative;
+    width: rem(234);
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+
+    @include mobile {
+      width: unset;
+    }
+  }
+
+  &__close {
+    flex: 0 0 auto;
+    position: relative;
+    margin-left: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: rem(48);
+    height: rem(48);
+
+    cursor: pointer;
+
+    @include mobile {
+      width: rem(32);
+      height: rem(32);
+    }
+
+    img {
+      position: relative;
+      z-index: 2;
+      width: rem(20);
+      height: rem(20);
+
+      @include mobile {
+        width: rem(12);
+        height: rem(12);
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      border-radius: rem(100);
+      background: #00000033;
+      transition-duration: 0.3s;
+    }
+
+    &:hover {
+      @include NOTmobile {
+        &:before {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    &:active {
+      @include NOTmobile {
+        &:before {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+@keyframes anim_before {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+// @keyframes anim_after {
+//   from {
+//     transform: translateX(-100%);
+//   }
+//   to {
+//     transform: translateX(0);
+//   }
+// }
