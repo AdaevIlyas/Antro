@@ -5,7 +5,6 @@
 }
 
 html {
-    
   --refRes: 1780;
   font-size: calc(100vw / var(--refRes) * 10);
 
@@ -14,8 +13,8 @@ html {
     font-size: calc(100vw / var(--refRes) * 10);
   }
   @media (max-width: 480px) {
-    --refRes: 375;
-    font-size: calc(100vw / var(--refRes) * 10);
+    --refRes: 375 !important;
+    font-size: calc(100vw / var(--refRes) * 10) !important;
   }
 
   /* --refRes: 375;
@@ -35,5 +34,4 @@ html {
     --refRes: 1780;
     font-size: calc(100vw / var(--refRes) * 10);
   } */
-
 }
