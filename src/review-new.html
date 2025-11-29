@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru" class="page page-review-new">
+
+@include('partials/head.html')
+
+<body class="page__body page__body_audit">
+    <div class="site-container">
+        @include('partials/header-review-new.html')
+        @include('partials/mobile-menu-review-new.html')
+        @include('partials/cookie.html')
+        <main class="main">
+            @include('partials/review-new-first.html')
+            @include('partials/review-new-inside.html')
+            @include('partials/review-benefit.html')
+            @include('partials/review-new-content.html')
+            @include('partials/review-new-companies.html')
+            @include('partials/review-feedback.html')
+            <div class="review__bg">
+                @include('partials/review-services.html')
+                @include('partials/review-research.html')
+            </div>
+            @include('partials/review-new-form.html')
+        </main>
+
+
+        @include('partials/modal.html')
+        @include('partials/footer.html')
+
+    </div>
+</body>
+
+</html>

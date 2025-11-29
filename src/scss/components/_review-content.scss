@@ -1,540 +1,548 @@
 .review-content {
-    &__wrapper {
-        margin-inline: rem(20);
-        padding: rem(100) rem(213) rem(177);
-        border-radius: rem(60);
-        background: linear-gradient(180deg, #012525 0%, #048b8b 100%);
-
-        @include laptop {
-            margin-inline: rem(16);
-            border-radius: rem(44);
-            padding: rem(60) rem(84) rem(80);
-        }
-
-        @include mobile {
-            margin-inline: 0;
-            border-radius: rem(40);
-            padding: rem(40) rem(16);
-        }
-    }
-
-    &__title {
-        font-size: rem(50);
-        color: var(--white);
-        text-align: center;
-        margin-bottom: rem(40);
-
-        @include laptop {
-            font-size: rem(38);
-        }
-
-        @include mobile {
-            font-size: rem(24);
-            margin-bottom: rem(30);
-        }
-    }
-
-    &__insides-inner {
-        @include mobile {
-            // margin-inline: rem(-16);
-            // padding-inline: rem(16);
-
-            // padding-bottom: rem(10);
-            // margin-bottom: rem(20);
-            // overflow-x: hidden;
-        }
-    }
-
-    &__insides {
-        max-width: rem(801);
-
-        display: flex;
-        gap: rem(14) rem(12);
-        justify-content: center;
-        flex-wrap: wrap;
-
-        margin-inline: auto;
-        margin-bottom: rem(60);
-
-        @include laptop {
-            max-width: rem(664);
-            gap: rem(12);
-            margin-bottom: rem(50);
-        }
-
-        @include mobile {
-            justify-content: flex-start;
-            max-width: none;
-            width: rem(409);
-            gap: rem(6);
-            margin-bottom: rem(30);
-        }
-    }
-
-    &__inside {
-        display: flex;
-        align-items: center;
-        gap: rem(8);
-
-        padding: rem(10) rem(28);
-        backdrop-filter: blur(rem(50));
-        background: rgba(255, 255, 255, 0.1);
-
-        border-radius: rem(160);
-
-        @include laptop {
-            padding: rem(9) rem(18);
-        }
-
-        @include mobile {
-            padding: rem(8) rem(10);
-        }
-    }
-
-    &__inside-img {
-        flex: 0 0 auto;
-        width: rem(20);
-        height: rem(20);
-
-        @include laptop {
-            width: rem(16);
-            height: rem(16);
-        }
-    }
-
-    &__inside-text {
-        font-family: var(--font-family);
-        font-weight: 400;
-        font-size: rem(16);
-        line-height: normal;
-        letter-spacing: -0.03em;
-        color: var(--white);
-
-        @include laptop {
-            font-size: rem(14);
-        }
-
-        @include mobile {
-            font-size: rem(12);
-        }
-    }
-
-    &__list {
-        display: flex;
-        flex-direction: column;
-        gap: rem(10);
-    }
-
-    &__item {
-    }
-}
-
-.review-content-item {
-    position: relative;
-    padding: rem(38) rem(50) rem(50) rem(50);
-    border-radius: rem(50);
+  &__wrapper {
+    margin-inline: rem(20);
+    padding: rem(100) rem(213) rem(177);
+    border-radius: rem(60);
+    background: linear-gradient(180deg, #012525 0%, #048b8b 100%);
 
     @include laptop {
-        border-radius: rem(38);
-        padding: rem(44);
+      margin-inline: rem(16);
+      border-radius: rem(44);
+      padding: rem(60) rem(84) rem(80);
     }
 
     @include mobile {
-        border-radius: rem(30);
-        padding: rem(20);
+      margin-inline: 0;
+      border-radius: rem(40);
+      padding: rem(40) rem(16);
+    }
+  }
+
+  &__title {
+    font-size: rem(50);
+    color: var(--white);
+    text-align: center;
+    margin-bottom: rem(40);
+
+    @include laptop {
+      font-size: rem(38);
     }
 
-    &.active {
-        background: red;
-        .review-content-item__close {
-            transform: rotate(0);
-        }
+    @include mobile {
+      font-size: rem(24);
+      margin-bottom: rem(30);
+    }
+  }
 
-        .review-content-item__body {
-            grid-template-rows: 1fr;
-        }
+  &__insides-inner {
+    @include mobile {
+      // margin-inline: rem(-16);
+      // padding-inline: rem(16);
+
+      // padding-bottom: rem(10);
+      // margin-bottom: rem(20);
+      // overflow-x: hidden;
+    }
+  }
+
+  &__insides {
+    max-width: rem(801);
+
+    display: flex;
+    gap: rem(14) rem(12);
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin-inline: auto;
+    margin-bottom: rem(60);
+
+    @include laptop {
+      max-width: rem(664);
+      gap: rem(12);
+      margin-bottom: rem(50);
     }
 
-    &.dark {
-        background: var(--reviewDark);
+    @include mobile {
+      justify-content: flex-start;
+      max-width: none;
+      width: rem(409);
+      gap: rem(6);
+      margin-bottom: rem(30);
+    }
+  }
 
-        .review-content-item__title {
-            color: var(--white);
-        }
+  &__inside {
+    display: flex;
+    align-items: center;
+    gap: rem(8);
 
-        .review-content-item__description {
-            color: var(--white);
-        }
+    padding: rem(10) rem(28);
+    backdrop-filter: blur(rem(50));
+    background: rgba(255, 255, 255, 0.1);
 
-        .review-content-item__list-item {
-            color: var(--white);
+    border-radius: rem(160);
 
-            &::before {
-                background: var(--white);
-            }
-        }
-
-        .review-content-item__circle {
-            color: var(--white);
-            background: rgba(0, 0, 0, 0.3);
-        }
-
-        .review-content-item__close {
-            rect {
-                fill: #1b3c3c;
-            }
-
-            path {
-                fill: var(--white);
-            }
-        }
-
-        .review-content-item__pages {
-            color: var(--white);
-            background: #011a1a;
-        }
+    @include laptop {
+      padding: rem(9) rem(18);
     }
 
-    &.white {
-        background: var(--bg);
+    @include mobile {
+      padding: rem(8) rem(10);
+    }
+  }
 
-        .review-content-item__title {
-            color: var(--black);
-        }
+  &__inside-img {
+    flex: 0 0 auto;
+    width: rem(20);
+    height: rem(20);
 
-        .review-content-item__description {
-            color: var(--black);
-        }
+    @include laptop {
+      width: rem(16);
+      height: rem(16);
+    }
+  }
 
-        .review-content-item__list-item {
-            color: var(--black);
+  &__inside-text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: normal;
+    letter-spacing: -0.03em;
+    color: var(--white);
 
-            &::before {
-                background: #a2a0ae;
-            }
-        }
-
-        .review-content-item__circle {
-            color: var(--black);
-            background: #e7e7e7;
-        }
-
-        .review-content-item__close {
-            rect {
-                fill: var(--white);
-            }
-
-            path {
-                fill: var(--black);
-            }
-        }
-
-        .review-content-item__pages {
-            color: var(--reviewDark);
-            background: var(--white);
-        }
+    @include laptop {
+      font-size: rem(14);
     }
 
-    &__info {
-        display: flex;
-        gap: rem(8);
-        margin-bottom: rem(16);
+    @include mobile {
+      font-size: rem(12);
+    }
+  }
 
-        @include laptop {
-        }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+  }
+
+  &__item {
+  }
+}
+
+.review-content-item {
+  position: relative;
+  padding: rem(38) rem(50) rem(50) rem(50);
+  border-radius: rem(50);
+
+  @include laptop {
+    border-radius: rem(38);
+    padding: rem(44);
+  }
+
+  @include mobile {
+    border-radius: rem(30);
+    padding: rem(20);
+  }
+
+  &.active {
+    background: red;
+    .review-content-item__close {
+      transform: rotate(0);
     }
 
-    &__pages {
-        display: flex;
-        align-items: center;
-        height: rem(33);
+    .review-content-item__body {
+      grid-template-rows: 1fr;
+    }
+  }
 
-        border-radius: rem(160);
-        padding: rem(8) rem(20);
+  &.dark {
+    background: var(--reviewDark);
 
-        font-family: var(--font-family);
-        font-weight: 500;
-        font-size: rem(14);
-        line-height: 120%;
-
-        backdrop-filter: blur(rem(50));
-
-        @include laptop {
-            padding: rem(9) rem(18);
-            height: rem(35);
-        }
-
-        @include mobile {
-            height: rem(32);
-            padding: rem(9) rem(14);
-
-            font-size: rem(12);
-        }
+    .review-content-item__title {
+      color: var(--white);
     }
 
-    &__free {
-        display: flex;
-        align-items: center;
-        gap: rem(6);
-        height: rem(33);
+    .review-content-item__description {
+      color: var(--white);
+    }
 
-        border-radius: rem(160);
-        padding: rem(8) rem(20);
+    .review-content-item__list-item {
+      color: var(--white);
 
+      &::before {
         background: var(--white);
-
-        backdrop-filter: blur(rem(50));
-
-        @include laptop {
-            height: rem(35);
-            padding: rem(8) rem(18);
-            font-size: rem(12);
-        }
-
-        @include mobile {
-            height: rem(32);
-            gap: rem(4);
-            padding: rem(9) rem(14);
-            font-size: rem(10);
-        }
-
-        span {
-            font-family: var(--font-family);
-            font-weight: 600;
-            font-size: rem(14);
-            line-height: normal;
-            letter-spacing: 0.02em;
-            text-transform: uppercase;
-            color: var(--black);
-            margin-bottom: rem(-2);
-
-            @include laptop {
-                font-size: rem(12);
-                margin-bottom: rem(-1);
-            }
-
-            @include mobile {
-                font-size: rem(10);
-                margin-bottom: 0;
-            }
-        }
-
-        &-logo {
-            width: rem(20);
-            height: rem(20);
-            flex: 0 0 auto;
-
-            @include mobile {
-                width: rem(16);
-                height: rem(16);
-            }
-        }
+      }
     }
 
-    &__head {
-        display: flex;
-        align-items: center;
-        gap: rem(12);
-        cursor: pointer;
-
-        user-select: none;
-
-        @include mobile {
-            gap: rem(10);
-        }
+    .review-content-item__circle {
+      color: var(--white);
+      background: rgba(0, 0, 0, 0.3);
     }
 
-    &__circle {
-        flex: 0 0 auto;
+    .review-content-item__close {
+      rect {
+        fill: #1b3c3c;
+      }
 
-        width: rem(44);
-        height: rem(44);
-        border-radius: 50%;
-
-        display: grid;
-        place-content: center;
-
-        font-family: var(--font-family);
-        font-weight: 500;
-        font-size: rem(20);
-        line-height: 94%;
-
-        @include laptop {
-            width: rem(40);
-            height: rem(40);
-            font-size: rem(18);
-        }
-
-        @include mobile {
-            width: rem(36);
-            height: rem(36);
-            font-size: rem(16);
-            line-height: normal;
-        }
+      path {
+        fill: var(--white);
+      }
     }
 
-    &__title {
-        font-family: var(--font-family);
-        font-weight: 500;
-        font-size: rem(34);
-        line-height: 120%;
-        letter-spacing: -0.03em;
+    .review-content-item__pages {
+      color: var(--white);
+      background: #011a1a;
+    }
+  }
 
-        @include laptop {
-            font-size: rem(24);
-            line-height: 108%;
-        }
+  &.white {
+    background: var(--bg);
 
-        @include mobile {
-            font-size: rem(16);
-        }
+    .review-content-item__title {
+      color: var(--black);
     }
 
-    &__close {
-        position: absolute;
-        top: rem(38);
-        right: rem(38);
-
-        width: rem(42);
-        height: rem(42);
-        border-radius: rem(80);
-        overflow: hidden;
-
-        transition: all 0.3s ease;
-
-        transform: rotate(-45deg);
-
-        @include laptop {
-            top: rem(32);
-            right: rem(32);
-        }
-
-        @include mobile {
-            top: rem(16);
-            right: rem(16);
-            width: rem(40);
-            height: rem(40);
-        }
-
-        svg {
-            width: 100%;
-            height: 100%;
-        }
+    .review-content-item__description {
+      color: var(--black);
     }
 
-    &__body {
-        display: grid;
-        grid-template-rows: 0fr;
-        overflow: hidden;
+    .review-content-item__list-item {
+      color: var(--black);
 
-        transition: all 0.3s ease-in;
+      &::before {
+        background: #a2a0ae;
+      }
     }
 
-    &__body-height {
-        min-height: 0;
+    .review-content-item__circle {
+      color: var(--black);
+      background: #e7e7e7;
     }
 
-    &__body-wrapper {
-        margin-top: rem(32);
+    .review-content-item__close {
+      rect {
+        fill: var(--white);
+      }
 
-        display: flex;
-
-        gap: rem(32);
-
-        @include laptop {
-            margin-top: rem(28);
-            gap: rem(40);
-        }
-
-        @include mobile {
-            margin-top: rem(24);
-
-            flex-direction: column;
-            gap: rem(6);
-        }
+      path {
+        fill: var(--black);
+      }
     }
 
-    &__description {
-        font-family: var(--font-family);
-        font-weight: 400;
-        font-size: rem(18);
-        line-height: 120%;
-        letter-spacing: -0.03em;
+    .review-content-item__pages {
+      color: var(--reviewDark);
+      background: var(--white);
+    }
+  }
 
-        @include laptop {
-            font-size: rem(16);
-        }
+  &__info {
+    display: flex;
+    gap: rem(8);
+    margin-bottom: rem(16);
 
-        @include mobile {
-            font-size: rem(14);
-        }
+    @include laptop {
+    }
+  }
+
+  &__pages {
+    display: flex;
+    align-items: center;
+    height: rem(33);
+
+    border-radius: rem(160);
+    padding: rem(8) rem(20);
+
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: 120%;
+
+    backdrop-filter: blur(rem(50));
+
+    @include laptop {
+      padding: rem(9) rem(18);
+      height: rem(35);
     }
 
-    &__list {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        gap: rem(12);
-        max-width: max-content;
+    @include mobile {
+      height: rem(32);
+      padding: rem(9) rem(14);
 
-        @include laptop {
-            gap: rem(10);
-        }
+      font-size: rem(12);
+    }
+  }
 
-        @include mobile {
-            gap: rem(6);
-        }
+  &__free {
+    display: flex;
+    align-items: center;
+    gap: rem(6);
+    height: rem(33);
 
-        &_max-width {
-            max-width: rem(478);
+    border-radius: rem(160);
+    padding: rem(8) rem(20);
 
-            @include laptop {
-                max-width: rem(434);
-            }
+    background: var(--white);
 
-            @include mobile {
-                max-width: none;
-            }
-        }
+    backdrop-filter: blur(rem(50));
+
+    @include laptop {
+      height: rem(35);
+      padding: rem(8) rem(18);
+      font-size: rem(12);
     }
 
-    &__list-item {
-        display: flex;
-        align-items: start;
-        font-family: var(--font-family);
-        font-weight: 400;
-        font-size: rem(18);
-        line-height: 120%;
-        letter-spacing: -0.03em;
-
-        @include laptop {
-            font-size: rem(16);
-            line-height: 110%;
-            letter-spacing: -0.02em;
-        }
-
-        @include mobile {
-            font-size: rem(14);
-            line-height: 120%;
-            letter-spacing: -0.03em;
-        }
-
-        &::before {
-            content: "";
-            flex: 0 0 auto;
-            width: rem(5);
-            height: rem(5);
-            border-radius: 50%;
-            margin: rem(8.5) rem(8) rem(3.5) rem(3);
-            background: var(--white);
-
-            @include laptop {
-                margin: rem(5) rem(8) rem(7) rem(3);
-            }
-
-            @include mobile {
-                margin: rem(4) rem(8) rem(8) rem(3);
-            }
-        }
+    @include mobile {
+      height: rem(32);
+      gap: rem(4);
+      padding: rem(9) rem(14);
+      font-size: rem(10);
     }
+
+    span {
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: rem(14);
+      line-height: normal;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: rem(-2);
+
+      @include laptop {
+        font-size: rem(12);
+        margin-bottom: rem(-1);
+      }
+
+      @include mobile {
+        font-size: rem(10);
+        margin-bottom: 0;
+      }
+    }
+
+    &-logo {
+      width: rem(20);
+      height: rem(20);
+      flex: 0 0 auto;
+
+      @include mobile {
+        width: rem(16);
+        height: rem(16);
+      }
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+    cursor: pointer;
+
+    user-select: none;
+
+    @include mobile {
+      gap: rem(10);
+    }
+  }
+
+  &__circle {
+    flex: 0 0 auto;
+
+    width: rem(44);
+    height: rem(44);
+    border-radius: 50%;
+
+    display: grid;
+    place-content: center;
+
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(20);
+    line-height: 94%;
+
+    @include laptop {
+      width: rem(40);
+      height: rem(40);
+      font-size: rem(18);
+    }
+
+    @include mobile {
+      width: rem(36);
+      height: rem(36);
+      font-size: rem(16);
+      line-height: normal;
+    }
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(34);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+
+    @include laptop {
+      font-size: rem(24);
+      line-height: 108%;
+    }
+
+    @include mobile {
+      font-size: rem(16);
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: rem(38);
+    right: rem(38);
+
+    width: rem(42);
+    height: rem(42);
+    border-radius: rem(80);
+    overflow: hidden;
+
+    transition: all 0.3s ease;
+
+    transform: rotate(-45deg);
+
+    @include laptop {
+      top: rem(32);
+      right: rem(32);
+    }
+
+    @include mobile {
+      top: rem(16);
+      right: rem(16);
+      width: rem(40);
+      height: rem(40);
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+
+    transition: all 0.3s ease-in;
+  }
+
+  &__body-height {
+    min-height: 0;
+  }
+
+  &__body-wrapper {
+    margin-top: rem(32);
+
+    display: flex;
+
+    gap: rem(32);
+
+    @include laptop {
+      margin-top: rem(28);
+      gap: rem(40);
+    }
+
+    @include mobile {
+      margin-top: rem(24);
+
+      flex-direction: column;
+      gap: rem(6);
+    }
+  }
+
+  &__description {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+
+    @include laptop {
+      font-size: rem(16);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: rem(12);
+    max-width: max-content;
+
+    @include laptop {
+      gap: rem(10);
+    }
+
+    @include mobile {
+      gap: rem(6);
+    }
+
+    &_max-width {
+      max-width: rem(478);
+
+      @include laptop {
+        max-width: rem(434);
+      }
+
+      @include mobile {
+        max-width: none;
+      }
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: start;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+
+    @include laptop {
+      font-size: rem(16);
+      line-height: 110%;
+      letter-spacing: -0.02em;
+    }
+
+    @include mobile {
+      font-size: rem(14);
+      line-height: 120%;
+      letter-spacing: -0.03em;
+    }
+
+    &::before {
+      content: "";
+      flex: 0 0 auto;
+      width: rem(5);
+      height: rem(5);
+      border-radius: 50%;
+      margin: rem(8.5) rem(8) rem(3.5) rem(3);
+      background: var(--white);
+
+      @include laptop {
+        margin: rem(5) rem(8) rem(7) rem(3);
+      }
+
+      @include mobile {
+        margin: rem(4) rem(8) rem(8) rem(3);
+      }
+    }
+
+    &_title {
+      font-weight: 600;
+      padding-bottom: rem(3);
+      &::before {
+        display: none;
+      }
+    }
+  }
 }

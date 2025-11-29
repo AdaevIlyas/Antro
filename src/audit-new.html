@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body page__body_audit">
+    <div class="site-container">
+        @include('partials/header-landing.html')
+        @include('partials/mobile-menu.html')
+        @include('partials/cookie.html', {"audit":"audit"})
+
+
+        <main class="main">
+
+            @include('partials/audit-first.html')
+            @include('partials/audit-brands.html')
+            @include('partials/audit-why.html')
+            @include('partials/audit-structure.html')
+            @include('partials/audit-goods.html')
+            @include('partials/audit-start.html')
+            @include('partials/audit-form.html')
+            @include('partials/audit-feedback.html')
+            @include('partials/audit-cases.html')
+            @include('partials/audit-faq.html')
+
+
+        </main>
+
+
+        @include('partials/modal.html')
+        @include('partials/footer.html')
+
+    </div>
+</body>
+
+</html>
