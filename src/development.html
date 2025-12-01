@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body page__body_development">
+    <div class="site-container">
+        @include('partials/header.html')
+        @include('partials/mobile-menu.html')
+        @include('partials/cookie.html', {"main":"main"})
+
+
+        <main class="main">
+            @include('partials/development-first.html')
+            @include('partials/development-brands.html')
+            @include('partials/development-inside.html')
+            @include('partials/development-metrics.html')
+            @include('partials/development-get.html')
+        </main>
+
+
+        @include('partials/modal.html')
+        @include('partials/footer.html')
+
+    </div>
+</body>
+
+</html>

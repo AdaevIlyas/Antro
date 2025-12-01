@@ -1,0 +1,28 @@
+.development-get {
+  &__wrapper {
+  }
+
+  &__title {
+    font-size: rem(50);
+    text-align: center;
+    margin-bottom: rem(60);
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr rem(513);
+    gap: rem(20);
+  }
+
+  &__left {
+    border-radius: rem(50);
+    padding: rem(60);
+    background: #0f230a;
+  }
+
+  &__right {
+    border-radius: rem(38);
+    padding: rem(40);
+    background: #0f230a;
+  }
+}

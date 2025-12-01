@@ -1,0 +1,242 @@
+.development-first {
+  &__inner {
+    margin-top: rem(94);
+    margin-bottom: rem(80);
+
+    // @include laptop {
+    //   margin-top: rem(72);
+    //   margin-bottom: rem(80);
+    // }
+    // @include mobile {
+    //   margin-top: rem(64);
+    //   margin-bottom: rem(60);
+    // }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: rem(729);
+    background: #0f230a;
+    border-radius: rem(60);
+    padding: rem(80);
+    padding-bottom: rem(100);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    // @include laptop {
+    //   border-radius: rem(44);
+    //   padding: rem(80) rem(84) rem(40);
+    //   min-height: rem(601);
+    // }
+    // @include mobile {
+    //   min-height: unset;
+    //   width: 100%;
+    //   border-radius: rem(40);
+    //   padding: rem(40) rem(16);
+    // }
+  }
+
+  &__title {
+    font-size: rem(80);
+    font-weight: 600;
+    color: #fff;
+    max-width: rem(1110);
+    line-height: 1.08;
+    margin-bottom: rem(24);
+
+    span {
+      color: #86e46d;
+    }
+
+    // @include laptop {
+    //   font-size: rem(64);
+    //   margin-bottom: rem(20);
+    //   max-width: rem(715);
+    // }
+    // @include mobile {
+    //   font-size: rem(32);
+    //   margin-bottom: rem(12);
+    // }
+  }
+
+  &__text {
+    font-size: rem(24);
+    color: #fff;
+    max-width: rem(750);
+
+    // @include laptop {
+    //   font-size: rem(18);
+    //   max-width: rem(537);
+    // }
+    // @include mobile {
+    //   margin-bottom: rem(189);
+    //   font-size: rem(14);
+    // }
+  }
+
+  &__btn {
+    font-weight: 500;
+    font-size: rem(26);
+
+    min-width: rem(439);
+    height: rem(81);
+
+    // @include laptop {
+    //   min-width: rem(320);
+    //   height: rem(58);
+    //   font-size: rem(16);
+    // }
+    // @include mobile {
+    //   min-width: rem(343);
+
+    //   height: rem(50);
+    // }
+  }
+
+  &__image {
+    position: absolute;
+    width: rem(842);
+    height: rem(624);
+    right: rem(-158);
+    bottom: rem(-65);
+
+    // @include laptop {
+    //   width: rem(556);
+    //   height: rem(591);
+    //   right: rem(-15);
+    //   top: rem(0);
+    // }
+
+    // @include mobile {
+    //   width: rem(167);
+    //   height: rem(205);
+    //   right: rem(104);
+    //   top: rem(238);
+    //   z-index: -1;
+    // }
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+
+  &__top {
+  }
+
+  &__bottom {
+    display: flex;
+    gap: rem(16);
+    max-width: rem(1030);
+
+    // @include laptop {
+    //   max-width: rem(715);
+    // }
+
+    // @include mobile {
+    //   flex-direction: column;
+    //   gap: rem(10);
+    // }
+  }
+
+  &__download {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #fff;
+
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      //   @include NOTmobile {
+      //     opacity: 0.8;
+      //   }
+    }
+
+    // @include laptop {
+    //   font-size: rem(14);
+    //   gap: rem(8);
+    // }
+
+    // @include mobile {
+    //   justify-content: center;
+    // }
+  }
+
+  &__download-img {
+    width: rem(70);
+    height: rem(70);
+
+    // @include laptop {
+    //   width: rem(58);
+    //   height: rem(58);
+    // }
+
+    // @include mobile {
+    //   width: rem(50);
+    //   height: rem(50);
+    // }
+  }
+
+  &__sale {
+    z-index: 3;
+    position: absolute;
+    right: rem(50);
+    bottom: rem(50);
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+
+    border-radius: rem(160);
+    padding: rem(44) rem(64);
+    backdrop-filter: blur(rem(50));
+    background: rgba(53, 0, 39, 0.3);
+
+    // @include laptop {
+    //   right: rem(40);
+    //   bottom: rem(40);
+    //   padding: rem(32) rem(40);
+    // }
+
+    // @include mobile {
+    //   display: none;
+    // }
+  }
+
+  &__sale-top {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(38);
+    line-height: 108%;
+    letter-spacing: -0.03em;
+    color: var(--white);
+
+    // @include laptop {
+    //   font-size: rem(24);
+    // }
+  }
+
+  &__sale-bottom {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(20);
+    line-height: 130%;
+    color: var(--white);
+
+    // @include laptop {
+    //   font-size: rem(16);
+    // }
+  }
+}

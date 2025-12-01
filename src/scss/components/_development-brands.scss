@@ -1,0 +1,127 @@
+.development-brands {
+  margin-bottom: rem(120);
+  &__text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 94%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #0a0620;
+
+    border: rem(1.5) solid #0a0620;
+    border-radius: rem(200);
+    padding: rem(14) rem(25);
+    width: rem(534);
+    background: rgba(255, 255, 255, 0);
+
+    margin: 0 auto rem(40);
+  }
+
+  &__description {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: var(--grayDark);
+
+    // @include laptop {
+    //   font-size: rem(16);
+    //   line-height: 110%;
+    // }
+
+    // @include mobile {
+    //   font-size: rem(14);
+    //   line-height: 120%;
+    //   letter-spacing: -0.03em;
+    // }
+  }
+
+  &__scroll {
+    width: 100%;
+
+    // @include laptop {
+    //   margin-bottom: rem(20);
+    // }
+
+    // @include mobile {
+    //   width: auto;
+    //   margin-inline: rem(-16);
+    //   padding-inline: rem(16);
+    //   overflow-x: auto;
+    //   margin-bottom: rem(16);
+    // }
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: rem(10);
+
+    // @include laptop {
+    //   gap: rem(16) rem(4);
+    //   margin-bottom: rem(10);
+    // }
+
+    // @include mobile {
+    //   gap: rem(4);
+    //   width: rem(750);
+    //   justify-content: flex-start;
+    //   margin-bottom: rem(8);
+    // }
+  }
+
+  &__group {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+
+    // @include laptop {
+    //   gap: rem(4);
+    // }
+  }
+
+  &__item {
+    display: grid;
+    place-content: center;
+
+    flex: 0 0 auto;
+    width: fit-content;
+    height: rem(76);
+    padding-inline: rem(22);
+    border-radius: rem(20);
+
+    backdrop-filter: blur(rem(4));
+    background: #fff;
+
+    user-select: none;
+    pointer-events: none;
+
+    // @include laptop {
+    //   height: rem(55);
+    //   border-radius: rem(16);
+    //   padding-inline: rem(16);
+    // }
+
+    // @include mobile {
+    //   height: rem(52);
+    // }
+
+    img,
+    svg {
+      width: auto;
+      height: rem(30);
+
+      //   @include laptop {
+      //     height: rem(20);
+      //   }
+    }
+  }
+}
