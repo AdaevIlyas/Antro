@@ -543,6 +543,10 @@
       &::before {
         display: none;
       }
+
+      @include mobile {
+        padding-top: rem(10);
+      }
     }
   }
 }

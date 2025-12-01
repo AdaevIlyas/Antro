@@ -181,6 +181,18 @@
   .modal__review-wrapper .review-form__box-free .review-form__form {
     gap: rem(12);
   }
+
+  .review-form__col {
+    min-height: rem(434);
+
+    @include laptop {
+      min-height: rem(334);
+    }
+
+    @include mobile {
+      min-height: auto;
+    }
+  }
 }
 
 .header-review__btn-description {
