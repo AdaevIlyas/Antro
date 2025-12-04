@@ -1,5 +1,14 @@
 .development-brands {
   margin-bottom: rem(120);
+
+  @include laptop {
+    margin-bottom: rem(80);
+  }
+
+  @include mobile {
+    margin-bottom: rem(60);
+  }
+
   &__text {
     font-family: var(--font-family);
     font-weight: 400;
@@ -17,6 +26,25 @@
     background: rgba(255, 255, 255, 0);
 
     margin: 0 auto rem(40);
+
+    @include laptop {
+      font-size: rem(14);
+
+      border-width: rem(1);
+      padding: rem(12) rem(20);
+      width: rem(416);
+      margin-bottom: rem(32);
+    }
+
+    @include mobile {
+      font-size: rem(12);
+      text-align: center;
+
+      width: 100%;
+      padding: rem(12) rem(10);
+
+      margin-bottom: rem(20);
+    }
   }
 
   &__description {
@@ -47,13 +75,12 @@
     //   margin-bottom: rem(20);
     // }
 
-    // @include mobile {
-    //   width: auto;
-    //   margin-inline: rem(-16);
-    //   padding-inline: rem(16);
-    //   overflow-x: auto;
-    //   margin-bottom: rem(16);
-    // }
+    @include mobile {
+      width: auto;
+      margin-inline: rem(-16);
+      padding-inline: rem(16);
+      overflow-x: auto;
+    }
   }
 
   &__list {
@@ -69,12 +96,11 @@
     //   margin-bottom: rem(10);
     // }
 
-    // @include mobile {
-    //   gap: rem(4);
-    //   width: rem(750);
-    //   justify-content: flex-start;
-    //   margin-bottom: rem(8);
-    // }
+    @include mobile {
+      gap: rem(4);
+      width: auto;
+      justify-content: flex-start;
+    }
   }
 
   &__group {
@@ -83,9 +109,9 @@
     align-items: center;
     gap: rem(10);
 
-    // @include laptop {
-    //   gap: rem(4);
-    // }
+    @include laptop {
+      gap: rem(4);
+    }
   }
 
   &__item {
@@ -104,24 +130,28 @@
     user-select: none;
     pointer-events: none;
 
-    // @include laptop {
-    //   height: rem(55);
-    //   border-radius: rem(16);
-    //   padding-inline: rem(16);
-    // }
+    @include laptop {
+      height: rem(55);
+      border-radius: rem(16);
+      padding-inline: rem(16);
+    }
 
-    // @include mobile {
-    //   height: rem(52);
-    // }
+    @include mobile {
+      height: rem(52);
+    }
 
     img,
     svg {
       width: auto;
       height: rem(30);
 
-      //   @include laptop {
-      //     height: rem(20);
-      //   }
+      @include laptop {
+        height: rem(22);
+      }
+
+      @include mobile {
+        height: rem(20);
+      }
     }
   }
 }

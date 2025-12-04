@@ -19,6 +19,16 @@
     font-size: rem(50);
     text-align: center;
     margin-bottom: rem(60);
+
+    @include laptop {
+      font-size: rem(38);
+      margin-bottom: rem(40);
+    }
+
+    @include mobile {
+      font-size: rem(24);
+      margin-bottom: rem(30);
+    }
   }
 
   &__inner {
@@ -30,17 +40,19 @@
     border-radius: rem(50);
     background: var(--white);
 
-    // @include laptop {
-    //   grid-template-columns: auto rem(564);
-    //   gap: rem(40);
-    //   padding: rem(16) rem(20) 0 rem(20);
-    // }
+    @include laptop {
+      grid-template-columns: auto rem(592);
+      gap: rem(40);
+      padding: rem(42);
+      border-radius: rem(38);
+    }
 
-    // @include mobile {
-    //   grid-template-columns: 1fr;
-    //   gap: rem(16);
-    //   padding: 0;
-    // }
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: rem(24);
+      padding: rem(24);
+      border-radius: rem(30);
+    }
   }
 
   &__left {
@@ -51,6 +63,15 @@
     flex-direction: column;
     justify-content: space-between;
     gap: rem(10);
+
+    @include laptop {
+      margin-block: rem(16);
+    }
+
+    @include mobile {
+      gap: rem(24);
+      margin: 0;
+    }
   }
 
   &__name {
@@ -62,15 +83,20 @@
     color: var(--black);
     margin-bottom: rem(24);
 
+    @include laptop {
+      font-size: rem(24);
+      margin-bottom: rem(16);
+    }
+
     // @include laptop {
     //   font-size: rem(24);
     //   margin-bottom: rem(16);
     // }
 
-    // @include mobile {
-    //   font-size: rem(20);
-    //   margin-bottom: rem(12);
-    // }
+    @include mobile {
+      font-size: rem(20);
+      margin-bottom: rem(12);
+    }
   }
 
   &__descriptions {
@@ -82,8 +108,20 @@
       letter-spacing: -0.03em;
       color: var(--black);
 
+      @include laptop {
+        font-size: rem(14);
+        line-height: 120%;
+      }
+
+      @include mobile {
+      }
+
       &:not(:last-child) {
         margin-bottom: 0.2em;
+
+        @include mobile {
+          margin-bottom: 0.4em;
+        }
       }
     }
 
@@ -114,15 +152,16 @@
       inset: 0;
     }
 
-    // @include laptop {
-    //   margin-top: rem(32);
-    //   max-width: rem(368);
-    // }
+    @include laptop {
+      align-items: center;
+      gap: rem(8);
+      // max-width: rem(368);
+    }
 
-    // @include mobile {
-    //   margin-top: rem(16);
-    //   max-width: none;
-    // }
+    @include mobile {
+      max-width: none;
+      gap: rem(10);
+    }
 
     &::after {
       content: "";
@@ -170,27 +209,31 @@
 
     object-fit: contain;
 
-    // @include laptop {
-    //   width: rem(42);
-    //   height: rem(42);
-    // }
+    @include laptop {
+      width: rem(42);
+      height: rem(42);
+    }
 
-    // @include mobile {
-    //   width: rem(48);
-    //   height: rem(48);
-    // }
+    @include mobile {
+      width: rem(48);
+      height: rem(48);
+    }
   }
 
   &__channel-block {
     position: relative;
     z-index: 3;
     padding-top: rem(7);
+
+    @include laptop {
+      padding-top: 0;
+    }
   }
 
   &__channel-title {
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: rem(16);
+    font-size: rem(14);
     line-height: 120%;
     letter-spacing: -0.03em;
     color: var(--black);
@@ -218,6 +261,18 @@
     overflow: hidden;
     background: var(--reviewBg);
 
+    @include laptop {
+      height: rem(388);
+      border-radius: rem(40);
+      margin-block: rem(14);
+    }
+
+    @include mobile {
+      border-radius: rem(24);
+      height: rem(175);
+      margin: 0;
+    }
+
     // @include laptop {
     //   height: rem(290);
     //   border-radius: rem(24);
@@ -235,15 +290,16 @@
     width: rem(615);
     object-position: 0 rem(10);
     animation: scroll 5s cubic-bezier(0.4, 0, 0.2, 1) /* forwards */ infinite;
-    // @include laptop {
-    //   width: rem(447);
-    //   object-position: 0 rem(-40);
-    // }
+    @include laptop {
+      width: rem(441);
+      // object-position: 0 rem(-40);
+    }
 
-    // @include mobile {
-    //   width: rem(295);
-    //   object-position: 0 rem(-30);
-    // }
+    @include mobile {
+      width: rem(238);
+      height: rem(284);
+      object-position: 0 rem(-130);
+    }
   }
 
   &__analytics {
@@ -256,6 +312,23 @@
     border-radius: rem(50);
     padding: rem(60);
     background: #fff;
+
+    @include laptop {
+      margin-top: rem(16);
+
+      border-radius: rem(38);
+      gap: rem(40);
+      padding: rem(42);
+    }
+
+    @include mobile {
+      margin-top: rem(10);
+
+      flex-direction: column;
+      gap: rem(24);
+      padding: rem(24);
+      border-radius: rem(30);
+    }
   }
 
   &__analytics-card {
@@ -263,9 +336,23 @@
     flex: 0 0 rem(527);
     padding-block: rem(20);
 
+    @include laptop {
+      padding-block: rem(16);
+      flex: 0 0 rem(364);
+    }
+
+    @include mobile {
+      flex: 1 1 auto;
+      padding: 0;
+    }
+
     .main-research__card {
       padding: 0;
       overflow: visible;
+
+      @include laptop {
+        height: 100%;
+      }
     }
 
     .main-research__card-title {
@@ -273,10 +360,34 @@
       font-size: rem(34);
       line-height: 120%;
       margin-bottom: rem(16);
+
+      @include laptop {
+        font-size: rem(24);
+        margin-bottom: rem(12);
+      }
+
+      @include mobile {
+        font-size: rem(20);
+        line-height: 108%;
+        margin-bottom: rem(8);
+      }
     }
 
     .main-research__card-list {
       margin-top: rem(66);
+
+      @include laptop {
+        margin-top: auto;
+      }
+
+      @include mobile {
+        margin-top: rem(24);
+        gap: rem(6);
+      }
+    }
+
+    .main-research__subscribe {
+      padding: 1.6rem 1.8rem;
     }
 
     .main-research__subscribe_open {
@@ -290,12 +401,24 @@
   &__description {
     margin-top: rem(32);
 
+    @include laptop {
+      margin-top: rem(16);
+    }
+
+    @include mobile {
+      margin-top: rem(12);
+    }
+
     p {
       font-weight: 400;
       font-size: rem(18);
       line-height: 150%;
       letter-spacing: -0.03em;
       color: #0a0620;
+
+      @include laptop {
+        font-size: rem(14);
+      }
 
       &:not(:last-child) {
         margin-bottom: 0.5em;
@@ -308,6 +431,15 @@
     display: flex;
     align-items: start;
     gap: rem(20);
+
+    @include laptop {
+      gap: rem(14);
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: rem(12);
+    }
   }
 
   &__banner {
@@ -317,9 +449,24 @@
     border-radius: rem(40);
     overflow: hidden;
 
+    @include laptop {
+      width: rem(222);
+      height: rem(393);
+      border-radius: rem(28);
+    }
+
+    @include mobile {
+      width: 100%;
+      height: rem(240);
+    }
+
     img {
       width: 100%;
       height: 100%;
+
+      @include mobile {
+        object-position: bottom;
+      }
     }
 
     .main-research__card-label {
@@ -331,9 +478,26 @@
       transform: translateX(-50%);
 
       width: rem(188);
+
+      @include laptop {
+        font-size: rem(14);
+        width: rem(176);
+      }
+
+      @include mobile {
+        font-size: rem(12);
+        width: auto;
+        padding-inline: rem(8);
+      }
+
       img {
         width: rem(10);
         height: rem(10);
+
+        @include mobile {
+          width: rem(8);
+          height: rem(8);
+        }
       }
     }
   }
@@ -353,16 +517,24 @@
     text-align: center;
     color: #fff;
 
+    @include laptop {
+      font-size: rem(16);
+      width: rem(162);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+      width: rem(235);
+    }
+
     span {
       display: block;
 
-      font-family: var(--font-family);
-      font-weight: 400;
-      font-size: rem(20);
-      line-height: 120%;
-      letter-spacing: -0.03em;
-      text-align: center;
       color: #fff;
+
+      @include mobile {
+        display: inline-block;
+      }
     }
   }
 
@@ -372,10 +544,33 @@
     display: flex;
     flex-direction: column;
     gap: rem(10);
+
+    @include laptop {
+      flex: 1 1 auto;
+    }
+
+    @include mobile {
+      gap: rem(8);
+    }
+  }
+
+  .main-research__card-text_big {
+    @include laptop {
+      font-size: rem(14);
+    }
   }
 
   .main-research__card-block {
     padding: rem(24) rem(30);
+
+    @include laptop {
+      padding: rem(15) rem(20);
+      border-radius: rem(28);
+    }
+
+    @include mobile {
+      padding: rem(12) rem(14);
+    }
   }
 
   .main-research__card_type1 {
@@ -386,6 +581,10 @@
     justify-content: center;
 
     padding: rem(24) rem(55);
+
+    @include mobile {
+      padding: rem(14) rem(34);
+    }
   }
 
   &__workers {
@@ -398,6 +597,21 @@
     border-radius: rem(50);
     padding: rem(60);
     background: #fff;
+
+    @include laptop {
+      border-radius: rem(38);
+      gap: rem(40);
+      padding: rem(42) rem(38) rem(42) rem(42);
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: rem(24);
+
+      margin-top: rem(10);
+      border-radius: rem(30);
+      padding: rem(24);
+    }
   }
 
   &__workers-info {
@@ -409,6 +623,19 @@
     gap: rem(20);
 
     padding-block: rem(20);
+
+    @include laptop {
+      flex: 0 0 rem(364);
+
+      padding-block: rem(16);
+    }
+
+    @include mobile {
+      flex: 1 1 auto;
+      padding-block: 0;
+
+      gap: rem(24);
+    }
   }
 
   &__workers-top {
@@ -424,6 +651,16 @@
     letter-spacing: -0.03em;
     color: #0a0620;
     margin-bottom: rem(24);
+
+    @include laptop {
+      font-size: rem(24);
+      margin-bottom: rem(16);
+    }
+
+    @include mobile {
+      font-size: rem(20);
+      margin-bottom: rem(12);
+    }
   }
 
   &__workers-description {
@@ -434,6 +671,11 @@
       line-height: 150%;
       letter-spacing: -0.03em;
       color: #0a0620;
+
+      @include laptop {
+        font-size: rem(14);
+        line-height: 120%;
+      }
 
       &:not(:last-child) {
         margin-bottom: 0.5em;
@@ -449,6 +691,11 @@
     letter-spacing: -0.03em;
     color: #0a0620;
     margin-bottom: rem(4);
+
+    @include laptop {
+      font-size: rem(14);
+      margin-bottom: rem(6);
+    }
   }
 
   &__workers-text {
@@ -458,6 +705,10 @@
     line-height: 120%;
     letter-spacing: -0.03em;
     color: #0a0620;
+
+    @include laptop {
+      font-size: rem(14);
+    }
   }
 
   &__workers-right {
@@ -467,6 +718,10 @@
     flex-direction: column;
     justify-content: space-between;
     gap: rem(20);
+
+    @include laptop {
+      gap: rem(16);
+    }
   }
 
   &__workers-cards {
@@ -475,6 +730,16 @@
     gap: rem(10);
 
     height: rem(480);
+
+    @include laptop {
+      height: rem(354);
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: rem(6);
+      height: unset;
+    }
   }
 
   &__workers-card {
@@ -484,6 +749,20 @@
 
     border-radius: rem(40);
     background: #f6f6f6;
+
+    @include laptop {
+      border-radius: rem(30);
+    }
+
+    @include mobile {
+      display: flex;
+      align-items: center;
+      gap: rem(12);
+
+      border-radius: rem(24);
+      padding: rem(12) rem(14);
+      min-height: rem(84);
+    }
   }
 
   &__workers-star {
@@ -496,6 +775,19 @@
     height: rem(224);
 
     object-fit: contain;
+
+    @include laptop {
+      top: rem(64);
+      width: rem(168);
+      height: rem(169);
+    }
+
+    @include mobile {
+      position: static;
+      width: rem(59);
+      height: rem(60);
+      transform: none;
+    }
   }
 
   &__workers-post {
@@ -511,6 +803,19 @@
     letter-spacing: -0.03em;
     text-align: center;
     color: #0a0620;
+
+    @include laptop {
+      font-size: rem(18);
+    }
+
+    @include mobile {
+      position: static;
+      font-size: rem(14);
+
+      br {
+        display: none;
+      }
+    }
   }
 
   &__btn {
@@ -519,6 +824,16 @@
     width: 100%;
 
     font-size: rem(18);
+
+    @include laptop {
+      height: rem(46);
+      font-size: rem(14);
+    }
+
+    @include mobile {
+      height: rem(50);
+      font-size: rem(16);
+    }
   }
 
   @keyframes scroll {

@@ -4,12 +4,30 @@
 
   &__head {
     padding-bottom: rem(80);
+
+    @include laptop {
+      padding-bottom: rem(50);
+    }
+
+    @include mobile {
+      padding-bottom: rem(30);
+    }
   }
 
   &__title {
     font-size: rem(50);
     text-align: center;
     margin-bottom: rem(30);
+
+    @include laptop {
+      font-size: rem(38);
+      margin-bottom: rem(16);
+    }
+
+    @include mobile {
+      font-size: rem(24);
+      margin-bottom: rem(12);
+    }
   }
 
   &__description {
@@ -20,6 +38,18 @@
     letter-spacing: -0.03em;
     text-align: center;
     color: var(--black);
+
+    @include laptop {
+      font-size: rem(18);
+    }
+
+    @include mobile {
+      font-size: rem(16);
+
+      br {
+        display: none;
+      }
+    }
   }
 
   &__bg {
@@ -27,6 +57,18 @@
     border-radius: rem(60);
     padding: rem(100) rem(80);
     background: linear-gradient(180deg, #0f230a 0%, #538246 100%);
+
+    @include laptop {
+      margin-inline: rem(16);
+      border-radius: rem(44);
+      padding: rem(60) rem(84);
+    }
+
+    @include mobile {
+      margin-inline: 0;
+      border-radius: rem(40);
+      padding: rem(40) rem(16);
+    }
   }
 
   &__heading {
@@ -37,6 +79,18 @@
     letter-spacing: -0.03em;
     text-align: center;
     color: var(--devGreen);
+
+    @include laptop {
+      font-size: rem(34);
+    }
+
+    @include mobile {
+      font-size: rem(24);
+
+      br {
+        display: none;
+      }
+    }
 
     span {
       color: #fff;
@@ -53,10 +107,31 @@
     color: #fff;
 
     margin-top: rem(16);
+
+    @include laptop {
+      font-size: rem(18);
+      margin-top: rem(8);
+    }
+
+    @include mobile {
+      font-size: rem(16);
+
+      br {
+        display: none;
+      }
+    }
   }
 
   &__top {
     margin-bottom: rem(60);
+
+    @include laptop {
+      margin-bottom: rem(40);
+    }
+
+    @include mobile {
+      margin-bottom: rem(30);
+    }
   }
 
   &__screen {
@@ -75,6 +150,17 @@
     object-fit: contain;
 
     margin-inline: auto;
+
+    @include laptop {
+      border-radius: rem(24);
+      width: rem(667);
+      height: rem(379);
+    }
+
+    @include mobile {
+      width: 100%;
+      height: rem(196);
+    }
   }
 
   &__screen-text {
@@ -88,6 +174,18 @@
     letter-spacing: -0.03em;
     text-align: center;
     color: #fff;
+
+    @include laptop {
+      margin-top: rem(10);
+      font-size: rem(14);
+    }
+
+    @include mobile {
+      font-size: rem(16);
+      line-height: 120%;
+      margin-top: rem(8);
+      padding-inline: rem(20);
+    }
   }
 
   &__statistics {
@@ -100,9 +198,26 @@
     height: rem(558);
     object-fit: contain;
     margin-bottom: rem(80);
-  }
 
-  &__statistics {
+    @include laptop {
+      width: rem(1080);
+      height: rem(388);
+      margin-bottom: rem(57);
+
+      margin-inline: auto;
+    }
+
+    @include mobile {
+      object-fit: cover;
+      object-position: right;
+      max-width: none;
+      width: calc(100vw - rem(16));
+      height: rem(252);
+      border-radius: 0 rem(16) rem(16) 0;
+
+      margin-left: rem(-16);
+      margin-bottom: rem(78);
+    }
   }
 
   &__statistics-arrow {
@@ -113,6 +228,19 @@
     height: rem(80);
 
     transform: translateY(-100%);
+
+    @include laptop {
+      width: rem(67);
+      height: rem(56);
+
+      right: rem(80);
+    }
+
+    @include mobile {
+      top: rem(-10);
+      left: rem(60);
+      right: auto;
+    }
   }
 
   &__green {
@@ -123,6 +251,16 @@
     padding: rem(32) rem(40);
     background: var(--devGreen);
     max-width: rem(730);
+
+    @include laptop {
+      border-radius: rem(26);
+      padding: rem(20) rem(50) rem(20) rem(30);
+      max-width: rem(500);
+    }
+
+    @include mobile {
+      padding: rem(24);
+    }
   }
 
   &__green-icon {
@@ -132,6 +270,11 @@
 
     width: rem(48);
     height: rem(48);
+
+    @include laptop {
+      width: rem(32);
+      height: rem(32);
+    }
   }
 
   &__green-title {
@@ -141,6 +284,14 @@
     line-height: 120%;
     letter-spacing: -0.03em;
     color: #fff;
+
+    @include laptop {
+      font-size: rem(16);
+    }
+
+    @include laptop {
+      font-size: rem(20);
+    }
   }
 
   &__change {
@@ -150,6 +301,15 @@
     align-items: center;
 
     margin-inline: rem(-80);
+
+    @include laptop {
+      margin-inline: rem(-84);
+    }
+
+    @include mobile {
+      flex-direction: column;
+      margin-inline: 0;
+    }
   }
 
   &__change-img {
@@ -157,6 +317,23 @@
     height: rem(558);
     width: rem(800);
     border-radius: 0 rem(40) rem(40) 0;
+
+    @include laptop {
+      width: rem(532);
+      height: rem(388);
+    }
+
+    @include mobile {
+      max-width: none;
+      position: relative;
+      z-index: 3;
+      width: calc(100vw - rem(16));
+      height: rem(252);
+      border-radius: 0 rem(16) rem(16) 0;
+      margin-left: rem(-16);
+
+      object-fit: cover;
+    }
   }
 
   &__change-points {
@@ -168,6 +345,19 @@
     display: flex;
     flex-direction: column;
     gap: rem(30);
+
+    @include laptop {
+      flex: 0 0 auto;
+      width: rem(282);
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-left: 0;
+
+      padding-inline: rem(30);
+      margin-block: rem(58) rem(30);
+    }
   }
 
   &__change-point {
@@ -186,6 +376,11 @@
 
     flex: 0 0 auto;
     width: rem(60);
+
+    @include laptop {
+      font-size: rem(30);
+      width: rem(34);
+    }
   }
 
   &__change-body {
@@ -199,6 +394,11 @@
     letter-spacing: -0.02em;
     color: #fff;
     margin-bottom: rem(10);
+
+    @include laptop {
+      font-size: rem(14);
+      margin-bottom: rem(6);
+    }
 
     span {
       font-weight: 500;
@@ -226,12 +426,24 @@
     line-height: 100%;
     letter-spacing: -0.03em;
     color: #fff;
+
+    @include laptop {
+      gap: rem(4);
+
+      font-size: rem(12);
+      padding: rem(6) rem(8);
+    }
   }
 
   &__tria {
     flex: 0 0 auto;
     width: rem(12);
     height: rem(10);
+
+    @include laptop {
+      width: rem(8);
+      height: rem(7);
+    }
   }
 
   &__change-arrow {
@@ -239,51 +451,119 @@
       position: absolute;
       left: rem(117);
       bottom: rem(76);
+      z-index: 1;
 
       width: rem(732);
       height: rem(375);
 
       pointer-events: none;
       user-select: none;
+      object-fit: contain;
+
+      @include laptop {
+        width: 52.1rem;
+        height: 28.7rem;
+
+        left: 6.7rem;
+        bottom: 4.6rem;
+      }
+
+      @include mobile {
+        top: 24rem;
+        left: 1.2rem;
+        bottom: unset;
+        width: rem(21);
+        height: rem(63);
+      }
     }
 
     &--two {
       position: absolute;
-
       top: rem(190);
       left: rem(403);
+      z-index: 1;
 
       width: rem(446);
       height: rem(100);
 
       pointer-events: none;
       user-select: none;
+      object-fit: contain;
+
+      @include laptop {
+        top: 13.2rem;
+        left: 27.2rem;
+        width: 31.6rem;
+        height: 7.9rem;
+      }
+
+      @include mobile {
+        width: rem(123);
+        height: rem(307);
+
+        top: 10.2rem;
+        left: -0.8rem;
+      }
     }
 
     &--three {
       position: absolute;
-
       top: rem(174);
       left: rem(666);
+      z-index: 1;
 
       width: rem(183);
       height: rem(169);
 
       pointer-events: none;
       user-select: none;
+      object-fit: contain;
+
+      @include laptop {
+        top: 12.1rem;
+        left: 46rem;
+        width: 12.8rem;
+        height: 12rem;
+      }
+
+      @include mobile {
+        width: rem(81);
+        height: rem(400);
+
+        top: 11.8rem;
+        left: auto;
+        right: 1rem;
+      }
     }
 
     &--four {
       position: absolute;
-
       top: rem(422);
       left: rem(735);
+      z-index: 1;
 
       width: rem(112);
       height: rem(49);
 
       pointer-events: none;
       user-select: none;
+      object-fit: contain;
+
+      @include laptop {
+        width: 8.7rem;
+        height: 4.4rem;
+
+        top: 29.7rem;
+        left: 49.5rem;
+      }
+
+      @include mobile {
+        width: 11rem;
+        height: 36.9rem;
+
+        top: 22.7rem;
+        left: 25rem;
+      }
     }
   }
 
@@ -302,6 +582,25 @@
     min-height: rem(478);
 
     margin-left: rem(80);
+
+    @include laptop {
+      margin-left: rem(45);
+      min-height: rem(326);
+      flex: 1 1 auto;
+      border-radius: rem(26) 0 0 rem(26);
+      padding: rem(20) rem(45) rem(20) rem(30);
+    }
+
+    @include mobile {
+      max-width: none;
+      width: 100%;
+      margin: 0;
+
+      border-radius: rem(26);
+      padding: rem(24);
+      min-height: rem(280);
+      gap: rem(24);
+    }
   }
 
   &__income-icon {
@@ -311,6 +610,11 @@
 
     width: rem(48);
     height: rem(48);
+
+    @include laptop {
+      width: rem(32);
+      height: rem(32);
+    }
   }
 
   &__income-title {
@@ -321,6 +625,16 @@
     letter-spacing: -0.03em;
     color: #fff;
     margin-bottom: rem(16);
+
+    @include laptop {
+      font-size: rem(16);
+      margin-bottom: rem(8);
+    }
+
+    @include mobile {
+      font-size: rem(20);
+      margin-bottom: rem(6);
+    }
   }
 
   &__income-description {
@@ -332,8 +646,20 @@
       letter-spacing: -0.03em;
       color: #fff;
 
+      @include laptop {
+        font-size: rem(14);
+      }
+
+      @include mobile {
+        line-height: 120%;
+      }
+
       &:not(:last-child) {
         margin-bottom: 0.7em;
+
+        @include mobile {
+          margin-bottom: 0.3em;
+        }
       }
 
       span {
@@ -349,6 +675,17 @@
     max-width: none;
 
     color: var(--devGreen);
+
+    @include laptop {
+      height: rem(46);
+
+      font-size: rem(14);
+    }
+
+    @include mobile {
+      font-size: rem(16);
+      height: rem(50);
+    }
   }
 
   &__wave {
@@ -356,6 +693,18 @@
     display: flex;
     align-items: center;
     gap: rem(60);
+
+    @include laptop {
+      max-width: rem(1080);
+      gap: rem(45);
+      margin-inline: auto;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: start;
+      gap: rem(20);
+    }
   }
 
   &__wave-left {
@@ -364,6 +713,11 @@
     display: flex;
     flex-direction: column;
     gap: rem(60);
+
+    @include mobile {
+      gap: rem(20);
+      max-width: rem(273);
+    }
   }
 
   &__wave-arrow {
@@ -379,6 +733,23 @@
     pointer-events: none;
 
     z-index: 10;
+
+    @include laptop {
+      width: rem(741);
+      height: rem(106);
+
+      top: 48%;
+      left: rem(32);
+    }
+
+    @include mobile {
+      width: 12.7rem;
+      height: 84.5rem;
+      left: auto;
+      right: rem(-6);
+      top: 2.7rem;
+      transform: none;
+    }
   }
 
   &__wave-circle {
@@ -394,6 +765,18 @@
     text-align: center;
 
     background: var(--devGreen);
+
+    @include laptop {
+      width: rem(287);
+      height: rem(287);
+    }
+
+    @include mobile {
+      width: rem(243);
+      height: rem(243);
+
+      align-self: center;
+    }
   }
 
   &__wave-icon {
@@ -401,6 +784,18 @@
     height: rem(34);
 
     margin-bottom: rem(40);
+
+    @include laptop {
+      width: rem(26);
+      height: rem(26);
+      margin-bottom: rem(24);
+
+      margin-top: rem(-50);
+
+      @include mobile {
+        margin-top: rem(-30);
+      }
+    }
   }
 
   &__wave-price {
@@ -413,6 +808,15 @@
     color: #fff;
 
     margin-bottom: rem(10);
+
+    @include laptop {
+      font-size: rem(34);
+      margin-bottom: rem(8);
+    }
+
+    @include mobile {
+      font-size: rem(26);
+    }
   }
 
   &__wave-shop {
@@ -422,6 +826,10 @@
     line-height: 120%;
     letter-spacing: -0.03em;
     color: #fff;
+
+    @include laptop {
+      font-size: rem(14);
+    }
   }
 
   &__wave-row {
@@ -430,9 +838,21 @@
     align-items: end;
     gap: rem(20);
 
+    @include laptop {
+      grid-template-columns: 1fr;
+    }
+
     &:nth-child(1) {
       .development-metrics__item {
         padding-bottom: rem(80);
+
+        @include laptop {
+          padding-bottom: rem(40);
+        }
+
+        @include mobile {
+          padding-bottom: rem(24);
+        }
       }
     }
 
@@ -440,11 +860,35 @@
       align-items: start;
       .development-metrics__item {
         padding-top: rem(80);
+
+        @include laptop {
+          padding-top: rem(40);
+        }
+
+        @include mobile {
+          padding-top: rem(24);
+        }
       }
     }
   }
 
   .development-metrics__item-title {
     margin-bottom: rem(8);
+
+    @include laptop {
+      margin-bottom: rem(6);
+    }
+
+    @include mobile {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .development-metrics__item-text {
+    @include mobile {
+      font-size: rem(14);
+    }
   }
 }

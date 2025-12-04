@@ -4,12 +4,30 @@
 
   &__head {
     margin-bottom: rem(60);
+
+    @include laptop {
+      margin-bottom: rem(40);
+    }
+
+    @include mobile {
+      margin-bottom: rem(30);
+    }
   }
 
   &__title {
     font-size: rem(50);
     text-align: center;
     margin-bottom: rem(30);
+
+    @include laptop {
+      font-size: rem(38);
+      margin-bottom: rem(16);
+    }
+
+    @include mobile {
+      font-size: rem(24);
+      margin-bottom: rem(12);
+    }
   }
 
   &__description {
@@ -20,6 +38,14 @@
     letter-spacing: -0.03em;
     text-align: center;
     color: var(--black);
+
+    @include laptop {
+      font-size: rem(18);
+    }
+
+    @include mobile {
+      font-size: rem(16);
+    }
   }
 
   &__img {
@@ -28,6 +54,18 @@
     height: rem(800);
 
     object-fit: contain;
+
+    @include laptop {
+      display: block;
+      margin-inline: auto;
+      width: rem(1080);
+      height: rem(547);
+    }
+
+    @include mobile {
+      width: 100%;
+      height: rem(174);
+    }
   }
 
   &__body {
@@ -40,6 +78,18 @@
 
     margin-top: rem(80);
     margin-inline: auto;
+
+    @include laptop {
+      gap: rem(26);
+      max-width: rem(936);
+      margin-top: rem(50);
+    }
+
+    @include mobile {
+      margin-top: rem(30);
+      flex-direction: column;
+      gap: rem(24);
+    }
   }
 
   &__green {
@@ -51,6 +101,16 @@
     padding: rem(40);
     background: var(--devGreen);
     max-width: rem(493);
+
+    @include laptop {
+      border-radius: rem(26);
+      padding: rem(20) rem(30);
+      max-width: rem(336);
+    }
+
+    @include mobile {
+      padding: rem(24);
+    }
   }
 
   &__green-icon {
@@ -60,6 +120,11 @@
 
     width: rem(48);
     height: rem(48);
+
+    @include laptop {
+      width: rem(32);
+      height: rem(32);
+    }
   }
 
   &__green-title {
@@ -70,6 +135,16 @@
     letter-spacing: -0.03em;
     color: #fff;
     margin-bottom: rem(24);
+
+    @include laptop {
+      font-size: rem(24);
+      margin-bottom: rem(14);
+    }
+
+    @include mobile {
+      font-size: rem(20);
+      margin-bottom: rem(6);
+    }
   }
 
   &__green-description {
@@ -80,6 +155,10 @@
       line-height: 120%;
       letter-spacing: -0.03em;
       color: #fff;
+
+      @include laptop {
+        font-size: rem(14);
+      }
 
       &:not(:last-child) {
         margin-bottom: 0.7em;
@@ -99,6 +178,20 @@
     transform: translateY(100%);
     width: rem(433);
     object-fit: contain;
+
+    @include laptop {
+      width: 31.1rem;
+      left: 17rem;
+      bottom: -2rem;
+    }
+
+    @include mobile {
+      width: rem(60);
+      height: rem(536);
+      left: auto;
+      right: rem(-10);
+      bottom: -1.7rem;
+    }
   }
 
   &__items {
@@ -106,6 +199,16 @@
 
     display: flex;
     gap: rem(10);
+
+    @include laptop {
+      gap: rem(8);
+    }
+
+    @include mobile {
+      flex-direction: column;
+      max-width: rem(273);
+      gap: rem(12);
+    }
   }
 
   &__items-col {
@@ -113,6 +216,15 @@
     display: flex;
     flex-direction: column;
     gap: rem(10);
+
+    @include laptop {
+      gap: rem(8);
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: rem(12);
+    }
   }
 
   &__item {
@@ -121,15 +233,28 @@
     padding: rem(40);
     background: #fff;
 
+    @include laptop {
+      border-radius: rem(26);
+      padding: rem(24);
+    }
+
     &:nth-child(1) {
       .development-metrics__item-point-wrapper:nth-child(2) {
         max-width: rem(290);
+
+        @include laptop {
+          max-width: rem(283);
+        }
       }
     }
 
     &:nth-child(2) {
       .development-metrics__item-point-wrapper:nth-child(2) {
         max-width: rem(290);
+
+        @include laptop {
+          max-width: rem(283);
+        }
       }
     }
   }
@@ -140,6 +265,11 @@
     left: rem(-10);
     width: rem(48);
     height: rem(48);
+
+    @include laptop {
+      width: rem(32);
+      height: rem(32);
+    }
   }
 
   &__item-title {
@@ -150,12 +280,30 @@
     letter-spacing: -0.03em;
     color: #0a0620;
     margin-bottom: rem(16);
+
+    @include laptop {
+      font-size: rem(18);
+      margin-bottom: rem(12);
+    }
+
+    @include mobile {
+      font-size: rem(16);
+      margin-bottom: rem(10);
+    }
   }
 
   &__item-points {
     display: flex;
     flex-direction: column;
     gap: rem(8);
+
+    @include laptop {
+      gap: rem(6);
+    }
+
+    @include mobile {
+      gap: rem(4);
+    }
   }
 
   &__item-point {
@@ -164,6 +312,10 @@
     flex-wrap: wrap;
     gap: rem(4);
 
+    @include mobile {
+      gap: 0 rem(4);
+    }
+
     span {
       font-family: var(--font-family);
       font-weight: 400;
@@ -171,6 +323,10 @@
       line-height: 150%;
       letter-spacing: -0.03em;
       color: #0a0620;
+
+      @include laptop {
+        font-size: rem(14);
+      }
     }
 
     img {
@@ -187,5 +343,9 @@
     line-height: 120%;
     letter-spacing: -0.03em;
     color: #615e71;
+
+    @include laptop {
+      font-size: rem(12);
+    }
   }
 }
