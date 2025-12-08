@@ -14,6 +14,11 @@ export default function scrollImgToMibile() {
         container.replaceChild(wrapper, img);
         wrapper.appendChild(img);
         container.classList.add("mobile-wrapped");
+        
+        wrapper.scrollTo({
+          left: 10000,
+          behavior:'instant'
+        });
       }
     } else {
       if (container.classList.contains("mobile-wrapped")) {
