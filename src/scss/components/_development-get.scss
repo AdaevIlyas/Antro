@@ -142,11 +142,12 @@
     color: #a5aba3;
 
     @include laptop {
-      font-size: rem(14);
+      font-size: rem(16);
     }
 
     @include mobile {
       line-height: 120%;
+      font-size: rem(14);
     }
   }
 
@@ -229,7 +230,7 @@
 
       @include laptop {
         height: rem(46);
-        font-size: rem(14);
+        font-size: rem(16);
       }
 
       @include mobile {
@@ -255,6 +256,7 @@
       }
       .input-block__error {
         color: #fda3a3;
+        white-space: wrap;
       }
 
       input {
@@ -286,8 +288,11 @@
       column-gap: rem(10);
 
       @include laptop {
-        flex-direction: column;
         row-gap: rem(8);
+      }
+
+      @include mobile {
+        flex-direction: column;
       }
     }
 
@@ -295,25 +300,25 @@
       &:has(> input[type="text"]) {
         max-width: rem(212);
 
-        @include laptop {
+        @include mobile {
           max-width: none;
         }
       }
       &:has(> input[type="tel"]) {
         max-width: rem(212);
-        @include laptop {
+        @include mobile {
           max-width: none;
         }
       }
       &:has(> input[type="email"]) {
         max-width: rem(300);
-        @include laptop {
+        @include mobile {
           max-width: none;
         }
       }
       &:has(> .select) {
         max-width: rem(325);
-        @include laptop {
+        @include mobile {
           max-width: none;
         }
       }
@@ -351,7 +356,7 @@
 
       @include laptop {
         margin-top: rem(38);
-        font-size: rem(14);
+        font-size: rem(16);
       }
       @include mobile {
         font-size: rem(16);

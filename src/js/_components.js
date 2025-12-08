@@ -64,3 +64,8 @@ function thanksModalFirst() {
   document.querySelector(".js-modal-open[data-modal='thanks']").click();
 }
 // thanksModalFirst();
+
+import scrollImgToMible from "./components/scrollImgToMobile";
+try {
+  scrollImgToMible();
+} catch (error) {}

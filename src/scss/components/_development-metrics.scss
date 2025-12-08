@@ -81,7 +81,7 @@
 
     @include laptop {
       gap: rem(26);
-      max-width: rem(936);
+      max-width: rem(1080);
       margin-top: rem(50);
     }
 
@@ -157,11 +157,19 @@
       color: #fff;
 
       @include laptop {
+        font-size: rem(16);
+      }
+
+      @include mobile {
         font-size: rem(14);
       }
 
       &:not(:last-child) {
         margin-bottom: 0.7em;
+
+        @include mobile {
+          margin-bottom: 0.4em;
+        }
       }
 
       span {
@@ -180,7 +188,7 @@
     object-fit: contain;
 
     @include laptop {
-      width: 31.1rem;
+      width: 32.1rem;
       left: 17rem;
       bottom: -2rem;
     }
@@ -325,6 +333,10 @@
       color: #0a0620;
 
       @include laptop {
+        font-size: rem(16);
+      }
+
+      @include mobile {
         font-size: rem(14);
       }
     }

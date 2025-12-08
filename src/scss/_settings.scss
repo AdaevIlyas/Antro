@@ -241,3 +241,11 @@ a {
     display: block !important;
   }
 }
+
+.mobile-img-wrapper {
+  overflow-x: scroll;
+  margin-left: rem(-16);
+  padding-inline: rem(16);
+  margin-bottom: rem(78);
+  width: 100vw;
+}

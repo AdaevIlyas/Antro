@@ -109,15 +109,16 @@
       color: var(--black);
 
       @include laptop {
-        font-size: rem(14);
+        font-size: rem(16);
         line-height: 120%;
       }
 
       @include mobile {
+        font-size: rem(14);
       }
 
       &:not(:last-child) {
-        margin-bottom: 0.2em;
+        margin-bottom: 0.6em;
 
         @include mobile {
           margin-bottom: 0.4em;
@@ -167,7 +168,7 @@
       content: "";
       position: absolute;
       width: calc(100% + rem(22));
-      height: calc(100% + rem(8));
+      height: calc(100% + rem(10));
       left: rem(-4);
       top: rem(-4);
       border-radius: rem(100);
@@ -233,11 +234,15 @@
   &__channel-title {
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: rem(14);
+    font-size: rem(16);
     line-height: 120%;
     letter-spacing: -0.03em;
     color: var(--black);
     margin-bottom: rem(2);
+
+    @include laptop {
+      font-size: rem(14);
+    }
   }
 
   &__channel-text {
@@ -322,11 +327,12 @@
     }
 
     @include mobile {
+      position: relative;
       margin-top: rem(10);
 
       flex-direction: column;
       gap: rem(24);
-      padding: rem(24);
+      padding: rem(24) rem(24) rem(150) rem(24);
       border-radius: rem(30);
     }
   }
@@ -338,10 +344,11 @@
 
     @include laptop {
       padding-block: rem(16);
-      flex: 0 0 rem(364);
+      flex: 0 0 rem(484);
     }
 
     @include mobile {
+      position: static;
       flex: 1 1 auto;
       padding: 0;
     }
@@ -352,6 +359,10 @@
 
       @include laptop {
         height: 100%;
+      }
+
+      @include mobile {
+        position: static;
       }
     }
 
@@ -381,6 +392,10 @@
       }
 
       @include mobile {
+        position: absolute;
+        left: rem(24);
+        right: rem(24);
+        bottom: rem(24);
         margin-top: rem(24);
         gap: rem(6);
       }
@@ -388,6 +403,12 @@
 
     .main-research__subscribe {
       padding: 1.6rem 1.8rem;
+
+      @include mobile {
+        height: rem(300);
+        top: auto;
+        bottom: 0;
+      }
     }
 
     .main-research__subscribe_open {
@@ -402,11 +423,11 @@
     margin-top: rem(32);
 
     @include laptop {
-      margin-top: rem(16);
+      margin-block: rem(16);
     }
 
     @include mobile {
-      margin-top: rem(12);
+      margin-block: rem(12) 0;
     }
 
     p {
@@ -417,11 +438,20 @@
       color: #0a0620;
 
       @include laptop {
+        font-size: rem(16);
+        line-height: 120%;
+      }
+
+      @include mobile {
         font-size: rem(14);
       }
 
       &:not(:last-child) {
-        margin-bottom: 0.5em;
+        margin-bottom: 0.6em;
+
+        @include mobile {
+          margin-bottom: 0.4em;
+        }
       }
     }
   }
@@ -480,7 +510,7 @@
       width: rem(188);
 
       @include laptop {
-        font-size: rem(14);
+        font-size: rem(16);
         width: rem(176);
       }
 
@@ -556,7 +586,7 @@
 
   .main-research__card-text_big {
     @include laptop {
-      font-size: rem(14);
+      font-size: rem(16);
     }
   }
 
@@ -625,7 +655,7 @@
     padding-block: rem(20);
 
     @include laptop {
-      flex: 0 0 rem(364);
+      flex: 0 0 48.4rem;
 
       padding-block: rem(16);
     }
@@ -673,12 +703,20 @@
       color: #0a0620;
 
       @include laptop {
-        font-size: rem(14);
+        font-size: rem(16);
         line-height: 120%;
       }
 
+      @include mobile {
+        font-size: rem(14);
+      }
+
       &:not(:last-child) {
-        margin-bottom: 0.5em;
+        margin-bottom: 0.6em;
+
+        @include mobile {
+          margin-bottom: 0.4em;
+        }
       }
     }
   }
@@ -693,7 +731,7 @@
     margin-bottom: rem(4);
 
     @include laptop {
-      font-size: rem(14);
+      font-size: rem(16);
       margin-bottom: rem(6);
     }
   }
@@ -707,6 +745,10 @@
     color: #0a0620;
 
     @include laptop {
+      font-size: rem(16);
+    }
+
+    @include mobile {
       font-size: rem(14);
     }
   }
@@ -827,7 +869,7 @@
 
     @include laptop {
       height: rem(46);
-      font-size: rem(14);
+      font-size: rem(16);
     }
 
     @include mobile {
