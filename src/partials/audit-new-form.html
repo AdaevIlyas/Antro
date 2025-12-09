@@ -1,0 +1,69 @@
+<section class="audit-new-form">
+    <div class='container'>
+        <div class="audit-new-form__inner">
+            <div class="audit-new-form__box">
+                <div class="audit-new-form__col">
+                    <div class="audit-new-form__title">
+                        Не знаете, какой тариф выбрать?
+                        <span>Мы поможем</span>
+                    </div>
+                </div>
+                <div class="audit-new-form__col">
+                    <form action="" class="audit-new-form__form">
+                        <div class="main-order__form-fields">
+                            <div class="input-block error">
+                                <div class="input-block__exclamation"><img src="img/svg/exclamation.svg" alt=""></div>
+                                <input name="name" type="text" required="" placeholder="Имя">
+                                <div class="input-block__error">Пожалуйста, проверьте правильность номера</div>
+                            </div>
+                            <div class="input-block">
+                                <div class="input-block__exclamation"><img src="img/svg/exclamation.svg" alt=""></div>
+                                <input name="company" type="text" required="" placeholder="Компания">
+                                <div class="input-block__error">Пожалуйста, проверьте правильность номера</div>
+                            </div>
+                            <div class="input-block">
+                                <div class="input-block__exclamation"><img src="img/svg/exclamation.svg" alt=""></div>
+                                <input name="email" type="email" required="" placeholder="Email">
+                                <div class="input-block__error">Пожалуйста, проверьте правильность номера</div>
+                            </div>
+                            <div class="main-order__form-flex">
+                                <div class="input-block">
+                                    <div class="input-block__exclamation"><img src="img/svg/exclamation.svg" alt="">
+                                    </div>
+                                    <input name="phone" type="tel" required="" placeholder="Телефон" inputmode="text">
+                                    <div class="input-block__error">Пожалуйста, проверьте правильность номера</div>
+                                </div>
+                                <div class="input-block">
+                                    <div class="input-block__exclamation"><img src="img/svg/exclamation.svg" alt="">
+                                    </div>
+                                    <div class="select">
+                                        <input class="select__value" type="text" autocomplete="off" readonly="readonly"
+                                            placeholder="Способ связи">
+                                        <div class="select__list">
+                                            <div data-value="Telegram или WhatsApp" class="select__option">Telegram или
+                                                WhatsApp</div>
+                                            <div data-value="Телефон" class="select__option">Телефон</div>
+                                            <div data-value="Email" class="select__option">Email</div>
+                                        </div>
+                                    </div>
+                                    <div class="input-block__error">Пожалуйста, выберите способ связи</div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <!-- <div class="main-order__form-note">Оставляя заявку, я соглашаюсь с <a href="#">обработкой персональных данных</a> и <a href="#">политикой конфиденциальности</a></div> -->
+
+                        <button class="btn-reset btn btn_wide btn_hover-pink">Оставить заявку</button>
+                        @include('./i-checkbox.html', {"audit": "audit"})
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

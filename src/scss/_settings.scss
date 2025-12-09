@@ -243,12 +243,18 @@ a {
 }
 
 .mobile-img-wrapper {
-  overflow-x: scroll;
+  // overflow-x: scroll;
   margin-left: rem(-16);
   padding-inline: rem(16);
   margin-bottom: rem(74);
   width: 100vw;
   padding-bottom: rem(4);
+
+
+  // 
+  display: flex;
+  justify-content: end;
+  // 
   
 
   &::-webkit-scrollbar {

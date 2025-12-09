@@ -314,6 +314,10 @@
     }
   }
 
+  &__item-point-wrapper {
+    line-height:0;
+  }
+
   &__item-point {
     display: flex;
     align-items: center;
