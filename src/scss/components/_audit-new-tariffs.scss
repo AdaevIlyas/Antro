@@ -1,0 +1,424 @@
+.audit-new-tariffs {
+  &__title {
+  }
+
+  &__list {
+    @include mobile {
+      width: 100vw;
+      margin-inline: rem(-16);
+      padding-inline: rem(16);
+
+      .swiper-pagination {
+        bottom: rem(20);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .swiper-pagination-bullet {
+        width: rem(6);
+        height: rem(6);
+        background: #d6ccd4;
+
+        &.swiper-pagination-bullet-active {
+          width: rem(10);
+          height: rem(10);
+          background: #615e71;
+        }
+      }
+    }
+  }
+
+  &__list-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(20);
+    padding-bottom: rem(20);
+
+    @include mobile {
+      gap: 0;
+      padding-bottom: rem(46);
+    }
+  }
+
+  &__card {
+    width: auto;
+    height: auto;
+    border-radius: rem(50);
+    padding: rem(20);
+    min-width: 0;
+    background: var(--white);
+
+    @include laptop {
+      border-radius: rem(30);
+      padding: rem(14);
+    }
+
+    @include mobile {
+      box-sizing: border-box;
+      width: rem(333);
+    }
+
+    &.black {
+      background: var(--black);
+
+      .audit-new-tariffs__card-sum {
+        display: flex;
+        gap: rem(12);
+        align-items: center;
+        color: var(--white);
+
+        @include laptop {
+          gap: rem(8);
+        }
+      }
+    }
+  }
+
+  &__card-info {
+    border-radius: rem(30);
+    padding: rem(30);
+    background: #f6f6f6;
+    margin-bottom: rem(60);
+
+    @include laptop {
+      border-radius: rem(20);
+      padding: rem(20) rem(18);
+      margin-bottom: rem(50);
+    }
+  }
+
+  &__card-title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(32);
+    line-height: 108%;
+    letter-spacing: -0.03em;
+    color: var(--black);
+    margin-bottom: rem(8);
+
+    @include laptop {
+      font-size: rem(20);
+      margin-bottom: rem(4);
+    }
+  }
+
+  &__card-subtitle {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(20);
+    line-height: 130%;
+    color: var(--grayDark);
+    margin-bottom: rem(32);
+
+    @include laptop {
+      font-size: rem(14);
+      margin-bottom: rem(22);
+    }
+  }
+
+  &__card-points {
+    display: flex;
+    flex-direction: column;
+    // gap: rem(14);
+
+    @include laptop {
+      // gap: rem(8);
+    }
+  }
+
+  &__card-point {
+    position: relative;
+    padding-left: rem(38);
+
+    @include laptop {
+      padding-left: rem(28);
+    }
+
+    &:not(:first-child) {
+      padding-top: rem(14);
+
+      @include laptop {
+        padding-top: rem(8);
+      }
+    }
+
+    &:not(:last-child) {
+      padding-bottom: rem(14);
+      border-bottom: rem(1) solid #e8e8ec;
+
+      @include laptop {
+        padding-bottom: rem(8);
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: rem(14);
+      left: 0;
+      display: block;
+      width: rem(30);
+      height: rem(30);
+      background-image: url("/img/audit/green.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @include laptop {
+        top: rem(8);
+        margin-block: rem(2);
+        width: rem(20);
+        height: rem(20);
+        background-size: contain;
+      }
+    }
+
+    &:first-child {
+      &::before {
+        top: 0;
+      }
+    }
+
+    &.disabled {
+      display: flex;
+      align-items: center;
+      min-height: rem(30);
+
+      @include laptop {
+        min-height: rem(24);
+      }
+
+      &::before {
+        background-image: url("/img/audit/black.svg");
+      }
+
+      .audit-new-tariffs__card-point-name {
+        color: var(--grayDark);
+        margin-bottom: 0;
+      }
+    }
+
+    &.no-descr {
+      display: flex;
+      align-items: center;
+      min-height: rem(30);
+
+      @include laptop {
+        min-height: rem(24);
+      }
+
+      @include mobile {
+        &::before {
+          top: rem(3);
+        }
+      }
+    }
+  }
+
+  &__card-point-name {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--black);
+
+    @include laptop {
+      font-size: rem(16);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+    }
+  }
+
+  &__card-point-description {
+    margin-top: rem(4);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    color: var(--grayDark);
+
+    @include laptop {
+      margin-top: rem(2);
+      font-size: rem(14);
+    }
+
+    strong {
+      font-weight: 500;
+    }
+  }
+
+  &__card-price {
+    padding-inline: rem(10);
+    margin-bottom: rem(18);
+
+    @include laptop {
+      margin-bottom: rem(6);
+    }
+  }
+
+  &__card-nds {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #aba9b2;
+    margin-bottom: rem(6);
+
+    @include laptop {
+      font-size: rem(14);
+      margin-bottom: rem(4);
+    }
+  }
+
+  &__card-sum {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(38);
+    line-height: 108%;
+    letter-spacing: -0.03em;
+    color: var(--black);
+
+    @include laptop {
+      font-size: rem(24);
+    }
+  }
+
+  &__card-sum-old {
+    font-weight: 400;
+    font-size: rem(28);
+    line-height: 108%;
+    letter-spacing: -0.03em;
+    text-decoration: line-through;
+    color: rgba(255, 255, 255, 0.4);
+
+    @include laptop {
+      font-size: rem(16);
+
+      align-self: flex-end;
+    }
+  }
+
+  &__card-sum-perc {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 130%;
+    color: var(--black);
+
+    border-radius: rem(20);
+    padding: rem(9) rem(14);
+    background: #f1e722;
+
+    @include laptop {
+      font-size: rem(12);
+      padding: rem(5) rem(10);
+    }
+  }
+
+  &__card-btn {
+    font-size: rem(18);
+    height: rem(70);
+
+    @include laptop {
+      font-size: rem(14);
+      height: rem(46);
+    }
+  }
+
+  &__add {
+    display: flex;
+    align-items: center;
+    gap: rem(105);
+
+    border-radius: rem(60);
+    padding: rem(40) rem(70);
+
+    background: #efefef;
+
+    max-width: rem(1434);
+    margin-inline: auto;
+
+    @include laptop {
+      gap: rem(27);
+
+      border-radius: rem(40);
+      padding: rem(32) rem(60);
+
+      max-width: rem(994);
+    }
+
+    @include mobile {
+      gap: rem(12);
+      flex-direction: column;
+      align-items: start;
+      border-radius: rem(30);
+      padding: rem(24);
+    }
+  }
+
+  &__add-left {
+    flex: 1 1 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: rem(12);
+
+    @include laptop {
+      gap: rem(8);
+    }
+  }
+
+  &__add-title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(24);
+    line-height: 108%;
+    letter-spacing: -0.03em;
+    color: var(--black);
+
+    @include laptop {
+      font-size: rem(22);
+    }
+
+    @include mobile {
+      font-size: rem(20);
+    }
+  }
+
+  &__add-text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(20);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #38344c;
+
+    @include laptop {
+      font-size: rem(16);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+    }
+  }
+
+  &__add-right {
+    flex: 0 0 auto;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(38);
+    line-height: 108%;
+    letter-spacing: -0.03em;
+    color: var(--black);
+
+    @include laptop {
+      font-size: rem(24);
+    }
+  }
+}

@@ -642,6 +642,28 @@
       border-radius: rem(30);
       padding: rem(24);
     }
+
+    &_audit {
+      .development-inside__workers-info {
+        justify-content: center;
+
+        @include mobile {
+          justify-content: stretch;
+        }
+      }
+
+      .development-inside__workers-cards {
+        height: rem(560);
+
+        @include laptop {
+          height: rem(387);
+        }
+
+        @include mobile {
+          height: auto;
+        }
+      }
+    }
   }
 
   &__workers-info {
@@ -749,7 +771,6 @@
     }
 
     @include mobile {
-    
     }
   }
 

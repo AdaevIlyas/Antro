@@ -1,0 +1,329 @@
+.audit-new-structure {
+  &__tariffs {
+    margin-block: rem(24);
+
+    @include mobile {
+      margin-block: rem(20);
+      margin-bottom: 0;
+    }
+
+    &_last {
+      margin-bottom: 0;
+    }
+  }
+
+  &__tariff {
+    border-radius: rem(20);
+    padding: rem(20) rem(24);
+    background: #fff;
+
+    margin-block: rem(24);
+
+    @include laptop {
+      margin-block: rem(16) rem(24);
+    }
+
+    @include mobile {
+      position: relative;
+      margin-block: rem(20) 0;
+      padding: rem(16) rem(14);
+    }
+
+    &_point {
+      margin-block: rem(10);
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+
+      &:first-child {
+        margin-top: 0;
+        background: #efefef;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &_last {
+      margin-bottom: 0;
+    }
+  }
+
+  &__tariff-name {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(20);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--black);
+
+    @include laptop {
+      font-size: rem(18);
+    }
+  }
+
+  &__tariff-list {
+    margin-top: rem(12);
+
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+
+    @include mobile {
+      margin-top: rem(8);
+      gap: rem(4);
+    }
+  }
+
+  &__tariff-list-icon {
+    flex: 0 0 auto;
+    width: rem(20);
+    height: rem(20);
+
+    @include laptop {
+      margin-bottom: auto;
+    }
+
+    @include mobile {
+      width: rem(14);
+      height: rem(14);
+    }
+  }
+
+  &__tariff-list-points {
+    display: flex;
+    align-items: center;
+    gap: rem(4);
+
+    @include laptop {
+      flex-wrap: wrap;
+    }
+
+    @include mobile {
+      gap: rem(3);
+    }
+  }
+
+  &__tariff-list-text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #615e71;
+    text-wrap: nowrap;
+
+    strong {
+      font-weight: 500;
+      color: var(--black);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+      text-wrap: wrap;
+    }
+
+    &_no-wrap {
+      @include laptop {
+        text-wrap: wrap;
+      }
+    }
+  }
+
+  &__tariff-list-info {
+    position: relative;
+
+    flex: 0 0 auto;
+    width: rem(20);
+    height: rem(20);
+
+    @include mobile {
+      position: static;
+    }
+
+    &:focus,
+    &:active,
+    &:hover {
+      .audit-new-structure__tariff-info {
+        display: block;
+      }
+    }
+  }
+
+  &__tariff-list-info-icon {
+    width: rem(20);
+    height: rem(20);
+    object-fit: contain;
+    transform: translateY(rem(4));
+
+    @include mobile {
+    }
+  }
+
+  &__tariff-list-arrow {
+    flex: 0 0 auto;
+    width: rem(24);
+    height: rem(24);
+
+    @include mobile {
+      width: rem(14);
+      height: rem(14);
+    }
+  }
+
+  &__tariff-info {
+    position: absolute;
+    left: rem(17);
+    bottom: rem(17);
+    z-index: 10;
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #615e71;
+    text-align: left;
+    text-wrap: wrap;
+
+    border-radius: rem(19);
+    padding: rem(20);
+    width: rem(368);
+
+    box-shadow: 0 0 rem(16) rem(4) rgba(10, 6, 32, 0.06);
+    background: #fff;
+
+    display: none;
+
+    @include mobile {
+      left: 0;
+      width: rem(295);
+    }
+  }
+
+  &__list {
+    margin-top: rem(24);
+    display: flex;
+    flex-direction: column;
+    gap: rem(12);
+    padding-left: rem(16);
+
+    @include laptop {
+      margin-top: rem(16);
+      gap: rem(10);
+    }
+
+    @include mobile {
+      margin-top: rem(8);
+      gap: rem(4);
+      padding-left: rem(14);
+    }
+  }
+
+  &__list-item {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #38344c;
+
+    @include laptop {
+      font-size: rem(16);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+    }
+  }
+
+  &__block-img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    display: block;
+    object-fit: contain;
+
+    border-radius: rem(40) 0 0 rem(40);
+    width: rem(559);
+    height: rem(325);
+
+    @include laptop {
+      border-radius: rem(30) 0 0 rem(30);
+      width: rem(450);
+      height: rem(261);
+    }
+
+    @include mobile {
+      position: static;
+      width: 100%;
+      height: rem(175);
+      border-radius: rem(24);
+      transform: none;
+    }
+  }
+
+  .audit-structure__block-col {
+    @include laptop {
+      width: auto;
+      max-width: rem(546);
+    }
+
+    @include mobile {
+      width: 100%;
+      max-width: none;
+    }
+  }
+
+  .audit-structure__content {
+    margin-top: 0;
+  }
+
+  .audit-structure__block {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .audit-structure__block-btn {
+    position: absolute;
+    top: rem(50);
+    right: rem(50);
+    margin-top: 0;
+
+    max-width: max-content;
+
+    @include mobile {
+      margin-top: rem(16);
+      position: static;
+
+      display: flex;
+      align-items: center;
+      margin-left: 0;
+    }
+  }
+
+  .audit-structure__block-text {
+    font-weight: 500;
+    color: #615e71;
+    margin-top: rem(10);
+
+    @include laptop {
+      margin-top: rem(8);
+    }
+
+    @include mobile {
+      margin-top: rem(6);
+      line-height: 120%;
+    }
+  }
+
+  .audit-structure__block-label {
+    @include mobile {
+      margin-top: rem(16);
+    }
+  }
+}
