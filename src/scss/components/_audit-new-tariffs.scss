@@ -163,6 +163,7 @@
       height: rem(30);
       background-image: url("/img/audit/green.svg");
       background-position: center;
+      background-size: contain;
       background-repeat: no-repeat;
 
       @include laptop {
@@ -249,6 +250,7 @@
 
     strong {
       font-weight: 500;
+      color: #38344c;
     }
   }
 
@@ -295,7 +297,7 @@
     line-height: 108%;
     letter-spacing: -0.03em;
     text-decoration: line-through;
-    color: rgba(255, 255, 255, 0.4);
+    color: #6c6a79;
 
     @include laptop {
       font-size: rem(16);

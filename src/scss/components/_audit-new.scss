@@ -1,0 +1,11 @@
+.audit-brands__brands {
+  max-width: rem(1212);
+
+  @include laptop {
+    max-width: rem(902);
+  }
+
+  @include mobile {
+    min-width: 58.7rem;
+  }
+}

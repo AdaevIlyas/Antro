@@ -1,169 +1,164 @@
+.audit-new-first {
+  &__inner {
+    margin-top: rem(94);
+    margin-bottom: rem(60);
 
+    @include laptop {
+      margin-top: rem(72);
+      margin-bottom: rem(80);
+    }
+    @include mobile {
+      margin-top: rem(64);
+      margin-bottom: rem(60);
+    }
+  }
 
+  &__box {
+    background: #0a0620;
+    border-radius: rem(60);
+    padding: rem(80);
+    padding-bottom: rem(100);
+    overflow: hidden;
+    position: relative;
+    min-width: rem(729);
+    z-index: 1;
 
-.audit-new-first{
+    @include laptop {
+      border-radius: rem(44);
+      padding: rem(80) rem(84) rem(85);
+      min-width: rem(601);
+    }
+    @include mobile {
+      min-width: unset;
+      width: 100%;
+      border-radius: rem(40);
+      padding: rem(40) rem(16);
+    }
+  }
 
-    &__inner{
-        margin-top: rem(94);
-        margin-bottom: rem(60);
+  &__labels {
+    margin-bottom: rem(32);
+    display: flex;
+    column-gap: rem(11);
 
-        @include laptop{
-            margin-top: rem(72);
-            margin-bottom: rem(80);
-        }
-        @include mobile{
-            margin-top: rem(64);
-            margin-bottom: rem(60);
-        }
+    @include laptop {
+      column-gap: rem(8);
+    }
+    @include mobile {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: rem(16);
+    column-gap: rem(8);
+    border-radius: rem(100);
+    background: #ffffff11;
+    padding: rem(10) rem(28);
+
+    @include laptop {
+      padding: rem(9) rem(18);
+      font-size: rem(14);
+    }
+    @include mobile {
+      width: 50%;
+      font-size: rem(12);
     }
 
-    &__box{
-        background: #0A0620;
-        border-radius: rem(60);
-        padding: rem(80);
-        padding-bottom: rem(100);
-        overflow: hidden;
-        position: relative;
-        min-width: rem(729);
-        z-index: 1;
+    svg {
+      width: rem(20);
+      height: rem(20);
 
-        @include laptop{
-            border-radius: rem(44);
-            padding: rem(80) rem(84) rem(85);
-            min-width: rem(601);
-        }
-        @include mobile{
-            min-width: unset;
-            width: 100%;
-            border-radius: rem(40);
-            padding: rem(40) rem(16);
-        }
+      @include laptop {
+        width: rem(16);
+        height: rem(16);
+      }
+    }
+  }
+
+  &__title {
+    font-size: rem(62);
+    font-weight: 600;
+    color: #fff;
+    max-width: rem(856);
+    line-height: 1.08;
+    margin-bottom: rem(24);
+
+    @include laptop {
+      font-size: rem(52);
+      margin-bottom: rem(20);
+      max-width: rem(720);
+    }
+    @include mobile {
+      font-size: rem(25);
+      margin-bottom: rem(12);
+    }
+  }
+
+  &__text {
+    font-size: rem(24);
+    color: #fff;
+    max-width: rem(760);
+    margin-bottom: rem(84);
+
+    @include laptop {
+      font-size: rem(18);
+      max-width: rem(537);
+      margin-bottom: rem(40);
+    }
+    @include mobile {
+      margin-bottom: rem(203);
+      font-size: rem(14);
+    }
+  }
+
+  &__btn {
+    min-width: rem(439);
+    height: rem(81);
+    font-size: rem(26);
+
+    @include laptop {
+      min-width: rem(300);
+      height: rem(58);
+      font-size: rem(16);
+    }
+    @include mobile {
+      min-width: rem(343);
+
+      height: rem(50);
+    }
+  }
+
+  &__image {
+    position: absolute;
+    width: rem(736);
+    height: rem(736);
+    right: rem(96);
+    top: rem(-3);
+
+    @include laptop {
+      width: rem(555);
+      height: rem(555);
+      right: rem(-45);
+      top: rem(0);
     }
 
-    &__labels{
-        margin-bottom: rem(32);
-        display: flex;
-        column-gap: rem(11);
-
-        @include laptop{
-            column-gap: rem(8);
-        }
-        @include mobile{
-            margin-bottom: rem(20);
-        }
+    @include mobile {
+      width: rem(167);
+      height: rem(205);
+      right: rem(104);
+      top: rem(272);
+      z-index: -1;
     }
 
-    &__label{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        font-size: rem(16);
-        column-gap: rem(8);
-        border-radius: rem(100);
-        background: #ffffff11;
-        padding: rem(10) rem(28);
-
-        @include laptop{
-            padding: rem(9) rem(18);
-            font-size: rem(14);
-        }
-        @include mobile{
-            width: 50%;
-            font-size: rem(12);
-        }
-
-        svg {
-            width: rem(20);
-            height: rem(20);
-
-            @include laptop{
-                width: rem(16);
-                height: rem(16);
-            }
-        }
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
     }
-
-    &__title{
-        font-size: rem(62);
-        font-weight: 600;
-        color: #fff;
-        max-width: rem(856);
-        line-height: 1.08;
-        margin-bottom: rem(24);
-
-        @include laptop{
-            font-size: rem(64);
-            margin-bottom: rem(20);
-            max-width: rem(715);
-        }
-        @include mobile{
-            font-size: rem(32);
-            margin-bottom: rem(12);
-        }
-    }
-
-    &__text{
-        font-size: rem(24);
-        color: #fff;
-        max-width: rem(760);
-        margin-bottom: rem(84);
-
-        @include laptop{
-            font-size: rem(18);
-            max-width: rem(537);
-            margin-bottom: rem(40);
-        }
-        @include mobile{
-            margin-bottom: rem(203);
-            font-size: rem(14);
-        }
-    }
-
-    &__btn{
-        min-width: rem(439);
-        height: rem(81);
-        font-size: rem(26);
-
-        @include laptop{
-            min-width: rem(300);
-            height: rem(58);
-            font-size: rem(16);
-        }
-        @include mobile{
-            min-width: rem(343);
-            
-            height: rem(50);
-        }
-    }
-
-    &__image{
-        position: absolute;
-        width: rem(736);
-        height: rem(736);
-        right: rem(96);
-        top: rem(-3);
-
-        @include laptop{
-            width: rem(555);
-            height: rem(555);
-            right: rem(-45);
-            top: rem(0);
-        }
-
-        @include mobile{
-            width: rem(167);
-            height: rem(205);
-            right: rem(104);
-            top: rem(272);
-            z-index: -1;
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-    }
-
+  }
 }

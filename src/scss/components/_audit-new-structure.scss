@@ -89,6 +89,8 @@
     @include mobile {
       width: rem(14);
       height: rem(14);
+
+      overflow: visible;
     }
   }
 
@@ -265,6 +267,20 @@
       border-radius: rem(24);
       transform: none;
     }
+
+    &_second {
+      @include laptop {
+        transform: none;
+        top: rem(120);
+      }
+    }
+
+    &_three {
+      @include laptop {
+        transform: none;
+        top: rem(120);
+      }
+    }
   }
 
   .audit-structure__block-col {
@@ -286,6 +302,10 @@
   .audit-structure__block {
     position: relative;
     overflow: hidden;
+
+    @include mobile {
+      padding-inline: rem(12);
+    }
   }
 
   .audit-structure__block-btn {
