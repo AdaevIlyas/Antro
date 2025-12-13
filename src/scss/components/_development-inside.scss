@@ -161,6 +161,7 @@
 
     @include mobile {
       max-width: none;
+      align-items: start;
       gap: rem(10);
     }
 
@@ -206,9 +207,15 @@
     z-index: 1;
     width: rem(48);
     height: rem(48);
+    flex: 0 0 auto;
     border-radius: 100%;
+    overflow: hidden;
 
     object-fit: contain;
+
+    svg {
+      overflow: hidden;
+    }
 
     @include laptop {
       width: rem(42);

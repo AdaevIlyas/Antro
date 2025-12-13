@@ -43,6 +43,9 @@
   }
 
   &__card {
+    display: flex;
+    flex-direction: column;
+
     width: auto;
     height: auto;
     border-radius: rem(50);
@@ -153,6 +156,29 @@
       }
     }
 
+    &:nth-child(1) {
+      height: rem(63);
+
+      @include laptop {
+        height: rem(70);
+      }
+
+      @include mobile {
+        height: rem(77);
+      }
+    }
+    &:nth-child(2) {
+      height: rem(44);
+
+      @include laptop {
+        height: rem(38);
+      }
+
+      @include mobile {
+        height: rem(70);
+      }
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -256,6 +282,7 @@
 
   &__card-price {
     padding-inline: rem(10);
+    margin-top: auto;
     margin-bottom: rem(18);
 
     @include laptop {

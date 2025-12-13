@@ -27,6 +27,8 @@
       position: relative;
       margin-block: rem(20) 0;
       padding: rem(16) rem(14);
+
+      margin-inline: rem(-12);
     }
 
     &_point {
@@ -262,10 +264,14 @@
 
     @include mobile {
       position: static;
-      width: 100%;
-      height: rem(175);
+      width: rem(319);
+      max-width: none;
+      height: rem(185);
       border-radius: rem(24);
       transform: none;
+      align-self: center;
+
+      // margin-left: rem(-12)
     }
 
     &_second {
@@ -304,7 +310,7 @@
     overflow: hidden;
 
     @include mobile {
-      padding-inline: rem(12);
+      // padding-inline: rem(12);
     }
   }
 
