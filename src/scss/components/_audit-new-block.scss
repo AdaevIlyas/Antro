@@ -100,6 +100,10 @@
 
     max-width: max-content;
 
+    &:hover {
+      color: var(--black);
+    }
+
     @include laptop {
       font-size: rem(14);
     }
@@ -145,7 +149,7 @@
     max-width: none;
 
     @include laptop {
-      width: rem(512);
+      width: rem(572);
     }
 
     @include mobile {
