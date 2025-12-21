@@ -110,10 +110,10 @@
     bottom: rem(-65);
 
     @include laptop {
-      width: rem(698);
-      height: rem(517);
-      right: rem(-103);
-      bottom: rem(-15);
+      width: 75.8rem;
+      height: 55.7rem;
+      right: -13.3rem;
+      bottom: -6.5rem;
     }
 
     @include mobile {

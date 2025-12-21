@@ -514,6 +514,26 @@
     width: 100%;
     max-width: 100%;
   }
+
+  &_development {
+    font-size: rem(12);
+    min-width: rem(193);
+    background: #92cd82;
+
+    &::before {
+      background: #92cd82;
+    }
+
+    .btn__circle {
+      background: #72b75f;
+    }
+
+    @include hover {
+      &::before {
+        background: #72b75f;
+      }
+    }
+  }
 }
 
 .btn-white {
