@@ -121,6 +121,11 @@
 
         @include mobile {
           font-weight: 400;
+
+          .header__link_wave,
+          .header__link_green {
+            font-weight: 500;
+          }
         }
       }
     }
