@@ -23,12 +23,12 @@ export const header = () => {
     function header_scroll() {
       if (window.pageYOffset > 0 && header) {
         header.classList.add("header_scroll");
-        for (let modal of modals ) {
+        for (let modal of modals) {
           modal.classList.add("modal_scroll");
         }
       } else {
         header.classList.remove("header_scroll");
-        for (let modal of modals ) {
+        for (let modal of modals) {
           modal.classList.remove("modal_scroll");
         }
       }
@@ -39,6 +39,7 @@ export const header = () => {
         mobileMenu?.classList.add("mobile-menu_show");
       } else {
         mobileMenu?.classList.remove("mobile-menu_show");
+        closeBurgerMenu();
       }
     }
 
@@ -55,3 +56,23 @@ export const header = () => {
     }
   }
 };
+
+function closeBurgerMenu() {
+  const mobileMenu = document.querySelector(".mobile-menu");
+  if (!mobileMenu) return;
+
+  mobileMenu
+    .querySelector(".mobile-menu__black")
+    ?.classList.remove("mobile-menu__black_show");
+  mobileMenu
+    .querySelector(".mobile-menu__slide")
+    ?.classList.remove("mobile-menu__slide_open");
+  mobileMenu
+    .querySelector(".mobile-menu__burger")
+    ?.classList.remove("mobile-menu__burger_open");
+
+  const burgerText = mobileMenu.querySelector(".mobile-menu__burger-text");
+  if (burgerText) {
+    burgerText.innerText = "Меню";
+  }
+}

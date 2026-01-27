@@ -169,6 +169,48 @@
         }
       }
     }
+
+    .header__links-ecom {
+      padding-left: rem(16);
+
+      @include laptop {
+        padding-left: rem(18);
+      }
+    }
+
+    .header__links-ecom-title {
+      color: #e8e4e8;
+    }
+
+    .header__link_ecom-green {
+      &:hover {
+        color: #e0e0e0;
+
+        &::before {
+          background: #0a0620;
+        }
+      }
+
+      &::before {
+        background: #0a0620;
+        opacity: 0.6;
+      }
+    }
+
+    .header__link_ecom-border {
+      &:hover {
+        color: #e0e0e0;
+
+        &::before {
+          background: #0a0620;
+        }
+      }
+
+      &::before {
+        background: #0a0620;
+        opacity: 0.6;
+      }
+    }
   }
 
   &_landing {
@@ -298,6 +340,7 @@
 
   &__nav {
     display: flex;
+    align-items: center;
     column-gap: rem(20);
     margin-left: rem(80);
 
@@ -342,6 +385,52 @@
       }
     }
 
+    &_ecom-green {
+      position: relative;
+      color: var(--white);
+
+      &::before {
+        content: "";
+        position: absolute;
+        border-radius: rem(100);
+        inset: rem(-3) rem(-12);
+        z-index: -1;
+        background: #92cd82;
+        transition-duration: 0.3s;
+
+        @include laptop {
+          inset: rem(-2) rem(-8);
+        }
+      }
+
+      &:hover {
+        color: var(--white);
+
+        &::before {
+          background: var(--devGreen);
+        }
+      }
+    }
+
+    &_ecom-border {
+      position: relative;
+      color: var(--black);
+
+      &::before {
+        content: "";
+        position: absolute;
+        border-radius: rem(100);
+        inset: rem(-3) rem(-12);
+        z-index: -1;
+        border: rem(1) solid #0a0620;
+        transition-duration: 0.3s;
+
+        @include laptop {
+          inset: rem(-2) rem(-8);
+        }
+      }
+    }
+
     &_pink {
       position: relative;
       margin-left: rem(12);
@@ -372,6 +461,53 @@
         @include laptop {
           inset: rem(-2) rem(-8);
         }
+      }
+    }
+  }
+
+  &__links-ecom {
+    display: flex;
+    align-items: center;
+    gap: rem(22);
+    padding-left: rem(30);
+
+    @include laptop {
+      padding-left: rem(20);
+      gap: rem(18);
+    }
+
+    @include mobile {
+      display: none;
+    }
+
+    &-title {
+      font-weight: 500;
+      font-size: rem(16);
+      line-height: 100%;
+      letter-spacing: -1%;
+      color: var(--grayDark);
+
+      @include laptop {
+        font-size: rem(14);
+      }
+
+      span {
+        color: inherit;
+        font-size: inherit;
+
+        @include laptop {
+          display: none;
+        }
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      gap: rem(30);
+
+      @include laptop {
+        gap: rem(22);
       }
     }
   }

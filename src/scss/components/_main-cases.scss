@@ -35,7 +35,7 @@
       width: 100%;
 
       &:has(.main-cases__card_small:last-child)
-        a.main-cases__card:has(+ .main-cases__card_small:last-child) {
+        a.main-cases__card:has(+ :not(a.main-cases__card)) {
         margin-bottom: 0;
       }
     }

@@ -76,13 +76,13 @@
   &__slide {
     border-radius: rem(24) rem(24) 0 0;
     background: var(--bg);
-    height: rem(416);
+    height: rem(506);
     width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
     z-index: -1;
-    padding: rem(73) rem(30) rem(0) rem(54);
+    padding: rem(73) rem(22) rem(0) rem(54);
     display: flex;
     justify-content: space-between;
     gap: rem(43);
@@ -118,6 +118,10 @@
       .header__link {
         display: block;
         font-weight: 500;
+
+        @include mobile {
+          font-weight: 400;
+        }
       }
     }
   }
@@ -165,5 +169,25 @@
       pointer-events: all;
       opacity: 0.6;
     }
+  }
+
+  &__ecom-links {
+    padding-bottom: rem(24);
+  }
+
+  &__ecom-title {
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 150%;
+    letter-spacing: -3%;
+    color: var(--grayDark);
+
+    margin-bottom: rem(16);
+  }
+
+  &__ecom-nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(24);
   }
 }
