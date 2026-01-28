@@ -41,7 +41,7 @@
     }
   }
 
-  a.main-cases__card:not(:first-child):has(+ a.main-cases__card) {
+  a.main-cases__card:has(+ a.main-cases__card) {
     margin-bottom: rem(80);
 
     @include laptop {
