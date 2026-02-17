@@ -26,7 +26,7 @@
     @include mobile {
       position: relative;
       margin-block: rem(20) 0;
-      padding: rem(16) rem(14);
+      padding: rem(20);
 
       margin-inline: rem(-12);
     }
@@ -63,6 +63,10 @@
 
     @include laptop {
       font-size: rem(18);
+    }
+
+    @include mobile {
+      font-size: rem(16);
     }
   }
 
@@ -144,7 +148,8 @@
     height: rem(20);
 
     @include mobile {
-      position: static;
+      position: absolute;
+      transform: translateY(-0.3rem) translateX(0.2rem);
     }
 
     &:focus,
@@ -163,6 +168,7 @@
     transform: translateY(rem(4));
 
     @include mobile {
+      transform: translateY(0);
     }
   }
 
@@ -204,6 +210,7 @@
     @include mobile {
       left: 0;
       width: rem(295);
+      transform: translateX(-41%) translateY(rem(-10));
     }
   }
 
@@ -380,7 +387,7 @@
   &__need-card {
     flex: 0 0 auto;
     padding: rem(20);
-    border-radius: rem(16);
+    border-radius: rem(20);
     background: #fff;
 
     width: rem(239);
@@ -392,7 +399,7 @@
     @include mobile {
       width: calc(100% + rem(28));
 
-      padding: rem(20) rem(14);
+      padding: rem(20);
       margin-inline: rem(-14);
     }
   }
