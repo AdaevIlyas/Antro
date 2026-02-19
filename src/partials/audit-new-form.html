@@ -36,21 +36,29 @@
                                 <div class="input-block">
                                     <div class="input-block__exclamation"><img src="img/svg/exclamation.svg" alt="">
                                     </div>
-                                    <div class="select">
+                                    <div class="select select_audit-form">
                                         <input class="select__value" type="text" autocomplete="off" readonly="readonly"
                                             placeholder="Способ связи">
                                         <div class="select__list">
-                                            <div data-value="Telegram или WhatsApp" class="select__option">Telegram или
-                                                WhatsApp</div>
+                                            <div data-value="Telegram" class="select__option js-telegram">Telegram
+                                            </div>
+                                            <div data-value="WhatsApp" class="select__option">WhatsApp
+                                            </div>
                                             <div data-value="Телефон" class="select__option">Телефон</div>
                                             <div data-value="Email" class="select__option">Email</div>
+                                        </div>
+                                        <div class="telegram-name"
+                                            style="--tg-primary: #fec6ef; --tg-bg: #FFF9FD; --tg-text: #0A0620; --tg-placeholder: #615E71;">
+                                            <input type="text" class="telegram-name__input tg" value
+                                                placeholder="Никнейм в Telegram" data-mobile-placeholder="Никнейм в TG">
+                                            <div class="telegram-name__message">
+                                                Укажите никнейм, если номер телефона в Telegram скрыт
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="input-block__error">Пожалуйста, выберите способ связи</div>
                                 </div>
                             </div>
-
-
                         </div>
                         <!-- <div class="main-order__form-note">Оставляя заявку, я соглашаюсь с <a href="#">обработкой персональных данных</a> и <a href="#">политикой конфиденциальности</a></div> -->
 

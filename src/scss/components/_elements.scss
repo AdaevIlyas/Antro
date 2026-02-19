@@ -823,6 +823,96 @@
   position: relative;
   display: inline-block;
   width: 100%;
+
+  &.select_modal-form {
+    max-width: rem(220);
+
+    @include laptop {
+      max-width: rem(170);
+    }
+
+    @include mobile {
+      max-width: none;
+    }
+  }
+
+  &.select_audit-modal-form {
+    max-width: rem(200);
+
+    @include laptop {
+      max-width: rem(170);
+    }
+
+    @include mobile {
+      max-width: none;
+    }
+
+    .telegram-name {
+      width: rem(220);
+
+      @include laptop {
+        width: rem(180);
+      }
+
+      @include mobile {
+        width: rem(155);
+      }
+    }
+  }
+
+  &.select_audit-form {
+    max-width: rem(200);
+
+    @include laptop {
+      max-width: rem(170);
+    }
+
+    @include mobile {
+      max-width: none;
+    }
+
+    .telegram-name {
+      width: rem(220);
+
+      @include laptop {
+        width: rem(180);
+      }
+
+      @include mobile {
+        width: rem(155);
+      }
+    }
+  }
+
+  &.select_tg {
+    margin-bottom: rem(40);
+
+    .select__value {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .telegram-name {
+      display: block;
+    }
+
+    @include mobile {
+      width: rem(135);
+
+      .select__list {
+        width: rem(260);
+      }
+    }
+
+    &.select_audit-form,
+    &.select_audit-modal-form {
+      .select__list {
+        @include mobile {
+          width: rem(287);
+        }
+      }
+    }
+  }
 }
 
 .select::after {
@@ -1066,6 +1156,81 @@
       border: 1px solid #e3e3e3;
       font-weight: 500;
       display: block;
+    }
+  }
+}
+
+.telegram-name {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+
+  transform: translateX(rem(-3));
+
+  outline: 0.3rem solid var(--tg-primary);
+  outline-offset: rem(-3);
+
+  border-radius: 0 rem(100) rem(100) 0;
+  width: rem(203);
+
+  background: var(--tg-bg);
+
+  @include laptop {
+    width: rem(176);
+  }
+
+  @include mobile {
+    width: rem(128);
+  }
+
+  &.active {
+    display: block;
+  }
+
+  &__input.tg {
+    width: 100%;
+
+    border: none;
+
+    padding-inline: rem(18);
+
+    border-radius: 0 rem(100) rem(100) 0;
+    background: var(--white);
+
+    &:hover:not(:focus) {
+      background: var(--tg-bg);
+    }
+
+    &:placeholder-shown {
+      background: var(--tg-bg);
+    }
+  }
+
+  &__message {
+    display: flex;
+    align-items: start;
+
+    position: absolute;
+    top: calc(100% + rem(10));
+    left: 0;
+
+    font-weight: 400;
+    font-size: rem(12);
+    line-height: 120%;
+    letter-spacing: -3%;
+    color: var(--tg-placeholder);
+
+    @include mobile {
+      left: auto;
+      right: rem(14);
+      width: rem(236);
+    }
+
+    &::before {
+      content: "*";
+      color: var(--tg-placeholder);
     }
   }
 }

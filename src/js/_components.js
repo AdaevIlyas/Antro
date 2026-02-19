@@ -69,3 +69,8 @@ import scrollImgToMible from "./components/scrollImgToMobile";
 try {
   scrollImgToMible();
 } catch (error) {}
+
+import { telegramPlaceholder } from "./components/telegramPlaceholder";
+try {
+  telegramPlaceholder();
+} catch (error) {}
