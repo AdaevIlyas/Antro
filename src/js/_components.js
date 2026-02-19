@@ -72,5 +72,5 @@ try {
 
 import { telegramPlaceholder } from "./components/telegramPlaceholder";
 try {
-  telegramPlaceholder();
+  // telegramPlaceholder();
 } catch (error) {}
