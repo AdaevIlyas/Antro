@@ -301,6 +301,10 @@
         @include laptop {
           max-width: rem(180);
         }
+
+        @include mobile {
+          max-width: none;
+        }
       }
       &:has(> input[type="email"]) {
         max-width: rem(410);
