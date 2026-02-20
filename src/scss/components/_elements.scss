@@ -896,7 +896,7 @@
     }
 
     .telegram-name {
-      width: rem(220);
+      width: rem(200);
 
       @include laptop {
         width: rem(180);
@@ -932,6 +932,20 @@
       @include mobile {
         width: rem(145);
       }
+
+      .telegram-name__message {
+        @include mobile {
+          width: rem(259);
+        }
+      }
+    }
+
+    &.select_audit-form {
+      margin-bottom: 0;
+
+      @include mobile {
+        margin-bottom: rem(40);
+      }
     }
 
     &.select_audit-form,
@@ -939,6 +953,12 @@
       .select__list {
         @include mobile {
           width: rem(287);
+        }
+      }
+
+      .telegram-name__message {
+        @include mobile {
+          width: rem(259);
         }
       }
     }
