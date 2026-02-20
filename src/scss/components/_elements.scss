@@ -860,6 +860,30 @@
     }
   }
 
+  &.select_development-form {
+    max-width: rem(220);
+
+    @include laptop {
+      max-width: rem(200);
+    }
+
+    @include mobile {
+      max-width: none;
+    }
+
+    .telegram-name {
+      width: rem(220);
+
+      @include laptop {
+        width: rem(180);
+      }
+
+      @include mobile {
+        width: rem(145);
+      }
+    }
+  }
+
   &.select_audit-form {
     max-width: rem(220);
 
@@ -901,6 +925,12 @@
 
       .select__list {
         width: rem(260);
+      }
+    }
+
+    &.select_development-form {
+      @include mobile {
+        width: rem(145);
       }
     }
 

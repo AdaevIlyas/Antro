@@ -235,6 +235,7 @@
 
       @include mobile {
         height: rem(50);
+        font-size: rem(14);
       }
 
       &::placeholder {
@@ -317,7 +318,7 @@
         }
       }
       &:has(> .select) {
-        max-width: rem(325);
+        max-width: rem(212);
         @include mobile {
           max-width: none;
         }

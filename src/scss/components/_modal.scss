@@ -323,6 +323,70 @@
         img {
         }
       }
+
+      .audit-new-tariffs__card-sum {
+        @include mobile {
+          margin-top: rem(-4);
+
+          display: flex;
+          align-items: center;
+          gap: rem(8);
+        }
+      }
+
+      .audit-new-tariffs__card-sum-old-wrapper {
+        @include mobile {
+          display: flex;
+          align-items: center;
+          gap: rem(8);
+        }
+      }
+
+      .audit-new-tariffs__card-nds {
+        font-size: rem(20);
+        color: var(--white);
+        margin-bottom: rem(16);
+
+        @include laptop {
+          font-size: rem(18);
+          margin-bottom: rem(12);
+        }
+      }
+
+      .audit-new-tariffs__card-sum-text {
+        font-size: rem(90);
+        color: var(--white);
+
+        @include laptop {
+          font-size: rem(70);
+        }
+
+        @include mobile {
+          font-size: rem(20);
+        }
+      }
+
+      .audit-new-tariffs__card-sum-old {
+        @include laptop {
+          font-size: rem(20);
+        }
+
+        @include mobile {
+          font-size: rem(16);
+          align-self: center;
+        }
+      }
+
+      .audit-new-tariffs__card-sum-perc {
+        @include laptop {
+          font-size: rem(16);
+        }
+
+        @include mobile {
+          display: block;
+          font-size: rem(12);
+        }
+      }
     }
 
     &_thanks-audit {
@@ -819,7 +883,7 @@
 
 .modal-mobile {
   &__review-head {
-    margin-bottom: rem(38);
+    margin-bottom: rem(24);
 
     @media (min-width: 481px) {
       display: none;
@@ -833,7 +897,11 @@
     letter-spacing: -0.03em;
     text-transform: uppercase;
     color: var(--white);
-    margin-bottom: rem(12);
+    // margin-bottom: rem(12);
+
+    &:has(+ .modal-mobile__review-data) {
+      margin-bottom: rem(12);
+    }
   }
 
   &__review-data {
@@ -841,6 +909,11 @@
     align-items: center;
     gap: rem(8);
     margin-bottom: rem(4);
+
+    &:empty {
+      margin-bottom: 0;
+      margin-top: rem(-12);
+    }
   }
 
   &__review-price {
