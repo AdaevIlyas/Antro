@@ -98,6 +98,7 @@
       max-width: unset;
       margin: 0;
       row-gap: rem(16);
+      margin-bottom: rem(24);
       @include mobile {
         row-gap: rem(10);
       }
