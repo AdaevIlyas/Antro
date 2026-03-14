@@ -1,0 +1,379 @@
+.development-how-work {
+  margin-block: rem(120);
+
+  @include laptop {
+    margin-block: rem(80);
+  }
+
+  @include mobile {
+    margin-block: rem(60);
+  }
+
+  &__inner {
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(50);
+    line-height: 108%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--black);
+
+    margin-bottom: rem(80);
+
+    @include laptop {
+      font-size: rem(38);
+      margin-bottom: rem(72);
+    }
+
+    @include mobile {
+      font-size: rem(24);
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+  }
+
+  &__interaction {
+    padding: rem(80) rem(213);
+    border-radius: rem(60);
+    background: linear-gradient(135deg, #7ba570 0%, #538246 100%);
+
+    @include laptop {
+      border-radius: rem(44);
+      padding: rem(60) rem(84);
+    }
+
+    @include mobile {
+      border-radius: rem(44);
+      padding: rem(40) rem(16);
+    }
+  }
+
+  &__interaction-title {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(48);
+    line-height: 108%;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: #fff;
+
+    margin-bottom: rem(60);
+
+    @include laptop {
+      font-size: rem(40);
+      margin-bottom: rem(40);
+    }
+
+    @include mobile {
+      font-size: rem(24);
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__interaction-body {
+    display: flex;
+    align-items: start;
+    gap: rem(10);
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__interaction-item {
+    position: relative;
+
+    flex: 0 1 100%;
+
+    padding: rem(24) rem(24) rem(24) rem(50);
+    border-radius: rem(50);
+
+    background: rgba(55, 98, 43, 0.5);
+
+    @include laptop {
+      border-radius: rem(26);
+      padding: rem(36) rem(24) rem(36) rem(36);
+    }
+
+    @include mobile {
+      padding: rem(24);
+    }
+  }
+
+  &__interaction-icon {
+    position: absolute;
+    top: rem(-8);
+    left: rem(-6);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(48);
+    height: rem(48);
+
+    border-radius: 100%;
+
+    background: #fff;
+
+    @include laptop {
+      width: rem(42);
+      height: rem(42);
+
+      top: rem(-8);
+      left: rem(-6);
+    }
+
+    @include mobile {
+      width: rem(34);
+      height: rem(34);
+
+      left: auto;
+      right: rem(-6);
+    }
+
+    svg {
+      width: rem(20);
+      height: rem(20);
+
+      @include laptop {
+        width: rem(18);
+        height: rem(18);
+      }
+
+      @include mobile {
+        width: rem(15);
+        height: rem(15);
+      }
+    }
+  }
+
+  &__interaction-item-title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(34);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #fff;
+
+    margin-bottom: rem(16);
+
+    @include laptop {
+      font-size: rem(28);
+      margin-bottom: rem(10);
+    }
+
+    @include mobile {
+      font-size: rem(20);
+    }
+  }
+
+  &__interaction-item-description {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 150%;
+    letter-spacing: -0.03em;
+    color: #fff;
+
+    @include laptop {
+      font-size: rem(16);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: rem(80);
+
+    padding: rem(260) rem(213) rem(100);
+    border-radius: rem(60);
+    background: #548247;
+
+    @include laptop {
+      gap: rem(40);
+      border-radius: rem(44);
+      padding: rem(260) rem(84) rem(100);
+    }
+
+    @include mobile {
+      border-radius: rem(44);
+      padding: rem(190) rem(16) rem(40);
+    }
+  }
+
+  &__watch {
+    display: flex;
+    align-items: center;
+    gap: rem(65);
+
+    margin-top: rem(40);
+    border-radius: rem(50);
+    padding: rem(50);
+    background: #fff;
+
+    overflow: hidden;
+
+    @include laptop {
+      border-radius: rem(26);
+      padding: rem(36);
+    }
+
+    @include mobile {
+      margin-top: 0;
+      padding: rem(24) rem(24) rem(7) rem(24);
+
+      flex-direction: column;
+      gap: rem(40);
+    }
+
+    &.green {
+      margin-top: 0;
+      background: #63a84f;
+
+      @include mobile {
+        padding-bottom: 0;
+        gap: rem(10);
+      }
+
+      .development-how-work__watch-image {
+        width: rem(467);
+        height: rem(237);
+        align-items: center;
+
+        @include mobile {
+          margin: 0;
+
+          height: rem(186);
+          width: rem(353);
+        }
+
+        img {
+          width: rem(568);
+          height: rem(268);
+          max-width: none;
+
+          @include mobile {
+            object-position: left bottom;
+            width: 40.8rem;
+            height: 21.5rem;
+          }
+        }
+      }
+
+      .development-how-work__watch-title,
+      .development-how-work__watch-description {
+        color: #fff;
+      }
+    }
+  }
+
+  &__watch-info {
+    flex: 1 1 auto;
+  }
+
+  &__watch-title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(34);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--black);
+    margin-bottom: rem(10);
+
+    br {
+      display: none;
+    }
+
+    @include laptop {
+      font-size: rem(28);
+
+      br {
+        display: block;
+      }
+    }
+
+    @include mobile {
+      font-size: rem(20);
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__watch-description {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 150%;
+    letter-spacing: -0.03em;
+    color: var(--black);
+
+    @include laptop {
+      font-size: rem(16);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__watch-image {
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: end;
+
+    width: rem(379);
+    height: rem(246);
+    overflow: hidden;
+
+    margin: rem(-50) rem(-50) rem(-50) auto;
+
+    user-select: none;
+    pointer-events: none;
+
+    @include laptop {
+      width: rem(330);
+      height: rem(222);
+
+      margin: rem(-36) rem(-36) rem(-36) auto;
+    }
+
+    @include mobile {
+      width: rem(234);
+      height: rem(179);
+
+      margin: 0 rem(-35) 0 auto;
+    }
+
+    img {
+      width: rem(379);
+      height: rem(300);
+      object-fit: contain;
+      object-position: right bottom;
+
+      @include mobile {
+        width: 22.4rem;
+        height: 19rem;
+      }
+    }
+  }
+}
