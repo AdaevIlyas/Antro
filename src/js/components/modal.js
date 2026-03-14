@@ -1,100 +1,94 @@
-
-
 export const modal = () => {
+  const modalOpen = "js-modal-open";
+  const modalClose = document.querySelectorAll(".js-modal-close");
+  const modals = document.querySelectorAll(".modal");
+  const forms = document.querySelectorAll(".js-form");
+  var distance = 0;
 
+  function disable_scroll() {
+    document.querySelector(".site-container").classList.add("dis-scroll");
+    document.querySelector(".site-container").scrollTo({
+      top: distance,
+      left: 0,
+    });
+  }
 
-    const modalOpen = 'js-modal-open';
-    const modalClose = document.querySelectorAll('.js-modal-close');
-    const modals = document.querySelectorAll('.modal');
-    const forms = document.querySelectorAll('.js-form');
-    var distance = 0;
+  function enable_scroll() {
+    document.querySelector(".site-container").classList.remove("dis-scroll");
 
-
-
-
-
-    function disable_scroll() {
-        document.querySelector(".site-container").classList.add("dis-scroll");
-        document.querySelector(".site-container").scrollTo({
-            top: distance,
-            left: 0,
+    if (distance != 0) {
+      setTimeout(() => {
+        window.scrollTo({
+          top: distance,
+          left: 0,
         });
+      }, 1);
     }
+  }
 
-    function enable_scroll() {
+  document.addEventListener("click", function (e) {
+    console.log("click");
+    console.log(e.target);
+    console.log(e.target.classList.contains(modalOpen));
+    if (e.target.classList.contains(modalOpen)) {
+      let modalName = e.target.dataset.modal;
+      console.log(modalName);
 
-        document.querySelector(".site-container").classList.remove("dis-scroll");
+      distance = window.pageYOffset;
+      //disable_scroll();
+      document.querySelector(".modal_open")?.classList.remove("modal_open");
+      document
+        .querySelector(`.modal[data-modal=${modalName}]`)
+        ?.classList.add("modal_open");
 
-        if ( distance != 0 ) {
-            setTimeout(() => {
-                window.scrollTo({
-                    top: distance,
-                    left: 0,
-                });
-            }, 1);
-        }
-
+      if (modalName == "video-about" || modalName == "video-solutions") {
+        document.querySelector(".modal_open")?.querySelector("video").play();
+      }
     }
+  });
 
+  document.addEventListener("keydown", function (e) {
+    let keyCode = e.keyCode;
+    if (keyCode === 27) {
+      if (document.querySelector(".modal_open").querySelector("video")) {
+        document.querySelector(".modal_open").querySelector("video").pause();
+      }
 
-    document.addEventListener('click',function(e){
-        if ( e.target.classList.contains(modalOpen) ) {
-
-            let modalName = e.target.dataset.modal;
-
-            distance = window.pageYOffset;
-            //disable_scroll();
-            document.querySelector('.modal_open')?.classList.remove('modal_open');
-            document.querySelector(`.modal[data-modal=${modalName}]`)?.classList.add("modal_open");
-
-            if ( modalName == "video-about" || modalName == "video-solutions" ) {
-                document.querySelector('.modal_open')?.querySelector("video").play();
-            }
-            
-        }
-    });
-
-    document.addEventListener('keydown', function(e) {
-        let keyCode = e.keyCode;
-        if (keyCode === 27) {     
-            if ( document.querySelector('.modal_open').querySelector("video") ){
-                document.querySelector('.modal_open').querySelector("video").pause();
-            }
-
-            document.querySelector('.modal_open')?.classList.remove('modal_open');            
-            //enable_scroll();
-        }
-    });
-
-    if ( modals.length ) {
-        for (let modal of modals ) {
-            modal.addEventListener('mousedown',function(e){
-                if ( e.target.classList.contains("modal") ) {   
-                    if ( document.querySelector('.modal_open').querySelector("video") ){
-                        document.querySelector('.modal_open').querySelector("video").pause();
-                    }                     
-                    document.querySelector('.modal_open')?.classList.remove('modal_open');
-                    //enable_scroll();
-                }
-            });
-        }
+      document.querySelector(".modal_open")?.classList.remove("modal_open");
+      //enable_scroll();
     }
+  });
 
-    if ( modals.length ) {
-        for (let close of modalClose ) {
-            close.addEventListener('mousedown',function(e){       
-                if ( document.querySelector('.modal_open').querySelector("video") ){
-                    document.querySelector('.modal_open').querySelector("video").pause();
-                }
-                document.querySelector('.modal_open')?.classList.remove('modal_open');
-                //enable_scroll();
-            });
+  if (modals.length) {
+    for (let modal of modals) {
+      modal.addEventListener("mousedown", function (e) {
+        if (e.target.classList.contains("modal")) {
+          if (document.querySelector(".modal_open").querySelector("video")) {
+            document
+              .querySelector(".modal_open")
+              .querySelector("video")
+              .pause();
+          }
+          document.querySelector(".modal_open")?.classList.remove("modal_open");
+          //enable_scroll();
         }
+      });
     }
+  }
 
+  if (modals.length) {
+    for (let close of modalClose) {
+      close.addEventListener("mousedown", function (e) {
+        if (document.querySelector(".modal_open").querySelector("video")) {
+          document.querySelector(".modal_open").querySelector("video").pause();
+        }
+        document.querySelector(".modal_open")?.classList.remove("modal_open");
+        //enable_scroll();
+      });
+    }
+  }
 
-
-    /* if ( forms.length ) {
+  /* if ( forms.length ) {
         
         for (let form of forms ) {
             
@@ -107,7 +101,4 @@ export const modal = () => {
         }
 
     } */
-
-    
-
-}
+};
