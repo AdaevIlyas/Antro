@@ -1,14 +1,38 @@
 .new-main-services {
+  .main-services__card-image {
+    @include laptop {
+    }
+  }
+
   .main-services__card-text {
     max-width: none;
   }
 
   .main-services__card-left {
     padding-block: rem(20);
-    width: rem(470);
+    width: rem(480);
+
+    @include laptop {
+      width: rem(340);
+    }
+
+    @include mobile {
+      gap: 0;
+      padding-block: rem(0);
+      width: auto;
+    }
 
     .main-services__card-title {
       margin-bottom: rem(10);
+
+      @include laptop {
+        margin-bottom: rem(6);
+      }
+
+      @include mobile {
+        font-size: rem(20);
+        margin-bottom: rem(10);
+      }
     }
   }
 
@@ -18,13 +42,38 @@
 
     width: rem(350);
 
+    @include laptop {
+      padding-block: rem(15);
+      width: rem(314);
+    }
+
+    @include mobile {
+      padding-block: rem(0);
+    }
+
     .main-services__card-title {
       margin-bottom: 0;
+
+      @include mobile {
+        font-size: rem(20);
+        margin-top: rem(16);
+      }
     }
   }
 
   .main-services__card_big {
     align-items: stretch;
+    padding-right: rem(60);
+
+    @include laptop {
+      padding-right: rem(44);
+      margin-bottom: rem(4);
+    }
+
+    @include mobile {
+      padding: rem(8) rem(8) rem(80);
+      margin-bottom: rem(6);
+    }
   }
 
   .main-services__card-content .main-services__card-btn {
@@ -33,26 +82,100 @@
 
   .main-services__card-text_time {
     margin-bottom: rem(20);
+
+    @include mobile {
+      order: 10;
+      display: block;
+      margin-bottom: 0;
+    }
   }
 
   .main-services__card-order {
     margin-top: auto;
+
+    @include mobile {
+      margin-top: rem(12);
+    }
   }
 
   .main-services__card-texts {
     display: flex;
     flex-direction: column;
     gap: rem(3);
+
+    @include mobile {
+      gap: rem(2);
+    }
   }
 
   .main-services__card-texts-row {
     display: flex;
     align-items: center;
     gap: rem(6);
+
+    @include mobile {
+      align-items: start;
+      flex-direction: column;
+      gap: rem(2);
+
+      img {
+        display: none;
+      }
+    }
+  }
+
+  .main-services__card-content {
+    @include mobile {
+      margin-top: rem(12);
+      padding-inline: rem(8);
+    }
   }
 
   &__card-star {
     width: rem(10);
     height: rem(10);
+  }
+
+  &__card_large {
+    .main-services__card-left {
+      padding-block: rem(12);
+
+      @include laptop {
+        padding-block: rem(8);
+      }
+
+      @include mobile {
+        padding-block: rem(0);
+      }
+    }
+
+    .main-services__card-title {
+      font-size: rem(24);
+    }
+
+    .main-services__card-text {
+      @include mobile {
+        display: block;
+      }
+    }
+
+    .main-services__card-image {
+      height: rem(189);
+      border-radius: rem(30);
+
+      @include mobile {
+        height: rem(135);
+        border-radius: rem(24);
+      }
+    }
+
+    .main-services__card-order {
+      color: var(--black);
+      background: var(--white);
+
+      &::before {
+        background: var(--white);
+      }
+    }
   }
 }

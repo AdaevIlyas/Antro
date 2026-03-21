@@ -638,6 +638,10 @@
     @include laptop {
       margin-bottom: rem(40);
     }
+
+    @include mobile {
+      margin-bottom: rem(30);
+    }
   }
 
   &_m0 {
