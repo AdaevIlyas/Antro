@@ -16,12 +16,17 @@
   }
 
   .footer__antro {
+    font-size: rem(14);
     @include mobile {
       position: static;
     }
   }
 
   .footer__col_gray {
+    @include laptop {
+      gap: rem(8);
+    }
+
     @include mobile {
       gap: rem(8);
 

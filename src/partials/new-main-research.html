@@ -20,7 +20,7 @@
                                     динамикой рынка и категориями спроса
                                 </div>
                             </div>
-                            <div class="new-main-research__box-head-right">
+                            <div class="new-main-research__box-head-right el-desctop">
                                 <div class="main-research__card-text main-research__card-text_tag"><img
                                         src="img/media/svg/tag.svg" alt="">
                                     Премия Тэглайн (Tagline Awards). Обзоры, которыми пользуется весь рынок
@@ -88,6 +88,10 @@
                                         <img src="img/svg/lightning.svg" alt="">
                                     </div>
                                 </button> -->
+                            </div>
+                            <div class="main-research__card-text main-research__card-text_tag el-mobile"><img
+                                    src="img/media/svg/tag.svg" alt="">
+                                Премия Тэглайн (Tagline Awards). Обзоры, которыми пользуется весь рынок
                             </div>
                         </div>
                     </div>
@@ -182,38 +186,84 @@
                 <div class="main-research__box main-research__box_grid new-main-research__blog-box">
                     <div class="main-research__card">
 
-                        <div class="js-form main-research__subscribe js-subscribe-baloon">
+                        <div class="js-form main-research__subscribe js-subscribe-baloon" data-widget-id="0">
 
                             <div class="main-research__subscribe-close js-subscribe-close">
-                                <img src="img/svg/close.svg" alt="">
+                                <img src="https://antro.cx/wp-content/themes/antro/new-assets/img/svg/close.svg" alt="">
                             </div>
 
-                            <div class="main-research__card-title">Email-рассылка с новостямии отраслевой аналитикой
-                            </div>
-                            <div class="main-research__card-text">Ежемесячно присылаем дайджест с аналитикой</div>
-                            <form action="" class="main-team__form-wrapper">
-                                <div class="main-team__form js-form">
+                            <div class="main-research__card-title js-form-subscribe-title">
+                                Рассылка с&nbsp;новостями и&nbsp;отраслевой аналитикой </div>
+                            <div class="main-research__card-text js-form-subscribe-text">
+                                Ежемесячно присылаем дайджест с&nbsp;аналитикой </div>
+                            <form action="" class="main-team__form-wrapper js-form-subscribe" data-widget-id="3">
+                                <input type="hidden" name="target" value="">
+                                <input type="hidden" id="nonce" name="nonce" value="6040d8d752"><input type="hidden"
+                                    name="_wp_http_referer" value="/">
+                                <div class="main-team__form">
                                     <div class="input-block">
-                                        <div class="input-block__exclamation"><img src="img/svg/exclamation.svg" alt="">
+                                        <div class="input-block__exclamation"><img
+                                                src="https://antro.cx/wp-content/themes/antro/new-assets/img/svg/exclamation.svg"
+                                                alt=""></div>
+                                        <input name="user-email" type="text" data-required="" data-email=""
+                                            placeholder="Е-мейл для подписки на рассылку">
+                                        <input type="hidden" name="page_id" value="1254">
+                                        <div class="input-block__error">Пожалуйста, перепроверьте правильность номера
                                         </div>
-                                        <input name="email" type="email" required
-                                            placeholder="Email для подписки на рассылку">
-                                        <div class="input-block__error">Пожалуйста, перепроверьте правильность
-                                            номера</div>
                                     </div>
-                                    <button class="btn-reset main-team__submit btn_hover-round">
-                                        <img src="img/svg/next.svg" alt="">
+                                    <div id="captcha-container" class="captcha-container smart-captcha_invisible"
+                                        data-testid="smartCaptcha-container">
+                                        <div style="display: none;"><iframe frameborder="0"
+                                                src="https://smartcaptcha.cloud.yandex.ru/backend.5e56b772c972d11334c1.html?sitekey=ysc1_7YikwQiWK9raQXxEzt6lL1lgE7fz6M6q52LMqcuC3dd5c1d2&amp;theme=light&amp;hl=ru&amp;host=antro.cx&amp;href=https%3A%2F%2Fantro.cx%2F&amp;test=false&amp;webview=false&amp;hideChallengeContainer=false"
+                                                aria-hidden="true" allow="encrypted-media *; accelerometer"
+                                                data-testid="backend-iframe" title="SmartCaptcha backend"
+                                                style="display: block; width: 100%; height: 100%; z-index: 0; transform: translate3d(0px, 0px, 0px);"></iframe>
+                                        </div><input type="hidden" name="smart-token" data-testid="smart-token">
+                                    </div>
+                                    <button type="submit" class="btn-reset main-team__submit btn_hover-round">
+                                        <img src="https://antro.cx/wp-content/themes/antro/new-assets/img/svg/next.svg"
+                                            alt="">
                                     </button>
                                 </div>
-                                @include('./i-checkbox.html', {"small": "small", "left": "left"})
+                                <label class="i-checkbox i-checkbox_smalli-checkbox_left i-checkbox_margin">
+                                    <input class="i-checkbox__input i-checkbox__input--position" type="checkbox"
+                                        name="i_agree">
+                                    <div class="i-checkbox__mask">
+                                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.16602 3.11091L4.89961 6.66671L10.5 1.33301" stroke="white"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="i-checkbox__text">
+                                        Я даю <a href="https://antro.cx/consent/">согласие на обработку моих
+                                            персональных данных</a>&nbsp;и принимаю условия <a
+                                            href="https://antro.cx/policy/">Политики обработки персональных данных</a>
+                                    </div>
+                                </label>
+                                <label
+                                    class="i-checkbox i-checkbox-center i-checkbox_smalli-checkbox_left i-checkbox_margin">
+                                    <input class="i-checkbox__input i-checkbox__input--position" type="checkbox"
+                                        name="i_advertising">
+                                    <div class="i-checkbox__mask">
+                                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.16602 3.11091L4.89961 6.66671L10.5 1.33301" stroke="white"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="i-checkbox__text">Я даю <a href="https://antro.cx/advertising/">согласие
+                                            на получение рекламных сообщений</a></div>
+                                </label>
                             </form>
                         </div>
 
                         <div class="main-research__card-title">Делимся новостями и аналитикой</div>
                         <div class="main-research__card-text main-research__card-text_tag"><img
-                                src="img/media/svg/tag.svg" alt=""> Премия Тэглайн (Tagline Awards). <br
-                                class="el-mobile"> Лучший
-                            email-маркетинг</div>
+                                src="img/media/svg/tag.svg" alt="">
+                            Премия Тэглайн (Tagline Awards). <br class="el-mobile"> Лучший email-маркетинг</div>
                         <div class="main-research__card-list new-main-research__card-list">
                             <a href="#" class="main-research__card-el btn_hover-graylight js-subscribe-open">
                                 <div class="main-research__card-icon main-research__card-icon_small">

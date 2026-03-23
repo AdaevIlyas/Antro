@@ -149,8 +149,14 @@
       }
     }
 
-    .main-services__card-title {
-      font-size: rem(24);
+    .main-services__card-left {
+      .main-services__card-title {
+        font-size: rem(24);
+
+        @include laptop {
+          font-size: rem(20);
+        }
+      }
     }
 
     .main-services__card-text {

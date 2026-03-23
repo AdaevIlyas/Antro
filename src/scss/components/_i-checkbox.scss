@@ -4,6 +4,27 @@
   display: flex;
   gap: rem(8);
   max-width: rem(560);
+  height: 4rem;
+
+  @include laptop {
+    height: rem(32);
+  }
+
+  @include mobile {
+    height: auto;
+  }
+
+  &_margin {
+    margin-inline: 0;
+
+    @include laptop {
+      margin-block: rem(5);
+    }
+
+    @include mobile {
+      margin-block: rem(10);
+    }
+  }
 
   @include laptop {
     max-width: rem(504);
@@ -169,4 +190,8 @@
       }
     }
   }
+}
+
+.i-checkbox-center {
+  align-items: center;
 }

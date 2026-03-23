@@ -606,6 +606,10 @@
     align-items: center;
     column-gap: rem(24);
 
+    &:hover {
+      z-index: 10;
+    }
+
     @include laptop {
       padding: rem(26) rem(34);
       column-gap: rem(16);

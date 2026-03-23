@@ -73,6 +73,13 @@
   .main-research__card-text_tag {
     align-items: start;
     color: #38344c;
+
+    @include mobile {
+      &.el-mobile {
+        margin-top: rem(-10);
+        display: flex !important;
+      }
+    }
   }
 
   &__blog-box {
@@ -128,6 +135,8 @@
         line-height: calc(120% + rem(5));
 
         @include laptop {
+          max-width: rem(317);
+          word-spacing: rem(2);
           line-height: calc(120% + rem(2));
         }
 
@@ -250,7 +259,7 @@
       position: relative;
       font-family: var(--font-family);
       font-weight: 500;
-      font-size: rem(14);
+      font-size: rem(15);
       line-height: 120%;
       letter-spacing: -0.02em;
       color: var(--black);
@@ -393,6 +402,19 @@
 
     @include mobile {
       padding-top: rem(4);
+    }
+  }
+
+  .main-research__subscribe {
+    justify-content: center;
+    padding: rem(34) rem(46) rem(26);
+
+    @include mobile {
+      padding: rem(24);
+
+      .main-research__card-title {
+        max-width: rem(280);
+      }
     }
   }
 }

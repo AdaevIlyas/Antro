@@ -94,7 +94,7 @@
 
     flex: 0 1 100%;
 
-    padding: rem(24) rem(24) rem(24) rem(50);
+    padding: rem(40) rem(24) rem(40) rem(50);
     border-radius: rem(50);
 
     background: rgba(55, 98, 43, 0.5);
@@ -554,6 +554,7 @@
     display: flex;
     align-items: start;
     gap: rem(120);
+    justify-content: space-between;
 
     border-radius: rem(50);
     padding: rem(50);
@@ -606,6 +607,12 @@
       }
     }
 
+    &--width {
+      @include laptop {
+        max-width: rem(438);
+      }
+    }
+
     p {
       font-family: var(--font-family);
       font-weight: 400;
@@ -616,6 +623,10 @@
 
       @include laptop {
         font-size: rem(16);
+
+        br {
+          display: none;
+        }
       }
 
       @include mobile {
@@ -630,6 +641,10 @@
 
       padding-left: rem(25);
 
+      @include mobile {
+        padding-left: rem(20);
+      }
+
       li {
         font-family: var(--font-family);
         font-weight: 400;
@@ -640,6 +655,10 @@
 
         @include laptop {
           font-size: rem(16);
+        }
+
+        @include mobile {
+          font-size: rem(14);
         }
 
         &:not(:last-child) {
@@ -689,8 +708,7 @@
     pointer-events: none;
 
     border-radius: 100%;
-    background: rgba(53, 0, 39, 0.2);
-    backdrop-filter: blur(rem(34));
+    background: #b8aec8;
 
     img {
       width: rem(14);
