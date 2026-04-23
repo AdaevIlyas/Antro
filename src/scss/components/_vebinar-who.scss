@@ -1,0 +1,33 @@
+.vebinar-who {
+  margin-block: rem(120);
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: rem(40);
+  }
+
+  &__title {
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: rem(16) rem(18);
+  }
+
+  &__point {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(24);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--black);
+
+    border-radius: rem(50);
+    padding: rem(20) rem(24);
+
+    background: #eee;
+  }
+}
