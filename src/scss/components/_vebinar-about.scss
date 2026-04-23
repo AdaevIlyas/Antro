@@ -1,10 +1,22 @@
 .vebinar-about {
   margin-block: rem(120);
 
+  @include laptop {
+    margin-block: rem(80);
+  }
+
+  @include mobile {
+    margin-block: rem(60);
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
     gap: rem(40);
+
+    @include mobile {
+      gap: rem(24);
+    }
   }
 
   &__title {
@@ -18,5 +30,13 @@
     letter-spacing: -0.03em;
     text-align: center;
     color: var(--black);
+
+    @include laptop {
+      font-size: rem(20);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+    }
   }
 }

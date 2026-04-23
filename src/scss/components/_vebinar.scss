@@ -1,5 +1,17 @@
 .vebinar {
   background: #f6f6f6;
+
+  .footer {
+    .footer__box {
+      background: var(--white);
+    }
+
+    .footer__social-link {
+      &::before {
+        background: #f6f6f6;
+      }
+    }
+  }
 }
 
 .vebinar-title {
@@ -11,4 +23,16 @@
   text-transform: uppercase;
   text-align: center;
   color: var(--black);
+
+  @include laptop {
+    font-size: rem(44);
+  }
+
+  @include mobile {
+    font-size: rem(24);
+  }
+
+  &_white {
+    color: var(--white);
+  }
 }

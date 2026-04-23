@@ -1,0 +1,143 @@
+.vebinar-programm {
+  position: relative;
+  z-index: 2;
+
+  padding: rem(80);
+  margin-block: rem(120);
+  margin-inline: rem(20);
+  border-radius: rem(60);
+  overflow: hidden;
+
+  @include laptop {
+    padding: rem(60) rem(20) rem(20) rem(20);
+    margin-block: rem(80);
+    border-radius: rem(44);
+  }
+
+  @include mobile {
+    margin-inline: 0;
+    margin-block: rem(60);
+
+    padding: rem(40) rem(16) rem(16);
+    border-radius: rem(40);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: rem(-100) 0 0 0;
+
+    background: linear-gradient(180deg, #0a0620 0%, #670c50 100%);
+
+    @include mobile {
+      top: rem(-300);
+    }
+  }
+
+  &__wrapper {
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(40);
+    margin-bottom: rem(60);
+
+    @include laptop {
+      margin-bottom: rem(40);
+    }
+
+    @include mobile {
+      gap: rem(20);
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__info {
+    @include mobile {
+      gap: rem(8);
+
+      .vebinar-banner__point-text {
+        font-size: rem(14);
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+
+    @include mobile {
+      gap: rem(8);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+
+    border-radius: rem(50);
+    padding: rem(38);
+    background: var(--bg);
+
+    @include laptop {
+      border-radius: rem(30);
+      padding: rem(24) rem(38);
+    }
+
+    @include mobile {
+      align-items: start;
+      padding: rem(22);
+    }
+  }
+
+  &__item-count {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: rem(44);
+    height: rem(44);
+
+    border-radius: 100%;
+
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(20);
+    line-height: 94%;
+    text-align: center;
+    color: var(--black);
+
+    background: #e7e7e7;
+
+    @include mobile {
+      width: rem(36);
+      height: rem(36);
+
+      font-size: rem(16);
+    }
+  }
+
+  &__item-text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(34);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--black);
+
+    @include laptop {
+      font-size: rem(28);
+    }
+
+    @include mobile {
+      margin-block: auto;
+      font-size: rem(16);
+    }
+  }
+}

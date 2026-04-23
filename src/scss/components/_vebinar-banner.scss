@@ -4,6 +4,18 @@
   margin-top: rem(130);
   margin-bottom: rem(120);
 
+  @include laptop {
+    padding-block: rem(80);
+    margin-bottom: rem(80);
+  }
+
+  @include mobile {
+    margin-top: rem(78);
+    margin-bottom: rem(60);
+
+    padding-block: rem(69) rem(64);
+  }
+
   &__bg {
     position: absolute;
     top: 0;
@@ -14,6 +26,19 @@
 
     width: calc(100% - rem(40));
     height: 100%;
+
+    @include laptop {
+      border-radius: rem(44);
+    }
+
+    @include mobile {
+      width: 100%;
+      height: 100%;
+
+      border-radius: rem(40);
+      left: 0;
+      right: 0;
+    }
   }
 
   &__wrapper {
@@ -25,6 +50,14 @@
     align-items: center;
     justify-content: center;
     gap: rem(80);
+
+    @include laptop {
+      gap: rem(60);
+    }
+
+    @include mobile {
+      gap: rem(20);
+    }
   }
 
   &__top {
@@ -34,11 +67,20 @@
     gap: rem(32);
 
     text-align: center;
+
+    @include mobile {
+      gap: rem(75);
+    }
   }
 
   &__logo {
     width: rem(245);
     height: rem(24);
+
+    @include mobile {
+      width: rem(175);
+      height: rem(16);
+    }
   }
 
   &__title {
@@ -50,6 +92,14 @@
     text-transform: uppercase;
     text-align: center;
     color: var(--white);
+
+    @include laptop {
+      font-size: rem(44);
+    }
+
+    @include mobile {
+      font-size: rem(24);
+    }
   }
 
   &__middle {
@@ -64,6 +114,12 @@
     align-items: center;
     justify-content: center;
     gap: rem(11);
+
+    @include mobile {
+      max-width: rem(260);
+      flex-wrap: wrap;
+      gap: rem(6);
+    }
   }
 
   &__point {
@@ -74,6 +130,10 @@
     backdrop-filter: blur(rem(50));
     background: rgba(255, 255, 255, 0.1);
     border-radius: rem(160);
+
+    @include mobile {
+      padding: rem(12) rem(16);
+    }
   }
 
   &__point-icon {
@@ -81,6 +141,11 @@
 
     width: rem(20);
     height: rem(20);
+
+    @include mobile {
+      width: rem(16);
+      height: rem(16);
+    }
   }
 
   &__point-circle {
@@ -107,6 +172,10 @@
     line-height: 120%;
     letter-spacing: -0.03em;
     color: var(--white);
+
+    @include mobile {
+      font-size: rem(12);
+    }
   }
 
   &__format {
@@ -116,6 +185,21 @@
     line-height: 108%;
     letter-spacing: -0.03em;
     color: var(--white);
+
+    @include laptop {
+      font-size: rem(20);
+    }
+
+    @include mobile {
+      font-size: rem(16);
+    }
+  }
+
+  &__bottom {
+    @include mobile {
+      width: calc(100% + rem(8));
+      margin-inline: rem(-4);
+    }
   }
 
   &__btn {
@@ -123,5 +207,18 @@
     height: rem(81);
     max-width: none;
     padding-inline: rem(90);
+
+    @include laptop {
+      max-width: rem(431);
+      height: rem(58);
+
+      font-size: rem(16);
+    }
+
+    @include mobile {
+      height: rem(50);
+      width: 100%;
+      padding-inline: rem(40);
+    }
   }
 }

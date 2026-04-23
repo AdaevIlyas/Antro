@@ -3,7 +3,7 @@
 
 // Определение операционной системы на мобильных
 import { mobileCheck } from "./functions/mobile-check";
-console.log(mobileCheck())
+console.log(mobileCheck());
 
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
@@ -65,8 +65,16 @@ console.log(mobileCheck())
 // const rellax = new Rellax('.rellax');
 
 // Подключение плавной прокрутки к якорям
-// import SmoothScroll from 'smooth-scroll';
-// const scroll = new SmoothScroll('a[href*="#"]');
+import SmoothScroll from "smooth-scroll";
+const header = document.querySelector(".header");
+const headerHeight = header.getBoundingClientRect().height;
+
+const scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 100,
+  offset: function (anchor, toggle) {
+    return headerHeight;
+  },
+});
 
 // Подключение событий свайпа на мобильных
 // import 'swiped-events';

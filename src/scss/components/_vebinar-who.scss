@@ -1,10 +1,22 @@
 .vebinar-who {
   margin-block: rem(120);
 
+  @include laptop {
+    margin-block: rem(80);
+  }
+
+  @include mobile {
+    margin-block: rem(60);
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
     gap: rem(40);
+
+    @include mobile {
+      gap: rem(24);
+    }
   }
 
   &__title {
@@ -15,6 +27,17 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: rem(16) rem(18);
+
+    @include laptop {
+      gap: rem(10);
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+
+      gap: rem(8);
+    }
   }
 
   &__point {
@@ -29,5 +52,15 @@
     padding: rem(20) rem(24);
 
     background: #eee;
+
+    @include laptop {
+      font-size: rem(20);
+      padding: rem(16) rem(20);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+      padding: rem(12) rem(16);
+    }
   }
 }
