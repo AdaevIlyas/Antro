@@ -94,4 +94,14 @@
       padding-top: rem(2);
     }
   }
+
+  &:has(.ai-agent) {
+    position: relative;
+
+    @include mobile {
+      min-height: rem(550);
+
+      margin-bottom: rem(170);
+    }
+  }
 }
