@@ -32,14 +32,14 @@
   @include mobile {
     top: auto;
     right: auto;
-    left: rem(16);
+    left: 50%;
     bottom: rem(-170);
 
     width: rem(351);
     height: rem(250);
 
-    transform: translateY(rem(30));
-    transform-origin: center;
+    transform: translateY(rem(30)) translateX(-50%);
+    transform-origin: center center;
   }
 
   &__inner {
