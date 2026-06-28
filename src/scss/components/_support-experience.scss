@@ -1,0 +1,90 @@
+.support-experience {
+  &__cases {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    margin-bottom: rem(60);
+
+    @include laptop {
+      margin-bottom: rem(40);
+    }
+
+    @include mobile {
+      gap: rem(10);
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(20);
+
+    @include laptop {
+      gap: rem(12);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: rem(10);
+    }
+  }
+
+  &__case {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+    min-height: rem(183);
+    padding: rem(30);
+    border-radius: rem(40);
+    background-color: #38344c;
+    color: var(--black);
+
+    @include laptop {
+      padding: rem(24);
+      border-radius: rem(30);
+      gap: rem(18);
+    }
+
+    @include mobile {
+      padding: rem(20);
+      border-radius: rem(24);
+    }
+  }
+
+  &__logo {
+    height: rem(24);
+
+    img {
+      width: auto;
+      height: 100%;
+      max-width: rem(170);
+      object-fit: contain;
+    }
+  }
+
+  &__case-body {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+    margin-top: auto;
+
+    .support-section__card-title,
+    .support-section__card-text {
+      color: var(--white);
+    }
+  }
+
+  &__notes {
+    margin-top: 0;
+
+    .support-section__note-card {
+      background-color: var(--grayDark);
+    }
+
+    .support-section__note-title,
+    .support-section__note-text {
+      color: var(--white);
+    }
+  }
+}

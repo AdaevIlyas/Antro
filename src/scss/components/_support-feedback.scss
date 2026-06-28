@@ -1,0 +1,18 @@
+.support-feedback {
+  margin-block: rem(120);
+
+  .main-cases__swiper-slide,
+  .main-cases__swiper-prev,
+  .main-cases__swiper-next {
+    background: var(--white);
+  }
+
+  .main-cases__swiper {
+    margin: 0;
+  }
+
+  .new-main-cases__swiper-bottom,
+  .new-main-cases__hashtag {
+    background: #f6f6f6;
+  }
+}

@@ -60,7 +60,8 @@ html {
     }
   }
 
-  &_development {
+  &_development,
+  &_support {
     background: #f6f6f6;
 
     .footer__box {

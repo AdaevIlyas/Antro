@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body page__body_support">
+    <div class="site-container">
+      @include('partials/new-header.html')
+      @include('partials/new-mobile-menu.html') @include('partials/cookie.html',
+      {"main":"main"})
+
+      <main class="main support-page">
+        @include('partials/support-first.html')
+        @include('partials/support-pain.html')
+        @include('partials/support-experience.html')
+        @include('partials/support-scenario.html')
+        @include('partials/support-safe.html')
+        @include('partials/support-scope.html')
+        @include('partials/support-tasks.html')
+        @include('partials/support-industry.html')
+        @include('partials/support-feedback.html')
+        @include('partials/support-formats.html')
+        @include('partials/support-order.html')
+      </main>
+
+      @include('partials/modal.html') @include('partials/new-footer.html')
+    </div>
+  </body>
+</html>

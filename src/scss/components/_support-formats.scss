@@ -1,0 +1,133 @@
+.support-formats {
+  .support-section__inner {
+    background-color: #0a0620;
+  }
+
+  .development-brands__text_tag {
+    color: var(--white);
+    border-color: var(--white);
+  }
+
+  .support-section__title {
+    color: var(--white);
+  }
+
+  .support-section__desc {
+    color: var(--white);
+  }
+
+  .support-section__list-item {
+    align-items: center;
+
+    img {
+      margin-bottom: auto;
+    }
+  }
+
+  &__grid {
+    align-items: stretch;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: rem(34);
+    min-height: rem(562);
+    padding: rem(40) rem(30) rem(30);
+    border-radius: rem(40);
+    background: var(--white);
+
+    &:nth-child(1) {
+      .support-section__list-item {
+        img {
+          filter: invert(1);
+        }
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      .support-formats__card-title,
+      .support-formats__card-desc,
+      .support-formats__sub,
+      .support-section__list-item {
+        color: var(--white);
+      }
+    }
+    &:nth-child(2) {
+      background-color: #615e71;
+    }
+    &:nth-child(3) {
+      background-color: #38344c;
+    }
+
+    @include laptop {
+      min-height: auto;
+      padding: rem(30) rem(24) rem(24);
+      gap: rem(24);
+    }
+
+    @include mobile {
+      padding: rem(24) rem(20) rem(20);
+    }
+  }
+
+  &__card-head {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+  }
+
+  &__card-title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(34);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--black);
+
+    @include laptop {
+      font-size: rem(28);
+    }
+
+    @include mobile {
+      font-size: rem(22);
+    }
+  }
+
+  &__card-desc {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--black);
+  }
+
+  &__sub {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--black);
+  }
+
+  &__list {
+    margin-top: auto;
+  }
+
+  &__btn {
+    width: 100%;
+    min-width: 0;
+    height: rem(58);
+    margin-top: auto;
+    font-size: rem(18);
+    width: 100%;
+    max-width: none;
+
+    @include laptop {
+      height: rem(46);
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.support-page {
+  --support-accent: #f3b2e7;
+  --support-mark-bad: #ffe6e7;
+  --support-input-border: #ffeefb;
+  --support-social-bg: #38344c;
+  --support-divider: #ddd;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  ul,
+  ol {
+    margin: 0;
+  }
+
+  .audit-feedback__inner {
+    margin-top: 0;
+    margin-bottom: rem(120);
+
+    @include laptop {
+      margin-top: 0;
+      margin-bottom: rem(80);
+    }
+
+    @include mobile {
+      margin-top: 0;
+      margin-bottom: rem(60);
+    }
+  }
+}

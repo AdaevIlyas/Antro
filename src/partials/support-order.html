@@ -1,0 +1,157 @@
+<section class="support-order">
+  <div class="container">
+    <div class="support-order__inner">
+      <img src="img/support/order-bg.png" alt="" class="support-order__bg" />
+      <div class="support-order__content">
+        <div class="support-order__title">
+          Не знаете, какой формат подойдет?
+        </div>
+        <p class="support-order__text">
+          Расскажите про проект — разберемся вместе и предложим точку входа
+        </p>
+      </div>
+
+      <div class="support-order__form-wrap">
+        <form action="" class="main-order__form js-form support-order__form">
+          <div class="main-order__form-fields">
+            <div class="input-block error">
+              <div class="input-block__exclamation">
+                <img src="img/svg/exclamation.svg" alt="" />
+              </div>
+              <input name="name" type="text" required placeholder="Имя" />
+              <div class="input-block__error">
+                Пожалуйста, проверьте правильность номера
+              </div>
+            </div>
+            <div class="input-block">
+              <div class="input-block__exclamation">
+                <img src="img/svg/exclamation.svg" alt="" />
+              </div>
+              <input
+                name="company"
+                type="text"
+                required
+                placeholder="Компания"
+              />
+              <div class="input-block__error">
+                Пожалуйста, проверьте правильность номера
+              </div>
+            </div>
+            <div class="input-block">
+              <div class="input-block__exclamation">
+                <img src="img/svg/exclamation.svg" alt="" />
+              </div>
+              <input name="phone" type="tel" required placeholder="Телефон" />
+              <div class="input-block__error">
+                Пожалуйста, проверьте правильность номера
+              </div>
+            </div>
+            <div class="input-block">
+              <div class="input-block__exclamation">
+                <img src="img/svg/exclamation.svg" alt="" />
+              </div>
+              <input name="email" type="email" required placeholder="Email" />
+              <div class="input-block__error">
+                Пожалуйста, проверьте правильность номера
+              </div>
+            </div>
+
+            <div class="input-block">
+              <div class="input-block__exclamation">
+                <img src="img/svg/exclamation.svg" alt="" />
+              </div>
+              <div class="select">
+                <input
+                  class="select__value"
+                  type="text"
+                  autocomplete="off"
+                  readonly="readonly"
+                  placeholder="Способ связи"
+                />
+                <div class="select__list">
+                  <div data-value="Telegram" class="select__option js-telegram">
+                    Telegram
+                  </div>
+                  <div data-value="WhatsApp" class="select__option">
+                    WhatsApp
+                  </div>
+                  <div data-value="Телефон" class="select__option">Телефон</div>
+                  <div data-value="Email" class="select__option">Email</div>
+                </div>
+                <div
+                  class="telegram-name"
+                  style="
+                    --tg-primary: #fec6ef;
+                    --tg-bg: #fff9fd;
+                    --tg-text: #0a0620;
+                    --tg-placeholder: #615e71;
+                  "
+                >
+                  <input
+                    type="text"
+                    class="telegram-name__input tg"
+                    value
+                    placeholder="Никнейм в TG"
+                    data-mobile-placeholder="Никнейм в TG"
+                  />
+                  <div class="telegram-name__message">
+                    Укажите никнейм, если номер телефона в Telegram скрыт
+                  </div>
+                </div>
+              </div>
+              <div class="input-block__error">
+                Пожалуйста, выберите способ связи
+              </div>
+            </div>
+
+            <button class="btn-reset btn btn_wide btn_hover-pink">
+              Оставить заявку
+            </button>
+          </div>
+
+          <label class="i-checkbox">
+            <input
+              class="i-checkbox__input"
+              type="checkbox"
+              name="i_agree"
+              checked
+            />
+            <div class="i-checkbox__mask">
+              <svg
+                width="12"
+                height="8"
+                viewBox="0 0 12 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.16602 3.11091L4.89961 6.66671L10.5 1.33301"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="i-checkbox__text">
+              Я даю согласие на <a href="">обработку моих персональных данных</a> и принимаю
+              условия <a href=""></a>политики обработки персональных данных</a>
+            </div>
+          </label>
+        </form>
+
+        <div class="main-order__social">
+          <a href="#" class="main-order__social-link btn_hover-round">
+            <img src="img/svg/telegram.svg" alt="" />
+          </a>
+          <a href="#" class="main-order__social-link btn_hover-round">
+            <img src="img/svg/whatsapp.svg" alt="" />
+          </a>
+          <a href="#" class="main-order__social-link btn_hover-round">
+            <img src="img/svg/email.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

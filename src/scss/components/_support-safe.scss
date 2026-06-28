@@ -1,0 +1,129 @@
+.support-safe {
+  &.support-section {
+    position: relative;
+    z-index: 3;
+    margin-bottom: rem(-80);
+  }
+
+  .support-section__inner {
+    background-color: var(--black);
+  }
+
+  .development-brands__text_tag {
+    color: var(--white);
+    border-color: var(--white);
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: rem(790) 1fr;
+    gap: rem(32);
+    align-items: start;
+
+    @include laptop {
+      grid-template-columns: 1fr;
+      gap: rem(24);
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+  }
+
+  &__title {
+    flex: none;
+    max-width: rem(790);
+    font-size: rem(50);
+    color: var(--white);
+
+    @include laptop {
+      font-size: rem(38);
+    }
+
+    @include mobile {
+      font-size: rem(24);
+    }
+  }
+
+  &__text {
+    max-width: rem(790);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(24);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--white);
+
+    @include laptop {
+      font-size: rem(16);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+    }
+  }
+
+  &__btn {
+    width: fit-content;
+    min-width: rem(329);
+    height: rem(58);
+    margin-top: rem(40);
+
+    @include laptop {
+      min-width: rem(260);
+      height: rem(46);
+      margin-top: rem(40);
+    }
+
+    @include mobile {
+      width: 100%;
+      min-width: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+    min-height: rem(69);
+    padding: rem(22) rem(40) rem(22) rem(26);
+    border-radius: rem(200);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--white);
+    background-color: rgba(255, 255, 255, 0.2);
+    max-width: fit-content;
+
+    p {
+      color: inherit;
+      font-size: inherit;
+    }
+
+    img {
+      flex: 0 0 auto;
+      width: rem(24);
+      height: rem(24);
+    }
+
+    @include laptop {
+      font-size: rem(16);
+      padding: rem(18) rem(22);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+      align-items: flex-start;
+    }
+  }
+}
