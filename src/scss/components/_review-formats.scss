@@ -1,522 +1,522 @@
 .review-formats {
-    &__wrapper {
-        padding-inline: rem(143);
-
-        @include laptop {
-            // max-width: rem(1080);
-            margin-inline: auto;
-            padding-inline: unset;
-        }
-
-        @include mobile {
-            max-width: none;
-        }
-    }
-
-    &__title {
-        font-size: rem(50);
-        color: var(--reviewDark);
-        text-align: center;
-        margin-bottom: rem(40);
-
-        @include laptop {
-            font-size: rem(38);
-        }
-
-        @include mobile {
-            font-size: rem(24);
-            margin-bottom: rem(30);
-        }
-    }
-
-    &__body {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: rem(20);
-        grid-auto-rows: minmax(rem(855), auto);
-
-        @include laptop {
-            grid-auto-rows: minmax(rem(750), auto);
-
-            max-width: rem(1080);
-            margin: 0 auto;
-        }
-
-        @include mobile {
-            grid-template-columns: 1fr;
-            grid-auto-rows: auto;
-            gap: rem(10);
-        }
-    }
-
-    &__card {
-        &_free {
-            background: var(--white);
-
-            .review-card__head {
-                background: #e7e7e7;
-            }
-        }
-
-        &_full {
-            background: var(--reviewDark);
-
-            .review-card__head {
-                background: var(--white);
-            }
-
-            .review-card__item_included {
-                color: var(--white);
-            }
-
-            @include mobile {
-                .review-card__body {
-                    padding-bottom: rem(89);
-                }
-            }
-        }
-    }
-}
-
-.review-card {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    padding: rem(20);
-    border-radius: rem(40);
-    overflow: hidden;
+  &__wrapper {
+    padding-inline: rem(143);
 
     @include laptop {
-        padding: rem(24);
-        border-radius: rem(38);
+      // max-width: rem(1080);
+      margin-inline: auto;
+      padding-inline: unset;
     }
 
     @include mobile {
-        padding: rem(20);
-        border-radius: rem(30);
+      max-width: none;
+    }
+  }
+
+  &__title {
+    font-size: rem(50);
+    color: var(--reviewDark);
+    text-align: center;
+    margin-bottom: rem(40);
+
+    @include laptop {
+      font-size: rem(38);
     }
 
-    &__head {
-        position: relative;
-        height: rem(283);
-        padding: rem(26) rem(30);
-        border-radius: rem(30);
+    @include mobile {
+      font-size: rem(24);
+      margin-bottom: rem(30);
+    }
+  }
 
-        @include laptop {
-            height: rem(229);
-            padding: rem(20);
-            border-radius: rem(24);
-        }
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(20);
+    grid-auto-rows: minmax(rem(855), auto);
 
-        @include mobile {
-            height: rem(209);
-        }
+    @include laptop {
+      grid-auto-rows: minmax(rem(750), auto);
+
+      max-width: rem(1080);
+      margin: 0 auto;
     }
 
-    &__version {
-        font-family: var(--font-family);
-        font-weight: 500;
-        font-size: rem(22);
-        line-height: 94%;
-        color: var(--black);
-        margin-bottom: rem(8);
+    @include mobile {
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto;
+      gap: rem(10);
+    }
+  }
 
-        @include laptop {
-            font-size: rem(18);
-            margin-bottom: rem(6);
-        }
+  &__card {
+    &_free {
+      background: var(--white);
 
-        @include mobile {
-            font-size: rem(16);
-        }
+      .review-card__head {
+        background: #e7e7e7;
+      }
     }
 
-    &__format {
-        font-family: var(--font-family);
-        font-weight: 400;
+    &_full {
+      background: var(--reviewDark);
+
+      .review-card__head {
+        background: var(--white);
+      }
+
+      .review-card__item_included {
+        color: var(--white);
+      }
+
+      @include mobile {
+        .review-card__body {
+          padding-bottom: rem(89);
+        }
+      }
+    }
+  }
+}
+
+.review-card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: rem(20);
+  border-radius: rem(40);
+  overflow: hidden;
+
+  @include laptop {
+    padding: rem(24);
+    border-radius: rem(38);
+  }
+
+  @include mobile {
+    padding: rem(20);
+    border-radius: rem(30);
+  }
+
+  &__head {
+    position: relative;
+    height: rem(283);
+    padding: rem(26) rem(30);
+    border-radius: rem(30);
+
+    @include laptop {
+      height: rem(229);
+      padding: rem(20);
+      border-radius: rem(24);
+    }
+
+    @include mobile {
+      height: rem(209);
+    }
+  }
+
+  &__version {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(22);
+    line-height: 100%;
+    color: var(--black);
+    margin-bottom: rem(8);
+
+    @include laptop {
+      font-size: rem(18);
+      margin-bottom: rem(6);
+    }
+
+    @include mobile {
+      font-size: rem(16);
+    }
+  }
+
+  &__format {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 120%;
+    color: var(--grayDark);
+    margin-bottom: rem(20);
+
+    @include laptop {
+      font-size: rem(16);
+      line-height: 110%;
+      margin-bottom: rem(16);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+      line-height: 120%;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: end;
+    gap: rem(12);
+
+    @include laptop {
+      gap: rem(16);
+      align-items: center;
+    }
+
+    @include mobile {
+      gap: rem(10);
+    }
+
+    &-now {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: rem(38);
+      line-height: 108%;
+      letter-spacing: -0.03em;
+      color: var(--black);
+
+      @include laptop {
+        font-size: rem(28);
+      }
+
+      @include mobile {
+        font-size: rem(24);
+      }
+    }
+
+    &-old {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: rem(28);
+      line-height: 108%;
+      letter-spacing: -0.03em;
+      text-decoration: line-through;
+      color: #9d9ba6;
+      padding-bottom: rem(2);
+
+      @include laptop {
         font-size: rem(18);
-        line-height: 120%;
-        color: var(--grayDark);
-        margin-bottom: rem(20);
+        padding-bottom: 0;
+      }
 
-        @include laptop {
-            font-size: rem(16);
-            line-height: 110%;
-            margin-bottom: rem(16);
-        }
-
-        @include mobile {
-            font-size: rem(14);
-            line-height: 120%;
-        }
-    }
-
-    &__price {
-        display: flex;
-        align-items: end;
-        gap: rem(12);
-
-        @include laptop {
-            gap: rem(16);
-            align-items: center;
-        }
-
-        @include mobile {
-            gap: rem(10);
-        }
-
-        &-now {
-            font-family: var(--font-family);
-            font-weight: 500;
-            font-size: rem(38);
-            line-height: 108%;
-            letter-spacing: -0.03em;
-            color: var(--black);
-
-            @include laptop {
-                font-size: rem(28);
-            }
-
-            @include mobile {
-                font-size: rem(24);
-            }
-        }
-
-        &-old {
-            font-family: var(--font-family);
-            font-weight: 400;
-            font-size: rem(28);
-            line-height: 108%;
-            letter-spacing: -0.03em;
-            text-decoration: line-through;
-            color: #9d9ba6;
-            padding-bottom: rem(2);
-
-            @include laptop {
-                font-size: rem(18);
-                padding-bottom: 0;
-            }
-
-            @include mobile {
-                font-size: rem(16);
-            }
-        }
-    }
-
-    &__description {
-        margin-top: rem(6);
-
-        font-family: var(--font-family);
-        font-weight: 400;
-        font-size: rem(18);
-        line-height: 130%;
-        color: var(--grayDark);
-
-        @include laptop {
-            font-size: rem(16);
-            line-height: 110%;
-        }
-
-        @include mobile {
-            font-size: rem(14);
-        }
-    }
-
-    &__btn {
-        margin-top: rem(20);
-        height: rem(70);
-
-        &.btn {
-            span {
-                font-family: var(--font-family);
-                font-weight: 500;
-                font-size: rem(18);
-                letter-spacing: -0.01em;
-                color: var(--white);
-                flex: 1 1 auto;
-                margin-right: rem(-56);
-            }
-
-            .btn__circle {
-                width: rem(56);
-                height: rem(56);
-            }
-        }
-
-        @include laptop {
-            height: rem(58);
-            font-size: rem(16);
-
-            &.btn {
-                span {
-                    @include laptop {
-                        font-size: rem(16);
-                        margin-right: rem(-48);
-                    }
-                }
-
-                .btn__circle {
-                    width: rem(48);
-                    height: rem(48);
-                }
-            }
-        }
-
-        @include mobile {
-            margin-top: rem(16);
-            height: rem(50);
-
-            &.btn {
-                span {
-                    @include mobile {
-                        margin-right: 0;
-                    }
-                }
-
-                .btn__circle {
-                    width: rem(36);
-                    height: rem(36);
-                }
-            }
-        }
-    }
-
-    &__discount {
-        position: absolute;
-        top: rem(18);
-        right: rem(18);
-        border-radius: rem(20);
-        padding: rem(9) rem(14);
-
-        font-family: var(--font-family);
-        font-weight: 500;
+      @include mobile {
         font-size: rem(16);
-        line-height: 130%;
-        color: var(--white);
-        white-space: nowrap;
+      }
+    }
+  }
 
-        background: #04afaf;
+  &__description {
+    margin-top: rem(6);
 
-        @include laptop {
-            top: rem(20);
-            right: rem(20);
-            font-weight: 400;
-            font-size: rem(14);
-        }
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 130%;
+    color: var(--grayDark);
 
-        @include mobile {
-            padding: rem(7) rem(8);
-
-            font-size: rem(12);
-            line-height: 120%;
-        }
+    @include laptop {
+      font-size: rem(16);
+      line-height: 110%;
     }
 
-    &__body {
-        padding: rem(30) rem(57) rem(0) rem(30);
-
-        @include laptop {
-            padding: rem(24) 0 0 0;
-        }
-
-        @include mobile {
-            padding: rem(20) 0 0 0;
-        }
+    @include mobile {
+      font-size: rem(14);
     }
+  }
 
-    &__list {
-        display: flex;
-        flex-direction: column;
-        gap: rem(24);
+  &__btn {
+    margin-top: rem(20);
+    height: rem(70);
 
-        @include laptop {
-            gap: rem(18);
-        }
-
-        @include mobile {
-            gap: rem(12);
-        }
-    }
-
-    &__item {
-        display: flex;
-        gap: rem(8);
-
-        font-family: var(--font-family);
-        font-weight: 400;
-        font-size: rem(18);
-        line-height: 120%;
-        letter-spacing: -0.03em;
-        color: #c9c8ce;
-
-        @include laptop {
-            gap: rem(10);
-            font-size: rem(16);
-            line-height: 110%;
-            letter-spacing: -0.02em;
-        }
-
-        @include mobile {
-            font-size: rem(14);
-            line-height: 120%;
-            letter-spacing: -0.03em;
-        }
-
-        &::before {
-            content: "";
-            display: inline-block;
-            background-image: url("/img/review/item-no.svg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            width: rem(20);
-            height: rem(20);
-
-            flex: 0 0 auto;
-
-            @include mobile {
-                margin-block: rem(2);
-                width: rem(16);
-                height: rem(16);
-            }
-        }
-
-        &_included {
-            color: var(--black);
-
-            &::before {
-                background-image: url("/img/review/item-yes.svg");
-            }
-        }
-    }
-
-    &__buy-count {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: rem(10);
-
-        position: absolute;
-        bottom: rem(28);
-        left: rem(4);
-        width: rem(790);
-        height: rem(60);
-        background: #04afaf;
-
-        transform: rotate(-13deg);
-
+    &.btn {
+      span {
         font-family: var(--font-family);
         font-weight: 500;
         font-size: rem(18);
-        line-height: 130%;
+        letter-spacing: -0.01em;
         color: var(--white);
+        flex: 1 1 auto;
+        margin-right: rem(-56);
+      }
 
-        @include laptop {
+      .btn__circle {
+        width: rem(56);
+        height: rem(56);
+      }
+    }
+
+    @include laptop {
+      height: rem(58);
+      font-size: rem(16);
+
+      &.btn {
+        span {
+          @include laptop {
             font-size: rem(16);
-            height: rem(54);
-            left: rem(-70);
-            bottom: rem(40);
-            transform: rotate(-15deg);
+            margin-right: rem(-48);
+          }
         }
 
-        @include mobile {
-            font-size: rem(14);
-            height: rem(50);
-            left: rem(-205);
-            bottom: rem(26);
-            transform: rotate(-13deg);
+        .btn__circle {
+          width: rem(48);
+          height: rem(48);
         }
+      }
     }
 
-    &__like {
-        flex: 0 0 auto;
-        width: rem(24);
-        height: rem(24);
+    @include mobile {
+      margin-top: rem(16);
+      height: rem(50);
+
+      &.btn {
+        span {
+          @include mobile {
+            margin-right: 0;
+          }
+        }
+
+        .btn__circle {
+          width: rem(36);
+          height: rem(36);
+        }
+      }
+    }
+  }
+
+  &__discount {
+    position: absolute;
+    top: rem(18);
+    right: rem(18);
+    border-radius: rem(20);
+    padding: rem(9) rem(14);
+
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 130%;
+    color: var(--white);
+    white-space: nowrap;
+
+    background: #04afaf;
+
+    @include laptop {
+      top: rem(20);
+      right: rem(20);
+      font-weight: 400;
+      font-size: rem(14);
     }
 
-    &__channel {
-        position: relative;
-        margin-top: rem(30);
-        display: flex;
-        align-items: center;
-        gap: rem(10);
-        max-width: rem(407);
+    @include mobile {
+      padding: rem(7) rem(8);
 
-        @include laptop {
-            margin-top: rem(24);
-            max-width: rem(368);
-        }
+      font-size: rem(12);
+      line-height: 120%;
+    }
+  }
 
-        @include mobile {
-            margin-top: rem(20);
-            max-width: none;
-        }
+  &__body {
+    padding: rem(30) rem(57) rem(0) rem(30);
 
+    @include laptop {
+      padding: rem(24) 0 0 0;
+    }
+
+    @include mobile {
+      padding: rem(20) 0 0 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+
+    @include laptop {
+      gap: rem(18);
+    }
+
+    @include mobile {
+      gap: rem(12);
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: rem(8);
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #c9c8ce;
+
+    @include laptop {
+      gap: rem(10);
+      font-size: rem(16);
+      line-height: 110%;
+      letter-spacing: -0.02em;
+    }
+
+    @include mobile {
+      font-size: rem(14);
+      line-height: 120%;
+      letter-spacing: -0.03em;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      background-image: url("/img/review/item-no.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: rem(20);
+      height: rem(20);
+
+      flex: 0 0 auto;
+
+      @include mobile {
+        margin-block: rem(2);
+        width: rem(16);
+        height: rem(16);
+      }
+    }
+
+    &_included {
+      color: var(--black);
+
+      &::before {
+        background-image: url("/img/review/item-yes.svg");
+      }
+    }
+  }
+
+  &__buy-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(10);
+
+    position: absolute;
+    bottom: rem(28);
+    left: rem(4);
+    width: rem(790);
+    height: rem(60);
+    background: #04afaf;
+
+    transform: rotate(-13deg);
+
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: 130%;
+    color: var(--white);
+
+    @include laptop {
+      font-size: rem(16);
+      height: rem(54);
+      left: rem(-70);
+      bottom: rem(40);
+      transform: rotate(-15deg);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+      height: rem(50);
+      left: rem(-205);
+      bottom: rem(26);
+      transform: rotate(-13deg);
+    }
+  }
+
+  &__like {
+    flex: 0 0 auto;
+    width: rem(24);
+    height: rem(24);
+  }
+
+  &__channel {
+    position: relative;
+    margin-top: rem(30);
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    max-width: rem(407);
+
+    @include laptop {
+      margin-top: rem(24);
+      max-width: rem(368);
+    }
+
+    @include mobile {
+      margin-top: rem(20);
+      max-width: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: calc(100% + rem(22));
+      height: calc(100% + rem(8));
+      left: rem(-4);
+      top: rem(-4);
+      border-radius: rem(100);
+      z-index: 0;
+      transition-duration: 0.3s;
+      background: transparent;
+
+      @include laptop {
+        top: rem(-2);
+        height: calc(100% + rem(4));
+      }
+    }
+
+    &:hover {
+      @include NOTmobile {
         &::after {
-            content: "";
-            position: absolute;
-            width: calc(100% + rem(22));
-            height: calc(100% + rem(8));
-            left: rem(-4);
-            top: rem(-4);
-            border-radius: rem(100);
-            z-index: 0;
-            transition-duration: 0.3s;
-            background: transparent;
-
-            @include laptop {
-                top: rem(-2);
-                height: calc(100% + rem(4));
-            }
+          content: "";
+          // background: #111a26;
         }
-
-        &:hover {
-            @include NOTmobile {
-                &::after {
-                    content: "";
-                    // background: #111a26;
-                }
-            }
-        }
-
-        &:active {
-            @include NOTmobile {
-                &::after {
-                    content: "";
-                    // background: #111a26;
-                }
-            }
-        }
+      }
     }
 
-    &__channel-img {
-        z-index: 1;
-        width: rem(48);
-        height: rem(48);
-        border-radius: 100%;
-
-        @include laptop {
-            width: rem(42);
-            height: rem(42);
+    &:active {
+      @include NOTmobile {
+        &::after {
+          content: "";
+          // background: #111a26;
         }
+      }
+    }
+  }
 
-        @include mobile {
-            width: rem(48);
-            height: rem(48);
-        }
+  &__channel-img {
+    z-index: 1;
+    width: rem(48);
+    height: rem(48);
+    border-radius: 100%;
+
+    @include laptop {
+      width: rem(42);
+      height: rem(42);
     }
 
-    &__channel-text {
-        z-index: 1;
-        font-family: var(--font-family);
-        font-weight: 400;
-        font-size: rem(16);
-        line-height: 120%;
-        letter-spacing: -0.03em;
-        color: var(--white);
-
-        @include laptop {
-            font-size: rem(14);
-        }
+    @include mobile {
+      width: rem(48);
+      height: rem(48);
     }
+  }
+
+  &__channel-text {
+    z-index: 1;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--white);
+
+    @include laptop {
+      font-size: rem(14);
+    }
+  }
 }

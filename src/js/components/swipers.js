@@ -121,4 +121,32 @@ export const swipers = () => {
       },
     },
   });
+
+  const supportExperienceSwiper = new Swiper(".js-support-experience-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: ".support-experience__pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      481: {
+        enable: false,
+      },
+    },
+  });
+
+  const supportIndustrySwiper = new Swiper(".js-support-industry-swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 10,
+    pagination: {
+      el: ".support-industry__pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      481: {
+        enabled: false,
+      },
+    },
+  });
 };

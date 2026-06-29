@@ -1,11 +1,135 @@
 .support-pain {
+  margin-bottom: rem(120);
+
+  .support-section__head {
+    @include laptop {
+      .development-brands__text_tag {
+        padding: rem(14) rem(25);
+        font-size: rem(14);
+        line-height: 100%;
+      }
+    }
+  }
+
+  .support-section__desc {
+    @include laptop {
+      flex: 1 1 0;
+      min-width: 0;
+      max-width: none;
+    }
+  }
+
+  .support-section__grid {
+    @include laptop {
+      gap: rem(20);
+    }
+
+    @include mobile {
+      gap: rem(10);
+    }
+  }
+
   .support-section__card {
     min-height: rem(300);
     gap: rem(40);
+
+    @include laptop {
+      min-height: rem(366);
+      gap: rem(24);
+      padding: rem(36);
+      border-radius: rem(38);
+    }
+
+    @include mobile {
+      min-height: 0;
+      gap: rem(20);
+      padding: rem(24);
+      border-radius: rem(24);
+    }
   }
 
   .support-section__card-body {
     gap: rem(18);
+
+    @include laptop {
+      gap: rem(12);
+    }
+
+    @include mobile {
+      gap: rem(12);
+    }
+  }
+
+  .support-section__card-title {
+    @include laptop {
+      padding-right: 0;
+      font-size: rem(24);
+      line-height: 108%;
+    }
+
+    @include mobile {
+      padding-right: 0;
+      font-size: rem(20);
+      line-height: 112%;
+      letter-spacing: -0.03em;
+    }
+  }
+
+  .support-section__card-text {
+    @include laptop {
+      line-height: 110%;
+      letter-spacing: -0.02em;
+    }
+
+    @include mobile {
+      font-size: rem(14);
+      line-height: 120%;
+      letter-spacing: -0.03em;
+    }
+  }
+
+  @include mobile {
+    .support-section__inner {
+      display: flex;
+      flex-direction: column;
+      gap: rem(24);
+    }
+
+    .support-section__head {
+      gap: rem(20);
+      margin-bottom: 0;
+
+      .development-brands__text_tag {
+        min-height: 0;
+        padding: rem(12) rem(16);
+        font-size: rem(12);
+        line-height: 100%;
+        letter-spacing: -0.03em;
+      }
+    }
+
+    .support-section__head-row {
+      gap: rem(12);
+    }
+
+    .support-section__title {
+      font-size: rem(20);
+      line-height: 110%;
+      letter-spacing: -0.03em;
+    }
+
+    .support-section__desc {
+      max-width: rem(295);
+      flex: 1 1 auto !important;
+    }
+
+    .support-section__card_dark {
+      .support-section__card-text {
+        font-size: rem(16);
+        line-height: 110%;
+        letter-spacing: -0.03em;
+      }
+    }
   }
 }
 
@@ -44,8 +168,8 @@
     padding: rem(60);
 
     @include laptop {
-      border-radius: rem(38);
-      padding: rem(42);
+      border-radius: rem(44);
+      padding: rem(44);
     }
 
     @include mobile {
@@ -61,8 +185,8 @@
     margin-bottom: rem(60);
 
     @include laptop {
-      gap: rem(24);
-      margin-bottom: rem(40);
+      gap: rem(20);
+      margin-bottom: rem(44);
     }
 
     @include mobile {
@@ -72,6 +196,12 @@
 
     .development-brands__text_tag {
       margin-bottom: 0;
+
+      @include mobile {
+        min-height: rem(35);
+        padding: rem(12) rem(16);
+        font-size: rem(11);
+      }
     }
   }
 
@@ -99,7 +229,7 @@
     @include laptop {
       flex: 1 1 auto;
       font-size: rem(38);
-      max-width: rem(620);
+      max-width: rem(562);
     }
 
     @include mobile {
@@ -119,12 +249,13 @@
     color: var(--black);
 
     @include laptop {
-      flex: 0 0 rem(360);
-      font-size: rem(16);
+      flex: 0 0 rem(410) !important;
+      padding-top: rem(16);
+      font-size: rem(18);
     }
 
     @include mobile {
-      flex: auto;
+      flex: auto !important;
       padding-top: 0;
       font-size: rem(14);
     }
@@ -182,6 +313,7 @@
       line-height: 120%;
       letter-spacing: -0.03em;
       color: var(--black);
+      height: rem(24);
 
       img {
         flex: 0 0 auto;
@@ -206,8 +338,8 @@
 
     @include laptop {
       gap: rem(24);
-      padding: rem(30);
-      border-radius: rem(30);
+      padding: rem(36);
+      border-radius: rem(40);
     }
 
     @include mobile {
@@ -243,7 +375,7 @@
     font-family: var(--font-family);
     font-weight: 500;
     font-size: rem(16);
-    line-height: 94%;
+    line-height: 100%;
     letter-spacing: -0.03em;
     color: inherit;
   }
@@ -257,6 +389,11 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
+    }
+
+    @include mobile {
+      width: rem(24);
+      height: rem(24);
     }
   }
 
@@ -405,6 +542,34 @@
 }
 
 .support-experience {
+  .support-section__head {
+    @include laptop {
+      .development-brands__text_tag {
+        padding: rem(14) rem(25);
+        font-size: rem(14);
+        line-height: 100%;
+      }
+    }
+  }
+
+  .support-section__title {
+    @include laptop {
+      max-width: rem(562);
+    }
+  }
+
+  .support-section__desc {
+    @include laptop {
+      flex: 1 1 0;
+      min-width: 0;
+      max-width: none;
+    }
+
+    @include mobile {
+      padding-right: rem(26);
+    }
+  }
+
   .support-section__inner {
     background-color: var(--black);
   }
@@ -412,17 +577,52 @@
   .support-section__head-row {
     gap: rem(20);
   }
+
   .development-brands__text_tag {
     color: var(--white);
     border-color: var(--white);
   }
 
-  .support-section__title {
-    padding-right: rem(300);
-  }
-
   .support-section__title,
   .support-section__desc {
     color: var(--white);
+  }
+
+  @include mobile {
+    .support-section__inner {
+      display: flex;
+      flex-direction: column;
+      gap: rem(24);
+    }
+
+    .support-section__head {
+      gap: rem(20);
+      margin-bottom: 0;
+
+      .development-brands__text_tag {
+        min-height: 0;
+        padding: rem(12) rem(16);
+        font-size: rem(12);
+        line-height: 100%;
+        letter-spacing: -0.03em;
+      }
+    }
+
+    .support-section__head-row {
+      gap: rem(12);
+    }
+
+    .support-section__title {
+      font-size: rem(20);
+      line-height: 108%;
+      letter-spacing: -0.03em;
+    }
+
+    .support-section__desc {
+      max-width: rem(295);
+      font-size: rem(14);
+      line-height: 120%;
+      letter-spacing: -0.03em;
+    }
   }
 }

@@ -1,17 +1,68 @@
 .support-experience {
   &__cases {
-    display: flex;
-    flex-direction: column;
-    gap: rem(20);
     margin-bottom: rem(60);
 
     @include laptop {
-      margin-bottom: rem(40);
+      margin-bottom: rem(44);
     }
 
     @include mobile {
-      gap: rem(10);
-      margin-bottom: rem(30);
+      width: auto;
+      margin-inline: rem(-24);
+      margin-bottom: 0;
+      padding-inline: rem(24);
+    }
+
+    @include NOTmobile {
+      &.swiper {
+        overflow: visible;
+      }
+
+      .swiper-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+        transform: none !important;
+      }
+
+      .swiper-slide {
+        width: 100% !important;
+        height: auto;
+        margin: 0 !important;
+      }
+
+      .support-experience__pagination {
+        display: none;
+      }
+    }
+  }
+
+  &__pagination {
+    @include mobile {
+      position: static;
+      margin-top: rem(12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: rem(8);
+    }
+
+    .swiper-pagination-bullet {
+      @include mobile {
+        width: rem(6);
+        height: rem(6);
+        margin: 0 !important;
+        background: rgba(255, 255, 255, 0.35);
+        opacity: 1;
+      }
+
+      &-active {
+        @include mobile {
+          width: rem(10);
+          height: rem(10);
+          background: var(--white);
+        }
+      }
     }
   }
 
@@ -20,13 +71,11 @@
     grid-template-columns: repeat(3, 1fr);
     gap: rem(20);
 
-    @include laptop {
-      gap: rem(12);
-    }
-
     @include mobile {
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
       gap: rem(10);
+      height: auto;
     }
   }
 
@@ -34,21 +83,24 @@
     display: flex;
     flex-direction: column;
     gap: rem(24);
-    min-height: rem(183);
+    min-height: rem(123);
     padding: rem(30);
     border-radius: rem(40);
     background-color: #38344c;
     color: var(--black);
 
     @include laptop {
-      padding: rem(24);
-      border-radius: rem(30);
-      gap: rem(18);
+      min-height: 0;
+      padding: rem(36);
+      border-radius: rem(38);
+      gap: rem(24);
     }
 
     @include mobile {
-      padding: rem(20);
+      min-height: 0;
+      padding: rem(24);
       border-radius: rem(24);
+      gap: rem(20);
     }
   }
 
@@ -67,7 +119,40 @@
     display: flex;
     flex-direction: column;
     gap: rem(8);
-    margin-top: auto;
+
+    @include laptop {
+    }
+
+    @include mobile {
+      margin-top: 0;
+    }
+
+    .support-section__card-title {
+      @include laptop {
+        padding-right: 0;
+        font-size: rem(24);
+        line-height: 108%;
+      }
+
+      @include mobile {
+        font-size: rem(18);
+        line-height: 108%;
+        letter-spacing: -0.03em;
+      }
+    }
+
+    .support-section__card-text {
+      @include laptop {
+        line-height: 110%;
+        letter-spacing: -0.02em;
+      }
+
+      @include mobile {
+        font-size: rem(14);
+        line-height: 120%;
+        letter-spacing: -0.03em;
+      }
+    }
 
     .support-section__card-title,
     .support-section__card-text {
@@ -78,8 +163,53 @@
   &__notes {
     margin-top: 0;
 
+    @include laptop {
+      gap: rem(20);
+    }
+
+    @include mobile {
+      gap: rem(10);
+    }
+
     .support-section__note-card {
       background-color: var(--grayDark);
+
+      @include laptop {
+        padding: rem(36);
+        border-radius: rem(38);
+      }
+
+      @include mobile {
+        padding: rem(24);
+        border-radius: rem(24);
+      }
+    }
+
+    .support-section__note-title {
+      @include laptop {
+        font-size: rem(24);
+        line-height: 108%;
+      }
+
+      @include mobile {
+        margin-bottom: rem(8);
+        font-size: rem(20);
+        line-height: 113%;
+        letter-spacing: -0.03em;
+      }
+    }
+
+    .support-section__note-text {
+      @include laptop {
+        line-height: 110%;
+        letter-spacing: -0.02em;
+      }
+
+      @include mobile {
+        font-size: rem(14);
+        line-height: 120%;
+        letter-spacing: -0.03em;
+      }
     }
 
     .support-section__note-title,

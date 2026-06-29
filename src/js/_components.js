@@ -74,3 +74,8 @@ import { telegramPlaceholder } from "./components/telegramPlaceholder";
 try {
   // telegramPlaceholder();
 } catch (error) {}
+
+import { supportScenario } from "./components/supportScenario";
+try {
+  supportScenario();
+} catch (error) {}

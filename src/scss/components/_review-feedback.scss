@@ -1,163 +1,163 @@
 .review-feedback {
-    .main-cases__swiper-slide {
-        background: #fff;
-    }
-    .main-cases__swiper-next {
-        background: #fff;
-    }
-    .main-cases__swiper-prev {
-        background: #fff;
-    }
-    .main-cases__swiper {
-        margin-top: 0;
-    }
+  .main-cases__swiper-slide {
+    background: #fff;
+  }
+  .main-cases__swiper-next {
+    background: #fff;
+  }
+  .main-cases__swiper-prev {
+    background: #fff;
+  }
+  .main-cases__swiper {
+    margin-top: 0;
+  }
 
-    &__title {
-        font-size: rem(50);
-        text-align: left;
-        margin-bottom: rem(40);
+  &__title {
+    font-size: rem(50);
+    text-align: left;
+    margin-bottom: rem(40);
 
-        @include laptop {
-            font-size: rem(38);
-        }
-
-        @include mobile {
-            font-size: rem(24);
-            margin-bottom: rem(30);
-        }
+    @include laptop {
+      font-size: rem(38);
     }
 
-    &__block {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: rem(20);
-        background: #e7e7e7;
-        padding: rem(20) rem(20) rem(20) rem(133);
+    @include mobile {
+      font-size: rem(24);
+      margin-bottom: rem(30);
+    }
+  }
 
-        border-radius: rem(210);
-        margin-bottom: rem(20);
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(20);
+    background: #e7e7e7;
+    padding: rem(20) rem(20) rem(20) rem(133);
 
-        width: calc(100% - rem(78));
+    border-radius: rem(210);
+    margin-bottom: rem(20);
 
-        @include laptop {
-            width: calc(100% - rem(54));
-            padding: rem(20) rem(20) rem(20) rem(90);
+    width: calc(100% - rem(78));
 
-            border-radius: rem(150);
-        }
+    @include laptop {
+      width: calc(100% - rem(54));
+      padding: rem(20) rem(20) rem(20) rem(90);
 
-        @include mobile {
-            padding: rem(28);
-            flex-direction: column;
-            width: 100%;
-            border-radius: rem(30);
-
-            margin-bottom: rem(10);
-        }
+      border-radius: rem(150);
     }
 
-    &__block-circle {
-        display: grid;
-        place-content: center;
-        grid-template-columns: rem(170);
-        gap: rem(8);
+    @include mobile {
+      padding: rem(28);
+      flex-direction: column;
+      width: 100%;
+      border-radius: rem(30);
 
-        text-align: center;
-        border-radius: 100%;
-        width: rem(224);
-        height: rem(224);
+      margin-bottom: rem(10);
+    }
+  }
 
-        background: var(--reviewDark);
+  &__block-circle {
+    display: grid;
+    place-content: center;
+    grid-template-columns: rem(170);
+    gap: rem(8);
 
-        @include laptop {
-            width: rem(180);
-            height: rem(180);
-            grid-template-columns: rem(160);
-        }
+    text-align: center;
+    border-radius: 100%;
+    width: rem(224);
+    height: rem(224);
 
-        @include mobile {
-            width: 100%;
-            height: rem(130);
-            border-radius: rem(40);
-        }
+    background: var(--reviewDark);
+
+    @include laptop {
+      width: rem(180);
+      height: rem(180);
+      grid-template-columns: rem(160);
     }
 
-    &__block-num {
-        font-family: var(--font-family);
-        font-weight: 500;
-        font-size: rem(38);
-        line-height: 108%;
-        letter-spacing: -0.03em;
-        color: var(--white);
+    @include mobile {
+      width: 100%;
+      height: rem(130);
+      border-radius: rem(40);
+    }
+  }
 
-        @include laptop {
-            font-size: rem(24);
-        }
+  &__block-num {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(38);
+    line-height: 108%;
+    letter-spacing: -0.03em;
+    color: var(--white);
 
-        @include mobile {
-            font-size: rem(38);
-        }
+    @include laptop {
+      font-size: rem(24);
     }
 
-    &__block-text {
-        font-family: var(--font-family);
-        font-weight: 400;
-        font-size: rem(18);
-        line-height: 130%;
-        text-align: center;
-        color: var(--white);
+    @include mobile {
+      font-size: rem(38);
+    }
+  }
 
-        @include laptop {
-            font-size: rem(16);
-        }
+  &__block-text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 130%;
+    text-align: center;
+    color: var(--white);
 
-        @include mobile {
-            font-size: rem(14);
-        }
+    @include laptop {
+      font-size: rem(16);
     }
 
-    &__block-title {
-        font-family: var(--font-family);
-        font-weight: 500;
-        font-size: rem(50);
-        line-height: 108%;
-        letter-spacing: -0.03em;
-        text-transform: uppercase;
-        color: var(--black);
-        max-width: rem(804);
+    @include mobile {
+      font-size: rem(14);
+    }
+  }
 
-        margin-bottom: rem(24);
+  &__block-title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(50);
+    line-height: 108%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--black);
+    max-width: rem(804);
 
-        @include laptop {
-            font-size: rem(38);
-            max-width: rem(591);
-        }
+    margin-bottom: rem(24);
 
-        @include mobile {
-            font-size: rem(24);
-            max-width: none;
-            margin-bottom: rem(12);
-        }
+    @include laptop {
+      font-size: rem(38);
+      max-width: rem(591);
     }
 
-    &__block-description {
-        font-family: var(--font-family);
-        font-weight: 400;
-        font-size: rem(24);
-        line-height: 120%;
-        letter-spacing: -0.03em;
-        color: var(--black);
-
-        max-width: rem(749);
-
-        @include laptop {
-            max-width: rem(527);
-            font-size: rem(16);
-        }
-        @include mobile {
-            max-width: none;
-            font-size: rem(14);
-        }
+    @include mobile {
+      font-size: rem(24);
+      max-width: none;
+      margin-bottom: rem(12);
     }
+  }
+
+  &__block-description {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(24);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--black);
+
+    max-width: rem(749);
+
+    @include laptop {
+      max-width: rem(527);
+      font-size: rem(16);
+    }
+    @include mobile {
+      max-width: none;
+      font-size: rem(14);
+    }
+  }
 }

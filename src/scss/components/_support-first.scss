@@ -12,10 +12,6 @@
   &__inner {
     margin-top: rem(142);
 
-    @include laptop {
-      margin-top: rem(72);
-    }
-
     @include mobile {
       margin-top: rem(64);
     }
@@ -28,7 +24,7 @@
     align-items: stretch;
 
     @include laptop {
-      grid-template-columns: 1fr rem(420);
+      grid-template-columns: 1fr rem(478);
     }
 
     @include mobile {
@@ -41,6 +37,10 @@
     display: flex;
     flex-direction: column;
     gap: rem(20);
+
+    @include mobile {
+      gap: rem(10);
+    }
   }
 
   &__hero {
@@ -55,13 +55,13 @@
     @include laptop {
       padding: rem(44);
       border-radius: rem(44);
-      gap: rem(24);
+      gap: rem(40);
     }
 
     @include mobile {
-      padding: rem(24) rem(16);
-      border-radius: rem(40);
-      gap: rem(20);
+      padding: rem(24);
+      border-radius: rem(30);
+      gap: rem(24);
     }
   }
 
@@ -70,6 +70,14 @@
     display: flex;
     flex-direction: column;
     gap: rem(24);
+
+    @include laptop {
+      gap: rem(20);
+    }
+
+    @include mobile {
+      gap: rem(12);
+    }
   }
 
   &__title {
@@ -83,12 +91,15 @@
     color: var(--black);
 
     @include laptop {
-      font-size: rem(42);
+      font-size: rem(46);
       max-width: none;
     }
 
     @include mobile {
-      font-size: rem(28);
+      max-width: none;
+      font-size: rem(32);
+      line-height: 108%;
+      letter-spacing: -0.05em;
     }
   }
 
@@ -107,12 +118,14 @@
 
     @include mobile {
       font-size: rem(14);
+      line-height: 120%;
+      letter-spacing: -0.03em;
     }
   }
 
   &__badge {
     position: absolute;
-    top: rem(88);
+    top: rem(98);
     left: rem(629);
     transform: rotate(9.24deg);
     padding: rem(8) rem(12);
@@ -126,10 +139,11 @@
     color: var(--white);
 
     @include laptop {
-      position: static;
-      transform: none;
-      width: fit-content;
-      font-size: rem(14);
+      display: none;
+    }
+
+    @include mobile {
+      display: none;
     }
   }
 
@@ -142,15 +156,19 @@
     padding: 0;
 
     @include laptop {
-      min-width: rem(260);
-      height: rem(46);
+      min-width: rem(320);
+      height: rem(58);
       font-size: rem(16);
     }
 
     @include mobile {
       width: 100%;
       min-width: 0;
-      height: rem(40);
+      height: rem(50);
+      border-radius: rem(160);
+      font-size: rem(16);
+      letter-spacing: -0.01em;
+      max-width: 100%;
     }
   }
 
@@ -170,7 +188,7 @@
     gap: rem(20);
 
     @include mobile {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: rem(10);
     }
   }
@@ -185,7 +203,7 @@
     color: var(--black);
 
     @include laptop {
-      padding: rem(30);
+      padding: rem(36);
       border-radius: rem(44);
       gap: rem(16);
     }
@@ -193,6 +211,7 @@
     @include mobile {
       padding: rem(24);
       border-radius: rem(30);
+      gap: rem(12);
     }
 
     &_dark {
@@ -209,11 +228,25 @@
       flex-direction: row;
       align-items: center;
       gap: rem(40);
+      padding-right: rem(70);
+
+      @include laptop {
+        gap: rem(24);
+      }
 
       @include mobile {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: rem(16);
+        align-items: center;
+        gap: rem(24);
+        padding: rem(24);
+
+        .support-first__stat-text {
+          text-wrap: auto;
+        }
+
+        .support-first__stat-num {
+          flex-shrink: 0;
+          white-space: nowrap;
+        }
       }
     }
   }
@@ -231,7 +264,9 @@
     }
 
     @include mobile {
-      font-size: rem(36);
+      font-size: rem(32);
+      line-height: 108%;
+      letter-spacing: -0.05em;
     }
   }
 
@@ -248,6 +283,9 @@
 
     @include mobile {
       font-size: rem(14);
+      line-height: 120%;
+      letter-spacing: -0.03em;
+      text-wrap: balance;
     }
   }
 
@@ -262,14 +300,15 @@
     overflow: hidden;
 
     @include laptop {
-      padding: rem(36);
+      padding: rem(44);
       border-radius: rem(44);
     }
 
     @include mobile {
-      min-height: rem(360);
-      padding: rem(24) rem(16);
-      border-radius: rem(40);
+      min-height: rem(386);
+      padding: rem(24);
+      border-radius: rem(30);
+      gap: rem(32);
     }
   }
 
@@ -283,6 +322,9 @@
     position: absolute;
     width: 100%;
     height: 100%;
+
+    @include mobile {
+    }
   }
 
   &__aside-text {
@@ -309,6 +351,8 @@
 
     @include mobile {
       font-size: rem(14);
+      line-height: 120%;
+      letter-spacing: -0.03em;
     }
   }
 
@@ -321,6 +365,19 @@
 
     @include mobile {
       margin-top: rem(40);
+
+      .development-brands__scroll {
+        width: auto;
+        margin-inline: rem(-16);
+        padding-inline: rem(16);
+        overflow-x: auto;
+      }
+
+      .development-brands__list {
+        flex-direction: column;
+        align-items: flex-start;
+        width: max-content;
+      }
     }
 
     .development-brands__text_compact {
@@ -331,6 +388,7 @@
       }
 
       @include mobile {
+        padding: rem(12) rem(18);
         margin-bottom: rem(20);
       }
     }
