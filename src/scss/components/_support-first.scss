@@ -114,12 +114,14 @@
 
     @include laptop {
       font-size: rem(18);
+      text-wrap: balance;
     }
 
     @include mobile {
       font-size: rem(14);
       line-height: 120%;
       letter-spacing: -0.03em;
+      text-wrap: auto;
     }
   }
 
@@ -139,11 +141,19 @@
     color: var(--white);
 
     @include laptop {
-      display: none;
+      padding: rem(7) rem(10);
+      font-size: rem(14);
+
+      top: 6.8rem;
+      left: 45.9rem;
     }
 
     @include mobile {
-      display: none;
+      padding: rem(6) rem(9);
+      font-size: rem(10);
+
+      top: 8.2rem;
+      left: 17.9rem;
     }
   }
 
@@ -388,7 +398,7 @@
       }
 
       @include mobile {
-        padding: rem(12) rem(18);
+        padding: rem(12) rem(18) rem(11);
         margin-bottom: rem(20);
       }
     }

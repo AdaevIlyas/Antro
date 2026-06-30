@@ -22,7 +22,7 @@
     border-radius: rem(50);
 
     @include laptop {
-      padding: rem(44);
+      padding: rem(120) rem(44) rem(44);
       border-radius: rem(44);
     }
 
@@ -89,7 +89,7 @@
 
         .development-brands__text_tag {
           min-height: 0;
-          padding: rem(14) rem(25);
+          padding: rem(12) rem(16) rem(11);
           font-size: rem(12);
           line-height: 100%;
           letter-spacing: -0.03em;
@@ -341,7 +341,7 @@
 
       @include mobile {
         margin-bottom: 0;
-        padding: rem(14) rem(25);
+        padding: rem(12) rem(16) rem(11);
         font-size: rem(12);
         line-height: 100%;
         letter-spacing: -0.03em;
@@ -529,6 +529,7 @@
     align-items: center;
     gap: rem(6);
     font-size: rem(16);
+    font-weight: 400;
     color: var(--grayDark);
 
     img {
@@ -537,7 +538,9 @@
       height: rem(10);
 
       &:nth-child(4) {
-        display: none;
+        @include laptop {
+          display: none;
+        }
       }
     }
 
@@ -609,7 +612,7 @@
 
         .development-brands__text_tag {
           min-height: 0;
-          padding: rem(14) rem(25);
+          padding: rem(12) rem(16) rem(11);
           font-size: rem(12);
           line-height: 100%;
           letter-spacing: -0.03em;

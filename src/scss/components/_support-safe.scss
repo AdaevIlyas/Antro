@@ -5,7 +5,7 @@
     margin-bottom: rem(-80);
 
     @include laptop {
-      margin-bottom: rem(60);
+      margin-bottom: rem(-60);
     }
 
     @include mobile {
@@ -17,7 +17,7 @@
   }
 
   .support-section__inner {
-    background-color: var(--black);
+    background-color: var(--pink);
 
     @include laptop {
       border-radius: rem(44);
@@ -46,7 +46,7 @@
 
       .development-brands__text_tag {
         min-height: 0;
-        padding: rem(14) rem(25);
+        padding: rem(12) rem(16) rem(11);
         font-size: rem(12);
         line-height: 100%;
         letter-spacing: -0.03em;

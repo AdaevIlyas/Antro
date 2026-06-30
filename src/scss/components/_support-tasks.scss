@@ -38,11 +38,6 @@
       gap: rem(20);
       padding: rem(44);
       border-radius: rem(44);
-
-      .support-section__stars {
-        margin-top: 0;
-        gap: rem(8);
-      }
     }
 
     @include mobile {
@@ -74,12 +69,18 @@
 
       @include mobile {
         font-size: rem(12);
+        padding: rem(12) rem(16) rem(11);
         margin-bottom: 0;
       }
     }
 
     .support-section__stars {
       gap: rem(12);
+
+      @include laptop {
+        margin-top: 0;
+        gap: rem(8);
+      }
     }
 
     &_dark {
@@ -167,7 +168,7 @@
 
       @include mobile {
         .development-brands__text_tag {
-          padding: rem(12) rem(16);
+          padding: rem(12) rem(16) rem(11);
         }
       }
     }
@@ -600,13 +601,13 @@
     color: var(--black);
 
     .btn__circle {
-      background: var(--pink);
+      background: var(--bg);
     }
 
     &:hover {
-      color: var(--white);
+      color: var(--black);
       &::before {
-        background: var(--pink);
+        background: var(--bg);
       }
     }
 
