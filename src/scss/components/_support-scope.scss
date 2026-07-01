@@ -356,10 +356,9 @@
     line-height: 105%;
     letter-spacing: -0.03em;
     color: var(--black);
-    padding-bottom: rem(10);
+    padding-bottom: rem(24);
 
     @include laptop {
-      padding-bottom: rem(12);
       font-size: rem(38);
       line-height: 108%;
     }

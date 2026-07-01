@@ -84,6 +84,12 @@ html {
         }
       }
     }
+
+    @include mobile {
+      .new-mobile-menu .mobile-menu__slide {
+        height: rem(496);
+      }
+    }
   }
 }
 
