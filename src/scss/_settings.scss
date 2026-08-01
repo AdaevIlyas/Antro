@@ -61,7 +61,8 @@ html {
   }
 
   &_development,
-  &_support {
+  &_support,
+  &_tshopping {
     background: #f6f6f6;
 
     .footer__box {
@@ -72,6 +73,27 @@ html {
       &::before {
         content: "";
         background: var(--bg);
+      }
+    }
+  }
+
+  &_tshopping {
+    .new-header {
+      .btn_lightning {
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+
+    --tshopping-social: #38344c;
+    --tshopping-input-border: #ffeefb;
+    --tshopping-muted: #969696;
+    --tshopping-legal: #38344c;
+
+    @include mobile {
+      .new-mobile-menu .mobile-menu__slide {
+        height: rem(496);
       }
     }
   }

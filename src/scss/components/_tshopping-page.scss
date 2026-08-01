@@ -1,0 +1,30 @@
+.tshopping-page {
+  --tshopping-social: #38344c;
+  --tshopping-input-border: #ffeefb;
+  --tshopping-muted: #969696;
+  --tshopping-legal: #38344c;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  ul,
+  ol {
+    margin: 0;
+  }
+}
+
+.support-section__card_black {
+  background: var(--black);
+  color: var(--white);
+
+  .support-section__card-title,
+  .support-section__card-label,
+  .support-section__card-text {
+    color: var(--white);
+  }
+}

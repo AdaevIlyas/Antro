@@ -1,0 +1,306 @@
+.tshopping-model {
+  .support-section__inner {
+    @include laptop {
+      padding: rem(44);
+      border-radius: rem(44);
+    }
+
+    @include mobile {
+      padding: rem(24);
+      border-radius: rem(30);
+    }
+  }
+
+  .support-section__head {
+    margin-bottom: rem(60);
+
+    @include laptop {
+      gap: rem(20);
+      margin-bottom: rem(44);
+
+      .development-brands__text_tag {
+        padding: rem(14) rem(25);
+        font-size: rem(14);
+      }
+    }
+
+    @include mobile {
+      gap: rem(20);
+      margin-bottom: rem(24);
+
+      .development-brands__text_tag {
+        padding: rem(12) rem(16);
+        font-size: rem(12);
+      }
+    }
+  }
+
+  .support-section__title {
+    @include laptop {
+      flex: 0 0 rem(562);
+      max-width: rem(562);
+      font-size: rem(38);
+    }
+
+    @include mobile {
+      flex: none;
+      max-width: none;
+      font-size: rem(20);
+    }
+  }
+
+  .support-section__desc {
+    @include laptop {
+      flex: 0 0 rem(410);
+      max-width: rem(410);
+      font-size: rem(18);
+      padding-top: rem(16);
+    }
+
+    @include mobile {
+      flex: none;
+      font-size: rem(14);
+      padding-top: 0;
+    }
+  }
+
+  .support-section__head-row {
+    @include mobile {
+      flex-direction: column;
+      gap: rem(12);
+    }
+  }
+
+  &__grid {
+    align-items: stretch;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: rem(10);
+    }
+  }
+
+  &__card {
+    gap: rem(24);
+    min-height: rem(583);
+    padding: rem(40);
+    border-radius: rem(40);
+
+    @include laptop {
+      min-height: rem(632);
+      gap: rem(20);
+      padding: rem(36);
+      border-radius: rem(38);
+    }
+
+    @include mobile {
+      min-height: 0;
+      gap: rem(12);
+      padding: rem(24);
+      border-radius: rem(24);
+    }
+  }
+
+  &__card-title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(24);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: inherit;
+
+    @include laptop {
+      font-size: rem(24);
+      line-height: 108%;
+    }
+
+    @include mobile {
+      font-size: rem(20);
+      line-height: 108%;
+    }
+  }
+
+  &__card-text {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+
+    p {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: rem(16);
+      line-height: 150%;
+      letter-spacing: -0.03em;
+      color: var(--white);
+
+      @include laptop {
+        letter-spacing: -0.02em;
+        line-height: 150%;
+      }
+
+      @include mobile {
+        font-size: rem(14);
+        line-height: 140%;
+      }
+    }
+  }
+
+  &__price-label {
+    margin-top: auto;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 150%;
+    letter-spacing: -0.03em;
+    color: var(--white);
+
+    @include mobile {
+      font-size: rem(14);
+      margin-top: rem(12);
+    }
+  }
+
+  &__prices {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+  }
+
+  &__price {
+    display: flex;
+    align-items: flex-end;
+    gap: rem(12);
+    padding-bottom: rem(16);
+    border-bottom: rem(1) solid rgba(255, 255, 255, 0.2);
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    @include laptop {
+      align-items: end;
+      gap: rem(12);
+    }
+
+    @include mobile {
+      align-items: center;
+    }
+  }
+
+  &__price-value {
+    flex: 1 1 auto;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(24);
+    line-height: 108%;
+    letter-spacing: -0.03em;
+    color: var(--pink);
+
+    @include mobile {
+      font-size: rem(20);
+    }
+  }
+
+  &__price-note {
+    flex: 0 0 auto;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 150%;
+    letter-spacing: -0.03em;
+    color: var(--white);
+    white-space: nowrap;
+
+    @include laptop {
+      font-size: rem(14);
+      line-height: 120%;
+      letter-spacing: -0.02em;
+    }
+
+    @include mobile {
+      font-size: rem(12);
+      line-height: 120%;
+    }
+  }
+
+  &__benefits {
+    display: flex;
+    flex-direction: column;
+    gap: rem(18);
+
+    @include laptop {
+      gap: rem(18);
+    }
+
+    @include mobile {
+      gap: rem(12);
+    }
+  }
+
+  &__benefit {
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+  }
+
+  &__benefit-title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(20);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--white);
+
+    @include laptop {
+      font-size: rem(18);
+      line-height: 120%;
+    }
+
+    @include mobile {
+      font-size: rem(16);
+      line-height: 120%;
+    }
+  }
+
+  &__benefit-text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 150%;
+    letter-spacing: -0.03em;
+    color: var(--white);
+
+    @include laptop {
+      font-size: rem(14);
+      line-height: 130%;
+    }
+
+    @include mobile {
+      font-size: rem(14);
+      line-height: 120%;
+    }
+  }
+
+  &__stars {
+    margin-top: 0;
+    gap: rem(12);
+
+    li {
+      height: auto;
+      min-height: rem(24);
+      align-items: flex-start;
+      color: var(--black);
+      font-size: rem(16);
+      padding-left: 0;
+
+      @include laptop {
+        font-size: rem(16);
+      }
+
+      @include mobile {
+        font-size: rem(14);
+      }
+    }
+  }
+}

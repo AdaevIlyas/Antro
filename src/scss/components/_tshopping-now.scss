@@ -1,0 +1,68 @@
+.tshopping-now {
+  margin-bottom: rem(120);
+
+  @include laptop {
+    margin-bottom: rem(80);
+  }
+
+  @include mobile {
+    margin-bottom: rem(60);
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(40);
+    max-width: rem(1324);
+    margin: 0 auto;
+    text-align: center;
+
+    @include laptop {
+      gap: rem(24);
+      max-width: rem(1080);
+    }
+
+    @include mobile {
+      gap: rem(20);
+      max-width: none;
+      text-align: center;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(50);
+    line-height: 108%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--black);
+
+    @include laptop {
+      font-size: rem(38);
+    }
+
+    @include mobile {
+      font-size: rem(24);
+    }
+  }
+
+  &__text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(24);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--black);
+
+    @include laptop {
+      font-size: rem(18);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+    }
+  }
+}

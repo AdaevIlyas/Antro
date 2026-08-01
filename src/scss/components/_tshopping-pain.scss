@@ -1,0 +1,159 @@
+.tshopping-pain {
+  .support-section__title {
+    max-width: rem(853);
+
+    @include laptop {
+      flex: 0 0 rem(562);
+      max-width: rem(562);
+      font-size: rem(38);
+    }
+
+    @include mobile {
+      flex: none;
+      max-width: none;
+      font-size: rem(20);
+    }
+  }
+
+  .support-section__desc {
+    @include laptop {
+      flex: 0 0 rem(410);
+      min-width: 0;
+      max-width: rem(410);
+      font-size: rem(18);
+      padding-top: rem(16);
+    }
+
+    @include mobile {
+      flex: none;
+      font-size: rem(14);
+      padding-top: 0;
+    }
+  }
+
+  .support-section__head-row {
+    @include laptop {
+      gap: rem(20);
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: rem(12);
+    }
+  }
+
+  .support-section__head {
+    @include laptop {
+      gap: rem(20);
+      margin-bottom: rem(44);
+
+      .development-brands__text_tag {
+        padding: rem(14) rem(25);
+        font-size: rem(14);
+        line-height: 100%;
+      }
+    }
+
+    @include mobile {
+      gap: rem(20);
+      margin-bottom: rem(24);
+
+      .development-brands__text_tag {
+        min-height: 0;
+        padding: rem(12) rem(16);
+        font-size: rem(12);
+      }
+    }
+  }
+
+  .support-section__inner {
+    @include laptop {
+      padding: rem(44);
+      border-radius: rem(44);
+    }
+
+    @include mobile {
+      padding: rem(24);
+      border-radius: rem(30);
+    }
+  }
+
+  .support-section__grid {
+    @include laptop {
+      gap: rem(20);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: rem(10);
+    }
+  }
+
+  .support-section__card {
+    min-height: rem(252);
+    gap: rem(40);
+    padding: rem(40);
+    border-radius: rem(40);
+
+    @include laptop {
+      min-height: auto;
+      gap: rem(24);
+      padding: rem(36);
+      border-radius: rem(38);
+    }
+
+    @include mobile {
+      min-height: 0;
+      gap: rem(20);
+      padding: rem(24);
+      border-radius: rem(24);
+    }
+  }
+
+  .support-section__card-body {
+    gap: rem(18);
+
+    @include laptop {
+      gap: rem(12);
+    }
+
+    @include mobile {
+      gap: rem(12);
+    }
+  }
+
+  .support-section__card-title {
+    padding-right: 0;
+
+    @include laptop {
+      padding-right: 0;
+      font-size: rem(24);
+      line-height: 108%;
+    }
+
+    @include mobile {
+      padding-right: 0;
+      font-size: rem(20);
+      line-height: 108%;
+    }
+  }
+
+  .support-section__card-text {
+    @include laptop {
+      line-height: 110%;
+      letter-spacing: -0.02em;
+    }
+
+    @include mobile {
+      font-size: rem(14);
+      line-height: 120%;
+    }
+  }
+
+  .support-section__card-icon {
+    @include mobile {
+      width: rem(24);
+      height: rem(24);
+    }
+  }
+}

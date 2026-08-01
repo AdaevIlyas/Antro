@@ -1,0 +1,213 @@
+.tshopping-appeal {
+  margin-bottom: rem(120);
+
+  @include laptop {
+    margin-bottom: rem(80);
+  }
+
+  @include mobile {
+    margin-bottom: rem(60);
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: rem(40);
+    padding: rem(60) rem(8) rem(8);
+    border-radius: rem(50);
+    background: var(--white);
+
+    @include laptop {
+      padding: rem(44) rem(8) rem(8);
+      border-radius: rem(44);
+      gap: rem(44);
+    }
+
+    @include mobile {
+      padding: rem(24) rem(8) rem(8);
+      border-radius: rem(30);
+      gap: rem(24);
+    }
+  }
+
+  &__quote {
+    position: absolute;
+    top: rem(60);
+    right: rem(60);
+    width: rem(44);
+    height: rem(44);
+
+    @include laptop {
+      top: rem(60);
+      right: rem(60);
+      width: rem(36);
+      height: rem(36);
+    }
+
+    @include mobile {
+      top: rem(24);
+      right: rem(24);
+      width: rem(23);
+      height: rem(23);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+    width: 100%;
+    padding: 0 rem(52);
+
+    @include laptop {
+      gap: rem(20);
+      padding: 0 rem(36);
+    }
+
+    @include mobile {
+      gap: rem(20);
+      padding: 0 rem(16);
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+
+    @include laptop {
+      gap: rem(20);
+    }
+
+    @include mobile {
+      gap: rem(12);
+    }
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(38);
+    line-height: 108%;
+    letter-spacing: -0.03em;
+    color: var(--black);
+    max-width: rem(760);
+
+    @include laptop {
+      font-size: rem(38);
+      max-width: rem(757);
+    }
+
+    @include mobile {
+      font-size: rem(20);
+      max-width: none;
+      padding-right: 0;
+    }
+  }
+
+  &__cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(60);
+
+    @include laptop {
+      gap: rem(40);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: rem(12);
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+
+    p {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: rem(24);
+      line-height: 120%;
+      letter-spacing: -0.03em;
+      color: var(--black);
+
+      @include laptop {
+        font-size: rem(18);
+      }
+
+      @include mobile {
+        font-size: rem(14);
+      }
+    }
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: rem(4);
+    padding: rem(24) rem(58);
+    border-radius: rem(42);
+    background: var(--bg);
+
+    @include laptop {
+      padding: rem(24) rem(58);
+      border-radius: rem(42);
+      min-width: rem(257);
+    }
+
+    @include mobile {
+      width: 100%;
+      align-items: flex-end;
+      padding: rem(12) rem(24);
+      border-radius: rem(42);
+      min-width: 0;
+    }
+  }
+
+  &__author-name {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--black);
+
+    @include laptop {
+      font-size: rem(14);
+      letter-spacing: -0.02em;
+    }
+
+    @include mobile {
+      font-size: rem(12);
+    }
+  }
+
+  &__author-role {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(14);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--black);
+
+    @include laptop {
+      font-size: rem(12);
+    }
+
+    @include mobile {
+      font-size: rem(12);
+    }
+  }
+}

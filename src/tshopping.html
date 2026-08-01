@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body page__body_tshopping">
+    <div class="site-container">
+      @include('partials/new-header-tshopping.html')
+      @include('partials/new-mobile-menu-tshopping.html')
+      @include('partials/cookie.html', {"main":"main"})
+
+      <main class="main tshopping-page">
+        @include('partials/tshopping-first.html')
+        @include('partials/tshopping-now.html')
+        @include('partials/tshopping-pain.html')
+        @include('partials/tshopping-appeal.html')
+        @include('partials/tshopping-model.html')
+        @include('partials/tshopping-integration.html')
+        @include('partials/tshopping-interest.html')
+        @include('partials/tshopping-order.html')
+        @include('partials/tshopping-faq.html')
+      </main>
+
+      @include('partials/modal.html') @include('partials/new-footer.html')
+    </div>
+  </body>
+</html>

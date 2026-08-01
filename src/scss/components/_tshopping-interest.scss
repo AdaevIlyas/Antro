@@ -1,0 +1,244 @@
+.tshopping-interest {
+  margin-bottom: rem(120);
+
+  @include laptop {
+    margin-bottom: rem(80);
+  }
+
+  @include mobile {
+    margin-bottom: rem(60);
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(40);
+    max-width: rem(1320);
+    margin: 0 auto;
+    overflow: visible;
+
+    @include laptop {
+      gap: rem(40);
+      max-width: rem(1080);
+    }
+
+    @include mobile {
+      gap: rem(24);
+      max-width: none;
+      align-items: center;
+    }
+  }
+
+  &__head {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__badge {
+    position: absolute;
+    top: -5.6rem;
+    right: -10.8rem;
+    transform: rotate(9.24deg);
+    padding: rem(8) rem(12);
+    border-radius: rem(200);
+    background: var(--grayDark);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: var(--white);
+    white-space: nowrap;
+    z-index: 2;
+
+    @include laptop {
+      top: rem(-54);
+      right: rem(-69);
+      transform: rotate(9.24deg);
+    }
+
+    @include mobile {
+      top: 16rem;
+      right: 0rem;
+      font-size: rem(12);
+      padding: rem(8) rem(12);
+      transform: rotate(9.24deg);
+    }
+  }
+
+  &__plane {
+    position: absolute;
+    top: 0rem;
+    right: -6.6rem;
+    width: 5rem;
+    height: 7rem;
+    pointer-events: none;
+    object-fit: contain;
+    z-index: 3;
+
+    @include laptop {
+      top: 0.4rem;
+      right: -5.1rem;
+      width: 3.2rem;
+      height: 5.1rem;
+      transform: rotate(7deg);
+    }
+
+    @include mobile {
+      top: auto;
+      bottom: 3rem;
+      right: 1.7rem;
+      width: 3.3rem;
+      height: 4.2rem;
+      transform: rotate(360deg);
+    }
+  }
+
+  &__rows {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    width: 100%;
+    overflow: visible;
+
+    @include laptop {
+      gap: rem(20);
+    }
+
+    @include mobile {
+      gap: rem(10);
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(5, rem(248));
+    gap: rem(20);
+    justify-content: center;
+
+    @include laptop {
+      grid-template-columns: repeat(5, rem(200));
+      gap: rem(20);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(3, rem(107));
+      gap: rem(10);
+
+      .tshopping-interest__card:nth-child(n + 4) {
+        display: none;
+      }
+    }
+
+    &_center {
+      grid-template-columns: repeat(4, rem(248));
+
+      @include laptop {
+        grid-template-columns: repeat(4, rem(200));
+      }
+
+      @include mobile {
+        grid-template-columns: repeat(2, rem(107));
+
+        .tshopping-interest__card {
+          display: flex;
+
+          &:nth-child(n + 3) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: rem(309);
+    padding: rem(24);
+    border-radius: rem(20);
+    overflow: hidden;
+
+    @include laptop {
+      height: rem(249);
+      padding: rem(24);
+      border-radius: rem(20);
+    }
+
+    @include mobile {
+      height: rem(133);
+      padding: rem(12);
+      border-radius: rem(12);
+    }
+
+    &_filled {
+      background: var(--tshopping-social);
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        max-height: rem(30);
+        object-fit: contain;
+        object-position: left bottom;
+
+        @include laptop {
+          max-height: rem(24);
+        }
+
+        @include mobile {
+          max-height: rem(16);
+        }
+      }
+    }
+
+    &_image {
+      padding: 0;
+      background: transparent;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &_empty {
+      background: var(--white);
+      border: rem(1.5) dashed #b4b4b4;
+      padding: rem(24) rem(22);
+
+      @include laptop {
+        padding: rem(24) rem(22);
+      }
+
+      @include mobile {
+        padding: rem(12);
+      }
+    }
+  }
+
+  &__placeholder {
+    display: block;
+    width: rem(157);
+    height: rem(45);
+    border-radius: rem(8);
+    background: var(--bg);
+
+    @include laptop {
+      width: rem(117);
+      height: rem(29);
+    }
+
+    @include mobile {
+      width: rem(73);
+      height: rem(18);
+      border-radius: rem(4);
+    }
+  }
+}

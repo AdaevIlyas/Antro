@@ -125,4 +125,47 @@
       object-position: center;
     }
   }
+
+  &__clubbing {
+    display: flex;
+    align-items: center;
+    gap: rem(15);
+    padding-left: rem(38);
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__clubbing-text {
+    font-size: rem(16);
+    font-weight: 500;
+    color: var(--grayDark);
+
+    @include laptop {
+      font-size: rem(14);
+    }
+  }
+
+  &__clubbing-link {
+    height: rem(36);
+    display: flex;
+    justify-content: center;
+    padding: rem(10) rem(20);
+    align-items: center;
+    border-radius: rem(60);
+    border: rem(1) solid #000;
+    background-color: #670c50;
+
+    font-family: var(--font-family);
+    font-size: rem(16);
+    font-weight: 500;
+    letter-spacing: -0.016em;
+    color: var(--white);
+
+    @include laptop {
+      font-size: rem(14);
+      height: rem(32);
+    }
+  }
 }
