@@ -47,6 +47,12 @@
       max-width: none;
       font-size: rem(20);
     }
+
+    br {
+      @include laptop {
+        display: none;
+      }
+    }
   }
 
   .support-section__desc {
@@ -82,19 +88,16 @@
 
   &__card {
     gap: rem(24);
-    min-height: rem(583);
     padding: rem(40);
     border-radius: rem(40);
 
     @include laptop {
-      min-height: rem(632);
       gap: rem(20);
       padding: rem(36);
       border-radius: rem(38);
     }
 
     @include mobile {
-      min-height: 0;
       gap: rem(12);
       padding: rem(24);
       border-radius: rem(24);

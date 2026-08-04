@@ -212,6 +212,11 @@
       background: var(--white);
       border: rem(1.5) dashed #b4b4b4;
       padding: rem(24) rem(22);
+      transition: border-color 0.3s ease-in-out;
+
+      @include hover {
+        border-color: #383838;
+      }
 
       @include laptop {
         padding: rem(24) rem(22);

@@ -154,8 +154,7 @@
 
     @include laptop {
       height: rem(68);
-      max-width: rem(346);
-      padding: rem(10) rem(16) rem(10) rem(10);
+      max-width: rem(368);
     }
 
     @include mobile {
@@ -278,7 +277,7 @@
     @include laptop {
       margin-top: 0;
       gap: rem(30);
-      padding: rem(44);
+      padding: rem(62) rem(44);
       border-radius: rem(44);
       align-items: stretch;
     }
@@ -355,6 +354,10 @@
       input {
         border-width: rem(4);
         border-color: var(--tshopping-input-border);
+
+        @include laptop {
+          border-width: rem(3);
+        }
       }
 
       .btn_wide {
