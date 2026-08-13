@@ -361,6 +361,7 @@
     &_tag {
       @include mobile {
         align-items: flex-start !important;
+        display: flex !important;
       }
 
       img {

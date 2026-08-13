@@ -92,9 +92,9 @@ html {
     --tshopping-legal: #38344c;
 
     @include mobile {
-      .new-mobile-menu .mobile-menu__slide {
-        height: 56.7rem;
-      }
+      // .new-mobile-menu .mobile-menu__slide {
+      //   height: 56.7rem;
+      // }
     }
   }
 

@@ -1,17 +1,32 @@
 .review-research {
-    &__description {
-        font-weight: 400;
+  &__description {
+    font-weight: 400;
 
-        color: var(--white);
+    color: var(--white);
 
-        background: rgba(255, 255, 255, 0.1);
-        border: none;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+  }
+
+  .main-research__top {
+    align-items: center;
+  }
+
+  .main-research__card--disabled {
+    .main-research__card-list {
+      opacity: 0.7;
+      pointer-events: none;
     }
+  }
 
-    .main-research__card--disabled {
-        .main-research__card-list {
-            opacity: 0.7;
-            pointer-events: none;
-        }
+  .new-main-research__expertise-left,
+  .main-research__card_type1 {
+    background-color: #025151;
+  }
+
+  .new-main-research__expertise-cms p {
+    &::before {
+      background-color: #39ffff;
     }
+  }
 }

@@ -130,7 +130,6 @@
     display: flex;
     align-items: center;
     gap: rem(15);
-    padding-left: rem(38);
 
     @include mobile {
       display: none;
@@ -148,24 +147,31 @@
   }
 
   &__clubbing-link {
-    height: rem(36);
+    height: rem(24);
     display: flex;
     justify-content: center;
-    padding: rem(10) rem(20);
+    padding: rem(4) rem(10);
     align-items: center;
     border-radius: rem(60);
-    border: rem(1) solid #000;
-    background-color: #670c50;
+    background-color: #ffdd2d;
 
     font-family: var(--font-family);
     font-size: rem(16);
     font-weight: 500;
     letter-spacing: -0.016em;
-    color: var(--white);
+    color: var(--black);
+    transition: opacity 0.3s ease;
+
+    @include hover {
+      opacity: 0.95;
+    }
 
     @include laptop {
       font-size: rem(14);
-      height: rem(32);
+      height: rem(20);
     }
+  }
+
+  &_tshopping {
   }
 }

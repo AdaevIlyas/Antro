@@ -61,8 +61,8 @@ export const swipers = () => {
       clickable: true,
     },
     breakpoints: {
-      480: {
-        enable: false,
+      481: {
+        enabled: false,
       },
     },
   });

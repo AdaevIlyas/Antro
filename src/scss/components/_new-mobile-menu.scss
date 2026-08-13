@@ -30,6 +30,21 @@
     line-height: 120%;
     letter-spacing: -0.03em;
     color: var(--primary);
+
+    &_yellow {
+      position: relative;
+      z-index: 2;
+      max-width: max-content;
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: rem(-2) rem(-10);
+        border-radius: rem(100);
+        background-color: #ffdd2d;
+      }
+    }
   }
 
   &__video {
@@ -70,5 +85,15 @@
 
   .mobile-menu__col_links .header__link {
     line-height: 125%;
+  }
+
+  &_tshopping {
+    .mobile-menu__slide {
+      height: rem(567);
+    }
+
+    .new-mobile-menu__slide-head {
+      padding-inline: rem(30);
+    }
   }
 }

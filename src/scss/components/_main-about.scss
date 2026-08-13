@@ -27,14 +27,15 @@
     @include mobile {
       padding: rem(40) rem(16);
       padding-bottom: rem(45);
-      //border-radius: rem(40);
+      border-radius: rem(40);
       background: url(../img/background-hills_mobile.jpg) no-repeat;
       background-size: cover;
       background-position: center;
 
-      mask-image: url(../img/mask/new-mask-1-m.svg);
-      mask-size: 100% 100%;
-      mask-repeat: no-repeat;
+      // mask-image: url(../img/mask/new-mask-1-m.svg);
+      // mask-size: 100% 100%;
+      // mask-repeat: no-repeat;
+      mask: none;
     }
   }
 
@@ -174,7 +175,7 @@
   }
 
   &__title {
-    max-width: rem(955);
+    max-width: rem(1100);
     text-transform: uppercase;
     color: var(--white);
     text-align: center;
@@ -183,7 +184,7 @@
     line-height: 1.1;
     @include laptop {
       font-size: rem(38);
-      max-width: rem(726);
+      max-width: rem(850);
     }
     @include mobile {
       font-size: rem(24);
@@ -409,6 +410,18 @@
       @include mobile {
         margin-top: unset;
         order: 6;
+      }
+    }
+
+    &_maxwidth {
+      height: rem(190);
+
+      @include laptop {
+        height: rem(160);
+      }
+
+      @include mobile {
+        height: auto;
       }
     }
   }

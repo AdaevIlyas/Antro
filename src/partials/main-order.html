@@ -1,127 +1,191 @@
 <section class="main-order">
-    <div class='container container_wide'>
+  <div class="container container_wide">
+    <div class="main-order__inner">
+      <div class="main-order__wrap">
+        <div class="description description_white">
+          подберем решение под ваш запрос
+        </div>
+        <h2 class="title title_white">Оставить заявку</h2>
 
-        <div class="main-order__inner">
-            <div class="main-order__wrap">
+        <form action="" class="main-order__form js-form">
+          <div class="main-order__form-title">
+            Бесплатно проконсультируем, расскажем, как мы работаем и составим КП
+          </div>
 
-                <div class="description description_white">подберем решение под ваш запрос</div>
-                <h2 class="title title_white">Оставить заявку</h2>
-
-                <form action="" class="main-order__form js-form">
-
-                    <div class="main-order__form-title">Бесплатно проконсультируем, расскажем, как мы работаем и
-                        составим КП</div>
-
-                    <div class="main-order__form-fields">
-                        <div class="input-block error">
-                            <div class="input-block__exclamation"><img src="img/svg/exclamation.svg" alt=""></div>
-                            <input name="name" type="text" required placeholder="Имя">
-                            <div class="input-block__error">Пожалуйста, проверьте правильность номера</div>
-                        </div>
-                        <div class="input-block">
-                            <div class="input-block__exclamation"><img src="img/svg/exclamation.svg" alt=""></div>
-                            <input name="company" type="text" required placeholder="Компания">
-                            <div class="input-block__error">Пожалуйста, проверьте правильность номера</div>
-                        </div>
-                        <div class="input-block">
-                            <div class="input-block__exclamation"><img src="img/svg/exclamation.svg" alt=""></div>
-                            <input name="phone" type="tel" required placeholder="Телефон">
-                            <div class="input-block__error">Пожалуйста, проверьте правильность номера</div>
-                        </div>
-                        <div class="input-block">
-                            <div class="input-block__exclamation"><img src="img/svg/exclamation.svg" alt=""></div>
-                            <input name="email" type="email" required placeholder="Email">
-                            <div class="input-block__error">Пожалуйста, проверьте правильность номера</div>
-                        </div>
-
-                        <div class="input-block">
-                            <div class="input-block__exclamation"><img src="img/svg/exclamation.svg" alt=""></div>
-                            <div class="select">
-                                <input class="select__value" type="text" autocomplete="off" readonly="readonly"
-                                    placeholder="Способ связи">
-                                <div class="select__list">
-                                    <div data-value="Telegram" class="select__option js-telegram">Telegram
-                                    </div>
-                                    <div data-value="WhatsApp" class="select__option">WhatsApp
-                                    </div>
-                                    <div data-value="Телефон" class="select__option">Телефон</div>
-                                    <div data-value="Email" class="select__option">Email</div>
-                                </div>
-                                <div class="telegram-name"
-                                    style="--tg-primary: #fec6ef; --tg-bg: #FFF9FD; --tg-text: #0A0620; --tg-placeholder: #615E71;">
-                                    <input type="text" class="telegram-name__input tg" value placeholder="Никнейм в TG"
-                                        data-mobile-placeholder="Никнейм в TG">
-                                    <div class="telegram-name__message">
-                                        Укажите никнейм, если номер телефона в Telegram скрыт
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="input-block__error">Пожалуйста, выберите способ связи</div>
-                        </div>
-
-                        <button class="btn-reset btn btn_wide btn_hover-pink">Оставить заявку</button>
-                    </div>
-
-                    <!-- <div class="main-order__form-note">Нажимая на кнопку, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с <a href="#">политикой конфиденциальности</a></div> -->
-                    @include('./i-checkbox.html', {"error": "error"})
-                    <!-- {"small": "small"} -->
-
-                </form>
-
-                <div class="main-order__success">
-                    <div class="main-order__success-title">Спасибо</div>
-                    <div class="main-order__success-text">Мы свяжемся с вами в течение одного рабочего дня. А пока ждете
-                        присмотритесь к телеграм-каналу и блогу</div>
-                    <div class="main-order__success-box">
-                        <div class="main-order__success-block">
-                            <div class="main-order__success-block-title">Телеграм-канал ANTRO</div>
-                            <div class="main-order__success-block-text">Показываем проекты, публикуем полезное и новости
-                                компании</div>
-                            <div class="main-order__success-block-flex">
-                                <a href="#" class="main-order__success-block-btn btn_hover-transparent">
-                                    <div class="main-team__card-icon">
-                                        <img src="img/svg/telegram-dark.svg" alt="">
-                                    </div>
-                                    Посмотреть
-                                </a>
-                                <div class="main-order__success-block-text main-order__success-block-text_icon"><img
-                                        src="img/media/svg/followers.svg" alt=""> 1 600+</div>
-                            </div>
-                        </div>
-                        <div class="main-order__success-block">
-                            <div class="main-order__success-block-title">Блог ANTRO на VC.ru</div>
-                            <div class="main-order__success-block-text">Пишем о пользовательском и клиентском опыте,
-                                даём рекомендации и критикуем существующие решения</div>
-                            <div class="main-order__success-block-flex">
-                                <a href="#" class="main-order__success-block-btn btn_hover-transparent">
-                                    <div class="main-team__card-icon">
-                                        <img src="img/svg/vc-dark.svg" alt="">
-                                    </div>
-                                    Читать блог
-                                </a>
-                                <div class="main-order__success-block-text main-order__success-block-text_icon"><img
-                                        src="img/media/svg/heart.svg" alt=""> 5 000+</div>
-                                <div class="main-order__success-block-text main-order__success-block-text_icon"><img
-                                        src="img/media/svg/followers.svg" alt=""> 1 800+</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="main-order__social">
-                    <a href="#" class="main-order__social-link btn_hover-round">
-                        <img src="img/svg/telegram.svg" alt="">
-                    </a>
-                    <a href="#" class="main-order__social-link btn_hover-round">
-                        <img src="img/svg/whatsapp.svg" alt="">
-                    </a>
-                    <a href="#" class="main-order__social-link btn_hover-round">
-                        <img src="img/svg/email.svg" alt="">
-                    </a>
-                </div>
-
+          <div class="main-order__form-fields">
+            <div class="input-block error">
+              <div class="input-block__exclamation">
+                <img src="img/svg/exclamation.svg" alt="" />
+              </div>
+              <input name="name" type="text" required placeholder="Имя" />
+              <div class="input-block__error">
+                Пожалуйста, проверьте правильность номера
+              </div>
             </div>
+            <div class="input-block">
+              <div class="input-block__exclamation">
+                <img src="img/svg/exclamation.svg" alt="" />
+              </div>
+              <input
+                name="company"
+                type="text"
+                required
+                placeholder="Компания"
+              />
+              <div class="input-block__error">
+                Пожалуйста, проверьте правильность номера
+              </div>
+            </div>
+            <div class="input-block">
+              <div class="input-block__exclamation">
+                <img src="img/svg/exclamation.svg" alt="" />
+              </div>
+              <input name="phone" type="tel" required placeholder="Телефон" />
+              <div class="input-block__error">
+                Пожалуйста, проверьте правильность номера
+              </div>
+            </div>
+            <div class="input-block">
+              <div class="input-block__exclamation">
+                <img src="img/svg/exclamation.svg" alt="" />
+              </div>
+              <input name="email" type="email" required placeholder="Email" />
+              <div class="input-block__error">
+                Пожалуйста, проверьте правильность номера
+              </div>
+            </div>
+
+            <div class="input-block">
+              <div class="input-block__exclamation">
+                <img src="img/svg/exclamation.svg" alt="" />
+              </div>
+              <div class="select">
+                <input
+                  class="select__value"
+                  type="text"
+                  autocomplete="off"
+                  readonly="readonly"
+                  placeholder="Способ связи"
+                />
+                <div class="select__list">
+                  <div data-value="Telegram" class="select__option js-telegram">
+                    Telegram
+                  </div>
+                  <div data-value="WhatsApp" class="select__option">
+                    WhatsApp
+                  </div>
+                  <div data-value="Телефон" class="select__option">Телефон</div>
+                  <div data-value="Email" class="select__option">Email</div>
+                </div>
+                <div
+                  class="telegram-name"
+                  style="
+                    --tg-primary: #fec6ef;
+                    --tg-bg: #fff9fd;
+                    --tg-text: #0a0620;
+                    --tg-placeholder: #615e71;
+                  "
+                >
+                  <input
+                    type="text"
+                    class="telegram-name__input tg"
+                    value
+                    placeholder="Никнейм в TG"
+                    data-mobile-placeholder="Никнейм в TG"
+                  />
+                  <div class="telegram-name__message">
+                    Укажите никнейм, если номер телефона в Telegram скрыт
+                  </div>
+                </div>
+              </div>
+              <div class="input-block__error">
+                Пожалуйста, выберите способ связи
+              </div>
+            </div>
+
+            <button class="btn-reset btn btn_wide btn_hover-pink">
+              Оставить заявку
+            </button>
+          </div>
+
+          <!-- <div class="main-order__form-note">Нажимая на кнопку, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с <a href="#">политикой конфиденциальности</a></div> -->
+          @include('./i-checkbox.html', {"error": "error"})
+          <!-- {"small": "small"} -->
+        </form>
+
+        <div class="main-order__success">
+          <div class="main-order__success-title">Спасибо</div>
+          <div class="main-order__success-text">
+            Мы свяжемся с вами в течение одного рабочего дня. А пока ждете
+            присмотритесь к телеграм-каналу и блогу
+          </div>
+          <div class="main-order__success-box">
+            <div class="main-order__success-block">
+              <div class="main-order__success-block-title">
+                Телеграм-канал ANTRO
+              </div>
+              <div class="main-order__success-block-text">
+                Показываем проекты, публикуем полезное и новости компании
+              </div>
+              <div class="main-order__success-block-flex">
+                <a
+                  href="#"
+                  class="main-order__success-block-btn btn_hover-transparent"
+                >
+                  <div class="main-team__card-icon">
+                    <img src="img/svg/telegram-dark.svg" alt="" />
+                  </div>
+                  Посмотреть
+                </a>
+                <div
+                  class="main-order__success-block-text main-order__success-block-text_icon"
+                >
+                  <img src="img/media/svg/followers.svg" alt="" /> 1 600+
+                </div>
+              </div>
+            </div>
+            <div class="main-order__success-block">
+              <div class="main-order__success-block-title">
+                Блог ANTRO на VC.ru
+              </div>
+              <div class="main-order__success-block-text">
+                Пишем о пользовательском и клиентском опыте, даём рекомендации и
+                критикуем существующие решения
+              </div>
+              <div class="main-order__success-block-flex">
+                <a
+                  href="#"
+                  class="main-order__success-block-btn btn_hover-transparent"
+                >
+                  <div class="main-team__card-icon">
+                    <img src="img/svg/vc-dark.svg" alt="" />
+                  </div>
+                  Читать блог
+                </a>
+                <div
+                  class="main-order__success-block-text main-order__success-block-text_icon"
+                >
+                  <img src="img/media/svg/heart.svg" alt="" /> 5 000+
+                </div>
+                <div
+                  class="main-order__success-block-text main-order__success-block-text_icon"
+                >
+                  <img src="img/media/svg/followers.svg" alt="" /> 1 800+
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
+        <div class="main-order__social">
+          <a href="#" class="main-order__social-link btn_hover-round">
+            <img src="img/svg/telegram.svg" alt="" />
+          </a>
+          <a href="#" class="main-order__social-link btn_hover-round">
+            <img src="img/svg/email.svg" alt="" />
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
