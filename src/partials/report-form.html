@@ -1,0 +1,74 @@
+<section class="mailing">
+  <div class="container">
+    <div
+      class="mailing__col"
+      style="background-image: url(/img/report/bg-report-form.png)"
+    >
+      <div class="mailing__head">
+        <div class="mailing__head-subtitle">Отчёт за подписку</div>
+        <div class="mailing__head-title">Большой обзор рынка фэшн-ритейла</div>
+      </div>
+      <form action="" class="mailing__form">
+        <div class="mailing__form-fields">
+          <div class="input-block">
+            <div class="input-block__exclamation">
+              <img src="img/svg/exclamation.svg" alt="" />
+            </div>
+            <input name="name" type="text" required="" placeholder="Имя" />
+            <div class="input-block__error">
+              Пожалуйста, проверьте правильность номера
+            </div>
+          </div>
+          <div class="mailing__form-fields-row">
+            <div class="input-block">
+              <div class="input-block__exclamation">
+                <img src="img/svg/exclamation.svg" alt="" />
+              </div>
+              <input
+                name="company"
+                type="text"
+                required=""
+                placeholder="Компания"
+              />
+              <div class="input-block__error">
+                Пожалуйста, проверьте правильность номера
+              </div>
+            </div>
+            <div class="input-block">
+              <div class="input-block__exclamation">
+                <img src="img/svg/exclamation.svg" alt="" />
+              </div>
+              <input
+                name="position"
+                type="text"
+                required=""
+                placeholder="Должность"
+              />
+              <div class="input-block__error">
+                Пожалуйста, проверьте правильность номера
+              </div>
+            </div>
+          </div>
+          <div class="input-block">
+            <div class="input-block__exclamation">
+              <img src="img/svg/exclamation.svg" alt="" />
+            </div>
+            <input name="email" type="email" required="" placeholder="Е-мейл" />
+            <div class="input-block__error">
+              Пожалуйста, проверьте правильность номера
+            </div>
+          </div>
+        </div>
+
+        <button class="btn-reset btn btn_hover-pink mailing__btn">
+          Скачать обзор
+        </button>
+
+        <div class="mailing__form-checkboxes">
+          @include('./i-checkbox.html', {"dark": "dark"})
+          @include('./i-checkbox-new.html', {"dark": "dark"})
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

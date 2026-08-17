@@ -1,50 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru" class="page page-review page-report">
+  @include('partials/head.html')
 
-@include('partials/head.html')
-
-<body class="page__body page__body_audit">
+  <body class="page__body page__body_audit">
     <div class="site-container">
-        @include('partials/header-report.html')
+      @include('partials/header-report.html')
 
-
-        <main class="main">
-            @include('partials/report-first-buy.html')
-            @include('partials/report-first.html')
-            <section class="report-track">
-                <div class="container">
-                    <div class="report-track__wrapper">
-                        @include('partials/report-way.html')
-                        <div class="report-track__body">
-                            @include('partials/report-data.html')
-                            @include('partials/report-more.html')
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="report-track">
-                <div class="container">
-                    <div class="report-track__wrapper">
-                        @include('partials/report-way.html')
-                        <div class="report-track__body">
-                            @include('partials/report-data-buy.html')
-                            @include('partials/report-more.html')
-                        </div>
-                    </div>
-                </div>
-            </section>
-            @include('partials/report-media.html')
-            @include('partials/report-community.html')
-            <div class="review__bg">
-                @include('partials/review-research.html')
+      <main class="main">
+        @include('partials/report-first-buy.html')
+        @include('partials/report-first.html')
+        <section class="report-track">
+          <div class="container">
+            <div class="report-track__wrapper">
+              @include('partials/report-way.html')
+              <div class="report-track__body">
+                @include('partials/report-data.html')
+                @include('partials/report-more.html')
+              </div>
             </div>
-        </main>
+          </div>
+        </section>
+        <section class="report-track">
+          <div class="container">
+            <div class="report-track__wrapper">
+              @include('partials/report-way.html')
+              <div class="report-track__body">
+                @include('partials/report-data-buy.html')
+                @include('partials/report-more.html')
+              </div>
+            </div>
+          </div>
+        </section>
+        @include('partials/report-media.html')
+        @include('partials/report-community.html')
+        <div class="review__bg">@include('partials/review-research.html')</div>
 
+        @include('partials/report-form.html')
+      </main>
 
-        @include('partials/modal.html')
-        @include('partials/footer.html')
-
+      @include('partials/modal.html') @include('partials/footer.html')
     </div>
-</body>
-
+  </body>
 </html>

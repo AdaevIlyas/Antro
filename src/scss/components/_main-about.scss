@@ -371,13 +371,13 @@
 
     &_short {
       //width: rem(390);
-      height: rem(180);
+      height: rem(190);
       margin-left: auto;
       margin-top: rem(-11);
 
       @include laptop {
         width: rem(284);
-        height: rem(147);
+        height: rem(160);
       }
       @include mobile {
         width: 100%;
@@ -414,10 +414,10 @@
     }
 
     &_maxwidth {
-      height: rem(190);
+      height: rem(180);
 
       @include laptop {
-        height: rem(160);
+        height: rem(150);
       }
 
       @include mobile {

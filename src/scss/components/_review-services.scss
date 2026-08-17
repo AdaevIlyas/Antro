@@ -266,6 +266,15 @@
 
   .main-services__card-tags {
     max-width: rem(591);
+    column-gap: rem(35);
+
+    @include laptop {
+      column-gap: rem(26);
+    }
+
+    @include mobile {
+      column-gap: 1.4rem;
+    }
   }
 
   .main-services__card_medium {

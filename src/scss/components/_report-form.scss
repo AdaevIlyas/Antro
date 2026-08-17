@@ -1,0 +1,144 @@
+.mailing {
+  margin-block: rem(70);
+
+  @include mobile {
+    margin-block: rem(30);
+  }
+
+  &__col {
+    padding: rem(70) rem(90);
+    border-radius: rem(70);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+
+    @include mobile {
+      padding: rem(28);
+      border-radius: rem(30);
+      background-image: none;
+      background: linear-gradient(360deg, #fbfbfb 0%, #dbdbdb 100%) !important;
+    }
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: rem(6);
+    margin-bottom: rem(32);
+    max-width: rem(590);
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__head-title {
+    font-size: rem(34);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  &__head-subtitle {
+    font-size: rem(16);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  &__form {
+    max-width: rem(458);
+  }
+
+  &__form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+    margin-bottom: rem(22);
+
+    @include mobile {
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__form-fields-row {
+    display: flex;
+    gap: rem(6);
+
+    @include mobile {
+      flex-direction: column;
+      gap: rem(10);
+    }
+  }
+
+  &__btn {
+    max-width: 100%;
+    width: 100%;
+    height: rem(58);
+
+    @include mobile {
+      height: rem(50);
+      font-size: rem(16);
+    }
+  }
+
+  &__form-checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+    margin-top: rem(42);
+
+    @include mobile {
+      margin-top: rem(24);
+    }
+
+    .i-checkbox_dark .i-checkbox__text {
+      font-size: rem(14);
+      color: #b0aeb8;
+
+      @include mobile {
+        font-size: rem(12);
+      }
+
+      a {
+        color: inherit;
+      }
+    }
+
+    .i-checkbox {
+      margin-top: 0;
+      height: auto;
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+
+  .input-block {
+    input {
+      height: rem(58);
+
+      @include mobile {
+        height: rem(50);
+      }
+    }
+
+    &:has(input[type="text"]) {
+      max-width: rem(224);
+
+      @include mobile {
+        max-width: 100%;
+      }
+    }
+
+    &:has(input[type="email"]) {
+      max-width: rem(301);
+
+      @include mobile {
+        max-width: 100%;
+      }
+    }
+  }
+}
