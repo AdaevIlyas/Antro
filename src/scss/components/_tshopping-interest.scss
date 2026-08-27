@@ -60,7 +60,8 @@
     }
 
     @include mobile {
-      top: 16rem;
+      top: auto;
+      bottom: 8.5rem;
       right: 0rem;
       font-size: rem(12);
       padding: rem(8) rem(12);
@@ -130,6 +131,14 @@
 
       .tshopping-interest__card:nth-child(n + 4) {
         display: none;
+      }
+    }
+
+    &_mobile {
+      display: none;
+
+      @include mobile {
+        display: grid;
       }
     }
 

@@ -1,0 +1,254 @@
+.tshopping-experience {
+  .support-section__title {
+    flex: 0 0 rem(600);
+    max-width: rem(600);
+
+    @include laptop {
+      flex: 0 0 rem(480);
+      max-width: rem(480);
+      font-size: rem(38);
+    }
+
+    @include mobile {
+      flex: none;
+      max-width: none;
+      font-size: rem(20);
+    }
+  }
+
+  .support-section__desc {
+    @include laptop {
+      flex: 0 0 rem(410);
+      max-width: rem(410);
+      font-size: rem(18);
+      padding-top: rem(16);
+    }
+
+    @include mobile {
+      flex: none;
+      font-size: rem(14);
+      padding-top: 0;
+    }
+  }
+
+  .support-section__head-row {
+    @include mobile {
+      flex-direction: column;
+      gap: rem(12);
+    }
+  }
+
+  .support-section__head {
+    @include laptop {
+      gap: rem(20);
+      margin-bottom: rem(44);
+
+      .development-brands__text_tag {
+        padding: rem(14) rem(25);
+        font-size: rem(14);
+      }
+    }
+
+    @include mobile {
+      gap: rem(20);
+      margin-bottom: rem(24);
+
+      .development-brands__text_tag {
+        padding: rem(12) rem(16);
+        font-size: rem(12);
+      }
+    }
+  }
+
+  .support-section__inner {
+    @include laptop {
+      padding: rem(44);
+      border-radius: rem(44);
+    }
+
+    @include mobile {
+      padding: rem(24);
+      border-radius: rem(30);
+    }
+  }
+
+  &__body {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: rem(40);
+
+    @include laptop {
+      gap: rem(24);
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: stretch;
+      gap: rem(24);
+    }
+  }
+
+  &__cases {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    width: rem(859);
+    flex-shrink: 0;
+
+    @include laptop {
+      width: rem(620);
+      gap: rem(16);
+    }
+
+    @include mobile {
+      width: 100%;
+      gap: rem(10);
+    }
+  }
+
+  &__case {
+    display: flex;
+    align-items: flex-start;
+    gap: rem(24);
+    padding: rem(40);
+    border-radius: rem(40);
+    background: var(--bg);
+
+    @include laptop {
+      gap: rem(20);
+      padding: rem(36);
+      border-radius: rem(38);
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: rem(16);
+      padding: rem(24);
+      border-radius: rem(24);
+    }
+
+    &_dark {
+      background: #615e71;
+
+      .tshopping-experience__case-title,
+      .tshopping-experience__case-text {
+        color: var(--white);
+      }
+    }
+  }
+
+  &__logo {
+    flex: 0 0 rem(94);
+    width: rem(94);
+    height: rem(38);
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: left center;
+    }
+
+    @include laptop {
+      flex-basis: rem(80);
+      width: rem(80);
+      height: rem(32);
+    }
+
+    @include mobile {
+      flex-basis: auto;
+      width: auto;
+      height: rem(26);
+    }
+  }
+
+  &__case-body {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  &__case-title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(24);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--black);
+
+    @include laptop {
+      // font-size: rem(20);
+    }
+
+    @include mobile {
+      font-size: rem(16);
+      line-height: 120%;
+    }
+  }
+
+  &__case-text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--black);
+
+    @include laptop {
+      // font-size: rem(14);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+      line-height: 120%;
+    }
+  }
+
+  &__link {
+    flex-shrink: 0;
+    max-width: rem(414);
+    font-size: rem(18);
+    letter-spacing: -0.03em;
+    color: var(--black);
+    text-align: left;
+    white-space: normal;
+    margin-right: auto;
+    margin-left: rem(90);
+    max-width: fit-content;
+
+    @include laptop {
+      font-size: rem(16);
+      margin-left: rem(100);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+      align-self: flex-start;
+      display: flex;
+      margin: 0;
+    }
+
+    @include hover {
+      color: var(--white);
+      &::before {
+        background: var(--pink);
+      }
+    }
+
+    .btn__circle {
+      background: var(--pink);
+    }
+  }
+
+  &__desc {
+    @include laptop {
+      br {
+        display: none;
+      }
+    }
+  }
+}

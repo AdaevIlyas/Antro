@@ -79,3 +79,8 @@ import { supportScenario } from "./components/supportScenario";
 try {
   supportScenario();
 } catch (error) {}
+
+import { partnersMarquee } from "./components/partnersMarquee";
+try {
+  partnersMarquee();
+} catch (error) {}
