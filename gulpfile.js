@@ -255,22 +255,37 @@ const htmlInclude = () => {
     .pipe(browserSync.stream());
 }
 
-const watchFiles = () => {
+const watchFiles = (done) => {
   browserSync.init({
     server: {
       baseDir: `${buildFolder}`
     },
-  });
+    host: '127.0.0.1',
+    listen: '127.0.0.1',
+    port: 3000,
+    ui: {
+      port: 3001
+    },
+    online: false,
+    open: false,
+    notify: false,
+  }, (err) => {
+    if (err) {
+      done(err);
+      return;
+    }
 
-  watch(paths.srcScss, styles);
-  watch(paths.srcFullJs, scripts);
-  watch(`${paths.srcPartialsFolder}/*.html`, htmlInclude);
-  watch(`${srcFolder}/*.html`, htmlInclude);
-  watch(`${paths.resourcesFolder}/**`, resources);
-  watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`, images);
-  watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
-  watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, avifImages);
-  watch(paths.srcSvg, svgSprites);
+    watch(paths.srcScss, styles);
+    watch(paths.srcFullJs, scripts);
+    watch(`${paths.srcPartialsFolder}/*.html`, htmlInclude);
+    watch(`${srcFolder}/*.html`, htmlInclude);
+    watch(`${paths.resourcesFolder}/**`, resources);
+    watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`, images);
+    watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
+    watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, avifImages);
+    watch(paths.srcSvg, svgSprites);
+    done();
+  });
 }
 
 const cache = () => {

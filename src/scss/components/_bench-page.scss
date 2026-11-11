@@ -1,0 +1,524 @@
+﻿.bench-page {
+  background: var(--bench-black);
+  color: var(--bench-white);
+  font-family: var(--font-family);
+
+  scroll-margin-top: rem(100);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  ul,
+  ol {
+    margin: 0;
+  }
+
+  section[id] {
+    scroll-margin-top: rem(100);
+
+    @include mobile {
+      scroll-margin-top: rem(60);
+    }
+  }
+
+  // vertical rhythm between sections
+  > section {
+    margin-bottom: rem(120);
+
+    @include laptop {
+      margin-bottom: rem(80);
+    }
+
+    @include mobile {
+      margin-bottom: rem(60);
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Shared UI
+// ---------------------------------------------------------------------------
+
+.bench-tag {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: rem(14) rem(25);
+  border: rem(1) solid var(--bench-white);
+  border-radius: rem(100);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: rem(16);
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  color: var(--bench-white);
+  white-space: nowrap;
+
+  @include laptop {
+    padding: rem(12) rem(20);
+    font-size: rem(14);
+  }
+
+  @include mobile {
+    padding: rem(12) rem(16);
+    font-size: rem(12);
+  }
+
+  &_dark {
+    border-color: var(--bench-black);
+    color: var(--bench-black);
+  }
+
+  &_fill {
+    border-color: transparent;
+    background: var(--bench-dark);
+    color: var(--bench-white);
+    padding: rem(7) rem(12);
+    border-radius: rem(32);
+    font-size: rem(16);
+
+    @include laptop {
+      padding: rem(5.5) rem(10);
+      font-size: rem(12);
+    }
+
+    @include mobile {
+      padding: rem(5) rem(10);
+      font-size: rem(11);
+    }
+  }
+
+  &_small {
+    padding: rem(8) rem(16);
+    font-size: rem(14);
+
+    @include laptop {
+      padding: rem(6) rem(12);
+      font-size: rem(12);
+    }
+
+    @include mobile {
+      padding: rem(5) rem(10);
+      font-size: rem(11);
+    }
+  }
+
+  &_pink {
+    border-color: var(--bench-brand);
+    background: var(--bench-brand);
+    color: var(--bench-white);
+    padding: rem(8) rem(16);
+
+    @include laptop {
+      padding: rem(6) rem(12);
+    }
+
+    @include mobile {
+      padding: rem(5) rem(10);
+    }
+  }
+}
+
+.bench-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: rem(10) rem(16);
+  border-radius: rem(100);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: rem(18);
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+
+  @include laptop {
+    padding: rem(10) rem(18);
+    font-size: rem(16);
+  }
+
+  @include mobile {
+    padding: rem(8) rem(14);
+    font-size: rem(14);
+  }
+
+  &_blue {
+    background: var(--bench-blue);
+    color: var(--bench-black);
+  }
+
+  &_pink {
+    background: var(--bench-brand);
+    color: var(--bench-white);
+  }
+
+  &_grey {
+    background: var(--bench-dark);
+    color: var(--bench-white);
+  }
+
+  &_line {
+    border: rem(1) solid var(--bench-white);
+    color: var(--bench-white);
+  }
+
+  &_dark {
+    background: var(--bench-black);
+    color: var(--bench-white);
+  }
+}
+
+.bench-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: rem(70);
+  padding: 0 rem(64);
+  border-radius: rem(100);
+  background: var(--bench-brand);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: rem(18);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--bench-white);
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+
+  &:hover {
+    background: var(--bench-pink);
+    color: var(--bench-black);
+  }
+
+  @include laptop {
+    height: rem(46);
+    padding: 0 rem(32);
+    font-size: rem(16);
+  }
+
+  @include mobile {
+    height: rem(50);
+    padding: 0 rem(24);
+    font-size: rem(16);
+  }
+
+  &_wide {
+    width: 100%;
+  }
+}
+
+// CSS hatch fill (-45deg stripes, used instead of the hatch svg)
+.bench-hatch {
+  --hatch-color: var(--bench-pink);
+
+  display: block;
+  width: var(--w, 100%);
+  height: 100%;
+  min-width: rem(3);
+  background: repeating-linear-gradient(
+    225deg,
+    var(--hatch-color) 0,
+    var(--hatch-color) rem(4),
+    transparent rem(4),
+    transparent rem(10)
+  );
+
+  &_pink {
+    --hatch-color: var(--bench-pink);
+  }
+
+  &_blue {
+    --hatch-color: var(--bench-blue);
+  }
+
+  &_white {
+    --hatch-color: var(--bench-white);
+  }
+
+  &_dark {
+    --hatch-color: var(--bench-black);
+  }
+}
+// blurred "locked" block with CTA on top
+.bench-blur {
+  position: relative;
+  overflow: hidden;
+  border-radius: rem(30);
+
+  > *:not(.bench-lock) {
+    filter: blur(rem(8));
+    pointer-events: none;
+    user-select: none;
+  }
+
+  @include laptop {
+    border-radius: rem(24);
+  }
+}
+
+.bench-lock {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(18, 17, 17, 0.35);
+}
+
+// dark-themed panel head used by funnel / metrics / process / method
+%bench-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: rem(32);
+  margin-bottom: rem(60);
+
+  @include laptop {
+    gap: rem(20);
+    margin-bottom: rem(44);
+  }
+
+  @include mobile {
+    gap: rem(20);
+    margin-bottom: rem(24);
+  }
+}
+
+%bench-h2 {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: rem(82);
+  line-height: 100%;
+  letter-spacing: -0.05em;
+  color: var(--bench-white);
+
+  @include laptop {
+    font-size: rem(58);
+  }
+
+  @include mobile {
+    font-size: rem(32);
+    letter-spacing: -0.04em;
+  }
+}
+
+%bench-head-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: rem(40);
+  width: 100%;
+
+  @include laptop {
+    gap: rem(32);
+  }
+
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: rem(16);
+  }
+}
+
+%bench-aside {
+  flex: 0 0 rem(640);
+  max-width: rem(640);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: rem(24);
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  color: var(--bench-white);
+
+  @include laptop {
+    flex-basis: rem(480);
+    max-width: rem(480);
+    font-size: rem(16);
+  }
+
+  @include mobile {
+    flex: none;
+    max-width: none;
+    font-size: rem(14);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Header on dark page (Figma: logo | centered nav | CTA)
+// ---------------------------------------------------------------------------
+
+.new-header_bench {
+  &.header {
+    background: transparent;
+
+    &.header_scroll {
+      top: 0;
+      background: rgba(18, 17, 17, 0.88);
+      backdrop-filter: blur(12px);
+    }
+  }
+
+  .new-header__links {
+    display: none;
+  }
+
+  .header__box,
+  .new-header_bench-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: rem(24);
+    width: 100%;
+    max-width: none;
+    height: auto;
+    min-height: rem(96);
+    margin: 0;
+    padding: rem(24) rem(100);
+    border-radius: 0;
+    background: transparent;
+    backdrop-filter: none;
+
+    @include laptop {
+      min-height: rem(72);
+      padding: rem(18) rem(100);
+      column-gap: rem(20);
+    }
+
+    @include mobile {
+      min-height: rem(64);
+      padding: rem(16);
+      column-gap: rem(12);
+    }
+  }
+
+  .header__logo,
+  .new-header_bench-logo {
+    flex: 0 0 auto;
+    display: block;
+    width: rem(226);
+    height: rem(48);
+    filter: none !important;
+
+    @include laptop {
+      width: rem(149);
+      height: rem(36);
+    }
+
+    @include mobile {
+      width: rem(120);
+      height: rem(28);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: left center;
+    }
+  }
+
+  .header__social,
+  .btn_lightning,
+  .new-header__clubbing {
+    display: none !important;
+  }
+
+  .new-header_bench-nav {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: rem(42);
+    margin: 0;
+    min-width: 0;
+
+    @include laptop {
+      gap: rem(24);
+    }
+
+    @include mobile {
+      display: none;
+    }
+
+    .header__link,
+    .new-header__link {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: rem(18);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--bench-white);
+      white-space: nowrap;
+      transition: color 0.2s ease;
+
+      @include laptop {
+        font-size: rem(14);
+        letter-spacing: -0.03em;
+      }
+
+      &:hover {
+        color: var(--bench-pink);
+      }
+    }
+  }
+
+  .new-header_bench-cta {
+    flex: 0 0 auto;
+    height: rem(48);
+    padding: 0 rem(48);
+    border-radius: rem(50);
+    font-size: rem(18);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--bench-white);
+    background: var(--bench-brand);
+
+    @include laptop {
+      height: rem(36);
+      padding: 0 rem(24);
+      font-size: rem(14);
+    }
+
+    @include mobile {
+      display: none;
+    }
+
+    &:hover {
+      background: var(--bench-pink);
+      color: var(--bench-black);
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Mobile menu on dark page
+// ---------------------------------------------------------------------------
+
+.new-mobile-menu_bench {
+  .mobile-menu__slide {
+    height: rem(567);
+  }
+
+  .new-mobile-menu__slide-head {
+    padding-inline: rem(30);
+  }
+
+  .mobile-menu__burger-text {
+    color: #fff;
+  }
+
+  .mobile-menu__burger_open .mobile-menu__burger-text {
+    color: #121111;
+  }
+}

@@ -1,0 +1,87 @@
+<section class="bench-industry" id="benchIndustry">
+  <div class="container">
+    <div class="bench-industry__inner">
+      <div class="bench-industry__left">
+        <span class="bench-tag bench-tag_dark">Другие отрасли</span>
+        <h2 class="bench-industry__title">
+          Нужен такой бенчмарк по вашей отрасли?
+        </h2>
+        <p class="bench-industry__text">
+          Сейчас бенчмарк есть только для фэшна. Выберите свою отрасль и
+          оставьте почту. Следующую отрасль выберем по числу заявок, а когда
+          соберем данные, пришлем отчет
+        </p>
+      </div>
+
+      <form action="" class="main-order__form js-form bench-industry__right">
+        <div class="bench-industry__choose">
+          <div class="bench-industry__choose-title">Можно выбрать несколько</div>
+          <div class="bench-industry__pills">
+            <label class="bench-industry__pill">
+              <input type="checkbox" name="industry[]" value="Бьюти" />
+              <span>Бьюти</span>
+            </label>
+            <label class="bench-industry__pill">
+              <input
+                type="checkbox"
+                name="industry[]"
+                value="DIY / дом"
+                checked
+              />
+              <span>DIY / дом</span>
+            </label>
+            <label class="bench-industry__pill">
+              <input
+                type="checkbox"
+                name="industry[]"
+                value="Электроника"
+                checked
+              />
+              <span>Электроника</span>
+            </label>
+            <label class="bench-industry__pill">
+              <input type="checkbox" name="industry[]" value="Детские товары" />
+              <span>Детские товары</span>
+            </label>
+            <label class="bench-industry__pill">
+              <input type="checkbox" name="industry[]" value="Продукты" />
+              <span>Продукты</span>
+            </label>
+            <label class="bench-industry__pill">
+              <input type="checkbox" name="industry[]" value="Другое" />
+              <span>Другое</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="main-order__form-fields bench-industry__fields">
+          <div class="input-block">
+            <div class="input-block__exclamation">
+              <img src="img/svg/exclamation.svg" alt="" />
+            </div>
+            <input name="email" type="email" required placeholder="Е-мейл для уведомления" />
+            <div class="input-block__error">
+              Пожалуйста, проверьте правильность заполнения
+            </div>
+          </div>
+          <button class="btn-reset bench-btn">Сообщить о выходе</button>
+        </div>
+
+        <label class="i-checkbox">
+          <input class="i-checkbox__input" type="checkbox" name="i_agree" checked />
+          <div class="i-checkbox__mask">
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.16602 3.11091L4.89961 6.66671L10.5 1.33301" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="i-checkbox__text">
+            Я даю согласие на
+            <a href="">обработку моих персональных данных</a>
+            и принимаю условия
+            <a href="">политики обработки персональных данных</a>
+          </div>
+        </label>
+      </form>
+    </div>
+  </div>
+</section>

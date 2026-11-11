@@ -98,6 +98,38 @@ html {
     }
   }
 
+  &_bench {
+    --bench-black: #121111;
+    --bench-dark: #302d2f;
+    --bench-dark-2: #464546;
+    --bench-bg: #f6f6f6;
+    --bench-brand: #fc63d5;
+    --bench-pink: #e3b9df;
+    --bench-pink-2: #d1a2cd;
+    --bench-blue: #b9cbe3;
+    --bench-blue-2: #8fa3be;
+    --bench-blue-dark: #5474a0;
+    --bench-accent-blue: #639ffc;
+    --bench-grey: #b5b5b5;
+    --bench-violet: #615e71;
+    --bench-line: #878687;
+    --bench-white: #fff;
+
+    background: var(--bench-black);
+    color: var(--bench-white);
+
+    .footer__box {
+      background: #fff;
+    }
+    .footer__social-link {
+      background: var(--bg);
+      &::before {
+        content: "";
+        background: var(--bg);
+      }
+    }
+  }
+
   &_support {
     .new-header {
       .btn_lightning {

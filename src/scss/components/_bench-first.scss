@@ -1,0 +1,611 @@
+.bench-first {
+  &__inner {
+    margin-top: rem(144);
+    display: flex;
+    flex-direction: column;
+    gap: rem(258);
+
+    @include laptop {
+      margin-top: rem(110);
+      gap: rem(56);
+    }
+
+    @include mobile {
+      margin-top: rem(64);
+      gap: rem(32);
+    }
+  }
+
+  // top: main (tags, h1, cta) + aside (lead, pills) -------------------------
+  &__top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: rem(60);
+
+    @include laptop {
+      gap: rem(40);
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: stretch;
+      gap: rem(24);
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: rem(24);
+    max-width: rem(1020);
+
+    @include laptop {
+      gap: rem(28);
+      max-width: rem(720);
+    }
+
+    @include mobile {
+      gap: rem(20);
+      max-width: none;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(10);
+
+    @include mobile {
+      gap: rem(6);
+    }
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: rem(82);
+    line-height: 1.1;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: var(--bench-white);
+
+    @include laptop {
+      font-size: rem(58);
+    }
+
+    @include mobile {
+      font-size: rem(36);
+      letter-spacing: -0.04em;
+    }
+  }
+
+  &__title-accent {
+    color: var(--bench-pink);
+  }
+
+  &__cta {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    padding-top: rem(14);
+    gap: rem(14);
+
+    @include laptop {
+      gap: rem(18);
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: stretch;
+      gap: rem(12);
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    min-width: rem(378);
+
+    @include laptop {
+      min-width: rem(240);
+    }
+
+    @include mobile {
+      min-width: 0;
+      width: 100%;
+    }
+  }
+
+  &__note {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--bench-grey);
+
+    @include laptop {
+      font-size: rem(14);
+    }
+
+    @include mobile {
+      font-size: rem(12);
+      text-align: center;
+    }
+  }
+
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    gap: rem(28);
+    flex: 0 0 rem(513);
+    max-width: rem(513);
+    padding-bottom: rem(41);
+
+    @include laptop {
+      gap: rem(20);
+      flex-basis: rem(400);
+      max-width: rem(400);
+    }
+
+    @include mobile {
+      flex: none;
+      max-width: none;
+      gap: rem(16);
+    }
+  }
+
+  &__lead {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(24);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--bench-white);
+
+    @include laptop {
+      font-size: rem(16);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+    }
+  }
+
+  &__pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(4);
+
+    @include laptop {
+      gap: rem(8);
+    }
+
+    @include mobile {
+      gap: rem(6);
+    }
+  }
+
+  // grid: left (pair + sources) + metrics ------------------------------------
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr rem(520);
+    gap: rem(20);
+
+    @include laptop {
+      grid-template-columns: 1fr rem(380);
+      gap: rem(14);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: rem(10);
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+
+    @include laptop {
+      gap: rem(14);
+    }
+
+    @include mobile {
+      gap: rem(10);
+    }
+  }
+
+  &__pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(20);
+    flex: 1;
+
+    @include laptop {
+      gap: rem(14);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: rem(10);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: rem(40);
+    padding: rem(40);
+    border-radius: rem(60);
+    overflow: hidden;
+
+    @include laptop {
+      gap: rem(20);
+      padding: rem(30);
+      border-radius: rem(44);
+    }
+
+    @include mobile {
+      gap: rem(20);
+      padding: rem(24);
+      border-radius: rem(30);
+    }
+
+    &_pink {
+      background: var(--bench-pink);
+      color: var(--bench-black);
+    }
+
+    &_blue {
+      background: var(--bench-blue);
+      color: var(--bench-black);
+    }
+
+    &_dark {
+      background: var(--bench-dark);
+      color: var(--bench-white);
+
+      .bench-first__card-num,
+      .bench-first__card-title {
+        color: var(--bench-white);
+      }
+
+      .bench-first__card-sub {
+        color: var(--bench-white);
+        opacity: 0.8;
+      }
+    }
+
+    &_sources {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: rem(24);
+      padding: rem(40);
+      height: rem(148);
+
+      @include laptop {
+        padding: rem(24) rem(30);
+      }
+
+      @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: rem(12);
+        padding: rem(24);
+      }
+    }
+
+    &_metrics {
+      justify-content: space-between;
+    }
+  }
+
+  &__card-head {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+
+    @include mobile {
+      gap: rem(6);
+    }
+  }
+
+  &__card-line {
+    display: flex;
+    align-items: baseline;
+    gap: rem(16);
+
+    @include laptop {
+      gap: rem(10);
+    }
+
+    @include mobile {
+      gap: rem(8);
+    }
+  }
+
+  &__card-num {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(62);
+    line-height: 90%;
+    letter-spacing: -0.06em;
+
+    @include laptop {
+      font-size: rem(84);
+    }
+
+    @include mobile {
+      font-size: rem(64);
+    }
+  }
+
+  &__card-title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(32);
+    line-height: 100%;
+    letter-spacing: -0.04em;
+
+    @include laptop {
+      font-size: rem(24);
+    }
+
+    @include mobile {
+      font-size: rem(20);
+    }
+  }
+
+  &__card-sub {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    opacity: 0.7;
+
+    @include laptop {
+      font-size: rem(14);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+    }
+  }
+
+  // pink: pill flow
+  &__flow {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+    margin-top: auto;
+
+    @include laptop {
+      gap: rem(8);
+    }
+  }
+
+  &__flow-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: rem(6);
+
+    @include laptop {
+      gap: rem(6);
+    }
+  }
+
+  &__flow-pill {
+    padding: rem(10) rem(16);
+    border-radius: rem(100);
+    background: var(--bench-black);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: var(--bench-white);
+    white-space: nowrap;
+
+    @include laptop {
+      padding: rem(8) rem(14);
+      font-size: rem(13);
+    }
+
+    @include mobile {
+      padding: rem(8) rem(12);
+      font-size: rem(12);
+    }
+  }
+
+  &__flow-arrow {
+    width: rem(16);
+    height: rem(16);
+    flex: 0 0 auto;
+
+    @include laptop {
+      width: rem(12);
+      height: rem(12);
+    }
+  }
+
+  // blue: cuts
+  &__cuts {
+    display: flex;
+    flex-direction: column;
+    gap: rem(14);
+    margin-top: auto;
+
+    @include laptop {
+      gap: rem(10);
+    }
+  }
+
+  &__cuts-icons,
+  &__cuts-labels {
+    display: grid;
+    grid-template-columns: repeat(4, rem(82));
+    justify-content: space-between;
+    gap: rem(10);
+
+    @include laptop {
+      gap: rem(6);
+    }
+  }
+
+  &__cuts-circles {
+    display: grid;
+    grid-template-columns: repeat(2, rem(40));
+    grid-template-rows: repeat(2, rem(40));
+    gap: rem(2);
+  }
+
+  &__cuts-circle {
+    width: rem(40);
+    height: rem(40);
+    border-radius: 50%;
+    border: rem(1) solid var(--bench-black);
+
+    &.fill {
+      background: var(--bench-black);
+    }
+  }
+
+  &__cuts-labels span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    color: var(--bench-violet);
+
+    @include laptop {
+      font-size: rem(11);
+    }
+
+    @include mobile {
+      font-size: rem(12);
+    }
+  }
+
+  // dark: sources
+  &__sources {
+    display: flex;
+    flex-direction: column;
+    gap: rem(12);
+    max-width: rem(640);
+    text-align: right;
+
+    @include laptop {
+      max-width: rem(420);
+    }
+
+    @include mobile {
+      text-align: left;
+      max-width: none;
+    }
+  }
+
+  &__sources-label {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--bench-grey);
+    opacity: 0.8;
+
+    @include laptop {
+      font-size: rem(13);
+    }
+
+    @include mobile {
+      font-size: rem(12);
+    }
+  }
+
+  &__sources-names {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: 110%;
+    letter-spacing: -0.04em;
+    color: var(--bench-white);
+    opacity: 0.8;
+
+    @include laptop {
+      font-size: rem(18);
+    }
+
+    @include mobile {
+      font-size: rem(16);
+    }
+  }
+
+  // dark: metric bars (hatch on #464546 tracks)
+  &__bars {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+
+    @include laptop {
+      gap: rem(12);
+    }
+
+    @include mobile {
+      gap: rem(12);
+    }
+  }
+
+  &__bar {
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+
+    @include laptop {
+      gap: rem(5);
+    }
+  }
+
+  &__bar-track {
+    display: block;
+    height: rem(20);
+    border-radius: rem(60);
+    background: var(--bench-dark-2);
+    overflow: hidden;
+
+    @include laptop {
+      height: rem(16);
+    }
+
+    @include mobile {
+      height: rem(16);
+    }
+  }
+
+  &__bar-name {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: var(--bench-grey);
+
+    @include laptop {
+      font-size: rem(12);
+    }
+
+    @include mobile {
+      font-size: rem(12);
+    }
+  }
+}

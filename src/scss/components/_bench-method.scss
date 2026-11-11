@@ -1,0 +1,156 @@
+.bench-method {
+  &__head {
+    @extend %bench-head;
+  }
+
+  &__head-row {
+    @extend %bench-head-row;
+  }
+
+  &__title {
+    @extend %bench-h2;
+  }
+
+  &__aside {
+    @extend %bench-aside;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+
+    li {
+      position: relative;
+      padding-left: rem(24);
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: rem(20);
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+      color: var(--bench-white);
+
+      @include laptop {
+        padding-left: rem(18);
+        font-size: rem(16);
+      }
+
+      @include mobile {
+        font-size: rem(14);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.45em;
+        width: rem(8);
+        height: rem(8);
+        border-radius: 50%;
+        background: var(--bench-pink);
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(20);
+
+    @include laptop {
+      gap: rem(16);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: rem(10);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: rem(32);
+    min-height: rem(320);
+    padding: rem(60);
+    border-radius: rem(60);
+    background: var(--bench-dark);
+
+    @include laptop {
+      gap: rem(12);
+      min-height: rem(230);
+      padding: rem(32);
+      border-radius: rem(44);
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: rem(16);
+      min-height: 0;
+      padding: rem(24);
+      border-radius: rem(30);
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: rem(64);
+    height: rem(64);
+
+    @include laptop {
+      width: rem(48);
+      height: rem(48);
+    }
+
+    @include mobile {
+      width: rem(40);
+      height: rem(40);
+    }
+  }
+
+  &__card-content {
+    display: flex;
+    flex-direction: column;
+    gap: rem(18);
+    min-width: 0;
+  }
+
+  &__card-title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(32);
+    line-height: 1.1;
+    letter-spacing: -0.05em;
+    color: var(--bench-white);
+
+    @include laptop {
+      font-size: rem(24);
+    }
+
+    @include mobile {
+      font-size: rem(20);
+    }
+  }
+
+  &__card-text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(20);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: var(--bench-white);
+
+    @include laptop {
+      font-size: rem(16);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+    }
+
+    p {
+      margin: 0 0 rem(10);
+    }
+  }
+}

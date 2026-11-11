@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body page__body_bench">
+    <div class="site-container">
+      @include('partials/new-header-bench.html')
+      @include('partials/new-mobile-menu-bench.html')
+      @include('partials/cookie.html', {"main":"main"})
+
+      <main class="main bench-page">
+        @include('partials/bench-first.html')
+        @include('partials/bench-loss.html')
+        @include('partials/bench-funnel.html')
+        @include('partials/bench-metrics.html')
+        @include('partials/bench-order.html')
+        @include('partials/bench-process.html')
+        @include('partials/bench-industry.html')
+        @include('partials/bench-method.html')
+      </main>
+
+      @include('partials/modal.html') @include('partials/new-footer.html')
+    </div>
+  </body>
+</html>

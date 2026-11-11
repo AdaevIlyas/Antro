@@ -1,0 +1,266 @@
+.bench-loss {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: rem(60);
+    padding: rem(84);
+    border-radius: rem(60);
+    background: var(--bench-bg);
+    color: var(--bench-black);
+    margin-inline: rem(16);
+
+    @include laptop {
+      gap: rem(40);
+      padding: rem(44);
+      border-radius: rem(44);
+    }
+
+    @include mobile {
+      gap: rem(24);
+      padding: rem(24);
+      border-radius: rem(30);
+    }
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(60);
+
+    @include laptop {
+      gap: rem(32);
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: rem(16);
+    }
+  }
+
+  &__title {
+    max-width: rem(920);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(52);
+    line-height: 105%;
+    letter-spacing: -0.05em;
+    color: var(--bench-black);
+
+    @include laptop {
+      max-width: rem(600);
+      font-size: rem(40);
+    }
+
+    @include mobile {
+      max-width: none;
+      font-size: rem(24);
+      letter-spacing: -0.04em;
+    }
+  }
+
+  &__aside {
+    flex: 0 0 rem(491);
+    max-width: rem(491);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(20);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--bench-black);
+    padding-top: rem(10);
+
+    @include laptop {
+      flex-basis: rem(400);
+      max-width: rem(400);
+      font-size: rem(15);
+    }
+
+    @include mobile {
+      flex: none;
+      max-width: none;
+      font-size: rem(14);
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(20);
+
+    @include laptop {
+      gap: rem(14);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: rem(10);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: rem(15);
+    min-height: rem(616);
+    padding: rem(40);
+    border-radius: rem(60);
+    background: var(--bench-dark);
+    color: var(--bench-white);
+
+    @include laptop {
+      gap: rem(20);
+      min-height: rem(440);
+      padding: rem(26);
+      border-radius: rem(36);
+    }
+
+    @include mobile {
+      gap: rem(20);
+      min-height: 0;
+      padding: rem(24);
+      border-radius: rem(30);
+    }
+  }
+
+  &__num {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: rem(62);
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: var(--bench-pink);
+
+    @include laptop {
+      font-size: rem(16);
+    }
+
+    @include mobile {
+      font-size: rem(16);
+    }
+  }
+
+  &__card-body {
+    display: flex;
+    flex-direction: column;
+    gap: rem(18);
+    padding-top: rem(17);
+
+    @include laptop {
+      gap: rem(10);
+    }
+  }
+
+  &__card-title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(32);
+    line-height: 105%;
+    letter-spacing: -0.04em;
+    color: var(--bench-white);
+
+    @include laptop {
+      font-size: rem(26);
+    }
+
+    @include mobile {
+      font-size: rem(22);
+    }
+  }
+
+  &__card-text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--bench-white);
+
+    @include laptop {
+      font-size: rem(14);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+    }
+  }
+
+  // 01 funnel rows -----------------------------------------------------------
+  &__funnel {
+    display: flex;
+    flex-direction: column;
+    gap: rem(12);
+    margin-top: auto;
+
+    @include laptop {
+      gap: rem(8);
+    }
+  }
+
+  &__funnel-row {
+    display: grid;
+    grid-template-columns: 1fr rem(126);
+    align-items: center;
+    gap: rem(14);
+
+    @include laptop {
+      grid-template-columns: 1fr rem(100);
+      gap: rem(8);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr rem(110);
+    }
+  }
+
+  &__funnel-bar {
+    display: block;
+    height: rem(40);
+    border-radius: rem(12);
+    background: var(--bench-dark-2);
+    overflow: hidden;
+
+    @include laptop {
+      height: rem(20);
+    }
+
+    @include mobile {
+      height: rem(20);
+    }
+
+    .bench-hatch {
+      width: var(--w);
+    }
+  }
+
+  &__funnel-label {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: var(--bench-white);
+    opacity: 0.6;
+
+    @include laptop {
+      font-size: rem(12);
+    }
+
+    @include mobile {
+      font-size: rem(13);
+    }
+  }
+
+  &__chart {
+    width: 100%;
+    height: rem(280);
+    margin-top: auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+}

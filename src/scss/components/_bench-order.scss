@@ -1,0 +1,329 @@
+﻿.bench-order {
+  &__inner {
+    display: grid;
+    grid-template-columns: rem(647) rem(641);
+    justify-content: space-between;
+    align-items: start;
+    gap: rem(40);
+    padding: rem(80);
+    border-radius: rem(60);
+    background: var(--bench-bg);
+    color: var(--bench-black);
+
+    @include laptop {
+      grid-template-columns: rem(473) rem(606);
+      gap: rem(33);
+      padding: rem(44);
+      border-radius: rem(44);
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      gap: rem(32);
+      padding: rem(24);
+      border-radius: rem(30);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: rem(32);
+
+    @include laptop {
+      gap: rem(20);
+    }
+
+    @include mobile {
+      gap: rem(16);
+    }
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(82);
+    line-height: 100%;
+    letter-spacing: -0.05em;
+    color: var(--bench-black);
+
+    @include laptop {
+      font-size: rem(58);
+    }
+
+    @include mobile {
+      font-size: rem(32);
+      letter-spacing: -0.04em;
+    }
+  }
+
+  &__text {
+    max-width: rem(600);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(24);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--bench-black);
+
+    @include laptop {
+      font-size: rem(18);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(14);
+
+    @include laptop {
+      gap: rem(10);
+    }
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: rem(14);
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: rem(20);
+      line-height: 120%;
+      letter-spacing: -0.03em;
+      color: var(--bench-black);
+
+      @include laptop {
+        gap: rem(10);
+        font-size: rem(16);
+      }
+
+      @include mobile {
+        font-size: rem(14);
+      }
+
+      img {
+        flex: 0 0 auto;
+        width: rem(24);
+        height: rem(32);
+        margin-top: rem(-2);
+        object-fit: contain;
+
+        @include laptop {
+          width: rem(18);
+          height: rem(24);
+        }
+
+        @include mobile {
+          width: rem(16);
+          height: rem(22);
+        }
+      }
+    }
+  }
+  &__note {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+    width: 100%;
+    max-width: rem(480);
+    padding: rem(10) rem(28) rem(10) rem(10);
+    border-radius: rem(50);
+    background: var(--bench-blue);
+
+    @include laptop {
+      max-width: rem(400);
+    }
+
+    @include mobile {
+      max-width: none;
+      padding: rem(10);
+    }
+  }
+
+  &__note-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 rem(52);
+    width: rem(52);
+    height: rem(52);
+    border-radius: 50%;
+    background: var(--bench-black);
+
+    img {
+      width: rem(24);
+      height: rem(24);
+    }
+
+    @include laptop {
+      flex-basis: rem(39);
+      width: rem(39);
+      height: rem(39);
+
+      img {
+        width: rem(20);
+        height: rem(20);
+      }
+    }
+  }
+
+  &__note-text {
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+
+    p {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: rem(16);
+      line-height: 120%;
+      letter-spacing: -0.03em;
+      color: var(--bench-black);
+
+      @include laptop {
+        font-size: rem(14);
+      }
+
+      @include mobile {
+        font-size: rem(12);
+      }
+    }
+  }
+
+  &__note-title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--bench-black);
+
+    @include laptop {
+      font-size: rem(16);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+    }
+  }
+
+  &__form-note {
+    margin-top: rem(8);
+    text-align: center;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--bench-grey);
+
+    @include laptop {
+      font-size: rem(14);
+    }
+
+    @include mobile {
+      font-size: rem(12);
+    }
+  }
+  // dark form ---------------------------------------------------------------
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: rem(30);
+    width: 100%;
+    padding: rem(46) rem(32);
+    border-radius: rem(50);
+    background: var(--bench-black);
+
+    @include laptop {
+      gap: rem(24);
+      padding: rem(44);
+      border-radius: rem(44);
+    }
+
+    @include mobile {
+      gap: rem(20);
+      padding: rem(24);
+      border-radius: rem(30);
+    }
+
+    .main-order__form-fields {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: rem(10);
+      width: 100%;
+      max-width: none;
+      margin: 0;
+
+      @include laptop {
+        gap: rem(8);
+      }
+
+      @include mobile {
+        gap: rem(6);
+      }
+
+      .input-block {
+        width: 100%;
+        max-width: none;
+
+        input {
+          border-width: rem(4);
+          border-color: var(--bench-dark);
+          background: var(--bench-dark);
+          color: var(--bench-white);
+
+          &::placeholder {
+            color: var(--bench-grey);
+          }
+
+          @include laptop {
+            height: rem(46);
+            border-width: rem(3);
+          }
+
+          @include mobile {
+            height: rem(50);
+          }
+        }
+      }
+
+      .bench-btn {
+        margin-top: rem(12);
+
+        @include laptop {
+          margin-top: rem(8);
+        }
+      }
+    }
+
+    .i-checkbox {
+      width: 100%;
+      max-width: none;
+      margin-top: 0;
+
+      &__text {
+        color: var(--bench-grey);
+
+        @include laptop {
+          font-size: rem(14);
+        }
+
+        @include mobile {
+          font-size: rem(12);
+        }
+
+        a {
+          color: var(--bench-grey);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
