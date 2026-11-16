@@ -1,0 +1,155 @@
+<div class="bench-funnel__informer js-bench-informer">
+  <button
+    type="button"
+    class="btn-reset bench-funnel__informer-btn js-bench-informer-btn"
+    aria-expanded="false"
+    aria-haspopup="dialog"
+  >
+    <img
+      class="bench-funnel__informer-icon"
+      src="img/bench/info.svg"
+      width="24"
+      height="24"
+      alt=""
+      aria-hidden="true"
+    />
+    <span class="bench-funnel__informer-label">Как читать график?</span>
+    <img
+      class="bench-funnel__informer-chevron"
+      src="img/bench/arrow.svg"
+      width="16"
+      height="16"
+      alt=""
+      aria-hidden="true"
+    />
+    <span class="visually-hidden bench-funnel__informer-sr"
+      >Что означают показатели</span
+    >
+  </button>
+
+  <div class="bench-funnel__informer-tip" role="tooltip">
+    <div class="bench-funnel__informer-text">
+      <p>
+        <strong>Медиана</strong> — значение посередине: у половины магазинов
+        показатель ниже, у половины — выше.
+      </p>
+      <p>
+        <strong>Коридор p25–p75</strong> — диапазон, в который попадает
+        половина магазинов. Ещё четверть находится ниже него, четверть —
+        выше.
+      </p>
+      <p>
+        <strong>Средневзвешенное</strong> — общий показатель с учётом числа
+        визитов. Чем больше трафика у магазина, тем сильнее он&nbsp;влияет на
+        результат.
+      </p>
+    </div>
+    <a href="#benchMethod" class="bench-funnel__informer-link">
+      Подробнее о методике
+      <img
+        src="img/bench/arrow-brand.svg"
+        width="16"
+        height="16"
+        alt=""
+        aria-hidden="true"
+      />
+    </a>
+  </div>
+
+  <div
+    class="bench-funnel__informer-popup"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Как читать график?"
+    hidden
+  >
+    <div class="bench-funnel__informer-popup-head">
+      <h3 class="bench-funnel__informer-popup-title">Как читать график?</h3>
+      <button
+        type="button"
+        class="btn-reset bench-funnel__informer-close js-bench-informer-close"
+        aria-label="Закрыть"
+      >
+        <img src="img/svg/close.svg" width="20" height="20" alt="" />
+      </button>
+    </div>
+    <div class="bench-funnel__informer-popup-card">
+      <ul class="bench-funnel__informer-list">
+        <li class="bench-funnel__informer-item">
+          <img
+            class="bench-funnel__legend-icon bench-funnel__legend-icon_whisk"
+            src="img/bench/icon-card-1.svg"
+            width="24"
+            height="24"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="bench-funnel__informer-item-body">
+            <strong>Коридор p10–p90</strong>
+          </div>
+        </li>
+        <li class="bench-funnel__informer-item">
+          <img
+            class="bench-funnel__legend-icon bench-funnel__legend-icon_band"
+            src="img/bench/icon-card-2.svg"
+            width="24"
+            height="24"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="bench-funnel__informer-item-body">
+            <strong>Коридор p25–p75</strong>
+            <p>
+              Диапазон, в который попадает половина магазинов. Ещё четверть
+              находится ниже него, четверть — выше.
+            </p>
+          </div>
+        </li>
+        <li class="bench-funnel__informer-item">
+          <img
+            class="bench-funnel__legend-icon bench-funnel__legend-icon_median"
+            src="img/bench/icon-card-3.svg"
+            width="7"
+            height="24"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="bench-funnel__informer-item-body">
+            <strong>Медиана</strong>
+            <p>
+              Значение посередине: у половины магазинов показатель ниже, у
+              половины — выше.
+            </p>
+          </div>
+        </li>
+        <li class="bench-funnel__informer-item">
+          <img
+            class="bench-funnel__legend-icon bench-funnel__legend-icon_mean"
+            src="img/bench/icon-card-4.svg"
+            width="16"
+            height="24"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="bench-funnel__informer-item-body">
+            <strong>Средневзвешенное</strong>
+            <p>
+              Общий показатель с учётом числа визитов. Чем больше трафика у
+              магазина, тем сильнее он влияет на результат.
+            </p>
+          </div>
+        </li>
+      </ul>
+      <a href="#benchMethod" class="bench-funnel__informer-link">
+        Подробнее о методике
+        <img
+          src="img/bench/arrow-brand.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true"
+        />
+      </a>
+    </div>
+  </div>
+</div>

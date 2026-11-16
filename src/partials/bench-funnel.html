@@ -4,7 +4,7 @@
       <span class="bench-tag">Шаги воронки</span>
       <div class="bench-funnel__head-row">
         <h2 class="bench-funnel__title">
-          От визита до покупки — воронка рынка
+          От визита до покупки <br />—&nbsp;воронка рынка
         </h2>
         <p class="bench-funnel__aside">
           Слева сквозная воронка. Крупная цифра показывает долю от всех визитов,
@@ -14,147 +14,516 @@
       </div>
     </div>
 
-    <div class="bench-funnel__body">
-      <ul class="bench-funnel__list list-reset">
-        <li class="bench-funnel__row bench-funnel__row_dim">
-          <div class="bench-funnel__row-top">
-            <span class="bench-funnel__row-num">01</span>
-            <span class="bench-funnel__row-val">100%</span>
-          </div>
-          <div class="bench-funnel__row-bar" style="--w: 100%">
-            <i class="bench-hatch bench-hatch_blue"></i>
-          </div>
-          <div class="bench-funnel__row-bottom">
-            <span class="bench-funnel__row-sub">Вся выборка</span>
-            <span class="bench-funnel__row-name">Все визиты</span>
-          </div>
-        </li>
-
-        <li class="bench-funnel__row">
-          <div class="bench-funnel__row-top">
-            <span class="bench-funnel__row-num">02</span>
-            <span class="bench-funnel__row-val">53,7%</span>
-          </div>
-          <div class="bench-funnel__row-bar" style="--w: 54%">
-            <i class="bench-hatch bench-hatch_blue"></i>
-          </div>
-          <div class="bench-funnel__row-bottom">
-            <span class="bench-funnel__row-sub">53,7% от всех визитов</span>
-            <span class="bench-funnel__row-name">Каталог</span>
-          </div>
-        </li>
-
-        <li class="bench-funnel__row bench-funnel__row_active">
-          <div class="bench-funnel__row-top">
-            <span class="bench-funnel__row-num">03</span>
-            <span class="bench-funnel__row-val">50,3%</span>
-          </div>
-          <div class="bench-funnel__row-bar" style="--w: 50%">
-            <i class="bench-hatch bench-hatch_dark"></i>
-          </div>
-          <div class="bench-funnel__row-bottom">
-            <span class="bench-funnel__row-sub">50,9% от визитов с каталогом</span>
-            <span class="bench-funnel__row-name">
-              Страница товара
-              <span class="bench-tag bench-tag_dark bench-tag_small">Пример разбора</span>
+    <div class="bench-funnel__body js-bench-funnel">
+      <div class="bench-funnel__nav" role="tablist">
+        <button
+          type="button"
+          class="bench-funnel__tab bench-funnel__tab_dim js-bench-funnel-tab"
+          role="tab"
+          aria-selected="false"
+          aria-controls="bench-funnel-panel-1"
+          id="bench-funnel-tab-1"
+          data-id="1"
+          disabled
+        >
+          <span class="bench-funnel__tab-fill" style="--w: 100%">
+            <i class="bench-hatch bench-hatch_dark-2"></i>
+          </span>
+          <span class="bench-funnel__tab-main">
+            <span class="bench-funnel__tab-num">01</span>
+            <span class="bench-funnel__tab-vals">
+              <span class="bench-funnel__tab-val">100%</span>
+              <span class="bench-funnel__tab-sub">Вся выборка</span>
             </span>
-          </div>
-        </li>
+          </span>
+          <span class="bench-funnel__tab-name">Все визиты</span>
+        </button>
 
-        <li class="bench-funnel__row">
-          <div class="bench-funnel__row-top">
-            <span class="bench-funnel__row-num">04</span>
-            <span class="bench-funnel__row-val">3,3%</span>
+        <button
+          type="button"
+          class="bench-funnel__tab js-bench-funnel-tab"
+          role="tab"
+          aria-selected="false"
+          aria-controls="bench-funnel-panel-2"
+          id="bench-funnel-tab-2"
+          data-id="2"
+        >
+          <span class="bench-funnel__tab-fill" style="--w: 54%">
+            <i class="bench-hatch bench-hatch_dark-2"></i>
+          </span>
+          <span class="bench-funnel__tab-main">
+            <span class="bench-funnel__tab-num">02</span>
+            <span class="bench-funnel__tab-vals">
+              <span class="bench-funnel__tab-val">53,7%</span>
+              <span class="bench-funnel__tab-sub">53,7% от всех визитов</span>
+            </span>
+          </span>
+          <div class="bench-funnel__tab-name-wrapper">
+            <span class="bench-funnel__tab-name">Каталог</span>
           </div>
-          <div class="bench-funnel__row-bar" style="--w: 3.5%">
-            <i class="bench-hatch bench-hatch_blue"></i>
-          </div>
-          <div class="bench-funnel__row-bottom">
-            <span class="bench-funnel__row-sub">6,1% от визитов со страницей товара</span>
-            <span class="bench-funnel__row-name">Корзина</span>
-          </div>
-        </li>
+        </button>
 
-        <li class="bench-funnel__row">
-          <div class="bench-funnel__row-top">
-            <span class="bench-funnel__row-num">05</span>
-            <span class="bench-funnel__row-val">1,4%</span>
+        <button
+          type="button"
+          class="bench-funnel__tab js-bench-funnel-tab is-active"
+          role="tab"
+          aria-selected="true"
+          aria-controls="bench-funnel-panel-3"
+          id="bench-funnel-tab-3"
+          data-id="3"
+        >
+          <span class="bench-funnel__tab-fill" style="--w: 50%">
+            <i class="bench-hatch bench-hatch_dark-2"></i>
+          </span>
+          <span class="bench-funnel__tab-main">
+            <span class="bench-funnel__tab-num">03</span>
+            <span class="bench-funnel__tab-vals">
+              <span class="bench-funnel__tab-val">50,3%</span>
+              <span class="bench-funnel__tab-sub"
+                >50,9% от визитов с каталогом</span
+              >
+            </span>
+          </span>
+          <div class="bench-funnel__tab-name-wrapper">
+            <span class="bench-funnel__tab-name"> Страница товара </span>
+            <span class="bench-tag bench-tag_fill bench-tag_small"
+              >Пример разбора</span
+            >
           </div>
-          <div class="bench-funnel__row-bar" style="--w: 1.8%">
-            <i class="bench-hatch bench-hatch_blue"></i>
-          </div>
-          <div class="bench-funnel__row-bottom">
-            <span class="bench-funnel__row-sub">32,6% от визитов с корзиной</span>
-            <span class="bench-funnel__row-name">Оформление</span>
-          </div>
-        </li>
+        </button>
 
-        <li class="bench-funnel__row">
-          <div class="bench-funnel__row-top">
-            <span class="bench-funnel__row-num">06</span>
-            <span class="bench-funnel__row-val">0,58%</span>
+        <button
+          type="button"
+          class="bench-funnel__tab js-bench-funnel-tab"
+          role="tab"
+          aria-selected="false"
+          aria-controls="bench-funnel-panel-4"
+          id="bench-funnel-tab-4"
+          data-id="4"
+        >
+          <span class="bench-funnel__tab-fill" style="--w: 4%">
+            <i class="bench-hatch bench-hatch_dark-2"></i>
+          </span>
+          <span class="bench-funnel__tab-main">
+            <span class="bench-funnel__tab-num">04</span>
+            <span class="bench-funnel__tab-vals">
+              <span class="bench-funnel__tab-val">3,3%</span>
+              <span class="bench-funnel__tab-sub"
+                >6,1% от визитов со страницей товара</span
+              >
+            </span>
+          </span>
+          <div class="bench-funnel__tab-name-wrapper">
+            <span class="bench-funnel__tab-name">Корзина</span>
           </div>
-          <div class="bench-funnel__row-bar" style="--w: 0.6%">
-            <i class="bench-hatch bench-hatch_blue"></i>
-          </div>
-          <div class="bench-funnel__row-bottom">
-            <span class="bench-funnel__row-sub">47,7% от визитов с оформлением</span>
-            <span class="bench-funnel__row-name">Покупка</span>
-          </div>
-        </li>
-      </ul>
+        </button>
 
-      <div class="bench-funnel__detail">
-        <div class="bench-funnel__detail-head">
-          <span class="bench-tag bench-tag_dark bench-tag_small">Страница товара</span>
-          <h3 class="bench-funnel__detail-title">
-            Половина визитов с каталогом доходит до страницы товара
-          </h3>
-        </div>
+        <button
+          type="button"
+          class="bench-funnel__tab js-bench-funnel-tab"
+          role="tab"
+          aria-selected="false"
+          aria-controls="bench-funnel-panel-5"
+          id="bench-funnel-tab-5"
+          data-id="5"
+        >
+          <span class="bench-funnel__tab-fill" style="--w: 2%">
+            <i class="bench-hatch bench-hatch_dark-2"></i>
+          </span>
+          <span class="bench-funnel__tab-main">
+            <span class="bench-funnel__tab-num">05</span>
+            <span class="bench-funnel__tab-vals">
+              <span class="bench-funnel__tab-val">1,4%</span>
+              <span class="bench-funnel__tab-sub"
+                >32,6% от визитов с корзиной</span
+              >
+            </span>
+          </span>
+          <div class="bench-funnel__tab-name-wrapper">
+            <span class="bench-funnel__tab-name">Оформление</span>
+          </div>
+        </button>
 
-        <div class="bench-funnel__stats">
-          <div class="bench-funnel__stat bench-funnel__stat_main">
-            <div class="bench-funnel__stat-label">Медиана</div>
-            <div class="bench-funnel__stat-val">50,9%</div>
+        <button
+          type="button"
+          class="bench-funnel__tab js-bench-funnel-tab"
+          role="tab"
+          aria-selected="false"
+          aria-controls="bench-funnel-panel-6"
+          id="bench-funnel-tab-6"
+          data-id="6"
+        >
+          <span class="bench-funnel__tab-fill" style="--w: 1%">
+            <i class="bench-hatch bench-hatch_dark-2"></i>
+          </span>
+          <span class="bench-funnel__tab-main">
+            <span class="bench-funnel__tab-num">06</span>
+            <span class="bench-funnel__tab-vals">
+              <span class="bench-funnel__tab-val">0,58%</span>
+              <span class="bench-funnel__tab-sub"
+                >47,7% от визитов с оформлением</span
+              >
+            </span>
+          </span>
+          <div class="bench-funnel__tab-name-wrapper">
+            <span class="bench-funnel__tab-name">Покупка</span>
           </div>
-          <div class="bench-funnel__stat">
-            <div class="bench-funnel__stat-label">Коридор</div>
-            <div class="bench-funnel__stat-val">46–54%</div>
-          </div>
-          <div class="bench-funnel__stat">
-            <div class="bench-funnel__stat-label">Средневзвешенное</div>
-            <div class="bench-funnel__stat-val">50,8%</div>
-          </div>
-        </div>
+        </button>
+      </div>
 
-        <div class="bench-funnel__charts">
-          <div class="bench-funnel__chart bench-funnel__chart_scale">
-            <span class="bench-funnel__scale-band"></span>
-            <span class="bench-funnel__scale-median"></span>
-          </div>
-          <div class="bench-funnel__chart">
-            <ul class="bench-funnel__chart-bars list-reset">
-              <li style="--h: 46%"></li>
-              <li style="--h: 58%"></li>
-              <li style="--h: 52%"></li>
-              <li style="--h: 70%"></li>
-              <li style="--h: 49%"></li>
-              <li style="--h: 64%"></li>
-              <li style="--h: 55%"></li>
-              <li style="--h: 60%"></li>
-            </ul>
-          </div>
+      <div class="bench-funnel__panels">
+        <div
+          class="bench-funnel__panel js-bench-funnel-panel"
+          id="bench-funnel-panel-1"
+          role="tabpanel"
+          aria-labelledby="bench-funnel-tab-1"
+          data-id="1"
+          hidden
+        ></div>
 
-          <div class="bench-funnel__lock">
-            <div class="bench-funnel__lock-text">
-              <div class="bench-funnel__lock-title">Остальное — в полном отчете</div>
-              <p class="bench-funnel__lock-sub">
-                Каналы трафика, Помесячная динамика
+        <div
+          class="bench-funnel__panel js-bench-funnel-panel"
+          id="bench-funnel-panel-2"
+          role="tabpanel"
+          aria-labelledby="bench-funnel-tab-2"
+          data-id="2"
+          hidden
+        ></div>
+
+        <div
+          class="bench-funnel__panel js-bench-funnel-panel is-active"
+          id="bench-funnel-panel-3"
+          role="tabpanel"
+          aria-labelledby="bench-funnel-tab-3"
+          data-id="3"
+        >
+          <div class="bench-funnel__panel-inner">
+            <div class="bench-funnel__intro">
+              <div class="bench-funnel__step">
+                <span>Шаг 2</span>
+                <span class="bench-funnel__step-dot" aria-hidden="true"></span>
+                <span>Каталог → страница товара</span>
+              </div>
+              <h3 class="bench-funnel__panel-title">
+                <span class="bench-funnel__panel-title-accent"
+                  >Половина визитов с каталогом</span
+                >
+                <span>доходит до страницы товара</span>
+              </h3>
+              <p class="bench-funnel__panel-text">
+                Коридор узкий, переход из каталога в товар устроен у магазинов
+                похоже. У лучших 10% до товара доходит от 59% визитов с
+                каталогом, у худших 10% меньше 42%. В&nbsp;остальных визитах с
+                каталогом страница товара так и не открывается
               </p>
             </div>
-            <a href="#benchForm" class="btn-reset bench-btn">Получить отчет</a>
+
+            <div class="bench-funnel__intro-content">
+              <div class="bench-funnel__stats">
+                <div class="bench-funnel__stat bench-funnel__stat_main">
+                  <div class="bench-funnel__stat-val">50,9%</div>
+                  <div class="bench-funnel__stat-label">Медиана</div>
+                </div>
+                <div class="bench-funnel__stat">
+                  <div class="bench-funnel__stat-val">46–54%</div>
+                  <div class="bench-funnel__stat-label">Коридор p25–p75</div>
+                </div>
+                <div class="bench-funnel__stat bench-funnel__stat_narrow">
+                  <div class="bench-funnel__stat-val">50,8%</div>
+                  <div class="bench-funnel__stat-label">Средневзвешенное</div>
+                </div>
+              </div>
+
+              <div class="bench-funnel__card">
+                <div class="bench-funnel__card-title">
+                  Переход из каталога в товар
+                </div>
+                <div class="bench-funnel__card-img">
+                  <img src="/img/bench/card-step-1.svg" alt="" />
+                </div>
+                <div class="bench-funnel__legend">
+                  <div class="bench-funnel__legend-items">
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_whisk"
+                        src="img/bench/icon-card-1.svg"
+                        width="24"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      p10–p90
+                    </span>
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_band"
+                        src="img/bench/icon-card-2.svg"
+                        width="24"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      p25–p75
+                    </span>
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_median"
+                        src="img/bench/icon-card-3.svg"
+                        width="7"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      медиана
+                    </span>
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_mean"
+                        src="img/bench/icon-card-4.svg"
+                        width="16"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      средневзвешенное
+                    </span>
+                  </div>
+                  @include('bench-funnel-informer.html')
+                </div>
+              </div>
+            </div>
+
+            <div class="bench-funnel__intro">
+              <div class="bench-funnel__block-label">Устройства</div>
+              <h4 class="bench-funnel__block-title">
+                На ПК магазины различаются сильнее
+              </h4>
+              <p class="bench-funnel__panel-text">
+                На смартфоне половина магазинов укладывается в 5 п. п., на ПК в
+                16 п. п. Каталог на&nbsp;смартфоне у всех работает похоже,
+                версии для ПК устроены по-разному
+              </p>
+
+              <div class="bench-funnel__card">
+                <div class="bench-funnel__card-title">
+                  Переход из каталога в товар
+                </div>
+                <div class="bench-funnel__card-img">
+                  <img src="/img/bench/card-step-2.svg" alt="" />
+                </div>
+                <div class="bench-funnel__legend">
+                  <div class="bench-funnel__legend-items">
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_whisk"
+                        src="img/bench/icon-card-1.svg"
+                        width="24"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      p10–p90
+                    </span>
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_band"
+                        src="img/bench/icon-card-2.svg"
+                        width="24"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      p25–p75
+                    </span>
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_median"
+                        src="img/bench/icon-card-3.svg"
+                        width="7"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      медиана
+                    </span>
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_mean"
+                        src="img/bench/icon-card-4.svg"
+                        width="16"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      средневзвешенное
+                    </span>
+                  </div>
+                  @include('bench-funnel-informer.html')
+                </div>
+              </div>
+            </div>
+
+            <div class="bench-funnel__intro">
+              <div class="bench-funnel__block-label">Новые и вернувшиеся</div>
+              <h4 class="bench-funnel__block-title">
+                <span class="bench-funnel__panel-title-accent">11 п.п.</span>
+                <span
+                  >на столько чаще вернувшиеся открывают товар из каталога</span
+                >
+              </h4>
+              <p class="bench-funnel__panel-text">
+                Коридор узкий, переход из каталога в товар устроен у магазинов
+                похоже. У лучших 10% до товара доходит от 59% визитов с
+                каталогом, у худших 10% меньше 42%. В&nbsp;остальных визитах с
+                каталогом страница товара так и не открывается
+              </p>
+
+              <div class="bench-funnel__card">
+                <div class="bench-funnel__card-title">
+                  Переход из каталога в товар у новых и вернувшихся
+                </div>
+                <div class="bench-funnel__card-img">
+                  <img src="/img/bench/card-step-3.svg" alt="" />
+                </div>
+                <div class="bench-funnel__legend">
+                  <div class="bench-funnel__legend-items">
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_whisk"
+                        src="img/bench/icon-card-1.svg"
+                        width="24"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      p10–p90
+                    </span>
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_band"
+                        src="img/bench/icon-card-2.svg"
+                        width="24"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      p25–p75
+                    </span>
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_median"
+                        src="img/bench/icon-card-3.svg"
+                        width="7"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      медиана
+                    </span>
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_mean"
+                        src="img/bench/icon-card-4.svg"
+                        width="16"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      средневзвешенное
+                    </span>
+                  </div>
+                  @include('bench-funnel-informer.html')
+                </div>
+              </div>
+            </div>
+
+            <div class="bench-funnel__intro bench-funnel__intro_lock">
+              <div class="bench-funnel__block-label">Каналы трафика</div>
+              <h4 class="bench-funnel__block-title">
+                <span class="bench-funnel__panel-title-accent">
+                  Платный трафик
+                </span>
+                <span>реже всех доводит до товара</span>
+              </h4>
+
+              <div class="bench-funnel__cards">
+                <div class="bench-funnel__card">
+                  <div class="bench-funnel__card-img">
+                    <img src="/img/bench/card-step-4.svg" alt="" />
+                  </div>
+                </div>
+                <div class="bench-funnel__card">
+                  <div class="bench-funnel__card-img">
+                    <img src="/img/bench/card-step-5.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="bench-funnel__lock">
+                <img
+                  class="bench-funnel__lock-icon"
+                  src="img/bench/lock.svg"
+                  width="64"
+                  height="64"
+                  alt=""
+                />
+                <div class="bench-funnel__lock-title">
+                  Остальное — в полном отчете
+                </div>
+                <div class="bench-funnel__lock-sub">
+                  <span>Каналы трафика</span>
+                  <img
+                    src="/img/bench/star-blue.svg"
+                    width="16"
+                    height="16"
+                    alt=""
+                    class="bench-funnel__lock-star"
+                    aria-hidden="true"
+                  />
+                  <span>Помесячная динамика</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bench-funnel__cta">
+              <a
+                href="#benchForm"
+                class="btn-reset bench-btn bench-funnel__cta-btn"
+                >Получить отчет</a
+              >
+              <p class="bench-funnel__cta-note">
+                Бесплатно. Пришлем ссылку на почту
+              </p>
+            </div>
           </div>
         </div>
+
+        <div
+          class="bench-funnel__panel js-bench-funnel-panel"
+          id="bench-funnel-panel-4"
+          role="tabpanel"
+          aria-labelledby="bench-funnel-tab-4"
+          data-id="4"
+          hidden
+        ></div>
+
+        <div
+          class="bench-funnel__panel js-bench-funnel-panel"
+          id="bench-funnel-panel-5"
+          role="tabpanel"
+          aria-labelledby="bench-funnel-tab-5"
+          data-id="5"
+          hidden
+        ></div>
+
+        <div
+          class="bench-funnel__panel js-bench-funnel-panel"
+          id="bench-funnel-panel-6"
+          role="tabpanel"
+          aria-labelledby="bench-funnel-tab-6"
+          data-id="6"
+          hidden
+        ></div>
       </div>
     </div>
   </div>

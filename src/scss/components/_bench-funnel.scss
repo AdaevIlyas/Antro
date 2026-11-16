@@ -24,11 +24,12 @@
     @extend %bench-aside;
   }
 
+  // desktop: nav | panels; mobile: accordion (JS moves panels under tabs)
   &__body {
     display: grid;
-    grid-template-columns: rem(780) 1fr;
+    grid-template-columns: rem(780) rem(780);
     gap: rem(20);
-    align-items: stretch;
+    align-items: start;
 
     @include laptop {
       grid-template-columns: rem(560) 1fr;
@@ -36,13 +37,13 @@
     }
 
     @include mobile {
-      grid-template-columns: 1fr;
-      gap: rem(10);
+      display: flex;
+      flex-direction: column;
+      gap: rem(6);
     }
   }
 
-  // left: funnel rows --------------------------------------------------------
-  &__list {
+  &__nav {
     display: flex;
     flex-direction: column;
     gap: rem(10);
@@ -52,435 +53,166 @@
     }
 
     @include mobile {
-      gap: rem(6);
+      display: contents;
     }
   }
 
-  &__row {
+  &__panels {
+    min-width: 0;
+
+    @include mobile {
+      display: contents;
+    }
+  }
+
+  // left tabs ----------------------------------------------------------------
+  &__tab {
+    position: relative;
     display: flex;
-    flex: 1;
-    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     gap: rem(16);
-    padding: rem(28) rem(36);
+    width: 100%;
+    min-height: rem(120);
+    padding: rem(24) rem(40);
+    border: 0;
     border-radius: rem(40);
     background: var(--bench-dark);
     color: var(--bench-white);
-    transition: background 0.3s ease;
+    text-align: left;
+    cursor: pointer;
+    overflow: hidden;
+    transition:
+      background 0.25s ease,
+      color 0.25s ease;
 
     @include laptop {
-      gap: rem(10);
-      padding: rem(18) rem(24);
+      min-height: rem(88);
+      padding: rem(16) rem(28);
       border-radius: rem(30);
+      gap: rem(12);
     }
 
     @include mobile {
-      gap: rem(8);
-      padding: rem(16) rem(20);
+      min-height: rem(72);
+      padding: rem(14) rem(18);
       border-radius: rem(24);
     }
 
+    // Figma: first row is the whole pill at 50% opacity
     &_dim {
-      > * {
-        opacity: 0.5;
-      }
+      opacity: 0.5;
     }
 
-    &_active {
+    // override global `* { color: var(--black) }` so spans inherit tab color
+    .bench-funnel__tab-main,
+    .bench-funnel__tab-vals,
+    .bench-funnel__tab-val,
+    .bench-funnel__tab-sub,
+    .bench-funnel__tab-name-wrapper,
+    .bench-funnel__tab-num,
+    .bench-funnel__tab-name {
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+
+    // Figma active: Bench/Pink #E3B9DF + black text (not Brand #FC63D5)
+    &.is-active {
       background: var(--bench-pink);
       color: var(--bench-black);
 
-      .bench-funnel__row-sub {
-        color: var(--bench-black);
-        opacity: 0.7;
+      .bench-tag {
+        border-color: transparent;
+        background: var(--bench-black);
+        color: var(--bench-white);
+        opacity: 1;
+        text-transform: none;
+      }
+
+      .bench-hatch.bench-hatch_dark-2 {
+        --hatch-color: var(--bench-pink-2);
       }
     }
   }
 
-  &__row-top {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: rem(16);
-  }
-
-  &__row-num {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: rem(18);
-    line-height: 100%;
-    letter-spacing: -0.03em;
-    opacity: 0.6;
-
-    @include laptop {
-      font-size: rem(13);
-    }
-
-    @include mobile {
-      font-size: rem(12);
-    }
-  }
-
-  &__row-val {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: rem(62);
-    line-height: 100%;
-    letter-spacing: -0.05em;
-
-    @include laptop {
-      font-size: rem(40);
-    }
-
-    @include mobile {
-      font-size: rem(32);
-    }
-  }
-
-  &__row-bar {
-    height: rem(20);
-    border-radius: rem(100);
-    background: var(--bench-dark-2);
+  &__tab-fill {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: var(--w, 50%);
     overflow: hidden;
-
-    @include laptop {
-      height: rem(14);
-    }
-
-    @include mobile {
-      height: rem(12);
-    }
+    pointer-events: none;
 
     .bench-hatch {
-      width: var(--w);
-    }
-
-    .bench-funnel__row_active & {
-      background: rgba(18, 17, 17, 0.12);
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 
-  &__row-bottom {
+  &__tab-main {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: rem(16);
-
-    @include mobile {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: rem(4);
-    }
-  }
-
-  &__row-sub {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: rem(18);
-    line-height: 120%;
-    letter-spacing: -0.03em;
-    color: var(--bench-grey);
+    gap: rem(24);
 
     @include laptop {
-      font-size: rem(13);
-    }
-
-    @include mobile {
-      font-size: rem(12);
-    }
-  }
-
-  &__row-name {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: rem(12);
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: rem(28);
-    line-height: 100%;
-    letter-spacing: -0.04em;
-
-    @include laptop {
-      gap: rem(8);
-      font-size: rem(18);
-    }
-
-    @include mobile {
-      justify-content: flex-start;
-      font-size: rem(16);
-    }
-  }
-
-  // right: detail panel ------------------------------------------------------
-  &__detail {
-    display: flex;
-    flex-direction: column;
-    gap: rem(32);
-    padding: rem(50);
-    border-radius: rem(60);
-    background: var(--bench-bg);
-    color: var(--bench-black);
-
-    @include laptop {
-      gap: rem(20);
-      padding: rem(30);
-      border-radius: rem(44);
-    }
-
-    @include mobile {
       gap: rem(16);
-      padding: rem(24);
-      border-radius: rem(30);
     }
-  }
 
-  &__detail-head {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: rem(20);
-
-    @include laptop {
+    @include mobile {
       gap: rem(12);
     }
   }
 
-  &__detail-title {
+  &__tab-num {
     font-family: var(--font-family);
     font-weight: 500;
-    font-size: rem(50);
-    line-height: 105%;
-    letter-spacing: -0.05em;
-    color: var(--bench-black);
+    font-size: rem(18);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    opacity: 0.8;
+    flex-shrink: 0;
 
     @include laptop {
-      font-size: rem(30);
+      font-size: rem(16);
     }
 
     @include mobile {
-      font-size: rem(22);
+      font-size: rem(14);
     }
   }
 
-  &__stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: rem(12);
-
-    @include laptop {
-      gap: rem(8);
-    }
-
-    @include mobile {
-      grid-template-columns: 1fr;
-      gap: rem(6);
-    }
-  }
-
-  &__stat {
+  &__tab-vals {
     display: flex;
     flex-direction: column;
-    gap: rem(12);
-    padding: rem(24);
-    border-radius: rem(30);
-    background: var(--bench-white);
-
-    @include laptop {
-      gap: rem(8);
-      padding: rem(16);
-      border-radius: rem(22);
-    }
-
-    @include mobile {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      padding: rem(14) rem(18);
-    }
-
-    &_main {
-      background: var(--bench-pink);
-    }
+    gap: rem(4);
+    min-width: 0;
   }
 
-  &__stat-label {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: rem(16);
-    line-height: 100%;
-    letter-spacing: -0.03em;
-    color: var(--bench-violet);
-
-    @include laptop {
-      font-size: rem(12);
-    }
-
-    .bench-funnel__stat_main & {
-      color: var(--bench-black);
-    }
-  }
-
-  &__stat-val {
+  &__tab-val {
     font-family: var(--font-family);
     font-weight: 500;
-    font-size: rem(40);
-    line-height: 100%;
+    font-size: rem(42);
+    line-height: 1.1;
     letter-spacing: -0.05em;
-    color: var(--bench-black);
     white-space: nowrap;
 
     @include laptop {
+      font-size: rem(32);
+    }
+
+    @include mobile {
       font-size: rem(24);
     }
-
-    @include mobile {
-      font-size: rem(20);
-    }
   }
 
-  &__charts {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: rem(12);
-    flex: 1;
-    min-height: rem(380);
-    overflow: hidden;
-    border-radius: rem(30);
-
-    @include laptop {
-      gap: rem(8);
-      min-height: rem(260);
-      border-radius: rem(22);
-    }
-
-    @include mobile {
-      grid-template-columns: 1fr;
-      min-height: 0;
-    }
-
-    > .bench-funnel__chart {
-      filter: blur(rem(6));
-      pointer-events: none;
-      user-select: none;
-    }
-  }
-
-  &__chart {
-    position: relative;
-    min-height: rem(380);
-    padding: rem(20);
-    border-radius: rem(30);
-    background: var(--bench-white);
-
-    @include laptop {
-      min-height: rem(260);
-      padding: rem(14);
-      border-radius: rem(22);
-    }
-
-    @include mobile {
-      min-height: rem(150);
-    }
-  }
-
-  &__scale-band {
-    position: absolute;
-    left: 28%;
-    right: 26%;
-    top: 40%;
-    height: rem(40);
-    border-radius: rem(100);
-    background: repeating-linear-gradient(
-      -45deg,
-      var(--bench-blue-2) 0,
-      var(--bench-blue-2) rem(2),
-      transparent rem(2),
-      transparent rem(6)
-    );
-
-    @include laptop {
-      height: rem(28);
-    }
-  }
-
-  &__scale-median {
-    position: absolute;
-    left: 50%;
-    top: 34%;
-    height: rem(64);
-    width: rem(4);
-    border-radius: rem(4);
-    background: var(--bench-pink);
-
-    @include laptop {
-      height: rem(44);
-    }
-  }
-
-  &__chart-bars {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: rem(8);
-    height: 100%;
-
-    li {
-      flex: 1;
-      height: var(--h);
-      border-radius: rem(8) rem(8) 0 0;
-      background: var(--bench-pink);
-    }
-  }
-
-  // blurred lock + CTA
-  &__lock {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: rem(24);
-    padding: rem(24);
-    text-align: center;
-    background: rgba(246, 246, 246, 0.55);
-    backdrop-filter: blur(rem(10));
-
-    @include laptop {
-      gap: rem(16);
-      padding: rem(16);
-    }
-  }
-
-  &__lock-title {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: rem(32);
-    line-height: 105%;
-    letter-spacing: -0.04em;
-    color: var(--bench-black);
-
-    @include laptop {
-      font-size: rem(22);
-    }
-
-    @include mobile {
-      font-size: rem(18);
-    }
-  }
-
-  &__lock-sub {
-    margin-top: rem(8);
-    font-family: var(--font-family);
-    font-weight: 400;
+  &__tab-sub {
     font-size: rem(18);
-    line-height: 120%;
+    line-height: 1.2;
     letter-spacing: -0.03em;
-    color: var(--bench-violet);
+    opacity: 0.8;
 
     @include laptop {
       font-size: rem(14);
@@ -490,4 +222,1141 @@
       font-size: rem(12);
     }
   }
+
+  &__tab-name-wrapper {
+    align-self: start;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: rem(8);
+    flex-shrink: 0;
+    text-align: right;
+    max-width: rem(220);
+  }
+
+  &__tab-name {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: 1.1;
+    opacity: 0.8;
+    letter-spacing: -0.03em;
+
+    @include laptop {
+      font-size: rem(16);
+      max-width: rem(160);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+      max-width: rem(120);
+      gap: rem(4);
+    }
+
+    .bench-tag {
+      align-self: flex-end;
+    }
+  }
+
+  // right panels -------------------------------------------------------------
+  &__panel {
+    width: 100%;
+    min-height: rem(760);
+    padding: rem(48) rem(40) 0;
+    border-radius: rem(60);
+    background: var(--bench-white);
+    overflow: hidden;
+
+    &[hidden] {
+      display: none !important;
+    }
+
+    &:empty {
+      min-height: 0;
+      padding: 0;
+      background: transparent;
+      border-radius: 0;
+    }
+
+    @include laptop {
+      min-height: rem(560);
+      padding: rem(32) rem(28) 0;
+      border-radius: rem(40);
+    }
+
+    @include mobile {
+      min-height: 0;
+      margin-top: rem(6);
+      padding: rem(24) rem(16) rem(24);
+      border-radius: rem(28);
+    }
+  }
+
+  &__panel-inner {
+    display: flex;
+    flex-direction: column;
+    gap: rem(42);
+    width: 100%;
+    max-width: rem(700);
+    margin: 0 auto;
+
+    @include laptop {
+      gap: rem(28);
+      max-width: none;
+    }
+
+    @include mobile {
+      gap: rem(24);
+    }
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    gap: rem(12);
+
+    .bench-funnel__panel-text {
+      padding-top: rem(4);
+    }
+
+    .bench-funnel__card {
+      margin-top: rem(8);
+    }
+  }
+
+  &__intro_lock {
+    position: relative;
+  }
+
+  &__intro-content {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+  }
+
+  &__step {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    font-size: rem(18);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: var(--bench-violet);
+
+    span {
+      color: inherit;
+    }
+
+    @include laptop {
+      font-size: rem(16);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+      flex-wrap: wrap;
+    }
+  }
+
+  &__step-dot {
+    width: rem(3);
+    height: rem(3);
+    border-radius: 50%;
+    background: currentColor;
+    flex-shrink: 0;
+  }
+
+  &__panel-title {
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(32);
+    line-height: 1.1;
+    letter-spacing: -0.05em;
+    color: var(--bench-black);
+
+    @include laptop {
+      font-size: rem(26);
+    }
+
+    @include mobile {
+      font-size: rem(22);
+    }
+  }
+
+  &__panel-title-accent {
+    color: var(--bench-blue-dark);
+    font-size: rem(46);
+    letter-spacing: -0.05em;
+
+    @include laptop {
+      font-size: rem(36);
+    }
+
+    @include mobile {
+      font-size: rem(28);
+    }
+  }
+
+  &__panel-text {
+    margin: 0;
+    font-size: rem(18);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: var(--bench-black);
+
+    @include laptop {
+      font-size: rem(16);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+    }
+  }
+
+  &__stats {
+    display: flex;
+    gap: rem(8);
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__stat {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    gap: rem(6);
+    min-width: 0;
+    padding: rem(32) rem(24);
+    border-radius: rem(40);
+    background: var(--bench-bg);
+
+    @include laptop {
+      padding: rem(22) rem(18);
+      border-radius: rem(28);
+    }
+
+    @include mobile {
+      padding: rem(18) rem(16);
+      border-radius: rem(24);
+    }
+
+    &_main {
+      flex: 0 0 rem(200);
+      background: var(--bench-pink);
+
+      @include laptop {
+        flex: 0 0 rem(140);
+      }
+
+      @include mobile {
+        flex: 1 0 auto;
+      }
+    }
+
+    &_narrow {
+      flex: 0 0 rem(200);
+
+      @include laptop {
+        flex: 0 0 rem(140);
+      }
+
+      @include mobile {
+        flex: 1 0 auto;
+      }
+    }
+  }
+
+  &__stat-val {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(42);
+    line-height: 1.1;
+    letter-spacing: -0.05em;
+    color: var(--bench-black);
+    white-space: nowrap;
+
+    @include laptop {
+      font-size: rem(30);
+    }
+
+    @include mobile {
+      font-size: rem(28);
+    }
+  }
+
+  &__stat-label {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--bench-violet);
+
+    .bench-funnel__stat_main & {
+      color: var(--bench-black);
+    }
+
+    @include laptop {
+      font-size: rem(14);
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+  }
+
+  &__block-label {
+    font-size: rem(18);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: var(--bench-violet);
+
+    @include laptop {
+      font-size: rem(16);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+    }
+  }
+
+  &__block-title {
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(32);
+    line-height: 1.1;
+    letter-spacing: -0.05em;
+    color: var(--bench-black);
+
+    @include laptop {
+      font-size: rem(26);
+    }
+
+    @include mobile {
+      font-size: rem(22);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+    padding: rem(24);
+    border-radius: rem(40);
+    background: var(--bench-bg);
+
+    @include laptop {
+      padding: rem(18);
+      border-radius: rem(28);
+      gap: rem(12);
+    }
+
+    @include mobile {
+      padding: rem(16);
+      border-radius: rem(24);
+    }
+
+    &_tall {
+      min-height: rem(280);
+    }
+  }
+
+  &__card-title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(20);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: #000;
+
+    @include laptop {
+      font-size: rem(16);
+    }
+
+    @include mobile {
+      font-size: rem(15);
+    }
+  }
+
+  &__card-img {
+    width: 100%;
+    height: auto;
+    user-select: none;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__plot-meta {
+    flex: 0 0 rem(172);
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+
+    @include laptop {
+      flex-basis: rem(120);
+    }
+
+    @include mobile {
+      flex-basis: auto;
+    }
+  }
+
+  &__plot-name {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--bench-black);
+
+    @include laptop {
+      font-size: rem(14);
+    }
+  }
+
+  &__plot-note {
+    font-size: rem(14);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: var(--bench-violet);
+
+    @include mobile {
+      font-size: rem(12);
+    }
+  }
+
+  &__plot {
+    position: relative;
+    flex: 1 1 auto;
+    height: rem(60);
+    max-width: rem(480);
+
+    @include laptop {
+      height: rem(48);
+      max-width: none;
+    }
+
+    @include mobile {
+      width: 100%;
+      max-width: none;
+      height: rem(44);
+    }
+  }
+
+  &__plot-grid {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      to right,
+      transparent 0,
+      transparent calc(25% - 1px),
+      rgba(200, 200, 200, 0.7) calc(25% - 1px),
+      rgba(200, 200, 200, 0.7) 25%
+    );
+    background-size: 25% 100%;
+    pointer-events: none;
+    opacity: 0.5;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: rgba(200, 200, 200, 0.7);
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  &__plot-whisk {
+    position: absolute;
+    top: 50%;
+    left: var(--whisk-l, 50%);
+    width: var(--whisk-w, 20%);
+    height: rem(8);
+    transform: translateY(-50%);
+    opacity: 0.6;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: rem(2);
+      height: rem(8);
+      background: var(--bench-blue-dark);
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+
+    // dashed line between caps
+    background-image: linear-gradient(
+      to right,
+      var(--bench-blue-dark) 40%,
+      transparent 0
+    );
+    background-position: center;
+    background-size: rem(6) rem(2);
+    background-repeat: repeat-x;
+  }
+
+  &__plot-band {
+    position: absolute;
+    top: 50%;
+    left: var(--band-l, 50%);
+    width: var(--band-w, 10%);
+    height: rem(20);
+    transform: translateY(-50%);
+    border-radius: rem(4);
+    background: var(--bench-blue-dark);
+    opacity: 0.6;
+  }
+
+  &__plot-median {
+    position: absolute;
+    top: 50%;
+    left: var(--median, 50%);
+    width: rem(3);
+    height: rem(28);
+    transform: translate(-50%, -50%);
+    border-radius: rem(4);
+    background: var(--bench-blue-dark);
+  }
+
+  &__plot-mean {
+    position: absolute;
+    top: 50%;
+    left: var(--mean, 50%);
+    width: rem(12);
+    height: rem(12);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: var(--bench-blue-dark);
+    box-shadow: 0 0 0 rem(2) #fff;
+  }
+
+  &__axis {
+    display: flex;
+    justify-content: space-between;
+    padding-left: rem(172);
+    font-size: rem(16);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: var(--bench-violet);
+
+    @include laptop {
+      padding-left: rem(120);
+      font-size: rem(13);
+    }
+
+    @include mobile {
+      padding-left: 0;
+      font-size: rem(12);
+    }
+  }
+
+  &__legend {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(12) rem(16);
+    padding: rem(12) rem(24);
+    border-radius: rem(16);
+    background: var(--bench-white);
+    font-size: rem(16);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: var(--bench-violet);
+
+    @include laptop {
+      gap: rem(8) rem(12);
+      padding: rem(10) rem(16);
+      font-size: rem(13);
+    }
+
+    @include mobile {
+      display: block;
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+      font-size: rem(14);
+    }
+  }
+
+  &__legend-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: rem(8) rem(24);
+    min-width: 0;
+    color: var(--bench-violet);
+
+    span {
+      color: inherit;
+    }
+
+    @include laptop {
+      gap: rem(6) rem(16);
+    }
+
+    @include mobile {
+      display: none;
+    }
+
+    > span {
+      display: inline-flex;
+      align-items: center;
+      gap: rem(8);
+    }
+  }
+
+  &__informer {
+    position: relative;
+    flex-shrink: 0;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__informer-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(24);
+    height: rem(24);
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    @include mobile {
+      width: 100%;
+      height: auto;
+      min-height: rem(48);
+      padding: rem(14) rem(16);
+      border-radius: rem(16);
+      background: var(--bench-bg);
+      justify-content: space-between;
+      gap: rem(8);
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: rem(14);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--bench-black);
+      text-align: left;
+    }
+  }
+
+  &__informer-icon {
+    display: block;
+    width: rem(24);
+    height: rem(24);
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__informer-label,
+  &__informer-chevron {
+    display: none;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__informer-chevron {
+    @include mobile {
+      width: rem(16);
+      height: rem(16);
+      flex-shrink: 0;
+    }
+  }
+
+  &__informer-sr {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__informer-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    display: none;
+    background: rgba(18, 17, 17, 0.55);
+
+    &.is-visible {
+      display: block;
+    }
+  }
+
+  &__informer-tip {
+    position: absolute;
+    top: calc(100% + #{rem(19)});
+    right: rem(-20);
+    z-index: 5;
+    display: none;
+    flex-direction: column;
+    gap: rem(16);
+    width: rem(420);
+    max-width: min(#{rem(420)}, 70vw);
+    padding: rem(24);
+    border-radius: rem(40);
+    background: var(--bench-bg);
+    box-shadow: 0 0 rem(10) rgba(0, 0, 0, 0.1);
+    color: var(--bench-violet);
+    font-size: rem(16);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    text-align: left;
+
+    @include laptop {
+      width: rem(360);
+      max-width: min(#{rem(360)}, 72vw);
+      padding: rem(20);
+      border-radius: rem(28);
+      gap: rem(14);
+      font-size: rem(14);
+    }
+
+    @include mobile {
+      display: none !important;
+    }
+
+    .bench-funnel__informer.is-open & {
+      display: flex;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .bench-funnel__informer:hover &,
+      .bench-funnel__informer:focus-within & {
+        display: flex;
+      }
+    }
+  }
+
+  &__informer-popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    bottom: rem(16);
+    z-index: 95;
+    width: calc(100vw - #{rem(32)});
+    max-width: rem(343);
+    max-height: calc(100vh - #{rem(32)});
+    padding: rem(20) rem(16) rem(16);
+    border-radius: rem(28);
+    background: var(--bench-black);
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    &.is-open {
+      display: flex;
+      flex-direction: column;
+      gap: rem(16);
+    }
+  }
+
+  &__informer-popup-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(12);
+    padding: 0 rem(4);
+  }
+
+  &__informer-popup-title {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--bench-white);
+  }
+
+  &__informer-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(24);
+    height: rem(24);
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    img {
+      display: block;
+      width: rem(20);
+      height: rem(20);
+    }
+  }
+
+  &__informer-popup-card {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+    padding: rem(20);
+    border-radius: rem(24);
+    background: var(--bench-white);
+  }
+
+  &__informer-list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__informer-item {
+    display: flex;
+    align-items: flex-start;
+    gap: rem(12);
+
+    .bench-funnel__legend-icon {
+      margin-top: rem(2);
+    }
+  }
+
+  &__informer-item-body {
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+    min-width: 0;
+
+    strong {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: rem(14);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--bench-black);
+    }
+
+    p {
+      margin: 0;
+      font-size: rem(14);
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+      color: var(--bench-violet);
+    }
+  }
+
+  &__informer-text {
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+
+    p {
+      margin: 0;
+    }
+
+    strong {
+      font-family: var(--font-family);
+      font-weight: 500;
+      line-height: 1.1;
+      color: var(--bench-black);
+    }
+  }
+
+  &__informer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: rem(4);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--bench-brand);
+    text-decoration: none;
+    white-space: nowrap;
+
+    img {
+      display: block;
+      width: rem(16);
+      height: rem(16);
+      flex-shrink: 0;
+    }
+
+    @include laptop {
+      font-size: rem(14);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+    }
+  }
+
+  &__legend-icon {
+    display: block;
+    flex-shrink: 0;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+
+    &_whisk,
+    &_band {
+      width: rem(24);
+      height: rem(24);
+    }
+
+    &_median {
+      width: rem(7);
+      height: rem(24);
+    }
+
+    &_mean {
+      width: rem(16);
+      height: rem(24);
+    }
+  }
+
+  // locked overlay -----------------------------------------------------------
+  &__locked {
+    position: relative;
+    min-height: rem(520);
+    overflow: hidden;
+
+    @include laptop {
+      min-height: rem(400);
+    }
+
+    @include mobile {
+      min-height: rem(360);
+    }
+  }
+
+  &__locked-preview {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+    pointer-events: none;
+    user-select: none;
+  }
+
+  &__ghost-bars {
+    display: flex;
+    flex-direction: column;
+    gap: rem(18);
+    padding-top: rem(8);
+
+    > span {
+      display: block;
+      height: rem(28);
+      width: var(--w, 70%);
+      border-radius: rem(8);
+      background: rgba(84, 116, 160, 0.25);
+    }
+  }
+
+  &__ghost-cols {
+    display: flex;
+    align-items: flex-end;
+    gap: rem(2);
+    height: rem(160);
+    padding-left: rem(40);
+
+    @include mobile {
+      padding-left: rem(24);
+      height: rem(120);
+    }
+
+    > span {
+      position: relative;
+      display: block;
+      width: var(--w, 20%);
+      height: 100%;
+      border-radius: rem(8);
+      background: #fff;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: var(--h, 50%);
+        border-radius: rem(8);
+        background: rgba(84, 116, 160, 0.6);
+      }
+
+      em {
+        position: absolute;
+        left: 50%;
+        top: 45%;
+        transform: translate(-50%, -50%);
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 500;
+        font-size: rem(12);
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        color: var(--bench-black);
+        white-space: nowrap;
+        z-index: 1;
+      }
+    }
+  }
+
+  &__lock {
+    position: absolute;
+    inset: rem(-42) rem(-40);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: rem(16);
+    padding: rem(40);
+    text-align: center;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.85) 35%,
+      #ffffffc7 70%
+    );
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  &__lock-icon {
+    width: rem(64);
+    height: rem(64);
+    display: block;
+    margin-bottom: rem(8);
+
+    @include mobile {
+      width: rem(48);
+      height: rem(48);
+    }
+  }
+
+  &__lock-title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(32);
+    line-height: 1.1;
+    letter-spacing: -0.05em;
+    color: var(--bench-black);
+
+    @include laptop {
+      font-size: rem(26);
+    }
+
+    @include mobile {
+      font-size: rem(22);
+    }
+  }
+
+  &__lock-sub {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: rem(8) rem(12);
+    font-size: rem(18);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: var(--bench-black);
+
+    @include laptop {
+      font-size: rem(16);
+    }
+
+    @include mobile {
+      font-size: rem(14);
+    }
+  }
+
+  &__lock-star {
+    object-fit: contain;
+    object-position: center;
+    width: rem(16);
+    height: rem(16);
+  }
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(18);
+    padding: 0 0 rem(48);
+
+    @include laptop {
+      padding-bottom: rem(32);
+      gap: rem(14);
+    }
+
+    @include mobile {
+      padding-bottom: rem(8);
+      gap: rem(12);
+    }
+  }
+
+  &__cta-btn {
+    width: 100%;
+  }
+
+  &__cta-note {
+    margin: 0;
+    font-size: rem(16);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: var(--bench-violet);
+
+    @include mobile {
+      font-size: rem(14);
+    }
+  }
+}
+
+body.bench-informer-open {
+  overflow: hidden;
 }

@@ -1,13 +1,16 @@
 ﻿.bench-order {
+  margin-bottom: calc(-1 * rem(316)) !important;
+
   &__inner {
     display: grid;
     grid-template-columns: rem(647) rem(641);
     justify-content: space-between;
     align-items: start;
     gap: rem(40);
-    padding: rem(80);
-    border-radius: rem(60);
-    background: var(--bench-bg);
+    padding: rem(84) rem(84) rem(400) rem(84);
+    margin-inline: 1.6rem;
+    border-radius: rem(60) rem(60) 0 0;
+    background: var(--bench-white);
     color: var(--bench-black);
 
     @include laptop {

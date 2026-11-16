@@ -84,3 +84,8 @@ import { partnersMarquee } from "./components/partnersMarquee";
 try {
   partnersMarquee();
 } catch (error) {}
+
+import { benchFunnel } from "./components/benchFunnel";
+try {
+  benchFunnel();
+} catch (error) {}

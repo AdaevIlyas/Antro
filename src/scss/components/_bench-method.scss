@@ -19,10 +19,10 @@
     display: flex;
     flex-direction: column;
     gap: rem(8);
+    padding-left: rem(25);
 
     li {
       position: relative;
-      padding-left: rem(24);
       font-family: var(--font-family);
       font-weight: 400;
       font-size: rem(20);
@@ -31,23 +31,11 @@
       color: var(--bench-white);
 
       @include laptop {
-        padding-left: rem(18);
         font-size: rem(16);
       }
 
       @include mobile {
         font-size: rem(14);
-      }
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0.45em;
-        width: rem(8);
-        height: rem(8);
-        border-radius: 50%;
-        background: var(--bench-pink);
       }
     }
   }
@@ -97,6 +85,8 @@
     flex-shrink: 0;
     width: rem(64);
     height: rem(64);
+    object-fit: contain;
+    object-position: center;
 
     @include laptop {
       width: rem(48);
