@@ -89,3 +89,8 @@ import { benchFunnel } from "./components/benchFunnel";
 try {
   benchFunnel();
 } catch (error) {}
+
+import { benchMetrics } from "./components/benchMetrics";
+try {
+  benchMetrics();
+} catch (error) {}

@@ -28,7 +28,7 @@
     display: grid;
     grid-template-columns: rem(780) 1fr;
     gap: rem(20);
-    align-items: stretch;
+    align-items: start;
 
     @include laptop {
       grid-template-columns: rem(560) 1fr;
@@ -38,6 +38,14 @@
     @include mobile {
       grid-template-columns: 1fr;
       gap: rem(10);
+    }
+  }
+
+  &__panels {
+    min-width: 0;
+
+    @include mobile {
+      display: contents;
     }
   }
 
@@ -51,6 +59,8 @@
     }
 
     @include mobile {
+      display: flex;
+      flex-direction: column;
       gap: rem(10);
     }
   }
@@ -59,35 +69,47 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: rem(40);
-    min-height: rem(360);
-    padding: rem(36);
-    border-radius: rem(50);
+    gap: rem(24);
+    min-height: rem(332);
+    padding: rem(40);
+    border: 0;
+    border-radius: rem(40);
     background: var(--bench-dark);
     color: var(--bench-white);
+    text-align: left;
+    cursor: pointer;
+    transition:
+      background 0.25s ease,
+      color 0.25s ease;
 
     @include laptop {
-      gap: rem(24);
-      min-height: rem(250);
+      gap: rem(18);
+      min-height: rem(240);
       padding: rem(24);
       border-radius: rem(36);
     }
 
     @include mobile {
-      gap: rem(16);
-      min-height: rem(170);
+      gap: rem(14);
+      min-height: rem(180);
       padding: rem(16);
       border-radius: rem(24);
     }
 
-    &_active {
+    &_active,
+    &.is-active {
       background: var(--bench-pink);
       color: var(--bench-black);
 
       .bench-metrics__card-name,
       .bench-metrics__card-val,
-      .bench-metrics__card-sub {
+      .bench-metrics__card-sub,
+      .bench-metrics__trend {
         color: var(--bench-black);
+      }
+
+      .bench-metrics__card-go {
+        background: var(--bench-pink-2);
       }
     }
 
@@ -100,53 +122,105 @@
       }
 
       @include mobile {
-        min-height: rem(150);
+        min-height: rem(160);
       }
+    }
+  }
+
+  &__card-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: rem(16);
+
+    @include laptop {
+      gap: rem(12);
+    }
+
+    @include mobile {
+      gap: rem(10);
+    }
+  }
+
+  &__trend {
+    display: inline-flex;
+    align-items: center;
+    gap: rem(10);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--bench-grey);
+
+    @include laptop {
+      gap: rem(6);
+      font-size: rem(13);
+    }
+
+    @include mobile {
+      font-size: rem(12);
+    }
+  }
+
+  &__trend-icon {
+    flex-shrink: 0;
+    width: rem(22);
+    height: rem(22);
+    object-fit: contain;
+    object-position: center;
+
+    @include laptop {
+      width: rem(16);
+      height: rem(16);
     }
   }
 
   &__card-name {
     font-family: var(--font-family);
     font-weight: 500;
-    font-size: rem(26);
+    font-size: rem(32);
     line-height: 108%;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.05em;
     color: var(--bench-white);
 
     @include laptop {
-      font-size: rem(17);
+      font-size: rem(18);
     }
 
     @include mobile {
-      font-size: rem(13);
+      font-size: rem(14);
     }
+  }
+
+  &__card-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: rem(16);
+  }
+
+  &__card-vals {
+    display: flex;
+    flex-direction: column;
+    gap: rem(6);
+    min-width: 0;
   }
 
   &__card-val {
     font-family: var(--font-family);
     font-weight: 500;
-    font-size: rem(82);
+    font-size: rem(42);
     line-height: 100%;
     letter-spacing: -0.05em;
     color: var(--bench-white);
 
     @include laptop {
-      font-size: rem(56);
+      font-size: rem(42);
     }
 
     @include mobile {
-      font-size: rem(32);
-    }
-  }
-
-  &__card-foot {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: rem(10);
-
-    @include mobile {
-      gap: rem(6);
+      font-size: rem(28);
     }
   }
 
@@ -167,312 +241,107 @@
     }
   }
 
-  &__badge {
-    display: inline-flex;
-    align-items: center;
-    width: fit-content;
-    padding: rem(8) rem(16);
-    border-radius: rem(100);
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: rem(16);
-    line-height: 100%;
-    letter-spacing: -0.03em;
-    color: var(--bench-black);
-    white-space: nowrap;
-
-    @include laptop {
-      padding: rem(6) rem(12);
-      font-size: rem(12);
-    }
-
-    @include mobile {
-      padding: rem(5) rem(10);
-      font-size: rem(10);
-    }
-
-    &_better {
-      background: var(--bench-pink);
-    }
-
-    &_worse {
-      background: var(--bench-blue);
-    }
-
-    .bench-metrics__card_active & {
-      background: var(--bench-black);
-      color: var(--bench-white);
-    }
-  }
-
-  // right: white detail card ------------------------------------------------
-  &__detail {
-    position: relative;
+  &__card-go {
     display: flex;
-    flex-direction: column;
-    gap: rem(32);
-    padding: rem(50);
-    border-radius: rem(60);
-    background: var(--bench-white);
-    color: var(--bench-black);
-
-    @include laptop {
-      gap: rem(20);
-      padding: rem(30);
-      border-radius: rem(44);
-    }
-
-    @include mobile {
-      gap: rem(16);
-      padding: rem(24);
-      border-radius: rem(30);
-    }
-  }
-
-  &__detail-head {
-    display: flex;
-    flex-direction: column;
-    gap: rem(12);
-
-    @include laptop {
-      gap: rem(8);
-    }
-  }
-
-  &__detail-title {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: rem(50);
-    line-height: 105%;
-    letter-spacing: -0.05em;
-    color: var(--bench-black);
-
-    @include laptop {
-      font-size: rem(30);
-    }
-
-    @include mobile {
-      font-size: rem(22);
-    }
-  }
-
-  &__detail-sub {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: rem(24);
-    line-height: 120%;
-    letter-spacing: -0.03em;
-    color: var(--bench-violet);
-
-    @include laptop {
-      font-size: rem(16);
-    }
-
-    @include mobile {
-      font-size: rem(14);
-    }
-  }
-
-  &__pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: rem(10);
-
-    @include laptop {
-      gap: rem(8);
-    }
-
-    @include mobile {
-      gap: rem(6);
-    }
-  }
-
-  &__pill {
-    display: flex;
-    flex-direction: column;
-    gap: rem(8);
-    padding: rem(14) rem(24);
-    border-radius: rem(30);
-    background: var(--bench-bg);
-
-    @include laptop {
-      gap: rem(4);
-      padding: rem(10) rem(16);
-      border-radius: rem(20);
-    }
-
-    @include mobile {
-      padding: rem(8) rem(14);
-    }
-
-    &_main {
-      background: var(--bench-pink);
-    }
-  }
-
-  &__pill-label {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: rem(16);
-    line-height: 100%;
-    letter-spacing: -0.03em;
-    color: var(--bench-violet);
-
-    @include laptop {
-      font-size: rem(12);
-    }
-
-    .bench-metrics__pill_main & {
-      color: var(--bench-black);
-    }
-  }
-
-  &__pill-val {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: rem(28);
-    line-height: 100%;
-    letter-spacing: -0.04em;
-    color: var(--bench-black);
-
-    @include laptop {
-      font-size: rem(18);
-    }
-
-    @include mobile {
-      font-size: rem(16);
-    }
-  }
-
-  &__viz {
-    position: relative;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    gap: rem(40);
-    min-height: rem(400);
-    padding: rem(40);
-    overflow: hidden;
-    border-radius: rem(30);
-    background: var(--bench-bg);
-
-    @include laptop {
-      gap: rem(24);
-      min-height: rem(260);
-      padding: rem(24);
-      border-radius: rem(22);
-    }
-
-    @include mobile {
-      gap: rem(16);
-      min-height: rem(240);
-      padding: rem(16);
-    }
-
-    > .bench-metrics__viz-scale,
-    > .bench-metrics__viz-bars {
-      filter: blur(rem(6));
-    }
-  }
-
-  &__viz-scale {
-    position: relative;
-    height: rem(40);
-    border-radius: rem(100);
-    background: var(--bench-grey);
-
-    @include laptop {
-      height: rem(28);
-    }
-  }
-
-  &__viz-band {
-    position: absolute;
-    left: 24%;
-    width: 30%;
-    top: 0;
-    bottom: 0;
-    border-radius: rem(100);
-    background: var(--bench-blue);
-  }
-
-  &__viz-mark {
-    position: absolute;
-    left: 36%;
-    top: rem(-6);
-    bottom: rem(-6);
-    width: rem(4);
-    border-radius: rem(4);
-    background: var(--bench-pink);
-  }
-
-  &__viz-bars {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: rem(10);
-    flex: 1;
-
-    li {
-      flex: 1;
-      height: var(--h);
-      border-radius: rem(8) rem(8) 0 0;
-      background: var(--bench-pink);
-    }
-  }
-
-  &__lock {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
-    gap: rem(24);
-    padding: rem(24);
-    text-align: center;
-    background: rgba(246, 246, 246, 0.55);
-    backdrop-filter: blur(rem(10));
+    width: rem(82);
+    height: rem(82);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
 
-    @include laptop {
-      gap: rem(16);
-      padding: rem(16);
+    img {
+      width: rem(42);
+      height: rem(42);
     }
-  }
-
-  &__lock-title {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: rem(32);
-    line-height: 105%;
-    letter-spacing: -0.04em;
-    color: var(--bench-black);
 
     @include laptop {
-      font-size: rem(22);
+      width: rem(44);
+      height: rem(44);
+
+      img {
+        width: rem(14);
+        height: rem(14);
+      }
     }
 
     @include mobile {
-      font-size: rem(18);
+      width: rem(36);
+      height: rem(36);
+
+      img {
+        width: rem(12);
+        height: rem(12);
+      }
     }
   }
 
-  &__lock-sub {
-    margin-top: rem(8);
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: rem(18);
-    line-height: 120%;
-    letter-spacing: -0.03em;
-    color: var(--bench-violet);
+  // chart extras (reuse bench-funnel plot/legend; only row + source marks here)
+  .bench-funnel__plot {
+    max-width: none;
+  }
+
+  .bench-funnel__plot-grid {
+    background: repeating-linear-gradient(
+      to right,
+      transparent 0,
+      transparent calc(20% - 1px),
+      rgba(200, 200, 200, 0.7) calc(20% - 1px),
+      rgba(200, 200, 200, 0.7) 20%
+    );
+    background-size: 20% 100%;
+  }
+
+  &__rows {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+
+    @include mobile {
+      flex-direction: column;
+      align-items: stretch;
+      gap: rem(8);
+    }
+  }
+
+  &__axis {
+    padding-left: rem(156);
 
     @include laptop {
-      font-size: rem(14);
+      padding-left: rem(126);
     }
 
     @include mobile {
-      font-size: rem(12);
+      padding-left: 0;
     }
+  }
+
+  &__plot-range {
+    position: absolute;
+    top: 50%;
+    left: var(--range-l, 40%);
+    width: var(--range-w, 24%);
+    height: rem(16);
+    transform: translateY(-50%);
+    border-radius: rem(4);
+    background: #d9d9d9;
+  }
+
+  &__plot-dot {
+    position: absolute;
+    top: 50%;
+    left: var(--dot, 50%);
+    width: rem(10);
+    height: rem(10);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: var(--bench-black);
   }
 }

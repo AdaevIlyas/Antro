@@ -11,7 +11,7 @@
     }
 
     @include mobile {
-      margin-top: rem(64);
+      margin-top: rem(94);
       gap: rem(32);
     }
   }
@@ -47,7 +47,7 @@
     }
 
     @include mobile {
-      gap: rem(20);
+      gap: rem(24);
       max-width: none;
     }
   }
@@ -58,7 +58,11 @@
     gap: rem(10);
 
     @include mobile {
-      gap: rem(6);
+      gap: rem(2);
+    }
+
+    .bench-tag {
+      background: var(--bench-dark);
     }
   }
 
@@ -78,6 +82,11 @@
     @include mobile {
       font-size: rem(36);
       letter-spacing: -0.04em;
+      padding-top: rem(40);
+
+      span {
+        display: block;
+      }
     }
   }
 
@@ -97,9 +106,10 @@
     }
 
     @include mobile {
+      padding-top: 0;
       flex-direction: column;
       align-items: stretch;
-      gap: rem(12);
+      gap: rem(10);
       width: 100%;
     }
   }
@@ -131,7 +141,7 @@
 
     @include mobile {
       font-size: rem(12);
-      text-align: center;
+      text-align: left;
     }
   }
 
@@ -150,9 +160,7 @@
     }
 
     @include mobile {
-      flex: none;
-      max-width: none;
-      gap: rem(16);
+      display: none;
     }
   }
 
@@ -199,8 +207,9 @@
     }
 
     @include mobile {
+      padding-top: rem(94);
       grid-template-columns: 1fr;
-      gap: rem(10);
+      gap: rem(8);
     }
   }
 
@@ -214,7 +223,7 @@
     }
 
     @include mobile {
-      gap: rem(10);
+      gap: rem(8);
     }
   }
 
@@ -230,7 +239,7 @@
 
     @include mobile {
       grid-template-columns: 1fr;
-      gap: rem(10);
+      gap: rem(8);
     }
   }
 

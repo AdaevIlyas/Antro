@@ -12,94 +12,634 @@
       </div>
     </div>
 
-    <div class="bench-metrics__body">
-      <div class="bench-metrics__grid">
-        <article class="bench-metrics__card bench-metrics__card_active">
-          <div class="bench-metrics__card-name">Конверсия в покупку (CR)</div>
-          <div class="bench-metrics__card-val">0,58%</div>
-          <div class="bench-metrics__card-foot">
-            <span class="bench-metrics__card-sub">Медиана рынка</span>
-            <span class="bench-metrics__badge bench-metrics__badge_better">Выше — лучше</span>
+    <div class="bench-metrics__body js-bench-metrics">
+      <div class="bench-metrics__grid" role="tablist" aria-label="Метрики">
+        <button
+          type="button"
+          class="bench-metrics__card bench-metrics__card_active js-bench-metrics-tab is-active"
+          role="tab"
+          id="bench-metrics-tab-1"
+          aria-controls="bench-metrics-panel-1"
+          aria-selected="true"
+          data-id="1"
+        >
+          <div class="bench-metrics__card-top">
+            <span class="bench-metrics__trend">
+              <img
+                class="bench-metrics__trend-icon"
+                src="img/bench/icon-trend-better.svg"
+                width="20"
+                height="20"
+                alt=""
+                aria-hidden="true"
+              />
+              Выше — лучше
+            </span>
+            <span class="bench-metrics__card-name"
+              >Конверсия в покупку (CR)</span
+            >
           </div>
-        </article>
-        <article class="bench-metrics__card">
-          <div class="bench-metrics__card-name">Добавление в корзину (ATC)</div>
-          <div class="bench-metrics__card-val">3,45%</div>
-          <div class="bench-metrics__card-foot">
-            <span class="bench-metrics__badge bench-metrics__badge_better">Выше — лучше</span>
+          <div class="bench-metrics__card-bottom">
+            <div class="bench-metrics__card-vals">
+              <span class="bench-metrics__card-val">0,58%</span>
+              <span class="bench-metrics__card-sub">Медиана рынка</span>
+            </div>
+            <span class="bench-metrics__card-go" aria-hidden="true">
+              <img
+                src="img/bench/arrow-white.svg"
+                width="16"
+                height="16"
+                alt=""
+              />
+            </span>
           </div>
-        </article>
-        <article class="bench-metrics__card">
-          <div class="bench-metrics__card-name">Отказы в каталоге</div>
-          <div class="bench-metrics__card-val">25%</div>
-          <div class="bench-metrics__card-foot">
-            <span class="bench-metrics__badge bench-metrics__badge_worse">Выше — хуже</span>
+        </button>
+
+        <button
+          type="button"
+          class="bench-metrics__card js-bench-metrics-tab"
+          role="tab"
+          id="bench-metrics-tab-2"
+          aria-controls="bench-metrics-panel-2"
+          aria-selected="false"
+          tabindex="-1"
+          data-id="2"
+        >
+          <div class="bench-metrics__card-top">
+            <span class="bench-metrics__trend">
+              <img
+                class="bench-metrics__trend-icon"
+                src="img/bench/icon-trend-better.svg"
+                width="20"
+                height="20"
+                alt=""
+                aria-hidden="true"
+              />
+              Выше — лучше
+            </span>
+            <span class="bench-metrics__card-name"
+              >Добавление в корзину (ATC)</span
+            >
           </div>
-        </article>
-        <article class="bench-metrics__card">
-          <div class="bench-metrics__card-name">Отказы на странице товара</div>
-          <div class="bench-metrics__card-val">34,4%</div>
-          <div class="bench-metrics__card-foot">
-            <span class="bench-metrics__badge bench-metrics__badge_worse">Выше — хуже</span>
+          <div class="bench-metrics__card-bottom">
+            <div class="bench-metrics__card-vals">
+              <span class="bench-metrics__card-val">3,45%</span>
+              <span class="bench-metrics__card-sub">Медиана рынка</span>
+            </div>
+            <span class="bench-metrics__card-go" aria-hidden="true">
+              <img src="img/bench/arrow.svg" width="16" height="16" alt="" />
+            </span>
           </div>
-        </article>
-        <article class="bench-metrics__card bench-metrics__card_wide">
-          <div class="bench-metrics__card-name">Брошенные корзины (CAR)</div>
-          <div class="bench-metrics__card-val">85,4%</div>
-          <div class="bench-metrics__card-foot">
-            <span class="bench-metrics__badge bench-metrics__badge_worse">Выше — хуже</span>
+        </button>
+
+        <button
+          type="button"
+          class="bench-metrics__card js-bench-metrics-tab"
+          role="tab"
+          id="bench-metrics-tab-3"
+          aria-controls="bench-metrics-panel-3"
+          aria-selected="false"
+          tabindex="-1"
+          data-id="3"
+        >
+          <div class="bench-metrics__card-top">
+            <span class="bench-metrics__trend">
+              <img
+                class="bench-metrics__trend-icon"
+                src="img/bench/icon-trend-worse.svg"
+                width="20"
+                height="20"
+                alt=""
+                aria-hidden="true"
+              />
+              Выше — хуже
+            </span>
+            <span class="bench-metrics__card-name">Отказы в каталоге</span>
           </div>
-        </article>
+          <div class="bench-metrics__card-bottom">
+            <div class="bench-metrics__card-vals">
+              <span class="bench-metrics__card-val">25%</span>
+              <span class="bench-metrics__card-sub">Медиана рынка</span>
+            </div>
+            <span class="bench-metrics__card-go" aria-hidden="true">
+              <img src="img/bench/arrow.svg" width="16" height="16" alt="" />
+            </span>
+          </div>
+        </button>
+
+        <button
+          type="button"
+          class="bench-metrics__card js-bench-metrics-tab"
+          role="tab"
+          id="bench-metrics-tab-4"
+          aria-controls="bench-metrics-panel-4"
+          aria-selected="false"
+          tabindex="-1"
+          data-id="4"
+        >
+          <div class="bench-metrics__card-top">
+            <span class="bench-metrics__trend">
+              <img
+                class="bench-metrics__trend-icon"
+                src="img/bench/icon-trend-worse.svg"
+                width="20"
+                height="20"
+                alt=""
+                aria-hidden="true"
+              />
+              Выше — хуже
+            </span>
+            <span class="bench-metrics__card-name"
+              >Отказы на странице <br />
+              товара</span
+            >
+          </div>
+          <div class="bench-metrics__card-bottom">
+            <div class="bench-metrics__card-vals">
+              <span class="bench-metrics__card-val">34,4%</span>
+              <span class="bench-metrics__card-sub">Медиана рынка</span>
+            </div>
+            <span class="bench-metrics__card-go" aria-hidden="true">
+              <img src="img/bench/arrow.svg" width="16" height="16" alt="" />
+            </span>
+          </div>
+        </button>
+
+        <button
+          type="button"
+          class="bench-metrics__card bench-metrics__card_wide js-bench-metrics-tab"
+          role="tab"
+          id="bench-metrics-tab-5"
+          aria-controls="bench-metrics-panel-5"
+          aria-selected="false"
+          tabindex="-1"
+          data-id="5"
+        >
+          <div class="bench-metrics__card-top">
+            <span class="bench-metrics__trend">
+              <img
+                class="bench-metrics__trend-icon"
+                src="img/bench/icon-trend-worse.svg"
+                width="20"
+                height="20"
+                alt=""
+                aria-hidden="true"
+              />
+              Выше — хуже
+            </span>
+            <span class="bench-metrics__card-name"
+              >Брошенные корзины (CAR)</span
+            >
+          </div>
+          <div class="bench-metrics__card-bottom">
+            <div class="bench-metrics__card-vals">
+              <span class="bench-metrics__card-val">85,4%</span>
+              <span class="bench-metrics__card-sub">Медиана рынка</span>
+            </div>
+            <span class="bench-metrics__card-go" aria-hidden="true">
+              <img src="img/bench/arrow.svg" width="16" height="16" alt="" />
+            </span>
+          </div>
+        </button>
       </div>
 
-      <div class="bench-metrics__detail">
-        <div class="bench-metrics__detail-head">
-          <h3 class="bench-metrics__detail-title">Конверсия в покупку (CR)</h3>
-          <p class="bench-metrics__detail-sub">
-            1 из 170 визитов заканчивается покупкой
-          </p>
-        </div>
-
-        <div class="bench-metrics__pills">
-          <div class="bench-metrics__pill bench-metrics__pill_main">
-            <span class="bench-metrics__pill-label">Медиана</span>
-            <span class="bench-metrics__pill-val">0,58%</span>
-          </div>
-          <div class="bench-metrics__pill">
-            <span class="bench-metrics__pill-label">Коридор p25–p75</span>
-            <span class="bench-metrics__pill-val">0,52–0,66%</span>
-          </div>
-          <div class="bench-metrics__pill">
-            <span class="bench-metrics__pill-label">Средневзвешенное</span>
-            <span class="bench-metrics__pill-val">0,69%</span>
-          </div>
-        </div>
-
-        <div class="bench-metrics__viz">
-          <div class="bench-metrics__viz-scale">
-            <i class="bench-metrics__viz-band"></i>
-            <i class="bench-metrics__viz-mark"></i>
-          </div>
-          <ul class="bench-metrics__viz-bars list-reset">
-            <li style="--h: 38%"></li>
-            <li style="--h: 52%"></li>
-            <li style="--h: 44%"></li>
-            <li style="--h: 66%"></li>
-            <li style="--h: 48%"></li>
-            <li style="--h: 58%"></li>
-            <li style="--h: 42%"></li>
-          </ul>
-
-          <div class="bench-metrics__lock">
-            <div class="bench-metrics__lock-text">
-              <div class="bench-metrics__lock-title">Остальное — в полном отчете</div>
-              <p class="bench-metrics__lock-sub">
-                Устройства, новые и вернувшиеся, источники, месяцы
+      <div class="bench-metrics__panels">
+        <div
+          class="bench-funnel__panel js-bench-metrics-panel is-active"
+          id="bench-metrics-panel-1"
+          role="tabpanel"
+          aria-labelledby="bench-metrics-tab-1"
+          data-id="1"
+        >
+          <div class="bench-funnel__panel-inner">
+            <div class="bench-funnel__intro">
+              <div class="bench-funnel__block-label">
+                Конверсия в покупку (CR)
+              </div>
+              <h3 class="bench-funnel__panel-title">
+                <span class="bench-funnel__panel-title-accent">1 из 170</span>
+                <span>визитов заканчивается покупкой</span>
+              </h3>
+              <p class="bench-funnel__panel-text">
+                Половина магазинов укладывается в узкий коридор. У лучших 10%
+                покупкой заканчивается от 0,95% визитов, у худших 10% около
+                0,35%. Средневзвешенное выше медианы, то есть у крупных
+                магазинов конверсия в покупку (CR) в среднем выше, чем у
+                магазина из середины рынка
               </p>
             </div>
-            <a href="#benchForm" class="btn-reset bench-btn">Получить отчет</a>
+
+            <div class="bench-funnel__intro-content">
+              <div class="bench-funnel__stats">
+                <div class="bench-funnel__stat bench-funnel__stat_main">
+                  <div class="bench-funnel__stat-val">0,58%</div>
+                  <div class="bench-funnel__stat-label">Медиана</div>
+                </div>
+                <div class="bench-funnel__stat">
+                  <div class="bench-funnel__stat-val">0,52–0,66%</div>
+                  <div class="bench-funnel__stat-label">Коридор p25–p75</div>
+                </div>
+                <div class="bench-funnel__stat bench-funnel__stat_narrow">
+                  <div class="bench-funnel__stat-val">0,69%</div>
+                  <div class="bench-funnel__stat-label">Средневзвешенное</div>
+                </div>
+              </div>
+
+              <div class="bench-funnel__card">
+                <div class="bench-funnel__card-title">
+                  Конверсия в покупку (CR) на рынке и в мировых исследованиях
+                </div>
+                <div class="bench-funnel__card-img">
+                  <img src="/img/bench/metrics-1.svg" alt="" />
+                </div>
+                <div class="bench-funnel__legend">
+                  <div class="bench-funnel__legend-items">
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_whisk"
+                        src="img/bench/icon-card-1.svg"
+                        width="24"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      p10–p90
+                    </span>
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_band"
+                        src="img/bench/icon-card-2.svg"
+                        width="24"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      p25–p75
+                    </span>
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_median"
+                        src="img/bench/icon-card-3.svg"
+                        width="7"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      медиана
+                    </span>
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_mean"
+                        src="img/bench/icon-card-4.svg"
+                        width="16"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      средневзвешенное
+                    </span>
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_mean"
+                        src="img/bench/icon-card-5.svg"
+                        width="16"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      мировой источник
+                    </span>
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_band"
+                        src="img/bench/icon-card-6.svg"
+                        width="24"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      диапазон источника
+                    </span>
+                  </div>
+                  @include('bench-funnel-informer.html')
+                </div>
+              </div>
+            </div>
+
+            <div class="bench-funnel__intro bench-funnel__intro_lock">
+              <div class="bench-funnel__cards">
+                <div class="bench-funnel__pictures">
+                  <div class="bench-funnel__card">
+                    <div class="bench-funnel__card-img">
+                      <img src="/img/bench/metrics-2-1.svg" alt="" />
+                    </div>
+                  </div>
+                  <div class="bench-funnel__card">
+                    <div class="bench-funnel__card-img">
+                      <img src="/img/bench/metrics-2-2.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="bench-funnel__card">
+                  <div class="bench-funnel__card-img">
+                    <img src="/img/bench/metrics-3.svg" alt="" />
+                  </div>
+                </div>
+                <div class="bench-funnel__card">
+                  <div class="bench-funnel__card-img">
+                    <img src="/img/bench/card-step-4.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="bench-funnel__lock">
+                <img
+                  class="bench-funnel__lock-icon"
+                  src="img/bench/lock.svg"
+                  width="64"
+                  height="64"
+                  alt=""
+                />
+                <div class="bench-funnel__lock-title">
+                  Остальное — в полном отчете
+                </div>
+                <div class="bench-funnel__lock-sub">
+                  <span>Устройство</span>
+                  <img
+                    class="bench-funnel__lock-star"
+                    src="img/bench/star-blue.svg"
+                    width="16"
+                    height="16"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>Помесячно</span>
+                  <img
+                    class="bench-funnel__lock-star"
+                    src="img/bench/star-blue.svg"
+                    width="16"
+                    height="16"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>Каналы трафика</span>
+                  <img
+                    class="bench-funnel__lock-star"
+                    src="img/bench/star-blue.svg"
+                    width="16"
+                    height="16"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>Новые/Вернувшиеся</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bench-funnel__cta">
+              <a
+                href="#benchForm"
+                class="btn-reset bench-btn bench-funnel__cta-btn"
+                >Получить отчет</a
+              >
+              <p class="bench-funnel__cta-note">
+                Бесплатно. Пришлем ссылку на почту
+              </p>
+            </div>
           </div>
         </div>
+
+        <div
+          class="bench-funnel__panel js-bench-metrics-panel"
+          id="bench-metrics-panel-2"
+          role="tabpanel"
+          aria-labelledby="bench-metrics-tab-2"
+          data-id="2"
+          hidden
+        >
+          <div class="bench-funnel__panel-inner">
+            <div class="bench-funnel__intro">
+              <div class="bench-funnel__block-label">
+                Добавление в корзину (ATC)
+              </div>
+              <h3 class="bench-funnel__panel-title">
+                <span class="bench-funnel__panel-title-accent">×6</span>
+                <span>во столько раз чаще кладут в корзину, чем покупают</span>
+              </h3>
+              <p class="bench-funnel__panel-text">
+                У лучших 10% магазинов товар в корзину добавляют от 4,77%
+                визитов, у худших 10% меньше 2,56%. Добавление в корзину и
+                посещение страницы корзины — разные события, страницу корзины
+                считает шаг 3
+              </p>
+            </div>
+
+            <div class="bench-funnel__intro-content">
+              <div class="bench-funnel__stats">
+                <div class="bench-funnel__stat bench-funnel__stat_main">
+                  <div class="bench-funnel__stat-val">3,45%</div>
+                  <div class="bench-funnel__stat-label">Медиана</div>
+                </div>
+                <div class="bench-funnel__stat">
+                  <div class="bench-funnel__stat-val">2,85–4,21%</div>
+                  <div class="bench-funnel__stat-label">Коридор p25–p75</div>
+                </div>
+                <div class="bench-funnel__stat bench-funnel__stat_narrow">
+                  <div class="bench-funnel__stat-val">3,79%%</div>
+                  <div class="bench-funnel__stat-label">Средневзвешенное</div>
+                </div>
+              </div>
+
+              <div class="bench-funnel__card">
+                <div class="bench-funnel__card-title">
+                  Конверсия в покупку (CR) на рынке и в мировых исследованиях
+                </div>
+                <div class="bench-funnel__card-img">
+                  <img src="/img/bench/metrics-5.svg" alt="" />
+                </div>
+                <div class="bench-funnel__legend">
+                  <div class="bench-funnel__legend-items">
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_whisk"
+                        src="img/bench/icon-card-1.svg"
+                        width="24"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      p10–p90
+                    </span>
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_band"
+                        src="img/bench/icon-card-2.svg"
+                        width="24"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      p25–p75
+                    </span>
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_median"
+                        src="img/bench/icon-card-3.svg"
+                        width="7"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      медиана
+                    </span>
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_mean"
+                        src="img/bench/icon-card-4.svg"
+                        width="16"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      средневзвешенное
+                    </span>
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_mean"
+                        src="img/bench/icon-card-5.svg"
+                        width="16"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      мировой источник
+                    </span>
+                    <span>
+                      <img
+                        class="bench-funnel__legend-icon bench-funnel__legend-icon_band"
+                        src="img/bench/icon-card-6.svg"
+                        width="24"
+                        height="24"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      диапазон источника
+                    </span>
+                  </div>
+                  @include('bench-funnel-informer.html')
+                </div>
+              </div>
+            </div>
+
+            <div class="bench-funnel__intro bench-funnel__intro_lock">
+              <div class="bench-funnel__cards">
+                <div class="bench-funnel__pictures">
+                  <div class="bench-funnel__card">
+                    <div class="bench-funnel__card-img">
+                      <img src="/img/bench/metrics-2-1.svg" alt="" />
+                    </div>
+                  </div>
+                  <div class="bench-funnel__card">
+                    <div class="bench-funnel__card-img">
+                      <img src="/img/bench/metrics-2-2.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="bench-funnel__card">
+                  <div class="bench-funnel__card-img">
+                    <img src="/img/bench/metrics-3.svg" alt="" />
+                  </div>
+                </div>
+                <div class="bench-funnel__card">
+                  <div class="bench-funnel__card-img">
+                    <img src="/img/bench/card-step-4.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="bench-funnel__lock">
+                <img
+                  class="bench-funnel__lock-icon"
+                  src="img/bench/lock.svg"
+                  width="64"
+                  height="64"
+                  alt=""
+                />
+                <div class="bench-funnel__lock-title">
+                  Остальное — в полном отчете
+                </div>
+                <div class="bench-funnel__lock-sub">
+                  <span>Устройство</span>
+                  <img
+                    class="bench-funnel__lock-star"
+                    src="img/bench/star-blue.svg"
+                    width="16"
+                    height="16"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>Помесячно</span>
+                  <img
+                    class="bench-funnel__lock-star"
+                    src="img/bench/star-blue.svg"
+                    width="16"
+                    height="16"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>Каналы трафика</span>
+                  <img
+                    class="bench-funnel__lock-star"
+                    src="img/bench/star-blue.svg"
+                    width="16"
+                    height="16"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>Новые/Вернувшиеся</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bench-funnel__cta">
+              <a
+                href="#benchForm"
+                class="btn-reset bench-btn bench-funnel__cta-btn"
+                >Получить отчет</a
+              >
+              <p class="bench-funnel__cta-note">
+                Бесплатно. Пришлем ссылку на почту
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bench-funnel__panel js-bench-metrics-panel"
+          id="bench-metrics-panel-3"
+          role="tabpanel"
+          aria-labelledby="bench-metrics-tab-3"
+          data-id="3"
+          hidden
+        ></div>
+
+        <div
+          class="bench-funnel__panel js-bench-metrics-panel"
+          id="bench-metrics-panel-4"
+          role="tabpanel"
+          aria-labelledby="bench-metrics-tab-4"
+          data-id="4"
+          hidden
+        ></div>
+
+        <div
+          class="bench-funnel__panel js-bench-metrics-panel"
+          id="bench-metrics-panel-5"
+          role="tabpanel"
+          aria-labelledby="bench-metrics-tab-5"
+          data-id="5"
+          hidden
+        ></div>
       </div>
     </div>
   </div>

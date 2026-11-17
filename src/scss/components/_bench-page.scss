@@ -91,7 +91,8 @@
 
     @include mobile {
       padding: rem(5) rem(10);
-      font-size: rem(11);
+      font-size: rem(12);
+      font-weight: 400;
     }
   }
 
@@ -196,8 +197,7 @@
     color 0.3s ease;
 
   &:hover {
-    background: var(--bench-pink);
-    color: var(--bench-black);
+    background: var(--pinkHover);
   }
 
   @include laptop {
@@ -214,6 +214,78 @@
 
   &_wide {
     width: 100%;
+  }
+}
+
+// Shared blue inputs (order + industry forms)
+.bench-form-fields {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: rem(20);
+  width: 100%;
+  max-width: none;
+  margin: 0;
+
+  @include laptop {
+    gap: rem(14);
+  }
+
+  @include mobile {
+    gap: rem(12);
+  }
+
+  .input-block {
+    width: 100%;
+    max-width: none !important;
+
+    input {
+      height: rem(70);
+      border-width: rem(4);
+      border-color: var(--bench-blue-2);
+      border-radius: rem(500);
+      background: var(--bench-blue);
+      color: var(--bench-black);
+
+      &::placeholder {
+        color: var(--bench-violet);
+      }
+
+      @include laptop {
+        height: rem(56);
+        border-width: rem(3);
+      }
+
+      @include mobile {
+        height: rem(52);
+      }
+
+      &:hover {
+        @include NOTmobile {
+          border-color: var(--bench-accent-blue);
+        }
+      }
+
+      &:focus {
+        @include NOTmobile {
+          border-color: var(--bench-accent-blue);
+        }
+      }
+    }
+  }
+
+  .bench-btn {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.bench-form-fields__narrow {
+  width: rem(460) !important;
+  max-width: 100% !important;
+
+  @include laptop {
+    width: 100% !important;
   }
 }
 
@@ -372,6 +444,10 @@
   &.header {
     background: transparent;
 
+    @include mobile {
+      display: none;
+    }
+
     &.header_scroll {
       top: 0;
       background: rgba(18, 17, 17, 0.88);
@@ -514,24 +590,155 @@
 }
 
 // ---------------------------------------------------------------------------
-// Mobile menu on dark page
+// Mobile menu on dark page (top bar + dropdown, Figma 375)
 // ---------------------------------------------------------------------------
 
 .new-mobile-menu_bench {
-  .mobile-menu__slide {
-    height: rem(567);
+  top: 0;
+  bottom: auto;
+  left: 0;
+  height: rem(56);
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  transform: translateY(0);
+  display: none;
+
+  @include mobile {
+    display: block;
   }
 
-  .new-mobile-menu__slide-head {
-    padding-inline: rem(30);
+  &.mobile-menu_show {
+    transform: translateY(0);
   }
 
-  .mobile-menu__burger-text {
-    color: #fff;
+  .mobile-menu__black {
+    top: 0;
+    bottom: auto;
+    height: 100vh;
+    background: rgba(18, 17, 17, 0.55);
   }
 
-  .mobile-menu__burger_open .mobile-menu__burger-text {
-    color: #121111;
+  &-bar {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+    height: rem(56);
+    padding: rem(8) rem(16);
+    background: var(--bench-black);
+    transition: background 0.3s ease;
+  }
+
+  &:has(.mobile-menu__slide_open) .new-mobile-menu_bench-bar {
+    background: var(--bench-dark);
+  }
+
+  &-logo {
+    flex: 0 0 auto;
+    display: block;
+    width: rem(120);
+    height: rem(28);
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: left center;
+    }
+  }
+
+  &-cta {
+    margin-left: auto;
+    height: rem(40);
+    padding: 0 rem(18);
+    font-size: rem(14);
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+
+  &-burger.mobile-menu__burger {
+    flex: 0 0 auto;
+    column-gap: 0;
+
+    .mobile-menu__burger-icon {
+      width: rem(40);
+      height: rem(40);
+      background: var(--bench-dark);
+      row-gap: rem(3);
+
+      span {
+        width: rem(18);
+        height: rem(2);
+        background: var(--bench-white);
+      }
+    }
+
+    &.mobile-menu__burger_open {
+      .mobile-menu__burger-icon {
+        // Open close circle: #121111 on sheet #302D2F
+        background: var(--bench-black);
+        row-gap: 0;
+
+        // Match site X: first two bars cross; hide the third.
+        span:nth-of-type(1) {
+          transform: translateY(rem(1)) rotate(45deg);
+        }
+
+        span:nth-of-type(2) {
+          opacity: 1;
+          transform: translateY(rem(-1)) rotate(-45deg);
+        }
+
+        span:nth-of-type(3) {
+          opacity: 0;
+          transform: none;
+        }
+      }
+    }
+  }
+
+  .mobile-menu__slide,
+  &-slide.mobile-menu__slide {
+    top: rem(56);
+    bottom: auto;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+    width: 100%;
+    height: auto;
+    padding: rem(16) rem(16) rem(42);
+    border-radius: 0 0 rem(40) rem(40);
+    background: var(--bench-dark);
+    transform: translateY(-12%);
+    opacity: 0;
+    pointer-events: none;
+
+    &.mobile-menu__slide_open {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  }
+
+  &-nav {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+  }
+
+  &-link {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: var(--bench-white);
   }
 }
 

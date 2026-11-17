@@ -591,6 +591,16 @@
     }
   }
 
+  &__pictures {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(8);
+
+    .bench-funnel__card {
+      margin-top: 0;
+    }
+  }
+
   &__card-img {
     width: 100%;
     height: auto;

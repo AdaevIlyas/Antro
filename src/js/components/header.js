@@ -35,6 +35,12 @@ export const header = () => {
     }
 
     function header_mobile_scroll() {
+      // bench: top burger bar is always visible on mobile
+      if (mobileMenu?.classList.contains("new-mobile-menu_bench")) {
+        mobileMenu.classList.add("mobile-menu_show");
+        return;
+      }
+
       if (window.pageYOffset > 0 && mobileMenu) {
         mobileMenu?.classList.add("mobile-menu_show");
       } else {

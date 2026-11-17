@@ -260,7 +260,7 @@
     gap: rem(8);
     margin-top: auto;
     padding: rem(24) rem(40);
-    border-radius: rem(30);
+    border-radius: rem(40);
     background: var(--bench-pink);
 
     @include laptop {
@@ -303,6 +303,7 @@
     background: var(--bench-bg);
     align-self: stretch;
     width: rem(740);
+    margin-top: rem(20);
     margin-right: rem(-40);
     margin-bottom: rem(-60);
 
