@@ -1,0 +1,13 @@
+<svg width="271" height="200" viewBox="0 0 271 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="106" height="200" rx="4" fill="white"/>
+<rect opacity="0.6" y="105" width="106" height="95" rx="4" fill="#5474A0"/>
+<rect x="108" width="71" height="200" rx="4" fill="white"/>
+<rect opacity="0.6" x="108" y="63" width="71" height="137" rx="4" fill="#5474A0"/>
+<rect x="181" width="55" height="200" rx="4" fill="white"/>
+<rect opacity="0.6" x="181" y="133" width="55" height="67" rx="4" fill="#5474A0"/>
+<rect x="238" width="19" height="200" rx="4" fill="white"/>
+<rect opacity="0.6" x="238" y="12" width="19" height="188" rx="4" fill="#5474A0"/>
+<rect x="259" width="12" height="200" rx="4" fill="white"/>
+<rect opacity="0.6" x="259" y="125" width="12" height="75" rx="4" fill="#5474A0"/>
+<path opacity="0.6" d="M0 99H1.99265M271 99H269.007M5.97794 99H9.96323M13.9485 99H17.9338M21.9191 99H25.9044M29.8897 99H33.875M37.8603 99H41.8456M45.8309 99H49.8162M53.8015 99H57.7868M61.7721 99H65.7574M69.7426 99H73.7279M77.7132 99H81.6985M85.6838 99H89.6691M93.6544 99H97.6397M101.625 99H105.61M109.596 99H113.581M117.566 99H121.551M125.537 99H129.522M133.507 99H137.493M141.478 99H145.463M149.448 99H153.434M157.419 99H161.404M165.39 99H169.375M173.36 99H177.345M181.331 99H185.316M189.301 99H193.287M197.272 99H201.257M205.243 99H209.228M213.213 99H217.198M221.184 99H225.169M229.154 99H233.14M237.125 99H241.11M245.095 99H249.081M253.066 99H257.051M261.037 99H265.022" stroke-width="2" stroke="#5474A0"/>
+</svg>

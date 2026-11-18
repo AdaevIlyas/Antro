@@ -4,6 +4,12 @@
     margin-inline: 1.6rem;
     background: var(--bench-dark);
     border-radius: rem(60);
+
+    @include mobile {
+      padding: rem(32) rem(16);
+      border-radius: rem(40);
+      margin-inline: 0;
+    }
   }
 
   &__head {
@@ -52,7 +58,6 @@
     align-items: start;
     padding: rem(60) 0 rem(60) rem(60);
     border-radius: rem(60);
-    border: rem(1) solid rgba(255, 255, 255, 0.12);
     background: var(--bench-dark-2);
     overflow: hidden;
 
@@ -66,8 +71,8 @@
     @include mobile {
       grid-template-columns: 1fr;
       gap: rem(20);
-      padding: rem(24);
-      border-radius: rem(30);
+      padding: rem(20);
+      border-radius: rem(28);
     }
   }
 
@@ -82,7 +87,7 @@
     }
 
     @include mobile {
-      gap: rem(16);
+      gap: rem(20);
     }
   }
 
@@ -129,7 +134,7 @@
     }
 
     @include mobile {
-      font-size: rem(32);
+      font-size: rem(34);
     }
   }
 
@@ -149,6 +154,7 @@
 
     @include mobile {
       font-size: rem(22);
+      padding-bottom: rem(4);
     }
   }
 
@@ -180,6 +186,10 @@
     @include laptop {
       gap: rem(8);
     }
+
+    @include mobile {
+      gap: rem(6);
+    }
   }
 
   &__label {
@@ -195,7 +205,7 @@
     }
 
     @include mobile {
-      font-size: rem(13);
+      font-size: rem(14);
     }
   }
 
@@ -270,8 +280,8 @@
     }
 
     @include mobile {
-      padding: rem(16) rem(20);
-      border-radius: rem(20);
+      padding: rem(16);
+      border-radius: rem(24);
     }
 
     .bench-process__label {
@@ -293,7 +303,7 @@
     }
 
     @include mobile {
-      font-size: rem(15);
+      font-size: rem(14);
     }
   }
 
@@ -303,24 +313,28 @@
     background: var(--bench-bg);
     align-self: stretch;
     width: rem(740);
+    height: rem(472);
     margin-top: rem(20);
     margin-right: rem(-40);
     margin-bottom: rem(-60);
 
     @include laptop {
-      min-height: rem(280);
       border-radius: rem(30);
     }
 
     @include mobile {
-      min-height: rem(220);
-      border-radius: rem(20);
+      border-radius: rem(28) 0 0 0;
+      width: rem(323);
+      height: rem(265);
+      margin-top: 0;
+      margin-right: rem(-20);
+      margin-bottom: rem(-80);
     }
 
     img {
       display: block;
       width: 100%;
-      height: 100%;
+      height: auto;
       object-fit: contain;
       object-position: center center;
     }

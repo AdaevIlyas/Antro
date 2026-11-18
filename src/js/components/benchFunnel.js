@@ -169,8 +169,29 @@ export const benchFunnel = () => {
   const getPanel = (id) =>
     panels.find((panel) => String(panel.dataset.id) === String(id));
 
+  const hasAccordion = (id) => {
+    const panel = getPanel(id);
+    if (!panel) return false;
+    return Boolean(panel.children.length) || Boolean(panel.textContent?.trim());
+  };
+
+  const syncTabAvailability = () => {
+    tabs.forEach((tab) => {
+      const openable = hasAccordion(tab.dataset.id);
+      tab.disabled = !openable;
+      tab.setAttribute("aria-disabled", openable ? "false" : "true");
+      tab.classList.toggle("is-disabled", !openable);
+      if (!openable) {
+        tab.classList.remove("is-active");
+        tab.setAttribute("aria-selected", "false");
+      }
+    });
+  };
+
   const setActive = (id, { allowToggle = false } = {}) => {
     const key = String(id);
+    if (!hasAccordion(key)) return;
+
     const isMobile = mq.matches;
     const current = tabs.find((tab) => tab.classList.contains("is-active"));
     const same = String(current?.dataset.id) === key;
@@ -217,18 +238,25 @@ export const benchFunnel = () => {
 
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
-      if (!tab.dataset.id) return;
+      if (!tab.dataset.id || tab.disabled || !hasAccordion(tab.dataset.id)) {
+        return;
+      }
       setActive(tab.dataset.id, { allowToggle: true });
     });
   });
 
+  syncTabAvailability();
   placePanels();
   mq.addEventListener("change", placePanels);
 
-  const initial =
+  const preferred =
     tabs.find((tab) => tab.classList.contains("is-active"))?.dataset.id ||
     panels.find((panel) => panel.classList.contains("is-active"))?.dataset.id ||
     "3";
 
-  setActive(initial);
+  const initial = hasAccordion(preferred)
+    ? preferred
+    : tabs.find((tab) => hasAccordion(tab.dataset.id))?.dataset.id;
+
+  if (initial) setActive(initial);
 };

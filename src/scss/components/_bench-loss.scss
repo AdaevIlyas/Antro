@@ -16,9 +16,10 @@
     }
 
     @include mobile {
-      gap: rem(24);
-      padding: rem(24);
-      border-radius: rem(30);
+      gap: rem(28);
+      padding: rem(32) rem(16) rem(16);
+      border-radius: rem(40);
+      margin-inline: 0;
     }
   }
 
@@ -34,7 +35,7 @@
     @include mobile {
       flex-direction: column;
       align-items: flex-start;
-      gap: rem(16);
+      gap: rem(12);
     }
   }
 
@@ -55,7 +56,7 @@
     @include mobile {
       max-width: none;
       font-size: rem(24);
-      letter-spacing: -0.04em;
+      letter-spacing: -0.05em;
     }
   }
 
@@ -77,6 +78,7 @@
     }
 
     @include mobile {
+      padding-top: 0;
       flex: none;
       max-width: none;
       font-size: rem(14);
@@ -94,7 +96,7 @@
 
     @include mobile {
       grid-template-columns: 1fr;
-      gap: rem(10);
+      gap: rem(8);
     }
   }
 
@@ -118,8 +120,8 @@
     @include mobile {
       gap: rem(20);
       min-height: 0;
-      padding: rem(24);
-      border-radius: rem(30);
+      padding: rem(20);
+      border-radius: rem(28);
     }
   }
 
@@ -136,7 +138,7 @@
     }
 
     @include mobile {
-      font-size: rem(16);
+      font-size: rem(34);
     }
   }
 
@@ -147,6 +149,7 @@
     padding-top: rem(17);
 
     @include laptop {
+      padding-top: 0;
       gap: rem(10);
     }
   }
@@ -182,6 +185,7 @@
 
     @include mobile {
       font-size: rem(14);
+      opacity: 0.8;
     }
   }
 
@@ -209,7 +213,7 @@
     }
 
     @include mobile {
-      grid-template-columns: 1fr rem(110);
+      grid-template-columns: 1fr rem(95);
     }
   }
 
@@ -225,7 +229,8 @@
     }
 
     @include mobile {
-      height: rem(20);
+      height: rem(24);
+      border-radius: rem(8);
     }
 
     .bench-hatch {
@@ -247,7 +252,7 @@
     }
 
     @include mobile {
-      font-size: rem(13);
+      font-size: rem(12);
     }
   }
 
@@ -255,6 +260,10 @@
     width: 100%;
     height: rem(280);
     margin-top: auto;
+
+    @include mobile {
+      height: auto;
+    }
 
     img {
       width: 100%;

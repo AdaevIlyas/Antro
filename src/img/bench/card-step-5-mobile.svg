@@ -1,0 +1,13 @@
+<svg width="271" height="160" viewBox="0 0 271 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="101" height="160" rx="4" fill="white"/>
+<rect opacity="0.6" y="65" width="101" height="95" rx="4" fill="#5474A0"/>
+<rect x="103" width="88" height="160" rx="4" fill="white"/>
+<rect opacity="0.6" x="103" y="48" width="88" height="112" rx="4" fill="#5474A0"/>
+<rect x="193" width="42" height="160" rx="4" fill="white"/>
+<rect opacity="0.6" x="193" y="69" width="42" height="91" rx="4" fill="#5474A0"/>
+<rect x="237" width="20" height="160" rx="4" fill="white"/>
+<rect opacity="0.6" x="237" y="45" width="20" height="115" rx="4" fill="#5474A0"/>
+<rect x="259" width="12" height="160" rx="4" fill="white"/>
+<rect opacity="0.6" x="259" y="69" width="12" height="91" rx="4" fill="#5474A0"/>
+<path opacity="0.6" d="M0 59H1.99265M271 59H269.007M5.97794 59H9.96323M13.9485 59H17.9338M21.9191 59H25.9044M29.8897 59H33.875M37.8603 59H41.8456M45.8309 59H49.8162M53.8015 59H57.7868M61.7721 59H65.7574M69.7426 59H73.7279M77.7132 59H81.6985M85.6838 59H89.6691M93.6544 59H97.6397M101.625 59H105.61M109.596 59H113.581M117.566 59H121.551M125.537 59H129.522M133.507 59H137.493M141.478 59H145.463M149.448 59H153.434M157.419 59H161.404M165.39 59H169.375M173.36 59H177.345M181.331 59H185.316M189.301 59H193.287M197.272 59H201.257M205.243 59H209.228M213.213 59H217.198M221.184 59H225.169M229.154 59H233.14M237.125 59H241.11M245.095 59H249.081M253.066 59H257.051M261.037 59H265.022" stroke-width="2" stroke="#5474A0"/>
+</svg>

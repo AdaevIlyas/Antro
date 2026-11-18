@@ -1,6 +1,10 @@
 ﻿.bench-order {
   margin-bottom: calc(-1 * rem(316)) !important;
 
+  @include mobile {
+    margin-bottom: calc(-1 * rem(96)) !important;
+  }
+
   &__inner {
     display: flex;
     align-items: flex-start;
@@ -20,9 +24,10 @@
 
     @include mobile {
       flex-direction: column;
-      gap: rem(32);
-      padding: rem(24);
-      border-radius: rem(30);
+      gap: rem(28);
+      padding: rem(32) rem(16) rem(128);
+      border-radius: rem(30) rem(30) 0 0;
+      margin-inline: 0;
     }
   }
 
@@ -44,7 +49,7 @@
     @include mobile {
       flex: none;
       max-width: none;
-      gap: rem(16);
+      gap: rem(12);
     }
   }
 
@@ -60,7 +65,7 @@
     }
 
     @include mobile {
-      gap: rem(16);
+      gap: rem(12);
     }
   }
 
@@ -94,7 +99,7 @@
     }
 
     @include mobile {
-      font-size: rem(32);
+      font-size: rem(24);
       letter-spacing: -0.04em;
     }
   }
@@ -123,6 +128,10 @@
     gap: rem(8);
     width: 100%;
 
+    @include mobile {
+      gap: rem(6);
+    }
+
     li {
       display: flex;
       align-items: flex-start;
@@ -140,6 +149,7 @@
       }
 
       @include mobile {
+        gap: rem(8);
         font-size: rem(14);
       }
 
@@ -152,6 +162,12 @@
 
         @include laptop {
           height: rem(20);
+        }
+
+        @include mobile {
+          flex: 0 0 rem(12);
+          width: rem(12);
+          height: rem(17);
         }
       }
     }
@@ -172,7 +188,9 @@
     }
 
     @include mobile {
-      padding: rem(16) rem(20);
+      gap: rem(6);
+      margin-top: rem(4);
+      padding: rem(16);
       border-radius: rem(24);
     }
   }
@@ -190,7 +208,7 @@
     }
 
     @include mobile {
-      font-size: rem(15);
+      font-size: rem(14);
     }
   }
 
@@ -235,8 +253,8 @@
       flex: none;
       width: 100%;
       gap: rem(20);
-      padding: rem(24);
-      border-radius: rem(30);
+      padding: rem(20);
+      border-radius: rem(28);
     }
   }
 
@@ -247,7 +265,7 @@
 
     @include mobile {
       flex-direction: column;
-      gap: rem(12);
+      gap: rem(14);
     }
 
     .input-block {
@@ -264,6 +282,10 @@
 
     @include laptop {
       gap: rem(12);
+    }
+
+    @include mobile {
+      gap: rem(10);
     }
   }
 
@@ -294,6 +316,11 @@
 
     @include laptop {
       gap: rem(12);
+    }
+
+    @include mobile {
+      gap: rem(10);
+      padding-right: rem(20);
     }
   }
 

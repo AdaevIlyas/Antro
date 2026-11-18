@@ -6,8 +6,7 @@
   }
 
   @include mobile {
-    padding-inline: rem(8);
-    padding-bottom: rem(24);
+    padding: 0;
   }
 
   &__box {
@@ -21,8 +20,8 @@
     }
 
     @include mobile {
-      padding: rem(28) rem(24);
-      border-radius: rem(30);
+      padding: rem(32) rem(20);
+      border-radius: rem(40);
     }
   }
 
@@ -39,7 +38,7 @@
     @include mobile {
       flex-direction: column;
       align-items: stretch;
-      gap: rem(28);
+      gap: rem(32);
     }
   }
 
@@ -94,8 +93,9 @@
     }
 
     @include mobile {
+      align-items: start;
       width: 100%;
-      gap: rem(20);
+      gap: rem(32);
     }
   }
 
@@ -113,7 +113,7 @@
     @include mobile {
       width: auto;
       flex: 1;
-      gap: rem(12);
+      gap: rem(20);
     }
 
     &:first-child {
@@ -163,6 +163,7 @@
     }
 
     @include mobile {
+      position: relative;
       flex-direction: column;
       align-items: stretch;
       gap: rem(24);
@@ -181,7 +182,8 @@
     @include mobile {
       flex-direction: column;
       align-items: stretch;
-      gap: rem(16);
+      gap: rem(20);
+      max-width: fit-content;
     }
   }
 
@@ -210,7 +212,7 @@
     }
 
     @include mobile {
-      font-size: rem(13);
+      font-size: rem(12);
     }
   }
 
@@ -245,7 +247,10 @@
     gap: rem(12);
 
     @include mobile {
-      gap: rem(10);
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      gap: rem(8);
     }
   }
 
@@ -267,19 +272,14 @@
     }
 
     @include mobile {
-      width: rem(48);
-      height: rem(48);
+      width: rem(44);
+      height: rem(44);
     }
 
     img {
       display: block;
       width: rem(20);
       height: rem(20);
-
-      @include laptop {
-        width: rem(18);
-        height: rem(18);
-      }
     }
 
     &:hover {
@@ -301,11 +301,11 @@
     }
 
     @include mobile {
-      flex-direction: column-reverse;
+      flex-direction: column;
       align-items: flex-start;
-      gap: rem(12);
-      margin-top: rem(16);
-      padding-inline: rem(8);
+      gap: rem(10);
+      margin-top: 0;
+      padding: rem(16) rem(20) rem(24);
     }
   }
 

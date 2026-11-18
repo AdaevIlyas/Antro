@@ -11,7 +11,7 @@
 
     @include mobile {
       grid-template-columns: 1fr;
-      gap: rem(10);
+      gap: rem(12);
     }
   }
 
@@ -32,9 +32,9 @@
     }
 
     @include mobile {
-      gap: rem(20);
-      padding: rem(24);
-      border-radius: rem(30);
+      gap: rem(12);
+      padding: rem(32) rem(20);
+      border-radius: rem(28);
     }
   }
 
@@ -49,7 +49,7 @@
     }
 
     @include mobile {
-      gap: rem(12);
+      gap: rem(8);
     }
   }
 
@@ -67,7 +67,7 @@
     }
 
     @include mobile {
-      font-size: rem(28);
+      font-size: rem(24);
       letter-spacing: -0.04em;
     }
   }
@@ -109,8 +109,8 @@
 
     @include mobile {
       gap: rem(20);
-      padding: rem(24);
-      border-radius: rem(30);
+      padding: rem(20);
+      border-radius: rem(28);
     }
 
     .i-checkbox {
@@ -118,6 +118,10 @@
       max-width: none;
       margin-top: 0;
       align-items: flex-start;
+
+      @include mobile {
+        gap: rem(6);
+      }
 
       &__mask {
         flex-shrink: 0;
@@ -135,7 +139,7 @@
         }
 
         @include mobile {
-          font-size: rem(13);
+          font-size: rem(14);
         }
 
         a {
@@ -158,7 +162,7 @@
     }
 
     @include mobile {
-      gap: rem(10);
+      gap: rem(12);
     }
   }
 
@@ -184,10 +188,6 @@
     flex-wrap: wrap;
     align-items: center;
     gap: rem(4);
-
-    @include mobile {
-      gap: rem(6);
-    }
   }
 
   &__pill {
@@ -228,7 +228,7 @@
       }
 
       @include mobile {
-        padding: rem(10) rem(14);
+        padding: rem(10) rem(16);
         font-size: rem(14);
       }
     }
@@ -250,6 +250,4 @@
       color: var(--bench-black);
     }
   }
-
 }
-

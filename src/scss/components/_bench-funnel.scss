@@ -39,7 +39,7 @@
     @include mobile {
       display: flex;
       flex-direction: column;
-      gap: rem(6);
+      gap: rem(8);
     }
   }
 
@@ -94,14 +94,26 @@
     }
 
     @include mobile {
+      z-index: 1;
+      height: rem(72);
       min-height: rem(72);
-      padding: rem(14) rem(18);
+      padding: rem(4) rem(4) rem(4) rem(20);
       border-radius: rem(24);
+      gap: rem(8);
+
+      .bench-tag {
+        display: none;
+      }
     }
 
     // Figma: first row is the whole pill at 50% opacity
     &_dim {
       opacity: 0.5;
+    }
+
+    &:disabled,
+    &.is-disabled {
+      cursor: default;
     }
 
     // override global `* { color: var(--black) }` so spans inherit tab color
@@ -114,6 +126,11 @@
     .bench-funnel__tab-name {
       color: inherit;
       transition: all 0.3s ease;
+    }
+
+    &:not(.is-disabled) {
+      @include mobile {
+      }
     }
 
     // Figma active: Bench/Pink #E3B9DF + black text (not Brand #FC63D5)
@@ -131,6 +148,47 @@
 
       .bench-hatch.bench-hatch_dark-2 {
         --hatch-color: var(--bench-pink-2);
+      }
+
+      @include mobile {
+        .bench-funnel__tab-go {
+          background: var(--bench-pink-2);
+          color: var(--bench-black);
+
+          svg {
+            color: var(--bench-black);
+            transform: rotate(180deg);
+            filter: none;
+          }
+        }
+      }
+    }
+  }
+
+  // Mobile accordion chevron — Figma 16193:152122 / 149977
+  &__tab-go {
+    display: none;
+
+    @include mobile {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      width: rem(40);
+      height: rem(64);
+      border-radius: rem(20);
+      background: var(--bench-dark-2);
+      color: var(--bench-white);
+
+      svg {
+        display: block;
+        width: rem(16);
+        height: rem(16);
+        color: var(--bench-white);
+        transition: all 0.25s ease;
+        filter: brightness(0) invert(1);
       }
     }
   }
@@ -156,13 +214,15 @@
     display: flex;
     align-items: center;
     gap: rem(24);
+    min-width: 0;
 
     @include laptop {
       gap: rem(16);
     }
 
     @include mobile {
-      gap: rem(12);
+      flex: 1 1 auto;
+      gap: rem(14);
     }
   }
 
@@ -204,7 +264,7 @@
     }
 
     @include mobile {
-      font-size: rem(24);
+      font-size: rem(22);
     }
   }
 
@@ -220,6 +280,7 @@
 
     @include mobile {
       font-size: rem(12);
+      white-space: nowrap;
     }
   }
 
@@ -234,6 +295,13 @@
     flex-shrink: 0;
     text-align: right;
     max-width: rem(220);
+
+    @include mobile {
+      padding-top: rem(12);
+      align-self: flex-start;
+      max-width: rem(100);
+      gap: 0;
+    }
   }
 
   &__tab-name {
@@ -250,9 +318,10 @@
     }
 
     @include mobile {
+      z-index: 1;
       font-size: rem(14);
-      max-width: rem(120);
-      gap: rem(4);
+      line-height: 1.2;
+      white-space: nowrap;
     }
 
     .bench-tag {
@@ -288,9 +357,9 @@
 
     @include mobile {
       min-height: 0;
-      margin-top: rem(6);
-      padding: rem(24) rem(16) rem(24);
-      border-radius: rem(28);
+      padding: rem(100) rem(20) rem(20);
+      border-radius: rem(24);
+      margin-top: rem(-78);
     }
   }
 
@@ -308,7 +377,7 @@
     }
 
     @include mobile {
-      gap: rem(24);
+      gap: rem(28);
     }
   }
 
@@ -319,10 +388,18 @@
 
     .bench-funnel__panel-text {
       padding-top: rem(4);
+
+      @include mobile {
+        padding-top: rem(2);
+      }
     }
 
     .bench-funnel__card {
       margin-top: rem(8);
+    }
+
+    @include mobile {
+      gap: rem(8);
     }
   }
 
@@ -334,6 +411,10 @@
     display: flex;
     flex-direction: column;
     gap: rem(8);
+
+    @include mobile {
+      gap: rem(12);
+    }
   }
 
   &__step {
@@ -384,7 +465,8 @@
     }
 
     @include mobile {
-      font-size: rem(22);
+      font-size: rem(18);
+      gap: rem(2);
     }
   }
 
@@ -398,7 +480,8 @@
     }
 
     @include mobile {
-      font-size: rem(28);
+      font-size: rem(26);
+      line-height: 110%;
     }
   }
 
@@ -443,7 +526,9 @@
     }
 
     @include mobile {
-      padding: rem(18) rem(16);
+      align-items: end;
+      flex-direction: row;
+      padding: rem(16);
       border-radius: rem(24);
     }
 
@@ -487,7 +572,7 @@
     }
 
     @include mobile {
-      font-size: rem(28);
+      font-size: rem(22);
     }
   }
 
@@ -505,6 +590,12 @@
 
     @include laptop {
       font-size: rem(14);
+    }
+
+    @include mobile {
+      font-size: rem(12);
+      padding-bottom: rem(2);
+      color: var(--bench-black);
     }
   }
 
@@ -565,7 +656,7 @@
     }
 
     @include mobile {
-      padding: rem(16);
+      padding: rem(20) rem(16);
       border-radius: rem(24);
     }
 
@@ -592,9 +683,13 @@
   }
 
   &__pictures {
-    display: grid;
+    display: grid !important;
     grid-template-columns: repeat(2, 1fr);
     gap: rem(8);
+
+    @include mobile {
+      display: none !important;
+    }
 
     .bench-funnel__card {
       margin-top: 0;
@@ -876,20 +971,20 @@
 
     @include mobile {
       width: 100%;
-      height: auto;
-      min-height: rem(48);
-      padding: rem(14) rem(16);
-      border-radius: rem(16);
-      background: var(--bench-bg);
+      height: rem(32);
+      padding: rem(8) rem(12);
+      border-radius: rem(12);
       justify-content: space-between;
       gap: rem(8);
       font-family: var(--font-family);
       font-weight: 500;
-      font-size: rem(14);
+      font-size: rem(12);
       line-height: 1.1;
       letter-spacing: -0.03em;
       color: var(--bench-black);
       text-align: left;
+      margin-top: rem(16);
+      background: var(--bench-white);
     }
   }
 
@@ -987,14 +1082,13 @@
     display: none;
     position: fixed;
     left: 50%;
-    bottom: rem(16);
+    bottom: 0;
     z-index: 95;
-    width: calc(100vw - #{rem(32)});
-    max-width: rem(343);
+    width: 100vw;
     max-height: calc(100vh - #{rem(32)});
-    padding: rem(20) rem(16) rem(16);
-    border-radius: rem(28);
-    background: var(--bench-black);
+    padding: rem(32) rem(16) rem(16);
+    border-radius: rem(40) rem(40) 0 0;
+    background: var(--bench-dark);
     transform: translateX(-50%);
     box-sizing: border-box;
     overflow-y: auto;
@@ -1012,7 +1106,6 @@
     align-items: center;
     justify-content: space-between;
     gap: rem(12);
-    padding: 0 rem(4);
   }
 
   &__informer-popup-title {
@@ -1039,24 +1132,24 @@
 
     img {
       display: block;
-      width: rem(20);
-      height: rem(20);
+      width: rem(24);
+      height: rem(24);
     }
   }
 
   &__informer-popup-card {
     display: flex;
     flex-direction: column;
-    gap: rem(16);
+    gap: rem(20);
     padding: rem(20);
-    border-radius: rem(24);
+    border-radius: rem(28);
     background: var(--bench-white);
   }
 
   &__informer-list {
     display: flex;
     flex-direction: column;
-    gap: rem(16);
+    gap: rem(12);
     margin: 0;
     padding: 0;
     list-style: none;
@@ -1069,6 +1162,15 @@
 
     .bench-funnel__legend-icon {
       margin-top: rem(2);
+    }
+
+    @include mobile {
+      align-items: center;
+      gap: rem(8);
+
+      .bench-funnel__legend-icon {
+        margin-top: 0;
+      }
     }
   }
 
@@ -1092,7 +1194,7 @@
       font-size: rem(14);
       line-height: 1.2;
       letter-spacing: -0.03em;
-      color: var(--bench-violet);
+      color: var(--bench-black);
     }
   }
 
@@ -1131,6 +1233,11 @@
       width: rem(16);
       height: rem(16);
       flex-shrink: 0;
+
+      @include mobile {
+        width: rem(14);
+        height: rem(14);
+      }
     }
 
     @include laptop {
@@ -1139,6 +1246,7 @@
 
     @include mobile {
       font-size: rem(14);
+      padding-left: rem(32);
     }
   }
 
@@ -1149,6 +1257,10 @@
     height: auto;
     object-fit: contain;
     object-position: center;
+
+    @include mobile {
+      align-self: flex-start;
+    }
 
     &_whisk,
     &_band {
@@ -1273,6 +1385,12 @@
     );
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+
+    @include mobile {
+      gap: rem(12);
+      inset: rem(-28) rem(-20);
+      padding: rem(20);
+    }
   }
 
   &__lock-icon {
@@ -1282,8 +1400,7 @@
     margin-bottom: rem(8);
 
     @include mobile {
-      width: rem(48);
-      height: rem(48);
+      margin-bottom: rem(4);
     }
   }
 
@@ -1321,6 +1438,7 @@
 
     @include mobile {
       font-size: rem(14);
+      gap: rem(8);
     }
   }
 
@@ -1329,6 +1447,11 @@
     object-position: center;
     width: rem(16);
     height: rem(16);
+
+    @include mobile {
+      width: rem(12);
+      height: rem(12);
+    }
   }
 
   &__cta {
@@ -1344,8 +1467,8 @@
     }
 
     @include mobile {
-      padding-bottom: rem(8);
-      gap: rem(12);
+      padding-bottom: rem(0);
+      gap: rem(10);
     }
   }
 
@@ -1362,7 +1485,7 @@
     color: var(--bench-violet);
 
     @include mobile {
-      font-size: rem(14);
+      font-size: rem(12);
     }
   }
 }

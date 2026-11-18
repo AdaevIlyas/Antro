@@ -66,7 +66,7 @@
   }
 
   @include mobile {
-    padding: rem(12) rem(16);
+    padding: rem(6) rem(14) rem(5);
     font-size: rem(12);
   }
 
@@ -231,10 +231,6 @@
     gap: rem(14);
   }
 
-  @include mobile {
-    gap: rem(12);
-  }
-
   .input-block {
     width: 100%;
     max-width: none !important;
@@ -253,11 +249,11 @@
 
       @include laptop {
         height: rem(56);
-        border-width: rem(3);
+        border-width: rem(4);
       }
 
       @include mobile {
-        height: rem(52);
+        height: rem(50);
       }
 
       &:hover {
@@ -277,6 +273,11 @@
   .bench-btn {
     width: 100%;
     margin-top: 0;
+
+    @include mobile {
+      margin-left: 0;
+      font-size: rem(14);
+    }
   }
 }
 
@@ -371,7 +372,7 @@
   }
 
   @include mobile {
-    gap: rem(20);
+    gap: rem(12);
     margin-bottom: rem(24);
   }
 }
@@ -389,7 +390,7 @@
   }
 
   @include mobile {
-    font-size: rem(32);
+    font-size: rem(24);
     letter-spacing: -0.04em;
   }
 }
@@ -408,7 +409,7 @@
   @include mobile {
     flex-direction: column;
     align-items: flex-start;
-    gap: rem(16);
+    gap: rem(8);
   }
 }
 
@@ -430,6 +431,7 @@
   }
 
   @include mobile {
+    padding-top: 0;
     flex: none;
     max-width: none;
     font-size: rem(14);
