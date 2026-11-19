@@ -27,8 +27,8 @@
 
     @include laptop {
       gap: rem(24);
-      padding: rem(40);
-      border-radius: rem(44);
+      padding: rem(42);
+      border-radius: rem(42);
     }
 
     @include mobile {
@@ -63,7 +63,7 @@
     color: var(--bench-black);
 
     @include laptop {
-      font-size: rem(36);
+      font-size: rem(38);
     }
 
     @include mobile {
@@ -84,7 +84,7 @@
 
     @include laptop {
       max-width: none;
-      font-size: rem(15);
+      font-size: rem(16);
     }
 
     @include mobile {
@@ -103,8 +103,8 @@
 
     @include laptop {
       gap: rem(24);
-      padding: rem(40);
-      border-radius: rem(44);
+      padding: rem(42);
+      border-radius: rem(42);
     }
 
     @include mobile {
@@ -118,6 +118,12 @@
       max-width: none;
       margin-top: 0;
       align-items: flex-start;
+
+      @include laptop {
+        max-width: rem(450);
+        align-self: flex-start;
+        margin-left: 0;
+      }
 
       @include mobile {
         gap: rem(6);
@@ -224,7 +230,7 @@
 
       @include laptop {
         padding: rem(12) rem(18);
-        font-size: rem(15);
+        font-size: rem(14);
       }
 
       @include mobile {

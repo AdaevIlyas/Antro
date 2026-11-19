@@ -61,8 +61,8 @@
   text-transform: uppercase;
 
   @include laptop {
-    padding: rem(12) rem(20);
-    font-size: rem(14);
+    padding: rem(9.5) rem(18) rem(8.5);
+    font-size: rem(12);
   }
 
   @include mobile {
@@ -101,8 +101,8 @@
     font-size: rem(14);
 
     @include laptop {
-      padding: rem(6) rem(12);
-      font-size: rem(12);
+      padding: rem(4) rem(8);
+      font-size: rem(11);
     }
 
     @include mobile {
@@ -140,8 +140,9 @@
   white-space: nowrap;
 
   @include laptop {
-    padding: rem(10) rem(18);
-    font-size: rem(16);
+    padding: rem(6.5) rem(12);
+    font-size: rem(14);
+    line-height: 110%;
   }
 
   @include mobile {
@@ -201,15 +202,15 @@
   }
 
   @include laptop {
-    height: rem(46);
+    height: rem(58);
     padding: 0 rem(32);
-    font-size: rem(16);
+    font-size: rem(14);
   }
 
   @include mobile {
     height: rem(50);
     padding: 0 rem(24);
-    font-size: rem(16);
+    font-size: rem(14);
   }
 
   &_wide {
@@ -228,7 +229,7 @@
   margin: 0;
 
   @include laptop {
-    gap: rem(14);
+    gap: rem(16);
   }
 
   .input-block {
@@ -248,7 +249,7 @@
       }
 
       @include laptop {
-        height: rem(56);
+        height: rem(58);
         border-width: rem(4);
       }
 
@@ -285,7 +286,7 @@
   width: rem(460) !important;
   max-width: 100% !important;
 
-  @include laptop {
+  @include mobile {
     width: 100% !important;
   }
 }
@@ -367,8 +368,8 @@
   margin-bottom: rem(60);
 
   @include laptop {
-    gap: rem(20);
-    margin-bottom: rem(44);
+    gap: rem(24);
+    margin-bottom: rem(42);
   }
 
   @include mobile {
@@ -386,7 +387,7 @@
   color: var(--bench-white);
 
   @include laptop {
-    font-size: rem(58);
+    font-size: rem(38);
   }
 
   @include mobile {
@@ -425,9 +426,10 @@
   padding-top: rem(10);
 
   @include laptop {
-    flex-basis: rem(480);
-    max-width: rem(480);
+    flex-basis: rem(349);
+    max-width: rem(349);
     font-size: rem(16);
+    padding-top: rem(6);
   }
 
   @include mobile {

@@ -17,9 +17,9 @@
     color: var(--bench-black);
 
     @include laptop {
-      gap: rem(33);
-      padding: rem(44);
-      border-radius: rem(44);
+      padding: rem(60) rem(84) rem(400);
+      border-radius: rem(42);
+      gap: rem(42);
     }
 
     @include mobile {
@@ -41,9 +41,9 @@
     min-width: 0;
 
     @include laptop {
-      flex-basis: rem(480);
-      max-width: rem(480);
-      gap: rem(20);
+      flex: 0 0 rem(506);
+      max-width: rem(506);
+      gap: rem(24);
     }
 
     @include mobile {
@@ -61,7 +61,7 @@
     width: 100%;
 
     @include laptop {
-      gap: rem(18);
+      gap: rem(16);
     }
 
     @include mobile {
@@ -77,7 +77,7 @@
     padding-right: rem(1);
 
     @include laptop {
-      gap: rem(14);
+      gap: rem(12);
     }
 
     @include mobile {
@@ -95,7 +95,7 @@
     color: var(--bench-black);
 
     @include laptop {
-      font-size: rem(40);
+      font-size: rem(38);
     }
 
     @include mobile {
@@ -128,6 +128,10 @@
     gap: rem(8);
     width: 100%;
 
+    @include laptop {
+      gap: rem(6);
+    }
+
     @include mobile {
       gap: rem(6);
     }
@@ -144,7 +148,7 @@
       color: var(--bench-black);
 
       @include laptop {
-        gap: rem(10);
+        gap: rem(8);
         font-size: rem(16);
       }
 
@@ -161,7 +165,9 @@
         object-fit: contain;
 
         @include laptop {
-          height: rem(20);
+          flex: 0 0 rem(12);
+          height: rem(19);
+          width: rem(12);
         }
 
         @include mobile {
@@ -183,8 +189,8 @@
     background: var(--bench-blue);
 
     @include laptop {
-      padding: rem(18) rem(28);
-      border-radius: rem(30);
+      padding: rem(16) rem(28);
+      border-radius: rem(28);
     }
 
     @include mobile {
@@ -204,7 +210,7 @@
     color: var(--bench-black);
 
     @include laptop {
-      font-size: rem(16);
+      font-size: rem(14);
     }
 
     @include mobile {
@@ -222,7 +228,7 @@
     color: var(--bench-black);
 
     @include laptop {
-      font-size: rem(15);
+      font-size: rem(14);
     }
 
     @include mobile {
@@ -234,6 +240,7 @@
     display: flex;
     flex: 0 0 rem(780);
     flex-direction: column;
+    align-self: stretch;
     gap: rem(32);
     width: rem(780);
     max-width: 100%;
@@ -242,11 +249,11 @@
     background: var(--bench-dark);
 
     @include laptop {
-      flex-basis: rem(520);
-      width: rem(520);
+      flex: 1 1 auto;
+      width: auto;
       gap: rem(24);
-      padding: rem(36);
-      border-radius: rem(44);
+      padding: rem(42);
+      border-radius: rem(42);
     }
 
     @include mobile {
@@ -262,6 +269,10 @@
     display: flex;
     gap: rem(10);
     width: 100%;
+
+    @include laptop {
+      gap: rem(8);
+    }
 
     @include mobile {
       flex-direction: column;
@@ -300,7 +311,7 @@
     text-align: left;
 
     @include laptop {
-      font-size: rem(15);
+      font-size: rem(14);
     }
 
     @include mobile {
@@ -316,6 +327,8 @@
 
     @include laptop {
       gap: rem(12);
+      max-width: rem(450);
+      align-self: flex-start;
     }
 
     @include mobile {
@@ -340,7 +353,7 @@
       }
 
       @include mobile {
-        font-size: rem(13);
+        font-size: rem(14);
       }
 
       a {

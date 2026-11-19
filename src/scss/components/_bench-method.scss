@@ -21,6 +21,10 @@
     gap: rem(8);
     padding-left: rem(25);
 
+    @include laptop {
+      padding-left: rem(20);
+    }
+
     @include mobile {
       padding-left: rem(20);
       gap: 0;
@@ -71,10 +75,10 @@
     background: var(--bench-dark);
 
     @include laptop {
-      gap: rem(12);
-      min-height: rem(230);
-      padding: rem(32);
-      border-radius: rem(44);
+      gap: rem(20);
+      min-height: auto;
+      border-radius: rem(42);
+      padding: rem(28);
     }
 
     @include mobile {
@@ -93,8 +97,8 @@
     object-position: center;
 
     @include laptop {
-      width: rem(48);
-      height: rem(48);
+      width: rem(46);
+      height: rem(46);
     }
 
     @include mobile {
@@ -108,6 +112,10 @@
     flex-direction: column;
     gap: rem(18);
     min-width: 0;
+
+    @include laptop {
+      gap: rem(12);
+    }
 
     @include mobile {
       gap: rem(8);

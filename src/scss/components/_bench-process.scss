@@ -5,6 +5,11 @@
     background: var(--bench-dark);
     border-radius: rem(60);
 
+    @include laptop {
+      padding: rem(60) rem(84);
+      border-radius: rem(42);
+    }
+
     @include mobile {
       padding: rem(32) rem(16);
       border-radius: rem(40);
@@ -35,6 +40,12 @@
 
   &__aside {
     @extend %bench-aside;
+
+    @include laptop {
+      br {
+        display: none !important;
+      }
+    }
   }
 
   &__list {
@@ -43,7 +54,7 @@
     gap: rem(20);
 
     @include laptop {
-      gap: rem(14);
+      gap: rem(16);
     }
 
     @include mobile {
@@ -63,9 +74,9 @@
 
     @include laptop {
       grid-template-columns: 1fr rem(480);
-      gap: rem(24);
-      padding: rem(30);
-      border-radius: rem(44);
+      gap: rem(54);
+      padding: rem(42) 0 rem(42) rem(42);
+      border-radius: rem(42);
     }
 
     @include mobile {
@@ -83,7 +94,7 @@
     min-width: 0;
 
     @include laptop {
-      gap: rem(20);
+      gap: rem(22);
     }
 
     @include mobile {
@@ -98,7 +109,7 @@
     gap: rem(10);
 
     @include laptop {
-      gap: rem(8);
+      gap: rem(6);
     }
 
     @include mobile {
@@ -130,7 +141,7 @@
     color: var(--bench-pink);
 
     @include laptop {
-      font-size: rem(40);
+      font-size: rem(46);
     }
 
     @include mobile {
@@ -150,6 +161,7 @@
 
     @include laptop {
       font-size: rem(24);
+      padding-bottom: rem(6);
     }
 
     @include mobile {
@@ -170,7 +182,7 @@
 
     @include laptop {
       max-width: none;
-      font-size: rem(15);
+      font-size: rem(14);
     }
 
     @include mobile {
@@ -184,7 +196,7 @@
     gap: rem(10);
 
     @include laptop {
-      gap: rem(8);
+      gap: rem(6);
     }
 
     @include mobile {
@@ -234,8 +246,8 @@
       }
 
       @include laptop {
-        gap: rem(10);
-        font-size: rem(15);
+        gap: rem(8);
+        font-size: rem(14);
       }
 
       @include mobile {
@@ -253,9 +265,9 @@
     flex-shrink: 0;
 
     @include laptop {
-      width: rem(14);
-      height: rem(14);
       margin-top: rem(2);
+      width: rem(12);
+      height: rem(12);
     }
 
     @include mobile {
@@ -275,8 +287,8 @@
 
     @include laptop {
       gap: rem(6);
-      padding: rem(18) rem(24);
-      border-radius: rem(22);
+      padding: rem(16) rem(28);
+      border-radius: rem(28);
     }
 
     @include mobile {
@@ -299,7 +311,7 @@
     color: var(--bench-black);
 
     @include laptop {
-      font-size: rem(16);
+      font-size: rem(14);
     }
 
     @include mobile {
@@ -319,7 +331,12 @@
     margin-bottom: rem(-60);
 
     @include laptop {
-      border-radius: rem(30);
+      border-radius: rem(40) 0 0 0;
+      width: rem(506);
+      height: rem(416);
+      margin-top: rem(12);
+      margin-right: rem(-28);
+      margin-bottom: rem(-136);
     }
 
     @include mobile {
@@ -346,7 +363,7 @@
     margin-top: rem(60);
 
     @include laptop {
-      margin-top: rem(40);
+      margin-top: rem(42);
     }
 
     @include mobile {
@@ -356,6 +373,10 @@
     .bench-btn {
       width: 100%;
       max-width: rem(450);
+
+      @include laptop {
+        max-width: rem(448);
+      }
     }
   }
 }

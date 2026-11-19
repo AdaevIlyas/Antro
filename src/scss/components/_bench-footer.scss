@@ -2,7 +2,7 @@
   padding: 0 rem(16) rem(64);
 
   @include laptop {
-    padding-bottom: rem(40);
+    padding-bottom: rem(20);
   }
 
   @include mobile {
@@ -15,8 +15,8 @@
     background: var(--bench-dark);
 
     @include laptop {
-      padding: rem(40) rem(44);
-      border-radius: rem(44);
+      padding: rem(46) rem(84);
+      border-radius: rem(42);
     }
 
     @include mobile {
@@ -89,7 +89,7 @@
     gap: rem(42);
 
     @include laptop {
-      gap: rem(24);
+      gap: rem(28);
     }
 
     @include mobile {
@@ -106,7 +106,7 @@
     width: rem(192);
 
     @include laptop {
-      gap: rem(14);
+      gap: rem(16);
       width: rem(150);
     }
 
@@ -120,7 +120,7 @@
       width: rem(187);
 
       @include laptop {
-        width: rem(150);
+        width: rem(145);
       }
 
       @include mobile {
@@ -159,7 +159,7 @@
     flex-shrink: 0;
 
     @include laptop {
-      gap: rem(20);
+      gap: rem(28);
     }
 
     @include mobile {
@@ -176,7 +176,7 @@
     gap: rem(42);
 
     @include laptop {
-      gap: rem(20);
+      gap: rem(28);
     }
 
     @include mobile {
@@ -208,7 +208,7 @@
     color: var(--bench-grey);
 
     @include laptop {
-      font-size: rem(13);
+      font-size: rem(12);
     }
 
     @include mobile {
@@ -228,7 +228,7 @@
     transition: opacity 0.2s ease;
 
     @include laptop {
-      font-size: rem(22);
+      font-size: rem(24);
     }
 
     @include mobile {
@@ -245,6 +245,10 @@
     display: flex;
     align-items: center;
     gap: rem(12);
+
+    @include laptop {
+      gap: rem(8);
+    }
 
     @include mobile {
       position: absolute;
@@ -266,9 +270,9 @@
     transition: opacity 0.2s ease;
 
     @include laptop {
-      width: rem(48);
-      height: rem(48);
-      padding: rem(12);
+      width: rem(46);
+      height: rem(46);
+      padding: rem(4);
     }
 
     @include mobile {
@@ -296,8 +300,7 @@
     padding-inline: rem(84);
 
     @include laptop {
-      margin-top: rem(16);
-      padding-inline: rem(44);
+      margin-top: rem(20);
     }
 
     @include mobile {
@@ -319,7 +322,7 @@
     color: var(--bench-grey);
 
     @include laptop {
-      font-size: rem(13);
+      font-size: rem(12);
     }
 
     @include mobile {

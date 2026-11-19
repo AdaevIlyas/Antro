@@ -84,9 +84,9 @@
 
     @include laptop {
       gap: rem(18);
-      min-height: rem(240);
-      padding: rem(24);
-      border-radius: rem(36);
+      min-height: rem(227);
+      padding: rem(28);
+      border-radius: rem(28);
     }
 
     @include mobile {
@@ -175,7 +175,7 @@
 
     @include laptop {
       gap: rem(6);
-      font-size: rem(13);
+      font-size: rem(14);
     }
 
     @include mobile {
@@ -205,7 +205,12 @@
     color: var(--bench-white);
 
     @include laptop {
-      font-size: rem(18);
+      font-size: rem(24);
+      letter-spacing: -0.05em;
+
+      br {
+        display: none;
+      }
     }
 
     @include mobile {
@@ -226,6 +231,10 @@
     gap: rem(6);
     min-width: 0;
 
+    @include laptop {
+      gap: rem(2);
+    }
+
     @include mobile {
       gap: rem(4);
     }
@@ -240,7 +249,7 @@
     color: var(--bench-white);
 
     @include laptop {
-      font-size: rem(42);
+      font-size: rem(26);
     }
 
     @include mobile {
@@ -257,7 +266,7 @@
     color: var(--bench-grey);
 
     @include laptop {
-      font-size: rem(13);
+      font-size: rem(14);
     }
 
     @include mobile {
@@ -282,12 +291,12 @@
     }
 
     @include laptop {
-      width: rem(44);
-      height: rem(44);
+      width: rem(48);
+      height: rem(48);
 
       img {
-        width: rem(14);
-        height: rem(14);
+        width: rem(24);
+        height: rem(24);
       }
     }
 
